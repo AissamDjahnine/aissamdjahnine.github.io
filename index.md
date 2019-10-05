@@ -10,7 +10,7 @@
 <img src="images/colortransfer.jpg?raw=true"/>
 
 [Search Algorithms Implementation ( BFS, DFS, DIJKSTR ,A*) ](https://github.com/AissamDjahnine/Suppression-of-Acoustic-Noise-in-Speech-Using-Spectral-Subtraction-)
-Searching is the universal technique of problem solving in AI. this project will give you a start with these different algorithms.
+* Searching is the universal technique of problem solving in AI. this project will give you a start with these different algorithms.
 * Brute-Force Search Strategies
 * * Breadth-First Search : It can be implemented using FIFO queue data structure. This method provides shortest path to the solution.
 * * Depth-First Search : It is implemented in recursion with LIFO stack data structure.
