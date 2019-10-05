@@ -11,7 +11,8 @@
 
 
 [Suppression of Acoustic Noise in Speech Using Spectral Subtraction](https://github.com/AissamDjahnine/Suppression-of-Acoustic-Noise-in-Speech-Using-Spectral-Subtraction-)
-* *Based on the work of STEVE F.BOLI , Paper available at : [Paper](https://ieeexplore.ieee.org/document/1163209)
+* *Based on the work of STEVE F.BOLI , Paper available at : [Paper](https://ieeexplore.ieee.org/document/1163209)*
+<img src="images/noisecancelling.jpg?raw=true"/>
 ---
 [Markov Decision Process](https://github.com/AissamDjahnine/markov-decision-process)
 * *A Markov decision process (MDP) is a discrete time stochastic control process. It provides a mathematical framework for modeling decision making in situations where outcomes are partly random and partly under the control of a decision maker. MDPs are useful for studying optimization problems solved via dynamic programming and reinforcement learning. MDPs were known at least as early as the 1950s;a core body of research on Markov decision processes resulted from Ronald Howard's 1960 book, Dynamic Programming and Markov Processes.They are used in many disciplines, including robotics, automatic control, economics and manufacturing. The name of MDPs comes from the Russian mathematician Andrey Markov.*
