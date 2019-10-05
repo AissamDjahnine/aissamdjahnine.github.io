@@ -2,7 +2,7 @@
 
 ---
 
-### Color Transfer
+### Projects
 
 
 [Color Transfer](https://github.com/AissamDjahnine/ColorTransfer)
