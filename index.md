@@ -40,7 +40,8 @@ In this project, i implemented the Color transfer in Correlated Color Space algo
 
 ### Online Courses / Achievements 
 
-**Udemy** : Python for Data Science and Machine Learning Bootcamp Certificate **
+**Udemy** : Python for Data Science and Machine Learning Bootcamp Certificate
+
 **Microsoft** :  Computer Vision and Image Analysis
 
 ---
