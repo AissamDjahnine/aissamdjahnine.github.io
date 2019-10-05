@@ -6,9 +6,17 @@
 
 
 [Color Transfer](https://github.com/AissamDjahnine/ColorTransfer)
-* *Color Transfer between Images in a correlated colour space ( RGB )*
+* **Color Transfer between Images in a correlated colour space ( RGB )**
+* Color transfer between images is the process of altering the color of a target image based on a source image.
+The goal is to transfer the look and the feel of this last (i.e : color characteristics) to the target image in order to increase
+its visual appeal and improve its appearance (ex: converting a daylight image into a night scene, a cold color image into a
+warm one).
+In this project, i implemented the Color transfer in Correlated Color Space algorithm specifically in RGB color space
+* based on the work of Xuezhong Xiao And Lizhuang.
 <img src="images/colortransfer.jpg?raw=true"/>
 
+
+* **Search Algorithms Implementation ( BFS, DFS, DIJKSTR ,A-Star )**
 [Search Algorithms Implementation ( BFS, DFS, DIJKSTR ,A*) ](https://github.com/AissamDjahnine/Suppression-of-Acoustic-Noise-in-Speech-Using-Spectral-Subtraction-)
 * Searching is the universal technique of problem solving in AI. this project will give you a start with these different algorithms.
 * Brute-Force Search Strategies
