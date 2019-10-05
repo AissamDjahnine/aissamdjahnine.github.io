@@ -38,10 +38,10 @@ In this project, i implemented the Color transfer in Correlated Color Space algo
 <img src="images/markovdecisionprocess.jpg?raw=true"/>
 
 
-### Category Name 2
+### Online Courses / Achievements 
 
-- [Color Transfer](https://github.com/AissamDjahnine/ColorTransfer)
-- [Search Algorithms](https://github.com/AissamDjahnine/Search-Algorithms-in-AI)
+**Udemy** : Python for Data Science and Machine Learning Bootcamp Certificate **
+**Microsoft** :  Computer Vision and Image Analysis
 
 ---
 
