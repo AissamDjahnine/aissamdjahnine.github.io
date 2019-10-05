@@ -4,10 +4,13 @@
 
 ### Color Transfer
 
+
+[Color Transfer](https://github.com/AissamDjahnine/ColorTransfer)
 <img src="images/colortransfer.jpg?raw=true"/>
 
-[Project 2 Title](/pdf/sample_presentation.pdf)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+
+[Suppression of Acoustic Noise in Speech Using Spectral Subtraction](https://github.com/AissamDjahnine/Suppression-of-Acoustic-Noise-in-Speech-Using-Spectral-Subtraction-)
+<img src="images/noisecancelling.jpg?raw=true"/>
 
 ---
 [Project 3 Title](http://example.com/)
