@@ -1,7 +1,7 @@
 ## Computer Vision and Machine Learning Msc Student
 
 ---
-### OnGoing Projects
+### Ongoing Projects
 [**Cell Images Segmentation Using Generative Adversarial Network)**](https://github.com/AissamDjahnine/ColorTransfer)
 * Cell images segmentation is a fundamental task for various medical applications, including nuclei
 morphology analysis, cell type classification, and cancer grading.Deep learning has emerged as a powerful approach to segment
