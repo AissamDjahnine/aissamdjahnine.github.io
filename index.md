@@ -3,7 +3,7 @@
 ---
 ### OnGoing Projects
 [**Cell Images Segmentation Using Generative Adversarial Network)**](https://github.com/AissamDjahnine/ColorTransfer)
-Cell images segmentation is a fundamental task for various medical applications, including nuclei
+* Cell images segmentation is a fundamental task for various medical applications, including nuclei
 morphology analysis, cell type classification, and cancer grading.Deep learning has emerged as a powerful approach to segment
 nuclei, but the accuracy of convolutional neural networks (CNNs) depends on the volume and quality of labeled histopathology
 data for training.Here, we implement an approach to cell segmentation that overcomes this challenge by utilizing a conditional generative adversarial network (cGAN) trained with synthetic and real data
