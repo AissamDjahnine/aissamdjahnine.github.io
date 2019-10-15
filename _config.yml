@@ -1,13 +1,8 @@
 title: Djahnine Aissam # your name (or website title) here
 logo: "/images/DJAHNINE_AISSAM.png?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
-  Hey! I am a Master's degree Student at Sorbonne university Studying Image Processing
-  and Computer Vision I'm Passionate about Digital Image Processing, 
-  Machine & deep Learning.I am looking Forward to a career in 
-  Computer Vision ,I am actively Seeking an internship for 2020 Starting from February.
-  Please feel free to reach out for me.  
-  <br><br>
-  My academic credentials includes in-progress MSc in computer science with focus on 
+  Hey! I am a Master's degree Student at Sorbonne university My academic credentials
+  includes in-progress MSc in computer science with focus on 
   Image processing and computer vision in Sorbonne university (Ex UPMC) in Paris
   which I expect to finish by summer 2020. My curriculum comprised of courses like : 
   Advanced Machine learning and deep learning, Computer Vision, Advanced Image processing,
@@ -15,6 +10,8 @@ description: > # your text below (remove <br> elements if you don't need line br
   With research and work interests in Object detection , Segmentation and Image/video generation
   ,i am currently a working as student research with the institute of Pasteur on Cell Images 
   segmentation using Generative adversarial networks ( GANs ).
+  <br><br>
+  
   <br><br>
   <a href="https://www.linkedin.com/in/aissamdjahnine/">View My LinkedIn Profile</a> 
   
