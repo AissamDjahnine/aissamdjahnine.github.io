@@ -8,7 +8,7 @@ morphology analysis, cell type classification, and cancer grading. Deep learning
 nuclei, but the accuracy of convolutional neural networks (CNNs) depends on the volume and quality of labeled data for training.Here, we implement an approach to cell segmentation that overcomes this challenge by utilizing a cycleGan framework (cycle generative adversarial network). The main objective of this research project is twofold :
 * Generate synthetic cell images that model the distribution of the input images for data augmentation. Use both of the synthetic and real cells images for training a contextaware CNN that can accurately segment these cells.
 * We propose to employ a segmentation method based on cycle-consistent generative adversarial networks (CycleGANs) that can be trained even in absence of prepared image-mask pairs.
-<img src="images/colortransfer.jpg?raw=true"/>
+<img src="images/cycleGan.jpg?raw=true"/>
 
 
 ### Projects
