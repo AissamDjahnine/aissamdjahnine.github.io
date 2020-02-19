@@ -2,6 +2,14 @@
 
 ---
 ### Research Projects
+
+[**Unsupervised Spatiotemporal Data Inpainting**](https://github.com/raoufkeskes/Unsupervised-Spatiotemporal-Data-Inpainting)
+* This work was done with : Ilyas aroui [Github](https://github.com/ily-R), Raouf Keskes [Github](https://github.com/raoufkeskes)
+* Inpainting spatio-temporal sequences is an active research topic that relies heavily on supervision with large datasets. In this work, we consider the problem of reconstructing missing information with an unsupervised learning approach. Following the work of Kim et al. We train a generative model on the occluded sequences. We ensure that the models captured both frame-based and sequential based information. Our proposed model is adapted to large-scale images and can be used to different types of sequences and occlusion processes. This a PyTorch implementaiton of this paper : [**Paper**](https://openreview.net/forum?id=rylqmxBKvH)
+<img src="images/unsupervised.png?raw=true"/>
+
+
+
 [**Cell Images Segmentation Using Cycle Generative Adversarial Network**](https://github.com/AissamDjahnine/ColorTransfer)
 * Cell images segmentation is a fundamental task for various medical applications, including nuclei
 morphology analysis, cell type classification, and cancer grading. Deep learning has emerged as a powerful approach to segment
