@@ -1,5 +1,10 @@
 ## Computer Vision and Machine Learning Msc Student
 
+### Intern at GE-HEALTHCARE
+<img src="images/GE.jpg?raw=true"/> 
+
+### Working on : "Investigation of automatic search methods for neural network hyperparameters (Neural Architecture Search)". Application to Mammographic Data.
+
 ---
 ### Research Projects
 
