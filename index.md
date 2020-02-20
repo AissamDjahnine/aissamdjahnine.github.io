@@ -4,13 +4,15 @@
 ### Research Projects
 
 [**Unsupervised Spatiotemporal Data Inpainting**](https://github.com/raoufkeskes/Unsupervised-Spatiotemporal-Data-Inpainting)
-* This work was done with : Ilyas aroui [Github](https://github.com/ily-R), Raouf Keskes [Github](https://github.com/raoufkeskes)
-* Inpainting spatio-temporal sequences is an active research topic that relies heavily on supervision with large datasets. In this work, we consider the problem of reconstructing missing information with an unsupervised learning approach. Following the work of Kim et al. We train a generative model on the occluded sequences. We ensure that the models captured both frame-based and sequential based information. Our proposed model is adapted to large-scale images and can be used to different types of sequences and occlusion processes. This a PyTorch implementaiton of this paper : [**Paper**](https://openreview.net/forum?id=rylqmxBKvH)
-<img src="images/unsupervised.png?raw=true"/>
+* This a PyTorch implementaiton of this paper : [**Unsupervised Spatiotemporal Data Inpainting**](https://openreview.net/forum?id=rylqmxBKvH) Under review at ICLR 2020.
+* The code is implemented with the help of : Ilyas aroui [Github](https://github.com/ily-R), Raouf Keskes [Github](https://github.com/raoufkeskes)
+* Inpainting spatio-temporal sequences is an active research topic that relies heavily on supervision with large datasets. In this work, we consider the problem of reconstructing missing information with an unsupervised learning approach. Following the work of Kim et al. We train a generative model on the occluded sequences. We ensure that the models captured both frame-based and sequential based information. Our proposed model is adapted to large-scale images and can be used to different types of sequences and occlusion processes.
+<img src="images/unsupervised.png?raw=true"/> 
 
 
 
-[**Cell Images Segmentation Using Cycle Generative Adversarial Network**](https://github.com/AissamDjahnine/ColorTransfer)
+
+[**Cell Images Segmentation Using Cycle Generative Adversarial Network**](https://github.com/AissamDjahnine/CycleGAN)
 * Cell images segmentation is a fundamental task for various medical applications, including nuclei
 morphology analysis, cell type classification, and cancer grading. Deep learning has emerged as a powerful approach to segment
 nuclei, but the accuracy of convolutional neural networks (CNNs) depends on the volume and quality of labeled data for training.Here, we implement an approach to cell segmentation that overcomes this challenge by utilizing a cycleGan framework (cycle generative adversarial network). The main objective of this research project is twofold :
