@@ -41,7 +41,7 @@ In this project, i implemented the Color transfer in Correlated Color Space algo
 
 [**Search Algorithms Implementation ( BFS, DFS, DIJKSTR ,A-Star )**](https://github.com/AissamDjahnine/Suppression-of-Acoustic-Noise-in-Speech-Using-Spectral-Subtraction-)
 * Searching is the universal technique of problem solving in AI. this project will give you a start with these different algorithms.
-* Brute-Force Search Strategies
+* Brute-Force Search Strategies.
 * * Breadth-First Search : It can be implemented using FIFO queue data structure. This method provides shortest path to the solution.
 * * Depth-First Search : It is implemented in recursion with LIFO stack data structure.
 
@@ -62,7 +62,7 @@ In this project, i implemented the Color transfer in Correlated Color Space algo
 <img src="images/markovdecisionprocess.jpg?raw=true"/>
 
 [**Metro Problem**](https://github.com/AissamDjahnine/Metro-Problem-)
-* Implementation of Dijkstra's algorithm to compute the shortest path on Paris subway network
+* Implementation of Dijkstra's algorithm to compute the shortest path on Paris subway network using C++.
 <img src="https://github.com/AissamDjahnine/aissamdjahnine.github.io/blob/master/images/BastilleJussieu.jpg?raw=true"/>
 
 ### Online Courses / Achievements 
