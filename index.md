@@ -61,7 +61,8 @@ In this project, i implemented the Color transfer in Correlated Color Space algo
 * *A Markov decision process (MDP) is a discrete time stochastic control process. It provides a mathematical framework for modeling decision making in situations where outcomes are partly random and partly under the control of a decision maker. MDPs are useful for studying optimization problems solved via dynamic programming and reinforcement learning. MDPs were known at least as early as the 1950s;a core body of research on Markov decision processes resulted from Ronald Howard's 1960 book, Dynamic Programming and Markov Processes.They are used in many disciplines, including robotics, automatic control, economics and manufacturing. The name of MDPs comes from the Russian mathematician Andrey Markov.*
 <img src="images/markovdecisionprocess.jpg?raw=true"/>
 
-[**Metro Problem - Implementation of Dijkstra's algorithm to compute the shortest path on Paris subway network Algorithms**](https://github.com/AissamDjahnine/Suppression-of-Acoustic-Noise-in-Speech-Using-Spectral-Subtraction-)
+[**Metro Problem**](https://github.com/AissamDjahnine/Metro-Problem-)
+* Implementation of Dijkstra's algorithm to compute the shortest path on Paris subway network
 <img src="https://github.com/AissamDjahnine/aissamdjahnine.github.io/blob/master/images/BastilleJussieu.jpg?raw=true"/>
 
 ### Online Courses / Achievements 
