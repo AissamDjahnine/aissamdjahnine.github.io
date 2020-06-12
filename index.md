@@ -14,9 +14,6 @@
 * Inpainting spatio-temporal sequences is an active research topic that relies heavily on supervision with large datasets. In this work, we consider the problem of reconstructing missing information with an unsupervised learning approach. Following the work of Kim et al. We train a generative model on the occluded sequences. We ensure that the models captured both frame-based and sequential based information. Our proposed model is adapted to large-scale images and can be used to different types of sequences and occlusion processes.
 <img src="images/unsupervised.png?raw=true"/> 
 
-
-
-
 [**Cell Images Segmentation Using Cycle Generative Adversarial Network**](https://github.com/AissamDjahnine/CycleGAN)
 * Cell images segmentation is a fundamental task for various medical applications, including nuclei
 morphology analysis, cell type classification, and cancer grading. Deep learning has emerged as a powerful approach to segment
@@ -25,6 +22,10 @@ nuclei, but the accuracy of convolutional neural networks (CNNs) depends on the 
 * We propose to employ a segmentation method based on cycle-consistent generative adversarial networks (CycleGANs) that can be trained even in absence of prepared image-mask pairs.
 <img src="images/cycleGan.jpg?raw=true"/>
 
+[**Histopathological Images Generation Using Generative Adversarial Network**](https://github.com/AissamDjahnine/GAN)
+* Here, we implement an approach to histopathological image generation that overcomes the challenge of dataset size (small datasets) in medical field by utilizing a GAN framework (Generative adversarial network). The main objective of this research project is :
+* Generate synthetic histopathological images that model the distribution of the input images for data augmentation. Use both of the synthetic and real images for training in different tasks (detection/segmentation/tracking).
+<img src="images/gans_ex.png?raw=true"/>
 
 ### Projects
 
