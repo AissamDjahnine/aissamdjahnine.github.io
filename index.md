@@ -1,4 +1,4 @@
-## Computer Vision and Machine Learning Msc Student
+## Computer Vision and Machine Learning Msc Student (Looking for PhD-Cifre) 
 
 ### Computer Vision and Deep Learning Intern at GE Healthcare
 <img src="images/GE.jpg?raw=true"/> 
