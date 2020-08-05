@@ -69,5 +69,3 @@ In this project, i implemented the Color transfer in Correlated Color Space algo
 * **Coursera** : Deep learning Specialization
 * **Udemy** : Python for Data Science and Machine Learning Bootcamp Certificate.
 
-![Alt text](./map.svg)
-<img src="./map.svg">
