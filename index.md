@@ -1,14 +1,11 @@
-## Computer Vision and Machine Learning Msc Student 
-
-### Computer Vision and Deep Learning Intern at GE Healthcare
-<img src="images/GE.jpg?raw=true"/> 
-
-### Working on : "Investigation of automatic search methods for neural network hyperparameters (Neural Architecture Search)". Application to Mammographic Data within WHARe team (Women's Health Applied Research).
+## PhD Student In Medical Imaging 
+### Computer Vision and Machine Learning Msc Graduate 
 
 ---
 ### Research Projects
+#### Computer Vision and Deep Learning Intern at GE Healthcare
 **Investigation of automatic search methods for neural network hyperparameters (Neural Architecture Search). Application to Mammographic Data within WHARe team (Women's Health Applied Research)**
-
+<img src="images/GE.jpg?raw=true"/> 
 * One of the major challenges in mammography is to develop systems that improve the effec-
 tiveness of clinical diagnostic. Deep learning became indispensable in this kind of tasks. It
 freed us from features engineering, however, the search for optimal neural network hyperpa-
