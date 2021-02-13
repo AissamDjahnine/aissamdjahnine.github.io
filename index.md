@@ -7,6 +7,37 @@
 
 ---
 ### Research Projects
+**Investigation of automatic search methods for neural network hyperparameters (Neural Architecture Search). Application to Mammographic Data within WHARe team (Women's Health Applied Research)**
+
+* One of the major challenges in mammography is to develop systems that improve the effec-
+tiveness of clinical diagnostic. Deep learning became indispensable in this kind of tasks. It
+freed us from features engineering, however, the search for optimal neural network hyperpa-
+rameters is a very time-consuming process. The neural architecture search (NAS) methods 
+enable to establish optimal hyperparameters automatically and save a lot of time. During
+this internship and unlike conventional approaches that apply evolution or reinforcement
+learning, we choose to test the efficiency of a gradient-based NAS method called DARTS
+(Differentiable Architecture Search) to perform classification tasks on mammographic data
+and test learned architecture transfer from one dataset to another. DARTS is shown to require
+100x fewer GPU memory than other existing methods and achieved the state-of-the-art in
+image classifications tasks on CIFAR and ImageNet datasets.
+
+* We test the efficiency of transfer of architectures learned on different da-
+tasets to mammographic data. The process consists of search and evaluation phases. We
+perform the search phase on mammographic (or other dataset) where we perform neural
+architecture search and establish the architecture. During the evaluation phase, we train
+from scratch the discovered architecture and report results on the validation set.
+
+* Based on this motivation, we conduct experiments where we come to significantly out-
+perform exiting models on different mammographic dataset. The approach is proven to be
+effective and shows promising results on mammography data classification task. Architecture
+transfer is also possible with larger, context-similar datasets and gives insights for other
+applications. However, DARTS approach is still not hyperparameter-free. It introduces new
+hyper-parameters while eliminating some other. For example the models that generate
+architectures still need to be hand designed. Furthermore, hyper-paramaters like learning
+rate, regularization strength and the type of optimizer are almost always left outside the
+scope of search,the choice of the search space also needs careful tuning in many cases.
+
+<img src="images/GE_INTERNSHIP.jpg?raw=true"/> 
 
 [**Unsupervised Spatiotemporal Data Inpainting**](https://github.com/raoufkeskes/Unsupervised-Spatiotemporal-Data-Inpainting)
 * This a PyTorch implementaiton of this paper : [**Unsupervised Spatiotemporal Data Inpainting**](https://openreview.net/forum?id=rylqmxBKvH) Under review at ICLR 2020.
