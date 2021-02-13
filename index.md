@@ -1,4 +1,6 @@
-## PhD Student In Medical Imaging 
+## PhD Student In Medical Imaging With Philips, CREATIS and HCL Lyon
+<img src="images/PHD.png?raw=true"/> 
+
 ### Computer Vision and Machine Learning Msc Graduate 
 
 ---
