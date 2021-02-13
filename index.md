@@ -1,8 +1,7 @@
 ## PhD Student In Medical Imaging With Philips, CREATIS and HCL Lyon
 <img src="images/PHD.png?raw=true"/> 
 
-### Computer Vision and Machine Learning Msc Graduate 
-
+#### Computer Vision and Machine Learning Msc Graduate at Sorbonne Université 
 ---
 ### Research Projects
 #### Computer Vision and Deep Learning Intern at GE Healthcare
