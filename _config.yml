@@ -7,7 +7,7 @@ description: > # your text below (remove <br> elements if you don't need line br
   Pattern recognition.
   <br><br>
   <a href="https://www.linkedin.com/in/aissamdjahnine/">View My LinkedIn Profile</a>
-  
+logo: "/images/DJAHNINE_AISSAM.png?raw=true" # your photo (or logo) here
 theme: jekyll-theme-minimal
 google_analytics: UA-000000-0 # your Google Analytics tracking ID here
 
