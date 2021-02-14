@@ -6,6 +6,9 @@ description: > # your text below (remove <br> elements if you don't need line br
   Advanced Machine learning and deep learning, Computer Vision, Advanced Image processing,
   Pattern recognition.
   <br><br>
+  <img src="images/PHD.png?raw=true"/> 
+  <br><br>
+
   <a href="https://www.linkedin.com/in/aissamdjahnine/">View My LinkedIn Profile</a>
   
 theme: jekyll-theme-minimal
