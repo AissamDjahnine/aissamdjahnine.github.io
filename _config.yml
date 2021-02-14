@@ -5,6 +5,8 @@ description: > # your text below (remove <br> elements if you don't need line br
   My curriculum comprised of courses like : 
   Advanced Machine learning and deep learning, Computer Vision, Advanced Image processing,
   Pattern recognition.
+  
+  ![](images/a.gif)
   <br><br>
   <a href="https://www.linkedin.com/in/aissamdjahnine/">View My LinkedIn Profile</a>
 </script>theme: jekyll-theme-minimal
