@@ -44,6 +44,9 @@ scope of search,the choice of the search space also needs careful tuning in many
 <img src="images/unsupervised.png?raw=true"/> 
 
 [**Cell Images Segmentation Using Cycle Generative Adversarial Network**](https://github.com/AissamDjahnine/CycleGAN)
+
+<img src="images/INSTITUT_PASTEUR_LOGO_2020.jpg?raw=true" width="300"/> 
+
 * Cell images segmentation is a fundamental task for various medical applications, including nuclei
 morphology analysis, cell type classification, and cancer grading. Deep learning has emerged as a powerful approach to segment
 nuclei, but the accuracy of convolutional neural networks (CNNs) depends on the volume and quality of labeled data for training.Here, we implement an approach to cell segmentation that overcomes this challenge by utilizing a cycleGan framework (cycle generative adversarial network). The main objective of this research project is twofold :
