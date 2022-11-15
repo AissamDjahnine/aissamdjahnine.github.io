@@ -7,6 +7,7 @@
 #### Computer Vision and Deep Learning Intern at GE Healthcare
 **Investigation of automatic search methods for neural network hyperparameters (Neural Architecture Search). Application to Mammographic Data within WHARe team (Women's Health Applied Research)**
 <img src="images/GE.jpg?raw=true"/> 
+
 * One of the major challenges in mammography is to develop systems that improve the effec-
 tiveness of clinical diagnostic. Deep learning became indispensable in this kind of tasks. It
 freed us from features engineering, however, the search for optimal neural network hyperpa-
@@ -19,17 +20,17 @@ and test learned architecture transfer from one dataset to another. DARTS is sho
 100x fewer GPU memory than other existing methods and achieved the state-of-the-art in
 image classifications tasks on CIFAR and ImageNet datasets.
 
-* We test the efficiency of transfer of architectures learned on different da-
-tasets to mammographic data. The process consists of search and evaluation phases. We
+* The process consists of search and evaluation phases. We
 perform the search phase on mammographic (or other dataset) where we perform neural
 architecture search and establish the architecture. During the evaluation phase, we train
 from scratch the discovered architecture and report results on the validation set.
 
-* Based on this motivation, we conduct experiments where we come to significantly out-
+* We conduct experiments where we come to significantly out-
 perform exiting models on different mammographic dataset. The approach is proven to be
 effective and shows promising results on mammography data classification task. Architecture
 transfer is also possible with larger, context-similar datasets and gives insights for other
-applications. However, DARTS approach is still not hyperparameter-free. It introduces new
+applications, where We test the efficiency of transfer of architectures learned on different da-
+tasets to mammographic data. However, DARTS approach is still not hyperparameter-free. It introduces new
 hyper-parameters while eliminating some other. For example the models that generate
 architectures still need to be hand designed. Furthermore, hyper-paramaters like learning
 rate, regularization strength and the type of optimizer are almost always left outside the
@@ -39,14 +40,13 @@ scope of search,the choice of the search space also needs careful tuning in many
 
 [**Unsupervised Spatiotemporal Data Inpainting**](https://github.com/raoufkeskes/Unsupervised-Spatiotemporal-Data-Inpainting)
 * This a PyTorch implementaiton of this paper : [**Unsupervised Spatiotemporal Data Inpainting**](https://openreview.net/forum?id=rylqmxBKvH) Under review at ICLR 2020.
-* The code is implemented with the help of : Ilyas aroui [Github](https://github.com/ily-R), Raouf Keskes [Github](https://github.com/raoufkeskes)
+* The code is implemented in collaboration of : Ilyas aroui [Github](https://github.com/ily-R), Raouf Keskes [Github](https://github.com/raoufkeskes)
 * Inpainting spatio-temporal sequences is an active research topic that relies heavily on supervision with large datasets. In this work, we consider the problem of reconstructing missing information with an unsupervised learning approach. Following the work of Kim et al. We train a generative model on the occluded sequences. We ensure that the models captured both frame-based and sequential based information. Our proposed model is adapted to large-scale images and can be used to different types of sequences and occlusion processes.
 <img src="images/unsupervised.png?raw=true"/> 
 
 [**Cell Images Segmentation Using Cycle Generative Adversarial Network**](https://github.com/AissamDjahnine/CycleGAN)
 
 <img src="images/INSTITUT_PASTEUR_LOGO_2020.jpg?raw=true" width="300"/> 
-
 * Cell images segmentation is a fundamental task for various medical applications, including nuclei
 morphology analysis, cell type classification, and cancer grading. Deep learning has emerged as a powerful approach to segment
 nuclei, but the accuracy of convolutional neural networks (CNNs) depends on the volume and quality of labeled data for training.Here, we implement an approach to cell segmentation that overcomes this challenge by utilizing a cycleGan framework (cycle generative adversarial network). The main objective of this research project is twofold :
@@ -69,18 +69,18 @@ its visual appeal and improve its appearance (ex: converting a daylight image in
 warm one).
 In this project, i implemented the Color transfer in Correlated Color Space algorithm specifically in RGB color space
 * based on the work of Xuezhong Xiao And Lizhuang.
-<img src="images/colortransfer.jpg?raw=true"/>
+<img src="images/colortransfer.jpg?raw=true"/,>
 
 [**Search Algorithms Implementation ( BFS, DFS, DIJKSTR ,A-Star )**](https://github.com/AissamDjahnine/Suppression-of-Acoustic-Noise-in-Speech-Using-Spectral-Subtraction-)
 * Searching is the universal technique of problem solving in AI. this project will give you a start with these different algorithms.
 * Brute-Force Search Strategies.
-* * Breadth-First Search : It can be implemented using FIFO queue data structure. This method provides shortest path to the solution.
-* * Depth-First Search : It is implemented in recursion with LIFO stack data structure.
+  * Breadth-First Search : It can be implemented using FIFO queue data structure. This method provides shortest path to the solution.
+  * Depth-First Search : It is implemented in recursion with LIFO stack data structure.
 
-* Informed (Heuristic) Search Strategies
-* * A Star Search : It is best-known form of Best First search.In this project I've implemented A* algorithm with :
-* * The Manhattan Distance Heuristic : this method of computing is called the Manhattan method because it is computed by calculating the total number of squares moved horizontally and vertically to reach the target square from the current square. We ignore diagonal movement and any obstacles that might be in the way.
-* * The Euclidean Distance Heuristic : his heuristic is slightly more accurate than its Manhattan counterpart. If we try run both simultaneously on the same maze, the Euclidean path finder favors a path along a straight line. This is more accurate but it is also slower because it has to explore a larger area to find the path.
+* Informed (Heuristic) Search Strategies : 
+  * A Star Search : It is best-known form of Best First search.In this project I've implemented A* algorithm with :
+  * The Manhattan Distance Heuristic : this method of computing is called the Manhattan method because it is computed by calculating the total number of squares moved horizontally and vertically to reach the target square from the current square. We ignore diagonal movement and any obstacles that might be in the way.
+  * The Euclidean Distance Heuristic : his heuristic is slightly more accurate than its Manhattan counterpart. If we try run both simultaneously on the same maze, the Euclidean path finder favors a path along a straight line. This is more accurate but it is also slower because it has to explore a larger area to find the path.
 
 <img src="images/searchalgorithms.jpg?raw=true"/>
 
