@@ -1,10 +1,11 @@
-## PhD Student In Medical Imaging With Philips, CREATIS and HCL Lyon
+## Researcher Phd Candidate @ Philips AI Research Hub France In collaboration with CREATIS Lab and HCL Lyon
+
 <img src="images/PHD.png?raw=true"/> 
 
-** Conferences & Summer Schools :
+**Conferences & Summer Schools :
 [*Tailored 3D CT contrastive pretraining to improve pulmonary pathology classification*](https://www.researchgate.net/publication/365967135_Tailored_3D_CT_contrastive_pretraining_to_improve_pulmonary_pathology_classification)
 
-** Publications :
+**Publications :
 [*BERT-based natural language processing analysis of French CT reports: Application to the measurement of the positivity rate for pulmonary embolism*](https://www.sciencedirect.com/science/article/pii/S2772652523000066)
 
 ---
