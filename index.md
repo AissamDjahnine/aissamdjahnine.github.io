@@ -1,6 +1,9 @@
 ## PhD Student In Medical Imaging With Philips, CREATIS and HCL Lyon
 <img src="images/PHD.png?raw=true"/> 
 
+** Publications:
+* 
+
 #### Computer Vision and Machine Learning Msc Graduate at Sorbonne Université 
 ---
 ### Research Projects
