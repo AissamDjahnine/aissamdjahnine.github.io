@@ -1,8 +1,13 @@
 ## PhD Student In Medical Imaging With Philips, CREATIS and HCL Lyon
 <img src="images/PHD.png?raw=true"/> 
 
-** Publications:
-* 
+** Conferences & Summer Schools :
+* Tailored 3D CT contrastive pretraining to improve pulmonary pathology classification
+
+** Publications :
+* BERT-based natural language processing analysis of French CT reports: Application to the measurement of the positivity rate for pulmonary embolism
+
+---
 
 #### Computer Vision and Machine Learning Msc Graduate at Sorbonne Université 
 ---
