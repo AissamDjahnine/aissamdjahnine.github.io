@@ -2,11 +2,11 @@
 
 <img src="images/PHD.png?raw=true"/> 
 
-**Conferences & Summer Schools :
-[*Tailored 3D CT contrastive pretraining to improve pulmonary pathology classification*](https://www.researchgate.net/publication/365967135_Tailored_3D_CT_contrastive_pretraining_to_improve_pulmonary_pathology_classification)
+### Conferences & Summer Schools :
+[**16th IEEE International Conference on Signal Processing (ICSP), Beijing, China : Tailored 3D CT contrastive pretraining to improve pulmonary pathology classification**](https://www.researchgate.net/publication/365967135_Tailored_3D_CT_contrastive_pretraining_to_improve_pulmonary_pathology_classification)
 
-**Publications :
-[*BERT-based natural language processing analysis of French CT reports: Application to the measurement of the positivity rate for pulmonary embolism*](https://www.sciencedirect.com/science/article/pii/S2772652523000066)
+### Publications :
+[**Research in Diagnostic and Interventional Imaging : BERT-based natural language processing analysis of French CT reports: Application to the measurement of the positivity rate for pulmonary embolism**](https://www.sciencedirect.com/science/article/pii/S2772652523000066)
 
 ---
 
