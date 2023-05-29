@@ -4,13 +4,14 @@
 
 ### Publications :
 [*Research in Diagnostic and Interventional Imaging : BERT-based natural language processing analysis of French CT reports: Application to the measurement of the positivity rate for pulmonary embolism*](https://www.sciencedirect.com/science/article/pii/S2772652523000066)
+Émilien Jupin-Delevaux, **Aissam Djahnine**, François Talbot, Antoine Richard, Sylvain Gouttard, Adeline Mansuy, Philippe Douek, Salim Si-Mohamed, Loïc Boussel
 
 ### Conferences & Summer Schools :
 [*16th IEEE International Conference on Signal Processing (ICSP), Beijing, China : Tailored 3D CT contrastive pretraining to improve pulmonary pathology classification*](https://www.researchgate.net/publication/365967135_Tailored_3D_CT_contrastive_pretraining_to_improve_pulmonary_pathology_classification)
 
 ### Honors & awards
 
-[*Data Challenge : Pulmonary embolism detection in CT*](https://www.researchgate.net/publication/365967135_Tailored_3D_CT_contrastive_pretraining_to_improve_pulmonary_pathology_classification)
+[*Data Challenge : Pulmonary embolism detection in CT*](https://www.linkedin.com/posts/nicolas-villain-9422122_fier-de-cette-belle-%C3%A9quipe-bravo-pour-activity-6985258006707851264-w3i9?utm_source=share&utm_medium=member_desktop)
 
 * I was a member of the Philips team in collaboration with Hospices Civils de Lyon that won the JFR (les Journées Francophones de Radiologie) data challenge. The solution used Deep Learning for Computer Vision to detect pulmonary embolism in CT scans. ([*Journal Paper*]())
 
