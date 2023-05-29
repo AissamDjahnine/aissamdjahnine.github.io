@@ -82,7 +82,7 @@ warm one).<br>
 * Implementation of Dijkstra's algorithm to compute the shortest path on Paris subway network using C++.
 <img src="https://github.com/AissamDjahnine/aissamdjahnine.github.io/blob/master/images/BastilleJussieu.jpg?raw=true"/>
 
-### Online Courses / Achievements 
+### Online Courses
 * **Coursera** : Deep learning Specialization
 * **Udemy** : 
    * Python for Data Science and Machine Learning Bootcamp Certificate.
