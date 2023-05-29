@@ -49,7 +49,7 @@ tasks on mammographic data. Through experiments, we achieved state-of-the-art re
 
 [**Histopathological Images Generation Using Generative Adversarial Network**](https://github.com/AissamDjahnine/gans)
 * Here, we implement an approach to histopathological image generation that overcomes the challenge of dataset size (small datasets) in medical field by utilizing a GAN framework (Generative adversarial network). The main objective of this research project is :
-* Generate synthetic histopathological images that model the distribution of the input images for data augmentation. Use both of the synthetic and real images for training in different tasks (detection/segmentation/tracking).
+* Generate synthetic histopathological images that model the distribution of the input images for data augmentation. Use both of the synthetic and real images for training in different tasks (detection/segmentation/tracking).<br>
 <img src="images/gans_ex.png?raw=true"/>
 
 ### Projects
@@ -58,31 +58,24 @@ tasks on mammographic data. Through experiments, we achieved state-of-the-art re
 * Color transfer between images is the process of altering the color of a target image based on a source image.
 The goal is to transfer the look and the feel of this last (i.e : color characteristics) to the target image in order to increase
 its visual appeal and improve its appearance (ex: converting a daylight image into a night scene, a cold color image into a
-warm one).
-In this project, i implemented the Color Transfer in Correlated Color Space algorithm specifically in RGB color space
-* based on the work of Xuezhong Xiao And Lizhuang.
+warm one).<br>
+* In this project, i implemented the Color Transfer in Correlated Color Space algorithm specifically in RGB color space (based on the work of Xuezhong Xiao And Lizhuang).<br>
 <img src="images/colortransfer.jpg?raw=true"/,>
 
 [**Search Algorithms Implementation ( BFS, DFS, DIJKSTR ,A-Star )**](https://github.com/AissamDjahnine/Suppression-of-Acoustic-Noise-in-Speech-Using-Spectral-Subtraction-)
-* Searching is the universal technique of problem solving in AI. this project will give you a start with these different algorithms.
-* Brute-Force Search Strategies.
-  * Breadth-First Search : It can be implemented using FIFO queue data structure. This method provides shortest path to the solution.
-  * Depth-First Search : It is implemented in recursion with LIFO stack data structure.
-
-* Informed (Heuristic) Search Strategies : 
-  * A Star Search : It is best-known form of Best First search.In this project I've implemented A* algorithm with :
-  * The Manhattan Distance Heuristic : this method of computing is called the Manhattan method because it is computed by calculating the total number of squares moved horizontally and vertically to reach the target square from the current square. We ignore diagonal movement and any obstacles that might be in the way.
-  * The Euclidean Distance Heuristic : his heuristic is slightly more accurate than its Manhattan counterpart. If we try run both simultaneously on the same maze, the Euclidean path finder favors a path along a straight line. This is more accurate but it is also slower because it has to explore a larger area to find the path.
-
+* This master project aims to provide newcomers in the field of AI with an introduction to the fundamental technique of problem solving: searching. The project covers various search algorithms, including brute-force strategies such as Breadth-First Search (BFS) and Depth-First Search (DFS). It also delves into informed search strategies, specifically focusing on the popular A* algorithm, which is implemented using two heuristic methods: the Manhattan Distance Heuristic and the Euclidean Distance Heuristic. By exploring these algorithms and heuristics, participants will gain a solid foundation in AI problem-solving techniques.<br>
 <img src="images/searchalgorithms.jpg?raw=true"/>
 
 [**Suppression of Acoustic Noise in Speech Using Spectral Subtraction**](https://github.com/AissamDjahnine/Suppression-of-Acoustic-Noise-in-Speech-Using-Spectral-Subtraction-)
-* *Based on the work of STEVE F.BOLI , Paper available at : [Paper](https://ieeexplore.ieee.org/document/1163209)*
+
+* In this master project, I successfully implemented the technique of spectral subtraction for the suppression of acoustic noise in speech. The project is based on the pioneering work of Steve F. Boli, as described in his [*paper*](https://ieeexplore.ieee.org/document/1163209).
+
+* By leveraging spectral subtraction, I effectively reduced the impact of background noise, enhancing the clarity and intelligibility of the speech signals. The project can be explored further on the GitHub repository [*here*](https://github.com/AissamDjahnine/Suppression-of-Acoustic-Noise-in-Speech-Using-Spectral-Subtraction-).<br>
 <img src="images/noisecancelling.jpg?raw=true"/>
 
-
 [**Markov Decision Process**](https://github.com/AissamDjahnine/markov-decision-process)
-* *A Markov decision process (MDP) is a discrete time stochastic control process. It provides a mathematical framework for modeling decision making in situations where outcomes are partly random and partly under the control of a decision maker. MDPs are useful for studying optimization problems solved via dynamic programming and reinforcement learning. MDPs were known at least as early as the 1950s;a core body of research on Markov decision processes resulted from Ronald Howard's 1960 book, Dynamic Programming and Markov Processes.They are used in many disciplines, including robotics, automatic control, economics and manufacturing. The name of MDPs comes from the Russian mathematician Andrey Markov.*
+
+* The proposed master project aims to explore the application of Markov decision processes (MDPs) in various domains, such as robotics, automatic control, economics, and manufacturing. MDPs offer a mathematical framework to model decision-making scenarios where outcomes involve both random elements and the choices made by a decision maker. By leveraging dynamic programming and reinforcement learning techniques, this project seeks to optimize decision-making processes and develop effective strategies within the context of MDPs, contributing to advancements in multiple fields.<br>
 <img src="images/markovdecisionprocess.jpg?raw=true"/>
 
 [**Metro Problem**](https://github.com/AissamDjahnine/Metro-Problem-)
@@ -91,5 +84,6 @@ In this project, i implemented the Color Transfer in Correlated Color Space algo
 
 ### Online Courses / Achievements 
 * **Coursera** : Deep learning Specialization
-* **Udemy** : Python for Data Science and Machine Learning Bootcamp Certificate.
-
+* **Udemy** : 
+   * Python for Data Science and Machine Learning Bootcamp Certificate.
+   * Complete Amazon AWS Certified Solution Architect Course
