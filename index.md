@@ -80,7 +80,8 @@ warm one).<br>
 
 [**Metro Problem**](https://github.com/AissamDjahnine/Metro-Problem-)
 * Implementation of Dijkstra's algorithm to compute the shortest path on Paris subway network using C++.
-<img src="https://github.com/AissamDjahnine/aissamdjahnine.github.io/blob/master/images/BastilleJussieu.jpg?raw=true"/>
+<img src="https://github.com/AissamDjahnine/aissamdjahnine.github.io/blob/master/images/BastilleJussieu.jpg?raw=true" style="height: 200px;">
+
 
 ### Online Courses
 * **Coursera** : Deep learning Specialization
