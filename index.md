@@ -6,6 +6,9 @@
 [*Research in Diagnostic and Interventional Imaging : BERT-based natural language processing analysis of French CT reports: Application to the measurement of the positivity rate for pulmonary embolism*](https://www.sciencedirect.com/science/article/pii/S2772652523000066)<br> 
 Émilien Jupin-Delevaux, **Aissam Djahnine**, François Talbot, Antoine Richard, Sylvain Gouttard, Adeline Mansuy, Philippe Douek, Salim Si-Mohamed, Loïc Boussel
 
+<!-- [*Research in Diagnostic and Interventional Imaging : BERT-based natural language processing analysis of French CT reports: Application to the measurement of the positivity rate for pulmonary embolism*](https://www.sciencedirect.com/science/article/pii/S2772652523000066)<br> 
+Émilien Jupin-Delevaux, **Aissam Djahnine**, François Talbot, Antoine Richard, Sylvain Gouttard, Adeline Mansuy, Philippe Douek, Salim Si-Mohamed, Loïc Boussel -->
+
 ### Conferences & Summer Schools :
 [*16th IEEE International Conference on Signal Processing (ICSP), Beijing, China : Tailored 3D CT contrastive pretraining to improve pulmonary pathology classification*](https://www.researchgate.net/publication/365967135_Tailored_3D_CT_contrastive_pretraining_to_improve_pulmonary_pathology_classification)<br>
 **Djahnine Aissam**, Popoff Alexandre, Jupin-Delevaux Emilien, Cotin Vincent, Nempont Olivier, Boussel Loic
@@ -26,33 +29,9 @@
 **Investigation of automatic search methods for neural network hyperparameters (Neural Architecture Search). Application to Mammographic Data within WHARe team (Women's Health Applied Research)**
 <img src="images/GE.jpg?raw=true"/> 
 
-* One of the major challenges in mammography is to develop systems that improve the effec-
-tiveness of clinical diagnostic. Deep learning became indispensable in this kind of tasks. It
-freed us from features engineering, however, the search for optimal neural network hyperpa-
-rameters is a very time-consuming process. The neural architecture search (NAS) methods 
-enable to establish optimal hyperparameters automatically and save a lot of time. During
-this internship and unlike conventional approaches that apply evolution or reinforcement
-learning, we choose to test the efficiency of a gradient-based NAS method called DARTS
-(Differentiable Architecture Search) to perform classification tasks on mammographic data
-and test learned architecture transfer from one dataset to another. DARTS is shown to require
-100x fewer GPU memory than other existing methods and achieved the state-of-the-art in
-image classifications tasks on CIFAR and ImageNet datasets.
-
-* The process consists of search and evaluation phases. We
-perform the search phase on mammographic (or other dataset) where we perform neural
-architecture search and establish the architecture. During the evaluation phase, we train
-from scratch the discovered architecture and report results on the validation set.
-
-* We conduct experiments where we come to significantly out-
-perform exiting models on different mammographic dataset. The approach is proven to be
-effective and shows promising results on mammography data classification task. Architecture
-transfer is also possible with larger, context-similar datasets and gives insights for other
-applications, where We test the efficiency of transfer of architectures learned on different da-
-tasets to mammographic data. However, DARTS approach is still not hyperparameter-free. It introduces new
-hyper-parameters while eliminating some other. For example the models that generate
-architectures still need to be hand designed. Furthermore, hyper-paramaters like learning
-rate, regularization strength and the type of optimizer are almost always left outside the
-scope of search,the choice of the search space also needs careful tuning in many cases.
+* In this internship, we focused on improving mammography systems for clinical diagnosis by utilizing deep learning techniques. 
+We specifically explored the efficiency of a gradient-based NAS method called DARTS (Differentiable Architecture Search) for classification 
+tasks on mammographic data. Through experiments, we achieved state-of-the-art results on mammography data classification, outperforming existing models. 
 
 <img src="images/GE_INTERNSHIP.jpg?raw=true"/> 
 
@@ -65,11 +44,7 @@ scope of search,the choice of the search space also needs careful tuning in many
 [**Cell Images Segmentation Using Cycle Generative Adversarial Network**](https://github.com/AissamDjahnine/CycleGAN)
 
 <img src="images/INSTITUT_PASTEUR_LOGO_2020.jpg?raw=true" width="300"/> 
-* Cell images segmentation is a fundamental task for various medical applications, including nuclei
-morphology analysis, cell type classification, and cancer grading. Deep learning has emerged as a powerful approach to segment
-nuclei, but the accuracy of convolutional neural networks (CNNs) depends on the volume and quality of labeled data for training.Here, we implement an approach to cell segmentation that overcomes this challenge by utilizing a cycleGan framework (cycle generative adversarial network). The main objective of this research project is twofold :
-* Generate synthetic cell images that model the distribution of the input images for data augmentation. Use both of the synthetic and real cells images for training a contextaware CNN that can accurately segment these cells.
-* We propose to employ a segmentation method based on cycle-consistent generative adversarial networks (CycleGANs) that can be trained even in absence of prepared image-mask pairs.
+* During our 6-month curriculum project with Institut Pasteur and Sorbonne University, we focused on cell image segmentation for various medical applications. Recognizing the significance of labeled data for training accurate convolutional neural networks (CNNs), we adopted a cycleGAN framework to overcome the challenge of limited data. Our research objectives were two-fold: first, to generate synthetic cell images that mimic the distribution of input images for data augmentation, combining them with real cell images to train a context-aware CNN for precise cell segmentation. Second, we proposed a segmentation method based on cycle-consistent generative adversarial networks (CycleGANs), which allowed us to train the model even in the absence of prepared image-mask pairs.
 <img src="images/cycleGan.jpg?raw=true"/>
 
 [**Histopathological Images Generation Using Generative Adversarial Network**](https://github.com/AissamDjahnine/gans)
@@ -79,13 +54,12 @@ nuclei, but the accuracy of convolutional neural networks (CNNs) depends on the 
 
 ### Projects
 
-
 [**Color Transfer between Images in a correlated colour space (RGB)**](https://github.com/AissamDjahnine/ColorTransfer)
 * Color transfer between images is the process of altering the color of a target image based on a source image.
 The goal is to transfer the look and the feel of this last (i.e : color characteristics) to the target image in order to increase
 its visual appeal and improve its appearance (ex: converting a daylight image into a night scene, a cold color image into a
 warm one).
-In this project, i implemented the Color transfer in Correlated Color Space algorithm specifically in RGB color space
+In this project, i implemented the Color Transfer in Correlated Color Space algorithm specifically in RGB color space
 * based on the work of Xuezhong Xiao And Lizhuang.
 <img src="images/colortransfer.jpg?raw=true"/,>
 
