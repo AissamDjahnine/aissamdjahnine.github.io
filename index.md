@@ -22,7 +22,7 @@
 <img src="images/JFR_port.png?raw=true"/> 
 ---
 
-#### Computer Vision and Machine Learning Msc Graduate at Sorbonne Université 
+#### Computer Vision and Machine Learning Msc Graduate at Sorbonne Université (2018-2020)
 ---
 ### Research Projects
 #### Computer Vision and Deep Learning Intern at GE Healthcare
@@ -78,7 +78,7 @@ warm one).<br>
 
 [**Metro Problem**](https://github.com/AissamDjahnine/Metro-Problem-)
 * Implementation of Dijkstra's algorithm to compute the shortest path on Paris subway network using C++.
-<img src="https://github.com/AissamDjahnine/aissamdjahnine.github.io/blob/master/images/BastilleJussieu.jpg?raw=true" style="height: 350px;">
+<img src="https://github.com/AissamDjahnine/aissamdjahnine.github.io/blob/master/images/BastilleJussieu.jpg?raw=true" style="height: 300px;">
 
 
 ### Online Courses
