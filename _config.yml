@@ -14,6 +14,7 @@ description: > # your text below (remove <br> elements if you don't need line br
   <br><br>
 
   <a href="https://www.linkedin.com/in/aissamdjahnine/">View My LinkedIn Profile</a>
+  <br>
   <a href="https://orcid.org/0000-0001-8633-4092">View My ORCID</a>
   
 theme: jekyll-theme-minimal
