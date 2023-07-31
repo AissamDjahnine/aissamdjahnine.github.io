@@ -6,14 +6,9 @@
 [*Research in Diagnostic and Interventional Imaging : BERT-based natural language processing analysis of French CT reports: Application to the measurement of the positivity rate for pulmonary embolism*](https://www.sciencedirect.com/science/article/pii/S2772652523000066)<br> 
 Émilien Jupin-Delevaux, **Aissam Djahnine**, François Talbot, Antoine Richard, Sylvain Gouttard, Adeline Mansuy, Philippe Douek, Salim Si-Mohamed, Loïc Boussel
 
-<!--[*Research in Diagnostic and Interventional Imaging : BERT-based natural language processing analysis of French CT reports: Application to the measurement of the positivity rate for pulmonary embolism*](https://www.sciencedirect.com/science/article/pii/S2772652523000066)<br> 
-Émilien Jupin-Delevaux, **Aissam Djahnine**, François Talbot, Antoine Richard, Sylvain Gouttard, Adeline Mansuy, Philippe Douek, Salim Si-Mohamed, Loïc Boussel
+[*Diagnostic and Interventional Imaging : BERT-based natural language processing analysis of French CT reports: Application to the measurement of the positivity rate for pulmonary embolism*]()<br> 
+**Aissam Djahninea**, Carole Lazarus, Mathieu Lederlin, Sébastien Mulé, Rafael Wiemker, Salim Si-Mohamed, Émilien Jupin-Delevaux, Olivier Nempont, Youssef Skandarani, Mathieu De Craene, Segbedji Goubalan, Caroline Raynaud, Younes Belkouchi, Amira Ben Afia, Clement Fabre, Gilbert Ferretti, Constance De Margerie, Pierre Berge, Renan Liberge, Nicolas Elbaz, Maxime Blain, Pierre-Yves Brillet, Guillaume Chassagnon, Farah Cadour, Caroline Caramella, Mostafa El Hajjam, Samia Boussouar, Joya Hadchiti, Xavier Fablet, Antoine Khalil, Hugues Talbot, Alain Luciani, Nathalie Lassau , Loic Boussel
 
-[*Research in Diagnostic and Interventional Imaging : BERT-based natural language processing analysis of French CT reports: Application to the measurement of the positivity rate for pulmonary embolism*](https://www.sciencedirect.com/science/article/pii/S2772652523000066)<br> 
-Émilien Jupin-Delevaux, **Aissam Djahnine**, François Talbot, Antoine Richard, Sylvain Gouttard, Adeline Mansuy, Philippe Douek, Salim Si-Mohamed, Loïc Boussel
-
-[*Research in Diagnostic and Interventional Imaging : BERT-based natural language processing analysis of French CT reports: Application to the measurement of the positivity rate for pulmonary embolism*](https://www.sciencedirect.com/science/article/pii/S2772652523000066)<br> 
-Émilien Jupin-Delevaux, **Aissam Djahnine**, François Talbot, Antoine Richard, Sylvain Gouttard, Adeline Mansuy, Philippe Douek, Salim Si-Mohamed, Loïc Boussel-->
 
 
 ### Conferences & Summer Schools :
