@@ -7,15 +7,14 @@
 Émilien Jupin-Delevaux, **Aissam Djahnine**, François Talbot, Antoine Richard, Sylvain Gouttard, Adeline Mansuy, Philippe Douek, Salim Si-Mohamed, Loïc Boussel
 
 [*Diagnostic and Interventional Imaging : BERT-based natural language processing analysis of French CT reports: Application to the measurement of the positivity rate for pulmonary embolism*]()<br> 
-**Aissam Djahninea**, Carole Lazarus, Mathieu Lederlin, Sébastien Mulé, Rafael Wiemker, Salim Si-Mohamed, Émilien Jupin-Delevaux, Olivier Nempont, Youssef Skandarani, Mathieu De Craene, Segbedji Goubalan, Caroline Raynaud, Younes Belkouchi, Amira Ben Afia, Clement Fabre, Gilbert Ferretti, Constance De Margerie, Pierre Berge, Renan Liberge, Nicolas Elbaz, Maxime Blain, Pierre-Yves Brillet, Guillaume Chassagnon, Farah Cadour, Caroline Caramella, Mostafa El Hajjam, Samia Boussouar, Joya Hadchiti, Xavier Fablet, Antoine Khalil, Hugues Talbot, Alain Luciani, Nathalie Lassau , Loic Boussel
-
+**Aissam Djahnine**, Carole Lazarus, Mathieu Lederlin, ..., Nathalie Lassau, Loic Boussel
 
 
 ### Conferences & Summer Schools :
-[*16th IEEE International Conference on Signal Processing (ICSP), Beijing, China : Tailored 3D CT contrastive pretraining to improve pulmonary pathology classification*](https://www.researchgate.net/publication/365967135_Tailored_3D_CT_contrastive_pretraining_to_improve_pulmonary_pathology_classification)<br>
+[*16 th IEEE International Conference on Signal Processing (ICSP), Beijing, China : Tailored 3D CT contrastive pretraining to improve pulmonary pathology classification*](https://www.researchgate.net/publication/365967135_Tailored_3D_CT_contrastive_pretraining_to_improve_pulmonary_pathology_classification)<br>
 **Djahnine Aissam**, Popoff Alexandre, Jupin-Delevaux Emilien, Cottin Vincent, Nempont Olivier, Boussel Loic
 
-<!-- This is a comment that won't be rendered  [*Oxford Machine Learning Summer School (13 July - 16 July 2023)*]() -->
+[*Oxford Machine Learning Summer School (13 July - 16 July 2023)*]()<br>
 
 ### Honors & awards
 [*Data Challenge : Pulmonary embolism detection in CT*](https://www.linkedin.com/posts/nicolas-villain-9422122_fier-de-cette-belle-%C3%A9quipe-bravo-pour-activity-6985258006707851264-w3i9?utm_source=share&utm_medium=member_desktop)
