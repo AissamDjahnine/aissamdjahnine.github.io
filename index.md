@@ -8,11 +8,11 @@
 [*Title : Automatic AI-based Multi-Pathology Detection and Localization in 3D Chest CT Scans: A Comprehensive Approach*]()<br> 
 **Aissam Djahnine**, Alexandre Popoff , Emilien Jupin-delevaux , Salim Aymeric Si-Mohamed , Vincent Cottin , Philippe Douek , Olivier Nempont , Loïc Boussel
 
-**Diagnostic and Interventional Imaging**
+**Diagnostic and Interventional Imaging (DII)**
 [*Title : Pulmonary Embolism Detection and Severity quantification in 3D CT scans*]()<br> 
 **Aissam Djahnine**, Carole Lazarus, Mathieu Lederlin, ..., Nathalie Lassau, Loic Boussel
 
-**Research in Diagnostic and Interventional Imaging**
+**Research in Diagnostic and Interventional Imaging (ReDII)**
 [* Title : BERT-based natural language processing analysis of French CT reports: Application to the measurement of the positivity rate for pulmonary embolism*](https://www.sciencedirect.com/science/article/pii/S2772652523000066)<br> 
 Émilien Jupin-Delevaux, **Aissam Djahnine**, François Talbot, Antoine Richard, Sylvain Gouttard, Adeline Mansuy, Philippe Douek, Salim Si-Mohamed, Loïc Boussel
 
