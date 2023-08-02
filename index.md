@@ -8,29 +8,31 @@
 [*Title : Automatic AI-based Multi-Pathology Detection and Localization in 3D Chest CT Scans: A Comprehensive Approach*]()<br> 
 **Aissam Djahnine**, Alexandre Popoff , Emilien Jupin-delevaux , Salim Aymeric Si-Mohamed , Vincent Cottin , Philippe Douek , Olivier Nempont , Loïc Boussel<br>
 
-**Diagnostic and Interventional Imaging (DII)**<br>
+**Diagnostic and Interventional Imaging Journal (DII)**<br>
 [*Title : Pulmonary Embolism Detection and Severity quantification in 3D CT scans*]()<br> 
 **Aissam Djahnine**, Carole Lazarus, Mathieu Lederlin, ..., Nathalie Lassau, Loic Boussel<br>
 
-**Research in Diagnostic and Interventional Imaging (ReDII)**<br>
+**Research in Diagnostic and Interventional Imaging Journal (ReDII)**<br>
 [*Title : BERT-based natural language processing analysis of French CT reports: Application to the measurement of the positivity rate for pulmonary embolism*](https://www.sciencedirect.com/science/article/pii/S2772652523000066)<br> 
 Émilien Jupin-Delevaux, **Aissam Djahnine**, François Talbot, Antoine Richard, Sylvain Gouttard, Adeline Mansuy, Philippe Douek, Salim Si-Mohamed, Loïc Boussel<br>
 
 
-
 ### Conferences & Summer Schools :
-**16 th IEEE International Conference on Signal Processing (ICSP), Beijing, China**<br>
+**16 th IEEE International Conference on Signal Processing (ICSP)**<br>
+21 - 24 October 2022
+Beijing, China
 [*Title : Tailored 3D CT contrastive pretraining to improve pulmonary pathology classification*](https://www.researchgate.net/publication/365967135_Tailored_3D_CT_contrastive_pretraining_to_improve_pulmonary_pathology_classification)<br>
 **Djahnine Aissam**, Popoff Alexandre, Jupin-Delevaux Emilien, Cottin Vincent, Nempont Olivier, Boussel Loic<br>
 
-[*Oxford Machine Learning Summer School (OxML 2023)(ML x Health Track, In Person*](https://drive.google.com/file/d/1Uozg6swQc0m2EvBPusXh2hW82zTxeIlz/view)<br>
-13 July - 16 July 2023 <br>
+**Oxford Machine Learning Summer School (OxML 2023)(ML x Health Track, In Person)**
+[*Certificate of Participation*](https://drive.google.com/file/d/1Uozg6swQc0m2EvBPusXh2hW82zTxeIlz/view)<br>
+13 - 16 July 2023 <br>
 Oxford, United Kingdom <br>
 
 ### Honors & awards
 [*Data Challenge : Pulmonary embolism detection in CT*](https://www.linkedin.com/posts/nicolas-villain-9422122_fier-de-cette-belle-%C3%A9quipe-bravo-pour-activity-6985258006707851264-w3i9?utm_source=share&utm_medium=member_desktop)
 
-* I was a member of the Philips team in collaboration with Hospices Civils de Lyon that won the JFR (les Journées Francophones de Radiologie) data challenge. The solution used Deep Learning for Computer Vision to detect pulmonary embolism in CT scans. ( [*Challenge Paper*](), [*our Solution Journal Paper*]())
+* I was a member of the Philips team in collaboration with Hospices Civils de Lyon that won the JFR (les Journées Francophones de Radiologie) data challenge. The solution used Deep Learning for Computer Vision to detect pulmonary embolism in CT scans. ( [*Challenge Paper*](https://www.sciencedirect.com/science/article/abs/pii/S2211568423001183), [*Our Solution (Journal Paper)*]())
 <img src="images/JFR_port.png?raw=true"/> 
 ---
 
@@ -42,7 +44,6 @@ Oxford, United Kingdom <br>
 <img src="images/GE.jpg?raw=true"/> 
 
 * In this internship, we focused on improving mammography systems for clinical diagnosis by utilizing deep learning techniques. We specifically explored the efficiency of a gradient-based NAS method called DARTS (Differentiable Architecture Search) for classification tasks on mammographic data. Through experiments, we achieved state-of-the-art results on mammography data classification, outperforming existing models. 
-
 <img src="images/GE_INTERNSHIP.jpg?raw=true"/> 
 
 [**Unsupervised Spatiotemporal Data Inpainting**](https://github.com/raoufkeskes/Unsupervised-Spatiotemporal-Data-Inpainting)
