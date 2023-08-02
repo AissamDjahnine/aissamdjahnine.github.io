@@ -15,12 +15,13 @@
 
 
 
-
 ### Conferences & Summer Schools :
 [*16 th IEEE International Conference on Signal Processing (ICSP), Beijing, China : Tailored 3D CT contrastive pretraining to improve pulmonary pathology classification*](https://www.researchgate.net/publication/365967135_Tailored_3D_CT_contrastive_pretraining_to_improve_pulmonary_pathology_classification)<br>
 **Djahnine Aissam**, Popoff Alexandre, Jupin-Delevaux Emilien, Cottin Vincent, Nempont Olivier, Boussel Loic
 
-[*Oxford Machine Learning Summer School (13 July - 16 July 2023)*]()<br>
+[*Oxford Machine Learning Summer School (OxML 2023)(ML x Health Track, In Person*](https://drive.google.com/file/d/1Uozg6swQc0m2EvBPusXh2hW82zTxeIlz/view)<br>
+13 July - 16 July 2023 <br>
+Oxford, United Kingdom <br>
 
 ### Honors & awards
 [*Data Challenge : Pulmonary embolism detection in CT*](https://www.linkedin.com/posts/nicolas-villain-9422122_fier-de-cette-belle-%C3%A9quipe-bravo-pour-activity-6985258006707851264-w3i9?utm_source=share&utm_medium=member_desktop)
