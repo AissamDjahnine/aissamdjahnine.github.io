@@ -4,24 +4,24 @@
 
 ### Publications :
 
-**The International Journal of Medical Physics Research and Practice (Medical Physics)**
+**The International Journal of Medical Physics Research and Practice (Medical Physics)**<br>
 [*Title : Automatic AI-based Multi-Pathology Detection and Localization in 3D Chest CT Scans: A Comprehensive Approach*]()<br> 
-**Aissam Djahnine**, Alexandre Popoff , Emilien Jupin-delevaux , Salim Aymeric Si-Mohamed , Vincent Cottin , Philippe Douek , Olivier Nempont , Loïc Boussel
+**Aissam Djahnine**, Alexandre Popoff , Emilien Jupin-delevaux , Salim Aymeric Si-Mohamed , Vincent Cottin , Philippe Douek , Olivier Nempont , Loïc Boussel<br>
 
-**Diagnostic and Interventional Imaging (DII)**
+**Diagnostic and Interventional Imaging (DII)**<br>
 [*Title : Pulmonary Embolism Detection and Severity quantification in 3D CT scans*]()<br> 
-**Aissam Djahnine**, Carole Lazarus, Mathieu Lederlin, ..., Nathalie Lassau, Loic Boussel
+**Aissam Djahnine**, Carole Lazarus, Mathieu Lederlin, ..., Nathalie Lassau, Loic Boussel<br>
 
-**Research in Diagnostic and Interventional Imaging (ReDII)**
+**Research in Diagnostic and Interventional Imaging (ReDII)**<br>
 [* Title : BERT-based natural language processing analysis of French CT reports: Application to the measurement of the positivity rate for pulmonary embolism*](https://www.sciencedirect.com/science/article/pii/S2772652523000066)<br> 
-Émilien Jupin-Delevaux, **Aissam Djahnine**, François Talbot, Antoine Richard, Sylvain Gouttard, Adeline Mansuy, Philippe Douek, Salim Si-Mohamed, Loïc Boussel
+Émilien Jupin-Delevaux, **Aissam Djahnine**, François Talbot, Antoine Richard, Sylvain Gouttard, Adeline Mansuy, Philippe Douek, Salim Si-Mohamed, Loïc Boussel<br>
 
 
 
 ### Conferences & Summer Schools :
-**16 th IEEE International Conference on Signal Processing (ICSP), Beijing, China**
+**16 th IEEE International Conference on Signal Processing (ICSP), Beijing, China**<br>
 [*Title : Tailored 3D CT contrastive pretraining to improve pulmonary pathology classification*](https://www.researchgate.net/publication/365967135_Tailored_3D_CT_contrastive_pretraining_to_improve_pulmonary_pathology_classification)<br>
-**Djahnine Aissam**, Popoff Alexandre, Jupin-Delevaux Emilien, Cottin Vincent, Nempont Olivier, Boussel Loic
+**Djahnine Aissam**, Popoff Alexandre, Jupin-Delevaux Emilien, Cottin Vincent, Nempont Olivier, Boussel Loic<br>
 
 [*Oxford Machine Learning Summer School (OxML 2023)(ML x Health Track, In Person*](https://drive.google.com/file/d/1Uozg6swQc0m2EvBPusXh2hW82zTxeIlz/view)<br>
 13 July - 16 July 2023 <br>
