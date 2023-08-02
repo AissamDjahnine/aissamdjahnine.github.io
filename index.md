@@ -19,8 +19,8 @@
 
 ### Conferences & Summer Schools :
 **16 th IEEE International Conference on Signal Processing (ICSP)**<br>
-21 - 24 October 2022
-Beijing, China
+21 - 24 October 2022<br>
+Beijing, China<br>
 [*Title : Tailored 3D CT contrastive pretraining to improve pulmonary pathology classification*](https://www.researchgate.net/publication/365967135_Tailored_3D_CT_contrastive_pretraining_to_improve_pulmonary_pathology_classification)<br>
 **Djahnine Aissam**, Popoff Alexandre, Jupin-Delevaux Emilien, Cottin Vincent, Nempont Olivier, Boussel Loic<br>
 
@@ -34,6 +34,12 @@ Oxford, United Kingdom <br>
 
 * I was a member of the Philips team in collaboration with Hospices Civils de Lyon that won the JFR (les Journées Francophones de Radiologie) data challenge. The solution used Deep Learning for Computer Vision to detect pulmonary embolism in CT scans. ( [*Challenge Paper*](https://www.sciencedirect.com/science/article/abs/pii/S2211568423001183), [*Our Solution (Journal Paper)*]())
 <img src="images/JFR_port.png?raw=true"/> 
+
+
+### Academic Services
+
+**Reviewer : 20th IEEE International Symposium on Biomedical Imaging, ISBI 2023**<br>
+
 ---
 
 #### Computer Vision and Machine Learning Msc Graduate at Sorbonne Université (2018-2020)
