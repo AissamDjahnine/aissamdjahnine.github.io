@@ -2,6 +2,8 @@
 
 <img src="images/PHD2.png?raw=true"/> 
 
+<div class='sk-instagram-feed' data-embed-id='176109'></div><script src='https://widgets.sociablekit.com/instagram-feed/widget.js' async defer></script>
+
 ### Publications :
 
 **The International Journal of Medical Physics Research and Practice (Medical Physics)**<br>
