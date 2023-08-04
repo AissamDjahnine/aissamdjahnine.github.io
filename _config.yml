@@ -1,16 +1,10 @@
 title: Djahnine Aissam # your name (or website title) here
 logo: "/images/Photo_identite_3-modified.png" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
-  Hey!
-  I'm Aissam, a passionate researcher in computer vision and its applications. 
-  I believe these fields offer immense potential for development and the opportunity to 
-  make a positive impact. My interest goes beyond the surface applications of AI—I am 
-  driven to explore its inner complexities and constantly learn more. 
+  Hey! I'm Aissam <br>
   
-  Through my portfolio, I aim to showcase my work and demonstrate how my dedication to 
-  computer vision has shaped my approach.
-
   <div class='sk-instagram-feed' data-embed-id='176109'></div><script src='https://widgets.sociablekit.com/instagram-feed/widget.js' async defer></script>
+ 
   <br><br>
 
   <a href="https://www.linkedin.com/in/aissamdjahnine/">View My LinkedIn Profile</a><br>
