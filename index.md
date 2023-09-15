@@ -17,6 +17,11 @@
 Émilien Jupin-Delevaux, **Aissam Djahnine**, François Talbot, Antoine Richard, Sylvain Gouttard, Adeline Mansuy, Philippe Douek, Salim Si-Mohamed, Loïc Boussel<br>
 
 
+**Research in Diagnostic and Interventional Imaging Journal (ReDII)<br>
+[*Title : Automatization and development of the TAVI CAPRI risk score with imaging biomarkers*]
+(https://www.sciencedirect.com/science/article/pii/S2772652523000066)<br> 
+P.-J. Lartaud, B. Harbaoui1, **A. Djahnine**, O. Nempont, J.-M. Rouet, Anna Vlachomitrou, B. Riche, M. Rabilloud, S. Si-Mohamed P. Douek, F. Derimay, G. Rioufol, P. Lantelme, L. Boussel<br>
+
 ### Conferences & Summer Schools :
 **16 th IEEE International Conference on Signal Processing (ICSP)**<br>
 21 - 24 October 2022<br>
@@ -41,7 +46,6 @@ Oxford, United Kingdom <br>
 **Reviewer : 20th IEEE International Symposium on Biomedical Imaging, ISBI 2023**<br>
 
 ---
-
 #### Computer Vision and Machine Learning Msc Graduate at Sorbonne Université (2018-2020)
 ---
 ### Research Projects
