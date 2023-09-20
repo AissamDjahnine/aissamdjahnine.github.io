@@ -10,19 +10,17 @@
 **Aissam Djahnine**, Alexandre Popoff , Emilien Jupin-delevaux , Salim Aymeric Si-Mohamed , Vincent Cottin , Philippe Douek , Olivier Nempont , Loïc Boussel<br>
 -->
 
-[**Detection and severity quantification of pulmonary embolism with 3D CT data using an automated deep learning-based artificial solution**]()<br>
+[*Detection and severity quantification of pulmonary embolism with 3D CT data using an automated deep learning-based artificial solution*]()<br>
 **Aissam Djahnine**, Carole Lazarus, Mathieu Lederlin, ..., Nathalie Lassau, Loic Boussel<br>
 *Diagnostic and Interventional Imaging Journal (DII)*<br>
 
-
-**Research in Diagnostic and Interventional Imaging Journal (ReDII)**<br>
-[*Title : BERT-based natural language processing analysis of French CT reports: Application to the measurement of the positivity rate for pulmonary embolism*](https://www.sciencedirect.com/science/article/pii/S2772652523000066)<br> 
+[*BERT-based natural language processing analysis of French CT reports: Application to the measurement of the positivity rate for pulmonary embolism*](https://www.sciencedirect.com/science/article/pii/S2772652523000066)<br> 
 Émilien Jupin-Delevaux, **Aissam Djahnine**, François Talbot, Antoine Richard, Sylvain Gouttard, Adeline Mansuy, Philippe Douek, Salim Si-Mohamed, Loïc Boussel<br>
+*Research in Diagnostic and Interventional Imaging Journal (ReDII)*<br>
 
 <!---
-**Research in Diagnostic and Interventional Imaging Journal (ReDII)<br>
-[*Title : Automatization and development of the TAVI CAPRI risk score with imaging biomarkers*]
-(https://www.sciencedirect.com/science/article/pii/S2772652523000066)<br> 
+**<br>
+[**Automatization and development of the TAVI CAPRI risk score with imaging biomarkers**]()<br> 
 P.-J. Lartaud, B. Harbaoui1, **A. Djahnine**, O. Nempont, J.-M. Rouet, Anna Vlachomitrou, B. Riche, M. Rabilloud, S. Si-Mohamed P. Douek, F. Derimay, G. Rioufol, P. Lantelme, L. Boussel<br>
 -->
 
