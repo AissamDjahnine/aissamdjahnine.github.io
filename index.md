@@ -24,6 +24,12 @@
 P.-J. Lartaud, B. Harbaoui1, **A. Djahnine**, O. Nempont, J.-M. Rouet, Anna Vlachomitrou, B. Riche, M. Rabilloud, S. Si-Mohamed P. Douek, F. Derimay, G. Rioufol, P. Lantelme, L. Boussel<br>
 -->
 
+<!---
+**<br>
+[**Automatization and development of the TAVI CAPRI risk score with imaging biomarkers**]()<br> 
+P.-J. Lartaud, B. Harbaoui1, **A. Djahnine**, O. Nempont, J.-M. Rouet, Anna Vlachomitrou, B. Riche, M. Rabilloud, S. Si-Mohamed P. Douek, F. Derimay, G. Rioufol, P. Lantelme, L. Boussel<br>
+-->
+
 ### Conferences & Summer Schools :
 **16 th IEEE International Conference on Signal Processing (ICSP)**<br>
 21 - 24 October 2022<br>
