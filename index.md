@@ -10,7 +10,7 @@
 **Aissam Djahnine**, Alexandre Popoff , Emilien Jupin-delevaux , Salim Aymeric Si-Mohamed , Vincent Cottin , Philippe Douek , Olivier Nempont , Loïc Boussel<br>
 -->
 
-[*Detection and severity quantification of pulmonary embolism with 3D CT data using an automated deep learning-based artificial solution*]()<br>
+[*Detection and severity quantification of pulmonary embolism with 3D CT data using an automated deep learning-based artificial solution*](https://authors.elsevier.com/a/1hvEm7ssZcFzxG)<br>
 **Aissam Djahnine**, Carole Lazarus, Mathieu Lederlin, ..., Nathalie Lassau, Loic Boussel<br>
 *Diagnostic and Interventional Imaging Journal (DII)*<br>
 
