@@ -46,7 +46,8 @@ Oxford, United Kingdom <br>
 
 [*JFR 2023 Data Challenge WINNER : Pancreatic masses detection in 3D CT scans*](https://www.linkedin.com/feed/update/urn:li:activity:7119672599088914432/)
 
-* I was a member of the Philips team in collaboration with Hospices Civils de Lyon that won the JFR (les Journées Francophones de Radiologie) data challenge. The solution used deep learning-based algorithm to detect pancreatic masses in 3D CT scans. ( [*Challenge Paper*](), [*Our Solution (Journal Paper)*]())
+* I was a member of the Philips team in collaboration with Hospices Civils de Lyon that won the JFR (les Journées Francophones de Radiologie) data challenge. The solution used deep learning-based algorithm to detect pancreatic masses in 3D CT scans. 
+<!---( [*Challenge Paper*](), [*Our Solution (Journal Paper)*]())-->
 <img src="images/JFR_23.jpg?raw=true"/> 
 <br>
 
