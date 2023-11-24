@@ -1,7 +1,8 @@
 var simplemaps_worldmap_mapdata={
   main_settings: {
    //General settings
-    width: "responsive", //'700' or 'responsive'
+    width: "540", //'700' or 'responsive'
+    height: "540",
     background_color: "lightblue",
     background_transparent: "no",
     popups: "detect",
