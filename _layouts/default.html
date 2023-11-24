@@ -65,19 +65,22 @@
                 max-width:none!important;
                 background:none!important
             }
-            
 
             #map {
-              width: 100px; /* Width of Instagram embed */
-              height: 240px; /* Adjust height as needed */
-              margin: auto; /* Center the map if desired */
-              border: 1px solid #ccc; /* Optional border */
+              width: 540px; /* Width to match Instagram embed */
+              height: auto; /* Height will adjust to content */
+              margin: 1px auto; /* Center the map and add a 1px margin to match the Instagram embed */
+              border: 0; /* No border to match the Instagram embed style */
+              border-radius: 3px; /* Match the Instagram embed style */
+              box-shadow: 0 0 1px 0 rgba(0,0,0,0.5), 0 1px 10px 0 rgba(0,0,0,0.15); /* Match the Instagram embed style */
             }
+
         </style>
         
 
         <!-- Embedding the Map Div -->
-        <div id="map" style="width: 100px; height: auto;"></div>
+        <div id="map"></div>  
+        
         
         {% if site.github.is_project_page %}
         <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
