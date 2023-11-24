@@ -4,8 +4,9 @@
 
 ### Publications :
 
-[*Automatic AI-based Multi-Pathology Detection and Localization in 3D Chest CT Scans: A Comprehensive Approach*]()<br> 
-**Aissam Djahnine**, Emilien Jupin-delevaux, Alexandre Popoff, Salim Aymeric Si-Mohamed, Vincent Cottin, Philippe Douek, Olivier Nempont, Loïc Boussel<br>
+
+[*Self-Supervised learning based Pathology Detection and Localization in 3D Chest Scans*]()<br> 
+**Aissam Djahnine**, Emilien Jupin-delevaux, Olivier Nempont, Fabien Craighero, Salim Aymeric Si-Mohamed, Vincent Cottin, Philippe Douek, Alexandre Popoff, Loïc Boussel<br>
 *The International Journal of Medical Physics Research and Practice (Medical Physics)*[*In revision*]()<br>
 
 [*Detection and severity quantification of pulmonary embolism with 3D CT data using an automated deep learning-based artificial solution*](https://authors.elsevier.com/a/1hvEm7ssZcFzxG)<br>
