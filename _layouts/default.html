@@ -25,6 +25,14 @@
           <img src="{{site.logo | relative_url}}" alt="Logo" />
         {% endif %}
         
+        {% if site.github.is_project_page %}
+        <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
+        {% endif %}
+
+        {% if site.github.is_user_page %}
+        <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>
+        {% endif %} 
+
         <p>{{ site.description | default: site.github.project_tagline }}</p>
         
         <p style="text-align: center; font-weight: bold;">Social feeds</p>
@@ -45,11 +53,15 @@
               <!-- Additional nested elements... -->
           </div>
         </blockquote>
+        
+        
+        
         <script src="https://www.instagram.com/embed.js"></script>
         <script type="text/javascript" src="https://www.embedista.com/j/instagramfeed.js"></script>
         <div style="overflow: auto; position: absolute; height: 0pt; width: 0pt;">
             <a href="https://www.embedista.com/instagramfeed">Embed Instagram Post</a> Code Generator
         </div>
+
         <style>
             .boxes3 {
                 height:175px;
@@ -82,14 +94,6 @@
         <div id="map"></div>  
         
         
-        {% if site.github.is_project_page %}
-        <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
-        {% endif %}
-
-        {% if site.github.is_user_page %}
-        <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>
-        {% endif %}
-
         {% if site.show_downloads %}
         <ul class="downloads">
           <li><a href="{{ site.github.zip_url }}">Download <strong>ZIP File</strong></a></li>
