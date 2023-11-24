@@ -30,6 +30,13 @@ P.-J. Lartaud, B. Harbaoui1, **A. Djahnine**, O. Nempont, J.-M. Rouet, Anna Vlac
 -->
 
 ### Conferences & Summer Schools :
+<!---
+**7 th Medical Imaging with Deep Learning (MIDL)**<br>
+3 - 5 July 2024<br>
+Paris, France<br>
+[*Title : Leveraging 3D Normalizing Flows for Unsupervised Detection of Pathological Pulmonary CT Scans*](https://www.researchgate.net/publication/365967135_Tailored_3D_CT_contrastive_pretraining_to_improve_pulmonary_pathology_classification)<br>
+**Djahnine Aissam**, Popoff Alexandre, Jupin-Delevaux Emilien, Cottin Vincent, Nempont Olivier, Boussel Loic<br>
+-->
 **16 th IEEE International Conference on Signal Processing (ICSP)**<br>
 21 - 24 October 2022<br>
 Beijing, China<br>
