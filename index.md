@@ -48,6 +48,7 @@ Beijing, China<br>
 13 - 16 July 2023 <br>
 Oxford, United Kingdom <br>
 
+
 ### Honors & awards
 
 [*JFR 2023 Data Challenge WINNER : Pancreatic masses detection in 3D CT scans*](https://www.linkedin.com/feed/update/urn:li:activity:7119672599088914432/)
