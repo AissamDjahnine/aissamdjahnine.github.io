@@ -10,45 +10,31 @@
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
-
-    <!-- Embedding the Vector Map's CSS -->
-    <link rel="stylesheet" href="./package/dist/css/jsvectormap.css" />
-    
-    <!-- Embedding the Vector Map's JavaScript -->
-    <link rel="stylesheet" href="https://aissamdjahnine.github.io/package/dist/css/jsvectormap.css" />
-    <script src="https://aissamdjahnine.github.io/package/dist/js/jsvectormap.min.js"></script>
-    <script src="https://aissamdjahnine.github.io/package/dist/js/maps/world.js"></script> <!-- Example for a world map -->
-
 </head>
 <body>
     <div class="wrapper">
         <header>
             <h1><a href="{{ '/' | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
-            
+
             {% if site.logo %}
             <img src="{{ site.logo | relative_url }}" alt="Logo" />
             {% endif %}
 
             <p>{{ site.description | default: site.github.project_tagline }}</p>
-            
+
+            <!-- Random Country Flags -->
+            <div>
+                <p>🇫🇷 France</p>
+                <p>🇧🇷 Brazil</p>
+                <p>🇮🇳 India</p>
+            </div>
+
             <p style="text-align: center; font-weight: bold;">Social feeds</p>
             <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/aissam_dhn/" data-instgrm-version="12">
                 <!-- Instagram embed content here -->
             </blockquote>
             <script src="https://www.instagram.com/embed.js"></script>
             <script type="text/javascript" src="https://www.embedista.com/j/instagramfeed.js"></script>
-
-            <!-- Adding the Map just below the Instagram embed -->
-            <div id="map" style="width: 600px; height: 400px; margin-top: 20px;"></div> <!-- Adjust size as needed -->
-
-            <!-- Initializing the Map -->
-            <script>
-                new jsVectorMap({
-                    selector: "#map",
-                    map: "world" // Example for a world map, change as needed
-                });
-            </script>
-
         </header>
         <section>
             {{ content }}
