@@ -12,8 +12,11 @@
     <![endif]-->
 
     <!-- Embedding SimpleMaps Scripts -->
-    <script type="text/javascript" src="https://aissamdjahnine.github.io/html5worldmapv4.2/mapdata.js"></script>
-    <script type="text/javascript" src="https://aissamdjahnine.github.io/html5worldmapv4.2/worldmap.js"></script>
+    <!--<script type="text/javascript" src="https://aissamdjahnine.github.io/html5worldmapv4.2/mapdata.js"></script>-->
+    <!--<script type="text/javascript" src="https://aissamdjahnine.github.io/html5worldmapv4.2/worldmap.js"></script>-->
+    
+    <link rel="stylesheet" href="./package/dist/css/jsvectormap.css" />
+    <script src="./package/dist/js/jsvectormap.min.js"></script>
 
   </head>
   <body>
@@ -80,9 +83,10 @@
         </style>
         
         <!-- Embedding the Map Div -->
-        <div id="map"></div>  
+        <!-- <div id="map"></div>  --> 
         
-
+        <div id="map"></div>
+        
         {% if site.show_downloads %}
         <ul class="downloads">
           <li><a href="{{ site.github.zip_url }}">Download <strong>ZIP File</strong></a></li>
