@@ -22,19 +22,22 @@
     <div class="wrapper">
         <header>
             <h1><a href="{{ '/' | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
-
+            
             {% if site.logo %}
             <img src="{{ site.logo | relative_url }}" alt="Logo" />
             {% endif %}
 
             <p>{{ site.description | default: site.github.project_tagline }}</p>
-
+            
             <p style="text-align: center; font-weight: bold;">Social feeds</p>
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/aissam_dhn/" data-instgrm-version="12">
+                <!-- Instagram embed content here -->
+            </blockquote>
+            <script src="https://www.instagram.com/embed.js"></script>
+            <script type="text/javascript" src="https://www.embedista.com/j/instagramfeed.js"></script>
 
-            <!-- Instagram embed and other elements here... -->
-
-            <!-- Embedding the Map Div -->
-            <div id="map" style="width: 600px; height: 400px;"></div> <!-- Adjust size as needed -->
+            <!-- Adding the Map just below the Instagram embed -->
+            <div id="map" style="width: 600px; height: 400px; margin-top: 20px;"></div> <!-- Adjust size as needed -->
 
             <!-- Initializing the Map -->
             <script>
