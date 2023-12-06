@@ -1,8 +1,9 @@
 ---
 layout: default
-title: Travel
-permalink: /travel/
+title: Education
+permalink: /education/
 ---
+
 # Travel Adventures
 
 Welcome to my travel blog, where I document my exciting journeys around the world. Join me on my adventures and explore the beauty of different destinations.
