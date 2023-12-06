@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'en-US' }}">
 
-<nav>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/publications/">Publications</a></li>
-      <li><a href="/travel/">Travel</a></li>
-      <!-- other navigation items -->
-    </ul>
-  </nav>
-  
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,10 +8,43 @@
 
     {% seo %}
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+
+    <style>
+        #nav-container {
+            display: flex;
+            justify-content: center; /* Horizontally center the navigation */
+            align-items: center; /* Vertically center the navigation */
+            height: 80px; /* Adjust the height as needed */
+        }
+
+        #nav-container ul {
+            list-style: none;
+            display: flex;
+            gap: 20px; /* Adjust the spacing between links */
+        }
+
+        #nav-container li {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
 </head>
 <body>
     <div class="wrapper">
         <header>
+            
+            <div id="nav-container">
+                <nav>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/publications/">Publications</a></li>
+                        <li><a href="/travel/">Travel</a></li>
+                        <!-- other navigation items -->
+                    </ul>
+                </nav>
+            </div>
+
             <h1><a href="{{ '/' | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
             {% if site.logo %}
             <img src="{{ site.logo | relative_url }}" alt="Logo" />
