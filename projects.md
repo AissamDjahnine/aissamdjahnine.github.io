@@ -11,10 +11,7 @@ permalink: /projects/
 # Projects
 
 [**Color Transfer between Images in a correlated colour space (RGB)**](https://github.com/AissamDjahnine/ColorTransfer)
-* Color transfer between images is the process of altering the color of a target image based on a source image.
-The goal is to transfer the look and the feel of this last (i.e : color characteristics) to the target image in order to increase
-its visual appeal and improve its appearance (ex: converting a daylight image into a night scene, a cold color image into a
-warm one).<br>
+* Color transfer between images is the process of altering the color of a target image based on a source image. The goal is to transfer the look and the feel of this last (i.e : color characteristics) to the target image in order to increase its visual appeal and improve its appearance (ex: converting a daylight image into a night scene, a cold color image into a warm one).<br>
 * In this project, i implemented the Color Transfer in Correlated Color Space algorithm specifically in RGB color space (based on the work of Xuezhong Xiao And Lizhuang).<br>
 <img src="/images/colortransfer.jpg?raw=true" />
 
@@ -35,5 +32,7 @@ warm one).<br>
 <img src="/images/markovdecisionprocess.jpg?raw=true"/>
 
 [**Metro Problem**](https://github.com/AissamDjahnine/Metro-Problem-)
-* Implementation of Dijkstra's algorithm to compute the shortest path on Paris subway network using C++.
+* The "Dijkstra Metro-Problem" project uses Dijkstra's algorithm in C++ to find the shortest path in the Paris subway network. It relies on C/C++ compilers and two CSV files containing station and connection information.<br>
+
+* The program, optimized for accuracy and efficiency, can be executed using either station IDs or names, ensuring user-friendliness and adaptability to minor input errors. This project showcases the practical application of complex algorithms in everyday transportation scenarios.
 <img src="/images/BastilleJussieu.png?raw=true" style="height: 300px;">
