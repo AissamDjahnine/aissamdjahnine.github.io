@@ -10,11 +10,23 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 
     <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center horizontally */
+        }
+
+        header {
+            width: 100%;
+            text-align: center;
+        }
+
         #nav-container {
             display: flex;
             justify-content: center; /* Horizontally center the navigation */
             align-items: center; /* Vertically center the navigation */
             height: 80px; /* Adjust the height as needed */
+            background-color: #f0f0f0; /* Background color for the navigation bar */
         }
 
         #nav-container ul {
