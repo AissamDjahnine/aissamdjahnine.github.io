@@ -13,7 +13,7 @@ theme: jekyll-theme-minimal
 nav:
   - title: "Home"
     url: "/"
-  - title: "Publications"
+  - title: "Publications V2"
     url: "/publications/"
-  - title: "Travel"
+  - title: "Travel V2"
     url: "/travel/"
