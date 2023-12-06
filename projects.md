@@ -16,7 +16,7 @@ The goal is to transfer the look and the feel of this last (i.e : color characte
 its visual appeal and improve its appearance (ex: converting a daylight image into a night scene, a cold color image into a
 warm one).<br>
 * In this project, i implemented the Color Transfer in Correlated Color Space algorithm specifically in RGB color space (based on the work of Xuezhong Xiao And Lizhuang).<br>
-<img src="/images/colortransfer.jpg?raw=true"/,>
+<img src="/images/colortransfer.jpg?raw=true" />
 
 [**Search Algorithms Implementation ( BFS, DFS, DIJKSTR ,A-Star )**](https://github.com/AissamDjahnine/Suppression-of-Acoustic-Noise-in-Speech-Using-Spectral-Subtraction-)
 * This master project aims to provide newcomers in the field of AI with an introduction to the fundamental technique of problem solving: searching. The project covers various search algorithms, including brute-force strategies such as Breadth-First Search (BFS) and Depth-First Search (DFS). It also delves into informed search strategies, specifically focusing on the popular A* algorithm, which is implemented using two heuristic methods: the Manhattan Distance Heuristic and the Euclidean Distance Heuristic. By exploring these algorithms and heuristics, participants will gain a solid foundation in AI problem-solving techniques.<br>
@@ -36,4 +36,4 @@ warm one).<br>
 
 [**Metro Problem**](https://github.com/AissamDjahnine/Metro-Problem-)
 * Implementation of Dijkstra's algorithm to compute the shortest path on Paris subway network using C++.
-<img src="https://github.com/AissamDjahnine/aissamdjahnine.github.io/blob/master/images/BastilleJussieu.jpg?raw=true" style="height: 300px;">
+<img src="/images/BastilleJussieu.png?raw=true" style="height: 300px;">
