@@ -1,10 +1,19 @@
 nav:
   - title: "Home"
     url: "/"
+
+  - title: "Education"
+  url: "/education/"
+  
   - title: "Publications"
-    url: "/publications/"
+  url: "/publications/"
+
+  - title: "Projects"
+    url: "/projects/"
+  
   - title: "Travel"
-    url: "/travel/"
+  url: "/travel/"
+  
 
 title: Djahnine Aissam # your name (or website title) here
 logo: "/images/Photo_identite_3-modified.png" # your photo (or logo) here
