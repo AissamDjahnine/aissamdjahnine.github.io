@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: 'en-US' }}">
+
+<nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/publications/">Publications</a></li>
+      <li><a href="/travel/">Travel</a></li>
+      <!-- other navigation items -->
+    </ul>
+  </nav>
+  
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +17,6 @@
 
     {% seo %}
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
 </head>
 <body>
     <div class="wrapper">
@@ -21,7 +28,6 @@
 
             <p>{{ site.description | default: site.github.project_tagline }}</p>
 
-            <!-- Flags Images -->
             <p style="text-align: center; font-weight: bold;">Travel</p>
             <div style="display: flex; justify-content: center; gap: 10px; align-items: center; flex-wrap: wrap;">
                 <img src="https://aissamdjahnine.github.io/flags/sweden.png" alt="Sweden" style="width: 1.5em; height: 1.5em;">
@@ -43,7 +49,6 @@
             <p style="text-align: center; font-weight: bold;"></p>
             <p style="text-align: center; font-weight: bold;">Social feeds</p>
             <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/aissam_dhn/" data-instgrm-version="12">
-                <!-- Instagram embed content here -->
             </blockquote>
             <script src="https://www.instagram.com/embed.js"></script>
             <script type="text/javascript" src="https://www.embedista.com/j/instagramfeed.js"></script>
@@ -55,7 +60,6 @@
             {% if site.github.is_project_page %}
             <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
             {% endif %}
-            <!-- Footer content here -->
         </footer>
     </div>
     <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>

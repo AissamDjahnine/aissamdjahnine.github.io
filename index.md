@@ -4,7 +4,6 @@
 
 ### Publications :
 
-
 [*Self-Supervised learning based Pathology Detection and Localization in 3D Chest Scans*]()<br> 
 **Aissam Djahnine**, Emilien Jupin-delevaux, Olivier Nempont, Fabien Craighero, Salim Aymeric Si-Mohamed, Vincent Cottin, Philippe Douek, Alexandre Popoff, Loïc Boussel<br>
 *The International Journal of Medical Physics Research and Practice (Medical Physics)*[*In revision*]()<br>
