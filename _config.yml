@@ -1,9 +1,9 @@
 nav:
   - title: "Home"
     url: "/"
-  - title: "Publications V4"
+  - title: "Publications"
     url: "/publications/"
-  - title: "Travel V4"
+  - title: "Travel"
     url: "/travel/"
 
 title: Djahnine Aissam # your name (or website title) here
