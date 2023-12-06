@@ -3,6 +3,10 @@ layout: default
 title: Projects
 permalink: /projects/
 ---
+<br>
+<br>
+<br>
+<br>
 
 # Projects
 

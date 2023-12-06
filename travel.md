@@ -3,6 +3,10 @@ layout: default
 title: Travel
 permalink: /travel/
 ---
+<br>
+<br>
+<br>
+<br>
 
 # Travel Adventures
 

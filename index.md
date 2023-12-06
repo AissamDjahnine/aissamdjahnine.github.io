@@ -2,8 +2,6 @@
 <br>
 <br>
 <br>
-<br>
-<br>
 
 ## Researcher Phd Candidate @ Philips AI Research Hub France In collaboration with CREATIS Lab and HCL Lyon
 
