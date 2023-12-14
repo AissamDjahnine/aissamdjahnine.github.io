@@ -10,15 +10,15 @@
 ### Publications :
 
 [*Self-Supervised learning based Pathology Detection and Localization in 3D Chest Scans*]()<br> 
-**Aissam Djahnine**, Emilien Jupin-delevaux, Olivier Nempont, Fabien Craighero, Salim Aymeric Si-Mohamed, Vincent Cottin, Philippe Douek, Alexandre Popoff, Loïc Boussel<br>
+**A. Djahnine**, E. Jupin-delevaux, O. Nempont, F. Craighero, S. A. Si-Mohamed, V. Cottin, P. Douek, A. Popoff, L. Boussel<br>
 *The International Journal of Medical Physics Research and Practice (Medical Physics)*[*In revision*]()<br>
 
 [*Detection and severity quantification of pulmonary embolism with 3D CT data using an automated deep learning-based artificial solution*](https://authors.elsevier.com/a/1hvEm7ssZcFzxG)<br>
-**Aissam Djahnine**, Carole Lazarus, Mathieu Lederlin, ..., Nathalie Lassau, Loic Boussel<br>
+**A. Djahnine**, C. Lazarus, M. Lederlin, S. Mulé, R. Wiemker, S. Si-Mohamed, E. Jupin-Delevaux, O. Nempont, Y. Skandarani, M. De Craene, S. Goubalan, C. Raynaud, Y. Belkouchi, A. Ben Afia, C. Fabre, G. Ferretti, C. De Margerie, P. Berge, R. Liberge, N. Elbaz, M. Blain, P. Brillet, G. Chassagnon, F. Cadour, C. Caramella, M. El Hajjam, S. Boussouar, J. Hadchiti, X. Fablet, A. Khalil, H. Talbot, A. Luciani, N. Lassau and L. Boussel<br>
 *Diagnostic and Interventional Imaging Journal (DII)*<br>
 
 [*BERT-based natural language processing analysis of French CT reports: Application to the measurement of the positivity rate for pulmonary embolism*](https://www.sciencedirect.com/science/article/pii/S2772652523000066)<br> 
-Émilien Jupin-Delevaux, **Aissam Djahnine**, François Talbot, Antoine Richard, Sylvain Gouttard, Adeline Mansuy, Philippe Douek, Salim Si-Mohamed, Loïc Boussel<br>
+E. Jupin-Delevaux, **A. Djahnine**, F. Talbot, A. Richard, S. Gouttard, A. Mansuy, P. Douek, S. A. Si-Mohamed, L. Boussel<br>
 *Research in Diagnostic and Interventional Imaging Journal (ReDII)*<br>
 
 <!---
@@ -44,8 +44,8 @@ Paris, France<br>
 **16 th IEEE International Conference on Signal Processing (ICSP)**<br>
 21 - 24 October 2022<br>
 Beijing, China<br>
-[*Title : Tailored 3D CT contrastive pretraining to improve pulmonary pathology classification*](https://www.researchgate.net/publication/365967135_Tailored_3D_CT_contrastive_pretraining_to_improve_pulmonary_pathology_classification)<br>
-**Djahnine Aissam**, Popoff Alexandre, Jupin-Delevaux Emilien, Cottin Vincent, Nempont Olivier, Boussel Loic<br>
+[*Tailored 3D CT contrastive pretraining to improve pulmonary pathology classification*](https://www.researchgate.net/publication/365967135_Tailored_3D_CT_contrastive_pretraining_to_improve_pulmonary_pathology_classification)<br>
+**A. Djahnine**, A. Popoff, E. Jupin-Delevaux, V. Cottin, O. Nempont, L. Boussel<br>
 
 **Oxford Machine Learning Summer School (OxML 2023)(ML x Health Track, In Person)**
 [*Certificate of Participation*](https://drive.google.com/file/d/1Uozg6swQc0m2EvBPusXh2hW82zTxeIlz/view)<br>
@@ -99,7 +99,6 @@ Oxford, United Kingdom <br>
 * Here, we implement an approach to histopathological image generation that overcomes the challenge of dataset size (small datasets) in medical field by utilizing a GAN framework (Generative adversarial network). The main objective of this research project is :
 * Generate synthetic histopathological images that model the distribution of the input images for data augmentation. Use both of the synthetic and real images for training in different tasks (detection/segmentation/tracking).<br>
 <img src="images/gans_ex.png?raw=true"/>
-
 
 
 ### Online Courses
