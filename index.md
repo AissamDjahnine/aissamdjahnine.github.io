@@ -21,17 +21,9 @@
 E. Jupin-Delevaux, **A. Djahnine**, F. Talbot, A. Richard, S. Gouttard, A. Mansuy, P. Douek, S. A. Si-Mohamed, L. Boussel<br>
 *Research in Diagnostic and Interventional Imaging Journal (ReDII)*<br>
 
-<!---
-**<br>
-[**Automatization and development of the TAVI CAPRI risk score with imaging biomarkers**]()<br> 
+[*Automatization and development of the TAVI CAPRI risk score with imaging biomarkers*]()<br> 
 P.-J. Lartaud, B. Harbaoui, **A. Djahnine**, O. Nempont, J.-M. Rouet, Anna Vlachomitrou, B. Riche, M. Rabilloud, S. Si-Mohamed P. Douek, F. Derimay, G. Rioufol, P. Lantelme, L. Boussel<br>
--->
-
-<!---
-**<br>
-[**Automatization and development of the TAVI CAPRI risk score with imaging biomarkers**]()<br> 
-P.-J. Lartaud, B. Harbaoui1, **A. Djahnine**, O. Nempont, J.-M. Rouet, Anna Vlachomitrou, B. Riche, M. Rabilloud, S. Si-Mohamed P. Douek, F. Derimay, G. Rioufol, P. Lantelme, L. Boussel<br>
--->
+*Radiology: Artificial Intelligence*[*In revision*]()<br>
 
 ### Conferences & Summer Schools :
 <!---
