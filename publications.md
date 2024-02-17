@@ -24,4 +24,4 @@ E. Jupin-Delevaux, **A. Djahnine**, F. Talbot, A. Richard, S. Gouttard, A. Mansu
 
 [*Automatization and development of the TAVI CAPRI risk score with imaging biomarkers*]()<br> 
 P.-J. Lartaud, B. Harbaoui, **A. Djahnine**, O. Nempont, J.-M. Rouet, Anna Vlachomitrou, B. Riche, M. Rabilloud, S. Si-Mohamed P. Douek, F. Derimay, G. Rioufol, P. Lantelme, L. Boussel<br>
-*Radiology: Artificial Intelligence*<br>
+*Radiology: Artificial Intelligence*[*In revision*]()<br>
