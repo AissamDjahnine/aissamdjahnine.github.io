@@ -36,7 +36,7 @@ Paris, France<br>
 **16 th IEEE International Conference on Signal Processing (ICSP)**<br>
 21 - 24 October 2022<br>
 Beijing, China<br>
-[*Tailored 3D CT contrastive pretraining to improve pulmonary pathology classification*](https://www.researchgate.net/publication/365967135_Tailored_3D_CT_contrastive_pretraining_to_improve_pulmonary_pathology_classification)<br>
+[*Tailored 3D CT contrastive pretraining to improve pulmonary pathology classification*](10.1109/ICSP56322.2022.9965218)<br>
 **A. Djahnine**, A. Popoff, E. Jupin-Delevaux, V. Cottin, O. Nempont, L. Boussel<br>
 
 **Oxford Machine Learning Summer School (OxML 2023)(ML x Health Track, In Person)**
