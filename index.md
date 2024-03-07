@@ -13,11 +13,11 @@
 **A. Djahnine**, E. Jupin-delevaux, O. Nempont, F. Craighero, S. A. Si-Mohamed, V. Cottin, P. Douek, A. Popoff, L. Boussel<br>
 *The International Journal of Medical Physics Research and Practice (Medical Physics)*[*In revision*]()<br>
 
-[*Detection and severity quantification of pulmonary embolism with 3D CT data using an automated deep learning-based artificial solution*](https://authors.elsevier.com/a/1hvEm7ssZcFzxG)<br>
+[*Detection and severity quantification of pulmonary embolism with 3D CT data using an automated deep learning-based artificial solution*](https://doi.org/10.1016/j.diii.2023.09.006)<br>
 **A. Djahnine**, C. Lazarus, M. Lederlin, S. Mulé, R. Wiemker, S. Si-Mohamed, E. Jupin-Delevaux, O. Nempont, Y. Skandarani, M. De Craene, S. Goubalan, C. Raynaud, Y. Belkouchi, A. Ben Afia, C. Fabre, G. Ferretti, C. De Margerie, P. Berge, R. Liberge, N. Elbaz, M. Blain, P. Brillet, G. Chassagnon, F. Cadour, C. Caramella, M. El Hajjam, S. Boussouar, J. Hadchiti, X. Fablet, A. Khalil, H. Talbot, A. Luciani, N. Lassau and L. Boussel<br>
 *Diagnostic and Interventional Imaging Journal (DII)*<br>
 
-[*BERT-based natural language processing analysis of French CT reports: Application to the measurement of the positivity rate for pulmonary embolism*](https://www.sciencedirect.com/science/article/pii/S2772652523000066)<br> 
+[*BERT-based natural language processing analysis of French CT reports: Application to the measurement of the positivity rate for pulmonary embolism*](https://doi.org/10.1016/j.redii.2023.100027)<br> 
 E. Jupin-Delevaux, **A. Djahnine**, F. Talbot, A. Richard, S. Gouttard, A. Mansuy, P. Douek, S. A. Si-Mohamed, L. Boussel<br>
 *Research in Diagnostic and Interventional Imaging Journal (ReDII)*<br>
 
@@ -36,7 +36,7 @@ Paris, France<br>
 **16 th IEEE International Conference on Signal Processing (ICSP)**<br>
 21 - 24 October 2022<br>
 Beijing, China<br>
-[*Tailored 3D CT contrastive pretraining to improve pulmonary pathology classification*](10.1109/ICSP56322.2022.9965218)<br>
+[*Tailored 3D CT contrastive pretraining to improve pulmonary pathology classification*](https://ieeexplore.ieee.org/document/9965218)<br>
 **A. Djahnine**, A. Popoff, E. Jupin-Delevaux, V. Cottin, O. Nempont, L. Boussel<br>
 
 **Oxford Machine Learning Summer School (OxML 2023)(ML x Health Track, In Person)**
