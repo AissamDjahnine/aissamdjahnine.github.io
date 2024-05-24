@@ -26,6 +26,7 @@ P.-J. Lartaud, B. Harbaoui, **A. Djahnine**, O. Nempont, J.-M. Rouet, Anna Vlach
 *Radiology: Artificial Intelligence*[*In revision*]()<br>
 
 ### Conferences & Summer Schools :
+
 <!---
 **7 th Medical Imaging with Deep Learning (MIDL)**<br>
 3 - 5 July 2024<br>
