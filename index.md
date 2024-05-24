@@ -9,7 +9,7 @@
 
 ### Publications :
 
-[*Self-Supervised learning based Pathology Detection and Localization in 3D Chest Scans*]()<br> 
+[*Weakly-Supervised learning based Pathology Detection and Localization in 3D Chest Scans*]()<br> 
 **A. Djahnine**, E. Jupin-delevaux, O. Nempont, F. Craighero, S. A. Si-Mohamed, V. Cottin, P. Douek, A. Popoff, L. Boussel<br>
 *The International Journal of Medical Physics Research and Practice (Medical Physics)*[*In revision*]()<br>
 
@@ -25,15 +25,13 @@ E. Jupin-Delevaux, **A. Djahnine**, F. Talbot, A. Richard, S. Gouttard, A. Mansu
 P.-J. Lartaud, B. Harbaoui, **A. Djahnine**, O. Nempont, J.-M. Rouet, Anna Vlachomitrou, B. Riche, M. Rabilloud, S. Si-Mohamed P. Douek, F. Derimay, G. Rioufol, P. Lantelme, L. Boussel<br>
 *Radiology: Artificial Intelligence*[*In revision*]()<br>
 
+[*Title : Leveraging 3D Normalizing Flows for Unsupervised Detection of Pathological Pulmonary CT Scans*](CT-3DFlow : Leveraging 3D Normalizing Flows for Unsupervised Detection of Pathological Pulmonary CT scans)<br>
+**Djahnine Aissam**, Popoff Alexandre, Jupin-Delevaux Emilien, Cottin Vincent, Nempont Olivier, Boussel Loic<br>
+*Arxiv*<br>
+
+
 ### Conferences & Summer Schools :
 
-<!---
-**7 th Medical Imaging with Deep Learning (MIDL)**<br>
-3 - 5 July 2024<br>
-Paris, France<br>
-[*Title : Leveraging 3D Normalizing Flows for Unsupervised Detection of Pathological Pulmonary CT Scans*](https://www.researchgate.net/publication/365967135_Tailored_3D_CT_contrastive_pretraining_to_improve_pulmonary_pathology_classification)<br>
-**Djahnine Aissam**, Popoff Alexandre, Jupin-Delevaux Emilien, Cottin Vincent, Nempont Olivier, Boussel Loic<br>
--->
 **16 th IEEE International Conference on Signal Processing (ICSP)**<br>
 21 - 24 October 2022<br>
 Beijing, China<br>
