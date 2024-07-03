@@ -11,7 +11,7 @@
 
 [*Weakly-Supervised learning based Pathology Detection and Localization in 3D Chest Scans*]()<br> 
 **A. Djahnine**, E. Jupin-delevaux, O. Nempont, F. Craighero, S. A. Si-Mohamed, V. Cottin, P. Douek, A. Popoff, L. Boussel<br>
-*The International Journal of Medical Physics Research and Practice (Medical Physics)*[*In revision*]()<br>
+*The International Journal of Medical Physics Research and Practice (Medical Physics)*<br>
 
 [*Detection and severity quantification of pulmonary embolism with 3D CT data using an automated deep learning-based artificial solution*](https://doi.org/10.1016/j.diii.2023.09.006)<br>
 **A. Djahnine**, C. Lazarus, M. Lederlin, S. Mulé, R. Wiemker, S. Si-Mohamed, E. Jupin-Delevaux, O. Nempont, Y. Skandarani, M. De Craene, S. Goubalan, C. Raynaud, Y. Belkouchi, A. Ben Afia, C. Fabre, G. Ferretti, C. De Margerie, P. Berge, R. Liberge, N. Elbaz, M. Blain, P. Brillet, G. Chassagnon, F. Cadour, C. Caramella, M. El Hajjam, S. Boussouar, J. Hadchiti, X. Fablet, A. Khalil, H. Talbot, A. Luciani, N. Lassau and L. Boussel<br>
@@ -28,7 +28,6 @@ P.-J. Lartaud, B. Harbaoui, **A. Djahnine**, O. Nempont, J.-M. Rouet, Anna Vlach
 [*Leveraging 3D Normalizing Flows for Unsupervised Detection of Pathological Pulmonary CT Scans*](https://arxiv.org/abs/2403.18514)<br>
 **Djahnine Aissam**, Popoff Alexandre, Jupin-Delevaux Emilien, Cottin Vincent, Nempont Olivier, Boussel Loic<br>
 *Arxiv*<br>
-
 
 ### Conferences & Summer Schools :
 
@@ -63,7 +62,6 @@ Oxford, United Kingdom <br>
 
 **Reviewer : 20th IEEE International Symposium on Biomedical Imaging, ISBI 2023**<br>
 
----
 #### Computer Vision and Machine Learning Msc Graduate at Sorbonne Université (2018-2020)
 ---
 ### Research Projects
