@@ -23,7 +23,8 @@ E. Jupin-Delevaux, **A. Djahnine**, F. Talbot, A. Richard, S. Gouttard, A. Mansu
 
 [*Automatization and development of the TAVI CAPRI risk score with imaging biomarkers*]()<br> 
 P.-J. Lartaud, B. Harbaoui, **A. Djahnine**, O. Nempont, J.-M. Rouet, Anna Vlachomitrou, B. Riche, M. Rabilloud, S. Si-Mohamed P. Douek, F. Derimay, G. Rioufol, P. Lantelme, L. Boussel<br>
-*Radiology: Artificial Intelligence*[*In revision*]()<br>
+*Radiology Advances : Oxford Academic*[*In revision*]()<br>
+
 
 [*Leveraging 3D Normalizing Flows for Unsupervised Detection of Pathological Pulmonary CT Scans*](https://arxiv.org/abs/2403.18514)<br>
 **Djahnine Aissam**, Popoff Alexandre, Jupin-Delevaux Emilien, Cottin Vincent, Nempont Olivier, Boussel Loic<br>
