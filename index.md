@@ -7,6 +7,9 @@
 
 <img src="images/PHD2.png?raw=true"/> 
 
+Supervisors : [*Pr. Loic Boussel*](https://www.spectralphotoncountingct.com/fr/team/members/2/show), [*Dr. Nicolas Villain*](https://www.linkedin.com/in/nicolas-villain-9422122/)<br><br>
+
+
 ### Publications :
 
 [*Weakly-Supervised learning based Pathology Detection and Localization in 3D Chest Scans*]()<br> 
