@@ -41,6 +41,8 @@ P.-J. Lartaud, B. Harbaoui, **A. Djahnine**, O. Nempont, J.-M. Rouet, Anna Vlach
 **Djahnine Aissam**, Popoff Alexandre, Jupin-Delevaux Emilien, Cottin Vincent, Nempont Olivier, Boussel Loic<br>
 *Arxiv*<br>
 
+<img src="images/GLOW_MIDL_recap.png?raw=true"/><br>
+
 ### Conferences & Summer Schools :
 
 **16 th IEEE International Conference on Signal Processing (ICSP)**<br>
