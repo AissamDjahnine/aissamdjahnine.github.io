@@ -16,6 +16,8 @@ Supervisors : [*Pr. Loic Boussel*](https://www.spectralphotoncountingct.com/fr/t
 **A. Djahnine**, E. Jupin-delevaux, O. Nempont, F. Craighero, S. A. Si-Mohamed, V. Cottin, P. Douek, A. Popoff, L. Boussel<br>
 *The International Journal of Medical Physics Research and Practice (Medical Physics)*<br>
 
+<img src="images/SIMCLR_recap.png?raw=true"/><br>
+
 [*Detection and severity quantification of pulmonary embolism with 3D CT data using an automated deep learning-based artificial solution*](https://doi.org/10.1016/j.diii.2023.09.006)<br>
 **A. Djahnine**, C. Lazarus, M. Lederlin, S. Mulé, R. Wiemker, S. Si-Mohamed, E. Jupin-Delevaux, O. Nempont, Y. Skandarani, M. De Craene, S. Goubalan, C. Raynaud, Y. Belkouchi, A. Ben Afia, C. Fabre, G. Ferretti, C. De Margerie, P. Berge, R. Liberge, N. Elbaz, M. Blain, P. Brillet, G. Chassagnon, F. Cadour, C. Caramella, M. El Hajjam, S. Boussouar, J. Hadchiti, X. Fablet, A. Khalil, H. Talbot, A. Luciani, N. Lassau and L. Boussel<br>
 *Diagnostic and Interventional Imaging Journal (DII)*<br>
