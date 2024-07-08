@@ -4,16 +4,20 @@
 <br>
 
 ## Researcher Phd Candidate @ Philips AI Research Hub France In collaboration with CREATIS Lab and HCL Lyon
-### Computer Vision and Machine Learning Msc Graduate at Sorbonne Université (2018-2020)
-### Electrical Engineering Bachelor at Sorbonne Université (2015-2018)
-
 
 <img src="images/PHD2.png?raw=true"/> 
 
 Supervisors : [*Pr. Loic Boussel*](https://www.spectralphotoncountingct.com/fr/team/members/2/show), [*Dr. Nicolas Villain*](https://www.linkedin.com/in/nicolas-villain-9422122/)<br><br>
 
+### Computer Vision and Machine Learning Msc Graduate at Sorbonne Université (2018-2020)
+### Electrical Engineering Bachelor at Sorbonne Université (2017-2018)
+### Engineering Preparatory Classes at Ecole Nationale Polytechnique d'Oran (ENPO) (2015-2017)
 
-### Publications :
+<br>
+<br>
+<br>
+
+## Publications :
 
 [*Weakly-Supervised learning based Pathology Detection and Localization in 3D Chest Scans*]()<br> 
 **A. Djahnine**, E. Jupin-delevaux, O. Nempont, F. Craighero, S. A. Si-Mohamed, V. Cottin, P. Douek, A. Popoff, L. Boussel<br>
@@ -59,8 +63,12 @@ Beijing, China<br>
 13 - 16 July 2023 <br>
 Oxford, United Kingdom <br>
 
+<br>
+<br>
+<br>
 
-### Honors & awards
+
+## Honors & awards
 
 [*JFR 2023 Data Challenge WINNER : Pancreatic masses detection in 3D CT scans*](https://www.linkedin.com/feed/update/urn:li:activity:7119672599088914432/)
 
@@ -74,12 +82,21 @@ Oxford, United Kingdom <br>
 * I was a member of the Philips team in collaboration with Hospices Civils de Lyon that won the JFR (les Journées Francophones de Radiologie) data challenge. The solution used Deep Learning for Computer Vision to detect pulmonary embolism in CT scans. ( [*Challenge Paper*](https://www.sciencedirect.com/science/article/abs/pii/S2211568423001183), [*Our Solution (Journal Paper)*](https://www.sciencedirect.com/science/article/abs/pii/S2211568423001808))
 <img src="images/JFR_port.png?raw=true"/> 
 
+<br>
+<br>
+<br>
 
-### Academic Services
+## Academic Services
 
 **Reviewer : 20th IEEE International Symposium on Biomedical Imaging, ISBI 2023**<br>
----
-### Research Projects
+
+**Academic Tutor : Assisted undergraduate students with academic projects and lab sessions, focusing on mathematics, linear algebra problem-solving, analog and digital electronics applications, as well as programming in C, MATLAB, and VHDL at Sorbonne University (2019)**<br>
+
+<br>
+<br>
+<br>
+
+## Research Projects
 
 #### PRE-PHD SHORT CONTRACT WITH HOSPICES CIVILS DE LYON  
 **Segmentation and measurement of skeletal muscle areas on CT scans**
@@ -112,8 +129,12 @@ Oxford, United Kingdom <br>
 * Generate synthetic histopathological images that model the distribution of the input images for data augmentation. Use both of the synthetic and real images for training in different tasks (detection/segmentation/tracking).<br>
 <img src="images/gans_ex.png?raw=true"/>
 
+<br>
+<br>
+<br>
 
-### Online Courses
+## Online Courses
+
 * **Coursera** : Deep learning Specialization
 * **Udemy** : 
    * Python for Data Science and Machine Learning Bootcamp Certificate.
