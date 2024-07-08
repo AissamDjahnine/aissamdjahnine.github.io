@@ -10,6 +10,12 @@ permalink: /projects/
 
 # Projects
 
+[**Segmentation and measurement of skeletal muscle areas on CT scans**]()
+
+* This project aims to segment and measure skeletal muscle areas on CT scans, specifically at the L3, L2, and L1 vertebrae levels, to improve sarcopenia estimation using deep learning-based methods. By leveraging advanced data augmentation techniques, such as applying filters, rotations, and adding artificial elements, the dataset's diversity and robustness were significantly improved. Post-processing methods were developed to remove artifacts like ribs, ensuring cleaner and more accurate segmentations. The approach showed promising results in accurately segmenting muscle areas, leading to more reliable sarcopenia assessments and potential further improvements.
+
+<img src="/images/SARCO_PROJECT.png?raw=true" />
+
 [**Color Transfer between Images in a correlated colour space (RGB)**](https://github.com/AissamDjahnine/ColorTransfer)
 * Color transfer between images is the process of altering the color of a target image based on a source image. The goal is to transfer the look and the feel of this last (i.e : color characteristics) to the target image in order to increase its visual appeal and improve its appearance (ex: converting a daylight image into a night scene, a cold color image into a warm one).<br>
 * In this project, i implemented the Color Transfer in Correlated Color Space algorithm specifically in RGB color space (based on the work of Xuezhong Xiao And Lizhuang).<br>
