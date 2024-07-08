@@ -19,10 +19,12 @@ permalink: /projects/
 [**Color Transfer between Images in a correlated colour space (RGB)**](https://github.com/AissamDjahnine/ColorTransfer)
 * Color transfer between images is the process of altering the color of a target image based on a source image. The goal is to transfer the look and the feel of this last (i.e : color characteristics) to the target image in order to increase its visual appeal and improve its appearance (ex: converting a daylight image into a night scene, a cold color image into a warm one).<br>
 * In this project, i implemented the Color Transfer in Correlated Color Space algorithm specifically in RGB color space (based on the work of Xuezhong Xiao And Lizhuang).<br>
+
 <img src="/images/colortransfer.jpg?raw=true" />
 
 [**Search Algorithms Implementation ( BFS, DFS, DIJKSTR ,A-Star )**](https://github.com/AissamDjahnine/Suppression-of-Acoustic-Noise-in-Speech-Using-Spectral-Subtraction-)
 * This master project aims to provide newcomers in the field of AI with an introduction to the fundamental technique of problem solving: searching. The project covers various search algorithms, including brute-force strategies such as Breadth-First Search (BFS) and Depth-First Search (DFS). It also delves into informed search strategies, specifically focusing on the popular A* algorithm, which is implemented using two heuristic methods: the Manhattan Distance Heuristic and the Euclidean Distance Heuristic. By exploring these algorithms and heuristics, participants will gain a solid foundation in AI problem-solving techniques.<br>
+
 <img src="/images/searchalgorithms.jpg?raw=true"/>
 
 [**Suppression of Acoustic Noise in Speech Using Spectral Subtraction**](https://github.com/AissamDjahnine/Suppression-of-Acoustic-Noise-in-Speech-Using-Spectral-Subtraction-)

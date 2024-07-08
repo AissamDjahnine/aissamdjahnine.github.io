@@ -79,6 +79,14 @@ Oxford, United Kingdom <br>
 #### Computer Vision and Machine Learning Msc Graduate at Sorbonne Université (2018-2020)
 ---
 ### Research Projects
+
+#### PRE-PHD SHORT CONTRACT WITH HOSPICES CIVILS DE LYON  
+**Segmentation and measurement of skeletal muscle areas on CT scans**
+
+* This project aims to segment and measure skeletal muscle areas on CT scans, specifically at the L3, L2, and L1 vertebrae levels, to improve sarcopenia estimation using deep learning-based methods. By leveraging advanced data augmentation techniques, such as applying filters, rotations, and adding artificial elements, the dataset's diversity and robustness were significantly improved. Post-processing methods were developed to remove artifacts like ribs, ensuring cleaner and more accurate segmentations. The approach showed promising results in accurately segmenting muscle areas, leading to more reliable sarcopenia assessments and potential further improvements.
+
+<img src="/images/SARCO_PROJECT.png?raw=true" />
+
 #### Computer Vision and Deep Learning Intern at GE Healthcare
 **Investigation of automatic search methods for neural network hyperparameters (Neural Architecture Search). Application to Mammographic Data within WHARe team (Women's Health Applied Research)**
 <img src="images/GE.jpg?raw=true"/> 
