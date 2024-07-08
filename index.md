@@ -4,6 +4,9 @@
 <br>
 
 ## Researcher Phd Candidate @ Philips AI Research Hub France In collaboration with CREATIS Lab and HCL Lyon
+### Computer Vision and Machine Learning Msc Graduate at Sorbonne Université (2018-2020)
+### Electrical Engineering Bachelor at Sorbonne Université (2015-2018)
+
 
 <img src="images/PHD2.png?raw=true"/> 
 
@@ -75,8 +78,6 @@ Oxford, United Kingdom <br>
 ### Academic Services
 
 **Reviewer : 20th IEEE International Symposium on Biomedical Imaging, ISBI 2023**<br>
-
-#### Computer Vision and Machine Learning Msc Graduate at Sorbonne Université (2018-2020)
 ---
 ### Research Projects
 
