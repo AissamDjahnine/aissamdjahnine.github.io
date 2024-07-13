@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Honors & Awards
-permalink: /honors/
+title: Awards
+permalink: /awards/
 ---
 <br>
 <br>
