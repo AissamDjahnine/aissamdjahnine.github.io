@@ -28,7 +28,7 @@
 
         /* Sidebar styling */
         .sidebar {
-            flex: 0 0 250px; /* Adjusted width for the left column */
+            flex: 0 0 220px; /* Adjusted width for the left column */
             padding: 20px;
             box-sizing: border-box;
             background-color: #f4f4f4; /* Optional: to differentiate the left section */
@@ -42,19 +42,19 @@
             padding: 20px;
             box-sizing: border-box;
             background-color: #ffffff; /* Optional: to differentiate the right section */
-            margin-left: -250px; /* Align the content with the navigation */
+            margin-left: 0; /* Removed the negative margin */
         }
 
         /* Navigation styling */
         .nav-container {
-            margin-left: 250px; /* Push the navigation to start where the main content starts */
+            margin-left: 220px; /* Align with the sidebar */
             margin-bottom: 20px; /* Space between the navigation and the main content */
         }
 
         .nav-container ul {
             list-style: none;
             display: flex;
-            gap: 20px; /* Adjust the spacing between links */
+            gap: 15px; /* Adjust the spacing between links */
             padding: 0;
             margin: 0;
         }
