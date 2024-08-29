@@ -28,13 +28,11 @@
 
         /* Sidebar styling */
         .sidebar {
-            flex: 0 0 300px; /* Fixed width for the left column */
+            flex: 0 0 250px; /* Adjusted width for the left column */
             padding: 20px;
             box-sizing: border-box;
             background-color: #f4f4f4; /* Optional: to differentiate the left section */
             border-right: 1px solid #ddd; /* Optional: to create a clear division */
-            position: relative;
-            z-index: 1; /* Ensure it's on top */
         }
 
         /* Main content styling */
@@ -43,7 +41,6 @@
             padding: 20px;
             box-sizing: border-box;
             background-color: #ffffff; /* Optional: to differentiate the right section */
-            margin-left: 20px; /* Ensure there's space between sections */
         }
 
         /* Navigation styling */
@@ -69,6 +66,22 @@
             color: #333;
         }
 
+        /* Instagram embed should stay within the sidebar */
+        .instagram-media {
+            width: 100%;
+            max-width: 100%;
+            margin-top: 20px;
+            display: block;
+        }
+
+        /* Ensure the sidebar content is not too wide */
+        .sidebar img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
     </style>
 
     <link rel="icon" href="images/fcon.png" type="image/x-icon">
@@ -81,7 +94,7 @@
         <aside class="sidebar">
             <h1>{{ site.title | default: site.github.repository_name }}</h1>
             {% if site.logo %}
-            <img src="{{ site.logo | relative_url }}" alt="Logo" style="max-width: 100%; height: auto;" />
+            <img src="{{ site.logo | relative_url }}" alt="Logo" />
             {% endif %}
 
             <p>{{ site.description | default: site.github.project_tagline }}</p>
