@@ -11,76 +11,76 @@
 
     <style>
     body {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        background-color: #ffffff;
-    }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ffffff;
+}
 
-    .wrapper {
-        display: flex;
-        min-height: 100vh;
-        max-width: 1200px; /* Set a max width for the entire layout */
-        width: 100%;
-        margin: 0 auto; /* Center the wrapper */
-        box-sizing: border-box;
-    }
+.wrapper {
+    display: flex;
+    min-height: 100vh;
+    max-width: 1200px; /* Set a max width for the entire layout */
+    width: 100%;
+    margin: 0 auto; /* Center the wrapper */
+    box-sizing: border-box;
+}
 
-    /* Sidebar styling */
-    .sidebar {
-        flex: 0 0 200px; /* Adjusted width for the left column */
-        padding: 20px 10px; /* Reduced padding */
-        box-sizing: border-box;
-        background-color: #f4f4f4; /* Optional: to differentiate the left section */
-        border-right: 1px solid #ddd; /* Optional: to create a clear division */
-        position: relative;
-    }
+/* Sidebar styling */
+.sidebar {
+    flex: 0 0 200px; /* Adjusted width for the left column */
+    padding: 20px 10px; /* Reduced padding */
+    box-sizing: border-box;
+    background-color: #f4f4f4; /* Optional: to differentiate the left section */
+    border-right: 1px solid #ddd; /* Optional: to create a clear division */
+    position: relative;
+}
 
-    /* Main content styling */
-    .content {
-        flex: 1;
-        padding: 20px 10px; /* Reduced padding */
-        box-sizing: border-box;
-        background-color: #ffffff; /* Optional: to differentiate the right section */
-        margin-left: -10px; /* Move the content closer to the sidebar */
-    }
+/* Main content styling */
+.content {
+    flex: 1;
+    padding: 20px 0px; /* Removed horizontal padding */
+    box-sizing: border-box;
+    background-color: #ffffff; /* Optional: to differentiate the right section */
+    margin-left: -50px; /* Move the content closer to the sidebar */
+}
 
-    /* Navigation styling */
-    .nav-container {
-        margin-left: 200px; /* Align the navigation with the sidebar */
-        margin-bottom: 20px; /* Space between the navigation and the main content */
-    }
+/* Navigation styling */
+.nav-container {
+    margin-left: 200px; /* Align the navigation with the sidebar */
+    margin-bottom: 20px; /* Space between the navigation and the main content */
+}
 
-    .nav-container ul {
-        list-style: none;
-        display: flex;
-        gap: 15px; /* Adjust the spacing between links */
-        padding: 0;
-        margin: 0;
-    }
+.nav-container ul {
+    list-style: none;
+    display: flex;
+    gap: 15px; /* Adjust the spacing between links */
+    padding: 0;
+    margin: 0;
+}
 
-    .nav-container li {
-        margin: 0;
-        padding: 0;
-    }
+.nav-container li {
+    margin: 0;
+    padding: 0;
+}
 
-    .nav-container a {
-        text-decoration: none;
-        color: #333;
-    }
+.nav-container a {
+    text-decoration: none;
+    color: #333;
+}
 
-    /* Ensure the sidebar content is not too wide */
-    .sidebar img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-    }
+/* Ensure the sidebar content is not too wide */
+.sidebar img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
 
-    /* Align content with navigation */
-    .content {
-        margin-top: 0; /* Align the main content with the top of the sidebar */
-    }
+/* Align content with navigation */
+.content {
+    margin-top: 0; /* Align the main content with the top of the sidebar */
+}
 </style>
 
     <link rel="icon" href="images/fcon.png" type="image/x-icon">
