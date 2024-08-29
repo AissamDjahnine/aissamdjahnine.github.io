@@ -10,53 +10,51 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 
     <style>
-        #nav-container {
-            display: flex;
-            justify-content: space-between; /* Horizontally center the navigation */
-            align-items: center; /* Vertically center the navigation */
-            height: 80px; /* Adjust the height as needed */
-        }
-
-        #nav-container ul {
-            list-style: none;
-            display: flex;
-            gap: 20px; /* Adjust the spacing between links */
-        }
-
-        #nav-container li {
-            margin: 0;
-            padding: 0;
-        }
-
         /* Wrapper for the whole page */
         .wrapper {
             display: flex;
-            min-height: 100vh;
             max-width: 1200px; /* Set a max width for the entire layout */
-            width: 100%;
             margin: 0 auto; /* Center the wrapper */
             box-sizing: border-box;
         }
 
         /* Sidebar styling */
         .sidebar {
-            flex: 0 0 200px; /* Adjusted width for the left column */
-            padding: 20px 10px; /* Reduced padding */
+            flex: 0 0 200px; /* Fixed width for the sidebar */
+            padding: 20px 10px;
             box-sizing: border-box;
-            background-color: #f4f4f4; /* Optional: to differentiate the left section */
-            border-right: 1px solid #ddd; /* Optional: to create a clear division */
+            background-color: #f4f4f4;
+            border-right: 1px solid #ddd;
             position: relative;
-            overflow-y: auto; /* Allow the sidebar to scroll */
-            height: 100vh; /* Make sidebar height fill the viewport */
+            overflow-y: auto; /* Enable scrolling */
+            height: 100vh; /* Sidebar height fills the viewport */
         }
 
         /* Main content area */
         .content {
             flex: 1;
-            padding: 20px; /* Default padding */
+            padding: 20px;
             box-sizing: border-box;
-            background-color: #ffffff; /* Optional: to differentiate the right section */
-            margin-left: -200px; /* Align the content with the sidebar */
+            background-color: #ffffff;
+        }
+
+        /* Navigation styling */
+        #nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        #nav-container ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        #nav-container li {
+            margin: 0;
+            padding: 0;
         }
 
         /* Ensure the sidebar content is not too wide */
@@ -66,13 +64,12 @@
             display: block;
             margin: 0 auto;
         }
-
     </style>
 
     <link rel="icon" href="images/fcon.png" type="image/x-icon">
     <link rel="shortcut icon" href="images/fcon.png" type="image/x-icon">
-
 </head>
+
 <body>
     <div class="wrapper">
         <!-- Sidebar -->
