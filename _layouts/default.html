@@ -33,6 +33,7 @@
             box-sizing: border-box;
             background-color: #f4f4f4; /* Optional: to differentiate the left section */
             border-right: 1px solid #ddd; /* Optional: to create a clear division */
+            position: relative;
         }
 
         /* Main content styling */
@@ -41,10 +42,12 @@
             padding: 20px;
             box-sizing: border-box;
             background-color: #ffffff; /* Optional: to differentiate the right section */
+            margin-left: -250px; /* Align the content with the navigation */
         }
 
         /* Navigation styling */
         .nav-container {
+            margin-left: 250px; /* Push the navigation to start where the main content starts */
             margin-bottom: 20px; /* Space between the navigation and the main content */
         }
 
