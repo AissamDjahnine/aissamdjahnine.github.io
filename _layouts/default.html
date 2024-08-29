@@ -14,53 +14,59 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            display: flex;
-            justify-content: center;
             background-color: #ffffff;
         }
 
         .wrapper {
             display: flex;
             min-height: 100vh;
-            flex-direction: row;
             max-width: 1200px; /* Set a max width for the entire layout */
             width: 100%;
+            margin: 0 auto; /* Center the wrapper */
+            box-sizing: border-box;
         }
 
-        header {
+        /* Sidebar styling */
+        .sidebar {
             flex: 0 0 300px; /* Fixed width for the left column */
-            overflow-y: auto;
             padding: 20px;
             box-sizing: border-box;
             background-color: #f4f4f4; /* Optional: to differentiate the left section */
             border-right: 1px solid #ddd; /* Optional: to create a clear division */
+            position: relative;
+            z-index: 1; /* Ensure it's on top */
         }
 
-        section {
+        /* Main content styling */
+        .content {
             flex: 1;
             padding: 20px;
-            overflow-y: auto;
             box-sizing: border-box;
             background-color: #ffffff; /* Optional: to differentiate the right section */
             margin-left: 20px; /* Ensure there's space between sections */
         }
 
-        #nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px; /* Adjust padding instead of a fixed height */
+        /* Navigation styling */
+        .nav-container {
+            margin-bottom: 20px; /* Space between the navigation and the main content */
         }
 
-        #nav-container ul {
+        .nav-container ul {
             list-style: none;
             display: flex;
             gap: 20px; /* Adjust the spacing between links */
+            padding: 0;
+            margin: 0;
         }
 
-        #nav-container li {
+        .nav-container li {
             margin: 0;
             padding: 0;
+        }
+
+        .nav-container a {
+            text-decoration: none;
+            color: #333;
         }
 
     </style>
@@ -71,20 +77,9 @@
 </head>
 <body>
     <div class="wrapper">
-        <header>
-            <div id="nav-container">
-                <nav>
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/education/">Education</a></li>
-                        <li><a href="/publications/">Publications</a></li>
-                        <li><a href="/projects/">Projects</a></li>
-                        <li><a href="/awards/">Awards</a></li>
-                    </ul>
-                </nav>
-            </div>
-
-            <h1><a href="{{ '/' | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h1>{{ site.title | default: site.github.repository_name }}</h1>
             {% if site.logo %}
             <img src="{{ site.logo | relative_url }}" alt="Logo" style="max-width: 100%; height: auto;" />
             {% endif %}
@@ -123,16 +118,33 @@
             </blockquote>
             <script src="https://www.instagram.com/embed.js"></script>
             <script type="text/javascript" src="https://www.embedista.com/j/instagramfeed.js"></script>
-        </header>
-        <section>
-            {{ content }}
-        </section>
-        <footer>
-            {% if site.github.is_project_page %}
-            <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-            {% endif %}
-        </footer>
+        </aside>
+
+        <!-- Main content area -->
+        <div class="content">
+            <div class="nav-container">
+                <nav>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/education/">Education</a></li>
+                        <li><a href="/publications/">Publications</a></li>
+                        <li><a href="/projects/">Projects</a></li>
+                        <li><a href="/awards/">Awards</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <section>
+                {{ content }}
+            </section>
+        </div>
     </div>
+
+    <footer>
+        {% if site.github.is_project_page %}
+        <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+        {% endif %}
+    </footer>
+
     <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
     {% if site.google_analytics %}
     <script>
