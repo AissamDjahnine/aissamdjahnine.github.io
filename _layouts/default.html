@@ -28,6 +28,14 @@
             position: relative;
             overflow-y: auto; /* Enable scrolling */
             height: 100vh; /* Sidebar height fills the viewport */
+
+            /* Hide scrollbar for WebKit-based browsers (Chrome, Safari) */
+            ::-webkit-scrollbar {
+                display: none;
+            }
+        
+            /* Hide scrollbar for Firefox */
+            scrollbar-width: none;
         }
 
         /* Main content area */
