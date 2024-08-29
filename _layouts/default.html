@@ -10,78 +10,64 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 
     <style>
-    body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #ffffff;
-}
+        #nav-container {
+            display: flex;
+            justify-content: space-between; /* Horizontally center the navigation */
+            align-items: center; /* Vertically center the navigation */
+            height: 80px; /* Adjust the height as needed */
+        }
 
-.wrapper {
-    display: flex;
-    min-height: 100vh;
-    max-width: 1200px; /* Set a max width for the entire layout */
-    width: 100%;
-    margin: 0 auto; /* Center the wrapper */
-    box-sizing: border-box;
-}
+        #nav-container ul {
+            list-style: none;
+            display: flex;
+            gap: 20px; /* Adjust the spacing between links */
+        }
 
-/* Sidebar styling */
-.sidebar {
-    flex: 0 0 200px; /* Adjusted width for the left column */
-    padding: 20px 10px; /* Reduced padding */
-    box-sizing: border-box;
-    background-color: #f4f4f4; /* Optional: to differentiate the left section */
-    border-right: 1px solid #ddd; /* Optional: to create a clear division */
-    position: relative;
-}
+        #nav-container li {
+            margin: 0;
+            padding: 0;
+        }
 
-/* Main content styling */
-.content {
-    flex: 1;
-    padding: -100px -100px; /* Removed horizontal padding */
-    box-sizing: border-box;
-    background-color: #ffffff; /* Optional: to differentiate the right section */
-    margin-left: -100px; /* Move the content closer to the sidebar */
-}
+        /* Wrapper for the whole page */
+        .wrapper {
+            display: flex;
+            min-height: 100vh;
+            max-width: 1200px; /* Set a max width for the entire layout */
+            width: 100%;
+            margin: 0 auto; /* Center the wrapper */
+            box-sizing: border-box;
+        }
 
-/* Navigation styling */
-.nav-container {
-    margin-left: 200px; /* Align the navigation with the sidebar */
-    margin-bottom: 20px; /* Space between the navigation and the main content */
-}
+        /* Sidebar styling */
+        .sidebar {
+            flex: 0 0 200px; /* Adjusted width for the left column */
+            padding: 20px 10px; /* Reduced padding */
+            box-sizing: border-box;
+            background-color: #f4f4f4; /* Optional: to differentiate the left section */
+            border-right: 1px solid #ddd; /* Optional: to create a clear division */
+            position: relative;
+            overflow-y: auto; /* Allow the sidebar to scroll */
+            height: 100vh; /* Make sidebar height fill the viewport */
+        }
 
-.nav-container ul {
-    list-style: none;
-    display: flex;
-    gap: 15px; /* Adjust the spacing between links */
-    padding: 0;
-    margin: 0;
-}
+        /* Main content area */
+        .content {
+            flex: 1;
+            padding: 20px; /* Default padding */
+            box-sizing: border-box;
+            background-color: #ffffff; /* Optional: to differentiate the right section */
+            margin-left: -200px; /* Align the content with the sidebar */
+        }
 
-.nav-container li {
-    margin: 0;
-    padding: 0;
-}
+        /* Ensure the sidebar content is not too wide */
+        .sidebar img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
 
-.nav-container a {
-    text-decoration: none;
-    color: #333;
-}
-
-/* Ensure the sidebar content is not too wide */
-.sidebar img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-/* Align content with navigation */
-.content {
-    margin-top: 0; /* Align the main content with the top of the sidebar */
-}
-</style>
+    </style>
 
     <link rel="icon" href="images/fcon.png" type="image/x-icon">
     <link rel="shortcut icon" href="images/fcon.png" type="image/x-icon">
@@ -97,7 +83,7 @@
             {% endif %}
 
             <p>{{ site.description | default: site.github.project_tagline }}</p>
-            
+
             <p style="text-align: center; font-weight: bold;">Travel</p>
             <div style="display: flex; justify-content: center; gap: 10px; align-items: center; flex-wrap: wrap;">
                 <img src="https://aissamdjahnine.github.io/flags/sweden.png" alt="Sweden" style="width: 1.5em; height: 1.5em;">
@@ -134,28 +120,29 @@
 
         <!-- Main content area -->
         <div class="content">
-            <div class="nav-container">
-                <nav>
-                    <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/education/">Education</a></li>
-                        <li><a href="/publications/">Publications</a></li>
-                        <li><a href="/projects/">Projects</a></li>
-                        <li><a href="/awards/">Awards</a></li>
-                    </ul>
-                </nav>
-            </div>
+            <header>
+                <div id="nav-container">
+                    <nav>
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/education/">Education</a></li>
+                            <li><a href="/publications/">Publications</a></li>
+                            <li><a href="/projects/">Projects</a></li>
+                            <li><a href="/awards/">Awards</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
             <section>
                 {{ content }}
             </section>
+            <footer>
+                {% if site.github.is_project_page %}
+                <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+                {% endif %}
+            </footer>
         </div>
     </div>
-
-    <footer>
-        {% if site.github.is_project_page %}
-        <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-        {% endif %}
-    </footer>
 
     <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
     {% if site.google_analytics %}
