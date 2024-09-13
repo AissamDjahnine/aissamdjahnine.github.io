@@ -49,6 +49,9 @@
             display: flex;
             margin-top: 80px; /* Same as the nav bar height */
             height: calc(100vh - 80px); /* Full viewport height minus nav bar */
+            max-width: 1200px; /* Set a maximum width for the entire content */
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* Sidebar styling */
@@ -104,6 +107,12 @@
         .sidebar *:after {
             box-sizing: border-box;
             max-width: 100%;
+        }
+
+        /* Center the wrapper content */
+        body {
+            margin: 0;
+            padding: 0;
         }
     </style>
 
