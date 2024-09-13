@@ -58,6 +58,14 @@
             background-color: #f4f4f4;
             padding: 20px;
             box-sizing: border-box;
+
+            /* Hide scrollbar */
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* Internet Explorer 10+ */
+        }
+
+        .sidebar::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
         }
 
         /* Main content area */
@@ -66,6 +74,14 @@
             overflow-y: auto; /* Enable vertical scrolling */
             padding: 20px;
             box-sizing: border-box;
+
+            /* Hide scrollbar */
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* Internet Explorer 10+ */
+        }
+
+        .content::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
         }
 
         /* Ensure the sidebar content is not too wide */
