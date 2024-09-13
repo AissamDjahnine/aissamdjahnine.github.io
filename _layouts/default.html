@@ -55,7 +55,7 @@
             display: flex;
             margin-top: 80px; /* Height of the nav bar */
             height: calc(100vh - 80px);
-            max-width: 1200px; /* Keep overall width reasonable */
+            max-width: 1000px; /* Reduced overall width */
             margin-left: auto;
             margin-right: auto;
             width: 100%;
@@ -63,10 +63,10 @@
 
         /* Sidebar styling */
         .sidebar {
-            flex: 0 0 350px; /* Increased width for the sidebar */
+            flex: 0 0 280px; /* Reduced width for the sidebar */
             overflow-y: auto;
             background-color: #f4f4f4;
-            padding: 20px;
+            padding: 15px;
             box-sizing: border-box;
             overflow-x: hidden;
 
@@ -83,7 +83,7 @@
         .content {
             flex: 1;
             overflow-y: auto;
-            padding: 20px;
+            padding: 15px;
             box-sizing: border-box;
             overflow-x: hidden;
 
@@ -110,6 +110,20 @@
         .sidebar *::after {
             box-sizing: border-box;
             max-width: 100%;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .wrapper {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .sidebar,
+            .content {
+                flex: none;
+                width: 100%;
+            }
         }
     </style>
 
@@ -146,7 +160,7 @@
             <!-- Travel Section -->
             <p style="text-align: center; font-weight: bold;">Travel</p>
             <!-- Flag icons -->
-            <div style="display: flex; justify-content: center; gap: 10px; align-items: center; flex-wrap: wrap;">
+            <div style="display: flex; justify-content: center; gap: 8px; align-items: center; flex-wrap: wrap;">
                 <img src="https://aissamdjahnine.github.io/flags/sweden.png" alt="Sweden"
                     style="width: 1.5em; height: 1.5em;">
                 <img src="https://aissamdjahnine.github.io/flags/finland.png" alt="Finland"
@@ -160,7 +174,8 @@
                 <img src="https://aissamdjahnine.github.io/flags/denmark.png" alt="Denmark"
                     style="width: 1.5em; height: 1.5em;">
             </div>
-            <div style="display: flex; justify-content: center; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 10px;">
+            <div
+                style="display: flex; justify-content: center; gap: 8px; align-items: center; flex-wrap: wrap; margin-top: 10px;">
                 <img src="https://aissamdjahnine.github.io/flags/italy.png" alt="Italy"
                     style="width: 1.5em; height: 1.5em;">
                 <img src="https://aissamdjahnine.github.io/flags/switzerland.png" alt="Switzerland"
@@ -174,7 +189,8 @@
                 <img src="https://aissamdjahnine.github.io/flags/turkey.png" alt="Turkey"
                     style="width: 1.5em; height: 1.5em;">
             </div>
-            <div style="display: flex; justify-content: center; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 10px;">
+            <div
+                style="display: flex; justify-content: center; gap: 8px; align-items: center; flex-wrap: wrap; margin-top: 10px;">
                 <img src="https://aissamdjahnine.github.io/flags/thailand.png" alt="Thailand"
                     style="width: 1.5em; height: 1.5em;">
                 <img src="https://aissamdjahnine.github.io/flags/egypt.png" alt="Egypt"
@@ -209,7 +225,8 @@
             <!-- Footer -->
             <footer>
                 {% if site.github.is_project_page %}
-                <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+                <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>
+                </p>
                 {% endif %}
             </footer>
         </div>
