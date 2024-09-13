@@ -53,7 +53,7 @@
 
         /* Sidebar styling */
         .sidebar {
-            flex: 0 0 300px; /* Fixed width for the sidebar */
+            flex: 0 0 400px; /* Increased width for the sidebar */
             overflow-y: auto; /* Enable vertical scrolling if needed */
             background-color: #f4f4f4;
             padding: 20px;
@@ -62,6 +62,9 @@
             /* Hide scrollbar */
             scrollbar-width: none; /* Firefox */
             -ms-overflow-style: none; /* Internet Explorer 10+ */
+
+            /* Prevent horizontal scrolling */
+            overflow-x: hidden;
         }
 
         .sidebar::-webkit-scrollbar {
@@ -78,6 +81,9 @@
             /* Hide scrollbar */
             scrollbar-width: none; /* Firefox */
             -ms-overflow-style: none; /* Internet Explorer 10+ */
+
+            /* Prevent horizontal scrolling */
+            overflow-x: hidden;
         }
 
         .content::-webkit-scrollbar {
@@ -90,6 +96,14 @@
             height: auto;
             display: block;
             margin: 0 auto;
+        }
+
+        /* Prevent images and content from causing horizontal overflow */
+        .sidebar *,
+        .sidebar *:before,
+        .sidebar *:after {
+            box-sizing: border-box;
+            max-width: 100%;
         }
     </style>
 
@@ -126,6 +140,7 @@
             <!-- Travel Section -->
             <p style="text-align: center; font-weight: bold;">Travel</p>
             <div style="display: flex; justify-content: center; gap: 10px; align-items: center; flex-wrap: wrap;">
+                <!-- Your flag icons -->
                 <img src="https://aissamdjahnine.github.io/flags/sweden.png" alt="Sweden" style="width: 1.5em; height: 1.5em;">
                 <img src="https://aissamdjahnine.github.io/flags/finland.png" alt="Finland" style="width: 1.5em; height: 1.5em;">
                 <img src="https://aissamdjahnine.github.io/flags/united-kingdom.png" alt="United Kingdom" style="width: 1.5em; height: 1.5em;">
