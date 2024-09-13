@@ -44,14 +44,22 @@
             color: blue; /* Change to your preferred hover color */
         }
 
+        /* Reset body margin and padding */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
         /* Adjust the main content to not overlap with the fixed nav bar */
         .wrapper {
             display: flex;
             margin-top: 80px; /* Same as the nav bar height */
             height: calc(100vh - 80px); /* Full viewport height minus nav bar */
-            max-width: 1200px; /* Set a maximum width for the entire content */
+            max-width: 1400px; /* Increased max width to accommodate wider sidebar */
             margin-left: auto;
             margin-right: auto;
+            /* Center the wrapper */
+            width: 100%;
         }
 
         /* Sidebar styling */
@@ -107,12 +115,6 @@
         .sidebar *:after {
             box-sizing: border-box;
             max-width: 100%;
-        }
-
-        /* Center the wrapper content */
-        body {
-            margin: 0;
-            padding: 0;
         }
     </style>
 
