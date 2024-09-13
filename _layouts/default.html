@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {% seo %}
-    <link rel="stylesheet"
-        href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 
     <style>
         /* Navigation styling */
@@ -18,130 +17,79 @@
             left: 0;
             width: 100%;
             display: flex;
-            justify-content: center;
+            justify-content: center; /* Center the navigation */
             align-items: center;
-            height: 80px;
-            background-color: white;
-            z-index: 1000;
+            height: 80px; /* Adjust the height as needed */
+            background-color: white; /* Ensure the background is solid */
+            z-index: 1000; /* Keeps the nav bar above other content */
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         #nav-container ul {
             list-style: none;
             display: flex;
-            gap: 20px;
+            gap: 20px; /* Adjust the spacing between links */
             margin: 0;
             padding: 0;
         }
 
         #nav-container ul li a {
             text-decoration: none;
-            color: black;
+            color: black; /* Default link color */
             padding: 10px 15px;
-            transition: color 0.3s;
+            transition: color 0.3s; /* Smooth color transition */
         }
 
         #nav-container ul li a:hover {
-            color: blue;
+            color: blue; /* Change to your preferred hover color */
         }
 
-        /* Reset body margin and padding */
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Main wrapper */
+        /* Adjust the main content to not overlap with the fixed nav bar */
         .wrapper {
             display: flex;
-            margin-top: 80px;
-            height: calc(100vh - 80px);
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-            width: 100%;
+            margin-top: 80px; /* Same as the nav bar height */
+            height: calc(100vh - 80px); /* Full viewport height minus nav bar */
         }
 
         /* Sidebar styling */
         .sidebar {
-            flex: 0 0 320px;
-            overflow-y: auto;
+            flex: 0 0 300px; /* Fixed width for the sidebar */
+            overflow-y: auto; /* Enable vertical scrolling if needed */
             background-color: #f4f4f4;
             padding: 20px;
             box-sizing: border-box;
-            overflow-x: hidden;
 
             /* Hide scrollbar */
-            scrollbar-width: none;
-            -ms-overflow-style: none;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* Internet Explorer 10+ */
         }
 
         .sidebar::-webkit-scrollbar {
-            display: none;
+            display: none; /* Chrome, Safari, Opera */
         }
 
         /* Main content area */
         .content {
             flex: 1;
-            min-width: 600px;
-            overflow-y: auto;
+            overflow-y: auto; /* Enable vertical scrolling */
             padding: 20px;
             box-sizing: border-box;
-            overflow-x: hidden;
 
             /* Hide scrollbar */
-            scrollbar-width: none;
-            -ms-overflow-style: none;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* Internet Explorer 10+ */
         }
 
         .content::-webkit-scrollbar {
-            display: none;
+            display: none; /* Chrome, Safari, Opera */
         }
 
-        /* Reduce space between sidebar and content */
-        .wrapper>.sidebar {
-            margin-right: 10px;
-        }
-
-        /* Ensure images in the sidebar don't overflow */
+        /* Ensure the sidebar content is not too wide */
         .sidebar img {
             max-width: 100%;
             height: auto;
             display: block;
             margin: 0 auto;
-        }
-
-        /* Prevent horizontal overflow in sidebar */
-        .sidebar *,
-        .sidebar *::before,
-        .sidebar *::after {
-            box-sizing: border-box;
-            max-width: 100%;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 1024px) {
-            .content {
-                min-width: 0;
-            }
-
-            .wrapper {
-                max-width: 100%;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .wrapper {
-                flex-direction: column;
-                height: auto;
-            }
-
-            .sidebar,
-            .content {
-                flex: none;
-                width: 100%;
-                margin-right: 0;
-            }
         }
     </style>
 
@@ -177,59 +125,38 @@
 
             <!-- Travel Section -->
             <p style="text-align: center; font-weight: bold;">Travel</p>
-            <!-- Flag icons -->
-            <div style="display: flex; justify-content: center; gap: 8px; align-items: center; flex-wrap: wrap;">
-                <img src="https://aissamdjahnine.github.io/flags/sweden.png" alt="Sweden"
-                    style="width: 1.5em; height: 1.5em;">
-                <img src="https://aissamdjahnine.github.io/flags/finland.png" alt="Finland"
-                    style="width: 1.5em; height: 1.5em;">
-                <img src="https://aissamdjahnine.github.io/flags/united-kingdom.png" alt="United Kingdom"
-                    style="width: 1.5em; height: 1.5em;">
-                <img src="https://aissamdjahnine.github.io/flags/norway.png" alt="Norway"
-                    style="width: 1.5em; height: 1.5em;">
-                <img src="https://aissamdjahnine.github.io/flags/netherlands.png" alt="Netherlands"
-                    style="width: 1.5em; height: 1.5em;">
-                <img src="https://aissamdjahnine.github.io/flags/denmark.png" alt="Denmark"
-                    style="width: 1.5em; height: 1.5em;">
+            <div style="display: flex; justify-content: center; gap: 10px; align-items: center; flex-wrap: wrap;">
+                <img src="https://aissamdjahnine.github.io/flags/sweden.png" alt="Sweden" style="width: 1.5em; height: 1.5em;">
+                <img src="https://aissamdjahnine.github.io/flags/finland.png" alt="Finland" style="width: 1.5em; height: 1.5em;">
+                <img src="https://aissamdjahnine.github.io/flags/united-kingdom.png" alt="United Kingdom" style="width: 1.5em; height: 1.5em;">
+                <img src="https://aissamdjahnine.github.io/flags/norway.png" alt="Norway" style="width: 1.5em; height: 1.5em;">
+                <img src="https://aissamdjahnine.github.io/flags/netherlands.png" alt="Netherlands" style="width: 1.5em; height: 1.5em;">
+                <img src="https://aissamdjahnine.github.io/flags/denmark.png" alt="Denmark" style="width: 1.5em; height: 1.5em;">
             </div>
-            <div
-                style="display: flex; justify-content: center; gap: 8px; align-items: center; flex-wrap: wrap; margin-top: 10px;">
-                <img src="https://aissamdjahnine.github.io/flags/italy.png" alt="Italy"
-                    style="width: 1.5em; height: 1.5em;">
-                <img src="https://aissamdjahnine.github.io/flags/switzerland.png" alt="Switzerland"
-                    style="width: 1.5em; height: 1.5em;">
-                <img src="https://aissamdjahnine.github.io/flags/malaysia.png" alt="Malaysia"
-                    style="width: 1.5em; height: 1.5em;">
-                <img src="https://aissamdjahnine.github.io/flags/belgium.png" alt="Belgium"
-                    style="width: 1.5em; height: 1.5em;">
-                <img src="https://aissamdjahnine.github.io/flags/spain.png" alt="Spain"
-                    style="width: 1.5em; height: 1.5em;">
-                <img src="https://aissamdjahnine.github.io/flags/turkey.png" alt="Turkey"
-                    style="width: 1.5em; height: 1.5em;">
+            <div style="display: flex; justify-content: center; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 10px;">
+                <!-- More flags -->
+                <img src="https://aissamdjahnine.github.io/flags/italy.png" alt="Italy" style="width: 1.5em; height: 1.5em;">
+                <img src="https://aissamdjahnine.github.io/flags/switzerland.png" alt="Switzerland" style="width: 1.5em; height: 1.5em;">
+                <img src="https://aissamdjahnine.github.io/flags/malaysia.png" alt="Malaysia" style="width: 1.5em; height: 1.5em;">
+                <img src="https://aissamdjahnine.github.io/flags/belgium.png" alt="Belgium" style="width: 1.5em; height: 1.5em;">
+                <img src="https://aissamdjahnine.github.io/flags/spain.png" alt="Spain" style="width: 1.5em; height: 1.5em;">
+                <img src="https://aissamdjahnine.github.io/flags/turkey.png" alt="Turkey" style="width: 1.5em; height: 1.5em;">
             </div>
-            <div
-                style="display: flex; justify-content: center; gap: 8px; align-items: center; flex-wrap: wrap; margin-top: 10px;">
-                <img src="https://aissamdjahnine.github.io/flags/thailand.png" alt="Thailand"
-                    style="width: 1.5em; height: 1.5em;">
-                <img src="https://aissamdjahnine.github.io/flags/egypt.png" alt="Egypt"
-                    style="width: 1.5em; height: 1.5em;">
-                <img src="https://aissamdjahnine.github.io/flags/tunisia.png" alt="Tunisia"
-                    style="width: 1.5em; height: 1.5em;">
-                <img src="https://aissamdjahnine.github.io/flags/france.png" alt="France"
-                    style="width: 1.5em; height: 1.5em;">
-                <img src="https://aissamdjahnine.github.io/flags/monaco.png" alt="Monaco"
-                    style="width: 1.5em; height: 1.5em;">
-                <img src="https://aissamdjahnine.github.io/flags/libya.png" alt="Libya"
-                    style="width: 1.5em; height: 1.5em;">
+            <div style="display: flex; justify-content: center; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 10px;">
+                <!-- Additional flags -->
+                <img src="https://aissamdjahnine.github.io/flags/thailand.png" alt="Thailand" style="width: 1.5em; height: 1.5em;">
+                <img src="https://aissamdjahnine.github.io/flags/egypt.png" alt="Egypt" style="width: 1.5em; height: 1.5em;">
+                <img src="https://aissamdjahnine.github.io/flags/tunisia.png" alt="Tunisia" style="width: 1.5em; height: 1.5em;">
+                <img src="https://aissamdjahnine.github.io/flags/france.png" alt="France" style="width: 1.5em; height: 1.5em;">
+                <img src="https://aissamdjahnine.github.io/flags/monaco.png" alt="Monaco" style="width: 1.5em; height: 1.5em;">
+                <img src="https://aissamdjahnine.github.io/flags/libya.png" alt="Libya" style="width: 1.5em; height: 1.5em;">
             </div>
+            <p style="text-align: center; font-weight: bold;"></p>
 
             <!-- Social Feeds -->
             <p style="text-align: center; font-weight: bold;">Social feeds</p>
-            <div style="max-width: 320px; margin: 0 auto;">
-                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/aissam_dhn/"
-                    data-instgrm-version="12">
-                </blockquote>
-            </div>
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/aissam_dhn/" data-instgrm-version="12">
+            </blockquote>
             <script src="https://www.instagram.com/embed.js"></script>
             <script type="text/javascript" src="https://www.embedista.com/j/instagramfeed.js"></script>
         </aside>
@@ -243,8 +170,7 @@
             <!-- Footer -->
             <footer>
                 {% if site.github.is_project_page %}
-                <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>
-                </p>
+                <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
                 {% endif %}
             </footer>
         </div>
@@ -255,8 +181,8 @@
     {% if site.google_analytics %}
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
         ga('create', '{{ site.google_analytics }}', 'auto');
         ga('send', 'pageview');
