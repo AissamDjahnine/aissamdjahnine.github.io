@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {% seo %}
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet"
+        href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 
     <style>
         /* Navigation styling */
@@ -17,7 +18,7 @@
             left: 0;
             width: 100%;
             display: flex;
-            justify-content: center; /* Center the navigation */
+            justify-content: center;
             align-items: center;
             height: 80px;
             background-color: white;
@@ -53,9 +54,9 @@
         /* Main wrapper */
         .wrapper {
             display: flex;
-            margin-top: 80px; /* Height of the nav bar */
+            margin-top: 80px;
             height: calc(100vh - 80px);
-            max-width: 1000px; /* Reduced overall width */
+            max-width: 1200px;
             margin-left: auto;
             margin-right: auto;
             width: 100%;
@@ -63,27 +64,28 @@
 
         /* Sidebar styling */
         .sidebar {
-            flex: 0 0 280px; /* Reduced width for the sidebar */
+            flex: 0 0 320px;
             overflow-y: auto;
             background-color: #f4f4f4;
-            padding: 15px;
+            padding: 20px;
             box-sizing: border-box;
             overflow-x: hidden;
 
             /* Hide scrollbar */
-            scrollbar-width: none; /* Firefox */
-            -ms-overflow-style: none; /* IE 10+ */
+            scrollbar-width: none;
+            -ms-overflow-style: none;
         }
 
         .sidebar::-webkit-scrollbar {
-            display: none; /* Chrome, Safari, Opera */
+            display: none;
         }
 
         /* Main content area */
         .content {
             flex: 1;
+            min-width: 600px;
             overflow-y: auto;
-            padding: 15px;
+            padding: 20px;
             box-sizing: border-box;
             overflow-x: hidden;
 
@@ -94,6 +96,11 @@
 
         .content::-webkit-scrollbar {
             display: none;
+        }
+
+        /* Reduce space between sidebar and content */
+        .wrapper>.sidebar {
+            margin-right: 10px;
         }
 
         /* Ensure images in the sidebar don't overflow */
@@ -113,6 +120,16 @@
         }
 
         /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .content {
+                min-width: 0;
+            }
+
+            .wrapper {
+                max-width: 100%;
+            }
+        }
+
         @media (max-width: 768px) {
             .wrapper {
                 flex-direction: column;
@@ -123,6 +140,7 @@
             .content {
                 flex: none;
                 width: 100%;
+                margin-right: 0;
             }
         }
     </style>
@@ -205,13 +223,13 @@
                     style="width: 1.5em; height: 1.5em;">
             </div>
 
-            <p style="text-align: center; font-weight: bold;"></p>
-
             <!-- Social Feeds -->
             <p style="text-align: center; font-weight: bold;">Social feeds</p>
-            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/aissam_dhn/"
-                data-instgrm-version="12">
-            </blockquote>
+            <div style="max-width: 320px; margin: 0 auto;">
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/aissam_dhn/"
+                    data-instgrm-version="12">
+                </blockquote>
+            </div>
             <script src="https://www.instagram.com/embed.js"></script>
             <script type="text/javascript" src="https://www.embedista.com/j/instagramfeed.js"></script>
         </aside>
