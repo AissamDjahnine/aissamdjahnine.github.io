@@ -1,11 +1,15 @@
 <br>
 <br>
-## Researcher Phd Candidate @ Philips AI Research Hub France In collaboration with CREATIS Lab and HCL Lyon
-
+## PhD Candidate | Data Scientist @ Philips AI Research Hub France In collaboration with CREATIS Lab and HCL Lyon
 <img src="images/PHD2.png?raw=true"/> 
-
 Supervisors : [*Pr. Loic Boussel*](https://www.spectralphotoncountingct.com/fr/team/members/2/show), [*Dr. Nicolas Villain*](https://www.linkedin.com/in/nicolas-villain-9422122/)<br><br>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 ### Computer Vision and Machine Learning Msc Graduate at Sorbonne Université (2018-2020)
 ### Electrical Engineering Bachelor at Sorbonne Université (2017-2018)
 ### Engineering Preparatory Classes at Ecole Nationale Polytechnique d'Oran (ENPO) (2015-2017)
