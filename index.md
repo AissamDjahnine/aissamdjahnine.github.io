@@ -17,7 +17,7 @@ Supervisors : [*Pr. Loic Boussel*](https://www.spectralphotoncountingct.com/fr/t
 <br>
 <br>
 
-## <span style="color: #HEXCODE;">Publications</span>
+## <span style="color:  #267cb9;">Publications</span>
 
 [*Weakly-Supervised learning based Pathology Detection and Localization in 3D Chest Scans*](https://pubmed.ncbi.nlm.nih.gov/39140793/)<br> 
 **A. Djahnine**, E. Jupin-delevaux, O. Nempont, F. Craighero, S. A. Si-Mohamed, V. Cottin, P. Douek, A. Popoff, L. Boussel<br>
@@ -51,7 +51,7 @@ P.-J. Lartaud, B. Harbaoui, **A. Djahnine**, O. Nempont, J.-M. Rouet, Anna Vlach
 <img src="images/GLOW_MIDL_recap.png?raw=true"/><br>
 
 
-## <span style="color: #HEXCODE;">Conferences & Summer Schools</span>
+## <span style="color:  #267cb9;">Conferences & Summer Schools</span>
 
 **16 th IEEE International Conference on Signal Processing (ICSP)**<br>
 21 - 24 October 2022<br>
@@ -67,7 +67,7 @@ Oxford, United Kingdom <br>
 <br>
 <br>
 
-## <span style="color: #HEXCODE;">Honors & awards</span>
+## <span style="color:  #267cb9;">Honors & awards</span>
 
 [*JFR 2023 Data Challenge WINNER : Pancreatic masses detection in 3D CT scans*](https://www.linkedin.com/feed/update/urn:li:activity:7119672599088914432/)
 
@@ -84,7 +84,7 @@ Oxford, United Kingdom <br>
 <br>
 <br>
 
-## <span style="color: #HEXCODE;">Academic Services</span>
+## <span style="color:  #267cb9;">Academic Services</span>
 
 **Reviewer** : 20th IEEE International Symposium on Biomedical Imaging, ISBI 2023<br>
 
@@ -93,7 +93,7 @@ Oxford, United Kingdom <br>
 <br>
 <br>
 
-## <span style="color: #HEXCODE;">Research Projects</span>
+## <span style="color:  #267cb9;">Research Projects</span>
 
 #### PRE-PHD SHORT CONTRACT WITH HOSPICES CIVILS DE LYON  
 **Segmentation and measurement of skeletal muscle areas on CT scans**
@@ -129,7 +129,7 @@ Oxford, United Kingdom <br>
 <br>
 <br>
 
-## <span style="color: #HEXCODE;">Online Courses</span>
+## <span style="color:  #267cb9;">Online Courses</span>
 
 * **Coursera** : Deep learning Specialization
 * **Udemy** : 
