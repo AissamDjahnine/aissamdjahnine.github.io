@@ -17,7 +17,7 @@ Supervisors : [*Pr. Loic Boussel*](https://www.spectralphotoncountingct.com/fr/t
 <br>
 <br>
 
-## <span style="color: red;">Publications.</span> :
+## <span style="color: #HEXCODE;">Publications</span>
 
 [*Weakly-Supervised learning based Pathology Detection and Localization in 3D Chest Scans*](https://pubmed.ncbi.nlm.nih.gov/39140793/)<br> 
 **A. Djahnine**, E. Jupin-delevaux, O. Nempont, F. Craighero, S. A. Si-Mohamed, V. Cottin, P. Douek, A. Popoff, L. Boussel<br>
