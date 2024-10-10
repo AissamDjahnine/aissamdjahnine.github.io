@@ -50,7 +50,8 @@ P.-J. Lartaud, B. Harbaoui, **A. Djahnine**, O. Nempont, J.-M. Rouet, Anna Vlach
 
 <img src="images/GLOW_MIDL_recap.png?raw=true"/><br>
 
-### Conferences & Summer Schools :
+
+## <span style="color: #HEXCODE;">Conferences & Summer Schools</span>
 
 **16 th IEEE International Conference on Signal Processing (ICSP)**<br>
 21 - 24 October 2022<br>
@@ -65,10 +66,8 @@ Oxford, United Kingdom <br>
 
 <br>
 <br>
-<br>
 
-
-## Honors & awards
+## <span style="color: #HEXCODE;">Honors & awards</span>
 
 [*JFR 2023 Data Challenge WINNER : Pancreatic masses detection in 3D CT scans*](https://www.linkedin.com/feed/update/urn:li:activity:7119672599088914432/)
 
@@ -84,19 +83,17 @@ Oxford, United Kingdom <br>
 
 <br>
 <br>
-<br>
 
-## Academic Services
+## <span style="color: #HEXCODE;">Academic Services</span>
 
-**Reviewer : 20th IEEE International Symposium on Biomedical Imaging, ISBI 2023**<br>
+**Reviewer** : 20th IEEE International Symposium on Biomedical Imaging, ISBI 2023<br>
 
-**Academic Tutor : Assisted undergraduate students with academic projects and lab sessions, focusing on mathematics, linear algebra problem-solving, analog and digital electronics applications, as well as programming in C, MATLAB, and VHDL at Sorbonne University (2019)**<br>
+**Academic Tutor** : Assisted undergraduate students with academic projects and lab sessions, focusing on mathematics, linear algebra problem-solving, analog and digital electronics applications, as well as programming in C, MATLAB, and VHDL at Sorbonne University (2019)<br>
 
-<br>
 <br>
 <br>
 
-## Research Projects
+## <span style="color: #HEXCODE;">Research Projects</span>
 
 #### PRE-PHD SHORT CONTRACT WITH HOSPICES CIVILS DE LYON  
 **Segmentation and measurement of skeletal muscle areas on CT scans**
@@ -131,11 +128,9 @@ Oxford, United Kingdom <br>
 
 <br>
 <br>
-<br>
 
-## Online Courses
+## <span style="color: #HEXCODE;">Online Courses</span>
 
 * **Coursera** : Deep learning Specialization
 * **Udemy** : 
    * Python for Data Science and Machine Learning Bootcamp Certificate.
-   * Complete Amazon AWS Certified Solution Architect Course
