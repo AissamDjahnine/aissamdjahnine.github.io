@@ -4,7 +4,7 @@
 ## AI Research Engineer @ DentalMonitoring
 <img src="images/DM.png?raw=true" style="width: 75%; height: 100%;"/>
 
-> I lead end-to-end AI projects, from conception to deployment, focusing on AI-based recognition systems for remote orthodontic monitoring. With expertise in computer vision, biomedical engineering, medical imaging, and AI research, I collaborate with a dynamic R&D team to innovate in orthodontic care. Proficient in Python and deep learning frameworks, I drive AI solutions into production, optimizing processes in orthodontic monitoring.
+> I drive end-to-end AI solutions, from research and conception to deployment in production, with a focus on AI-based recognition systems for remote orthodontic monitoring. Leveraging expertise in computer vision, biomedical engineering, medical imaging, and AI research, I collaborate with a dynamic R&D team to innovate in orthodontic care.
 
 <br>
 
