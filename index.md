@@ -9,7 +9,6 @@
 > I lead end-to-end AI projects, from conception to deployment, focusing on AI-based recognition systems for remote orthodontic monitoring. With expertise in computer vision, biomedical engineering, medical imaging, and AI research, I collaborate with a dynamic R&D team to innovate in orthodontic care. Proficient in Python and deep learning frameworks, I drive AI solutions into production, optimizing processes in orthodontic monitoring.
 
 <br>
-<br>
 
 #### July 2021 - September 2024
 ## PhD Candidate | Machine Learning Engineer @ Philips Health Technology Innovation - AI Research Hub France under CIFRE collaboration with CREATIS Lab and HCL Lyon
