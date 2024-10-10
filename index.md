@@ -12,10 +12,11 @@
 <br>
 
 #### July 2021 - September 2024
-## PhD Candidate | Machine Learning Engineer @ Philips AI Research Hub France under CIFRE collaboration with CREATIS Lab and HCL Lyon
+## PhD Candidate | Machine Learning Engineer @ Philips Health Technology Innovation - AI Research Hub France under CIFRE collaboration with CREATIS Lab and HCL Lyon
 <img src="images/PHD2.png?raw=true"/> 
 Supervisors : [*Pr. Loic Boussel*](https://www.spectralphotoncountingct.com/fr/team/members/2/show), [*Dr. Nicolas Villain*](https://www.linkedin.com/in/nicolas-villain-9422122/)<br><br>
 
+> I completed a CIFRE PhD in collaboration with Philips Health Technology Innovation, INSA Lyon, and Hospices Civils de Lyon (HCL), under the supervision of Prof. Loïc Boussel, Dr. Nicolas Villain, Dr. Olivier Nempont, and Dr. Alexandre Popoff. My research explored the development of AI-driven pathology detection systems for conventional CT scans, combining computer vision, medical imaging, and deep learning. Working closely with teams in healthcare and research, I contributed to the design of automated tools that could potentially improve the precision and efficiency of clinical workflows. This research led to several publications, and I gained valuable experience in Python and deep learning frameworks throughout the process.
 <br>
 <br>
 
