@@ -1,6 +1,8 @@
 <br>
 <br>
 
+<span style="color: red;">This text is red.</span>
+
 #### October 2024 - Today
 ## AI Research Engineer @ DentalMonitoring
 <img src="images/DM.png?raw=true" style="width: 75%; height: 100%;"/>
