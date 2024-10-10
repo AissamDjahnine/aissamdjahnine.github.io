@@ -1,6 +1,13 @@
 <br>
 <br>
-## PhD Candidate | Data Scientist @ Philips AI Research Hub France In collaboration with CREATIS Lab and HCL Lyon
+
+## AI Research Engineer @ DentalMonitoring
+<img src="images/DM.png?raw=true"/> 
+
+<br>
+<br>
+
+## PhD Candidate | Machine Learning Engineer @ Philips AI Research Hub France In collaboration with CREATIS Lab and HCL Lyon
 <img src="images/PHD2.png?raw=true"/> 
 Supervisors : [*Pr. Loic Boussel*](https://www.spectralphotoncountingct.com/fr/team/members/2/show), [*Dr. Nicolas Villain*](https://www.linkedin.com/in/nicolas-villain-9422122/)<br><br>
 
