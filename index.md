@@ -16,16 +16,6 @@ Supervisors : [*Pr. Loic Boussel*](https://www.spectralphotoncountingct.com/fr/t
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-### Computer Vision and Machine Learning Msc Graduate at Sorbonne Université (2018-2020)
-### Electrical Engineering Bachelor at Sorbonne Université (2017-2018)
-### Engineering Preparatory Classes at Ecole Nationale Polytechnique d'Oran (ENPO) (2015-2017)
-
-<br>
-<br>
-<br>
 
 ## Publications :
 
