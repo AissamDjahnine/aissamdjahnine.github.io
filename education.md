@@ -8,7 +8,7 @@ permalink: /education/
 
 ## INSA Lyon - Institut National des Sciences Appliquées de Lyon
 
-## <img src="path_to_logo" alt="INSA Lyon Logo" style="border-radius: 50%; width: 40px; vertical-align: middle;"/> INSA Lyon - Institut National des Sciences Appliquées de Lyon
+## <img src="images/telecom_paristech_logo.png" alt="INSA Lyon Logo" style="border-radius: 50%; width: 40px; vertical-align: middle;"/> INSA Lyon - Institut National des Sciences Appliquées de Lyon
 
 **PhD, Computer Science**  
 **Lyon, France**  
