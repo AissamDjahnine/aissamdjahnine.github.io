@@ -3,8 +3,7 @@ layout: default
 title: Education
 permalink: /education/
 ---
-
-# Education
+# <span style="color:  #267cb9;">Education</span>
 
 ## INSA Lyon - Institut National des Sciences Appliquées de Lyon
 **PhD, Computer Science**  
