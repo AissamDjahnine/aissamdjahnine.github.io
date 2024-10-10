@@ -9,7 +9,7 @@
 <br>
 
 #### July 2021 - September 2024
-## PhD Candidate | Machine Learning Engineer @ Philips AI Research Hub France In collaboration with CREATIS Lab and HCL Lyon
+## PhD Candidate | Machine Learning Engineer @ Philips AI Research Hub France under CIFRE collaboration with CREATIS Lab and HCL Lyon
 <img src="images/PHD2.png?raw=true"/> 
 Supervisors : [*Pr. Loic Boussel*](https://www.spectralphotoncountingct.com/fr/team/members/2/show), [*Dr. Nicolas Villain*](https://www.linkedin.com/in/nicolas-villain-9422122/)<br><br>
 
