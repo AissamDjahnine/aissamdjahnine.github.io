@@ -3,8 +3,7 @@
 
 #### October 2024 - Today
 ## AI Research Engineer @ DentalMonitoring
-<img src="images/DM.png?raw=true"/> 
-
+<img src="images/DM.png?raw=true" style="width: 90%; height: 100%;"/>
 <br>
 <br>
 <br>
