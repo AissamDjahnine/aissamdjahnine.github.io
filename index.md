@@ -1,6 +1,4 @@
 <br>
-<br>
-
 
 #### October 2024 - Today
 ## AI Research Engineer @ DentalMonitoring
