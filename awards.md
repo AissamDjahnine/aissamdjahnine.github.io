@@ -9,8 +9,7 @@ permalink: /awards/
 
 * I was a member of the Philips team in collaboration with Hospices Civils de Lyon that won the JFR (les Journées Francophones de Radiologie) data challenge. The solution used deep learning-based algorithm to detect pancreatic masses in 3D CT scans. 
 <!---( [*Challenge Paper*](), [*Our Solution (Journal Paper)*]())-->
-<img src="/images/JFR_23.jpg?raw=true"/> 
-<br>
+<img src="/images/JFR_23.jpg?raw=true"/> <br>
 
 [*JFR 2022 Data Challenge WINNER : Pulmonary embolism detection in 3D CT scans*](https://www.linkedin.com/posts/nicolas-villain-9422122_fier-de-cette-belle-%C3%A9quipe-bravo-pour-activity-6985258006707851264-w3i9?utm_source=share&utm_medium=member_desktop)
 
