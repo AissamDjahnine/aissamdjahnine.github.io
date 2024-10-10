@@ -15,7 +15,6 @@ Supervisors : [*Pr. Loic Boussel*](https://www.spectralphotoncountingct.com/fr/t
 
 <br>
 <br>
-<br>
 
 ## Publications :
 
