@@ -3,12 +3,7 @@ layout: default
 title: Awards
 permalink: /awards/
 ---
-<br>
-<br>
-<br>
-<br>
-
-# Honors & Awards
+# <span style="color:  #267cb9;">Honors & Awards</span>
 
 [*JFR 2023 Data Challenge WINNER : Pancreatic masses detection in 3D CT scans*](https://www.linkedin.com/feed/update/urn:li:activity:7119672599088914432/)
 
