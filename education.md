@@ -9,7 +9,7 @@ permalink: /education/
 **PhD, Computer Science**  
 **Lyon, France**  
 **July 2021 - July 2024**  
-CIFRE contract with Philips Research France and Hospices Civils de Lyon (HCL) under the supervision of Pr Loïc Boussel. Working on "Automatic pathology detection in conventional and spectral CT scans."
+CIFRE contract with Philips Research France and Hospices Civils de Lyon (HCL) under the supervision of Pr Loïc Boussel. Working on "Automatic pathology detection in conventional and spectral CT scans".
 
 ---
 
