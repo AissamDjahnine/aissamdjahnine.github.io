@@ -19,10 +19,10 @@ CIFRE contract with Philips Research France and Hospices Civils de Lyon (HCL) un
 **2018 - 2020**  
 **Grade:** 14.66/20  
 - Master 2: Image Processing & Computer Vision (IMA)
-  - Advanced Image Processing, Machine Learning, and Deep Learning.
-  - Pattern Recognition for Image Analysis, Computer Vision Techniques, and Seminars.
+  - Pattern Recognition for Image Analysis and Interpretation, Advanced Image Processing, Advanced Computer Vision Techniques, Seminars and practice IMAGES, Advanced Machine Learning and Deep Learning.
+  
 - Master 1: Engineering of Robotics and Intelligent Systems (ISI)
-  - Robotics, Artificial Intelligence, Signal Processing, and Embedded Systems.
+  - Random Signal Processing, Statistics, Embedded Systems & Sensors, Artificial Intelligence, Computer Vision, Robotics, Image Processing.
 
 ---
 
@@ -39,8 +39,7 @@ Part of the IMA program at Sorbonne University.
 **Bachelor’s Degree, Electrical and Electronics Engineering**  
 **Paris, France**  
 **2017 - 2018**  
-- Signals and Systems, Magnetic Induction, and Energy Conversion.
-- Programming, Embedded Systems, Smart Grid Technologies, and Robotic Systems.
+- Signals and systems, Magnetic induction and energy conversion, Mathematical tools for electronics, Programming and numerical methods, Smart grids and energy management, Techniques and devices for analog electronics, Digital systems and embedded processors, Radiation and propagation, Robotic systems.
 
 ---
 
@@ -49,7 +48,7 @@ Part of the IMA program at Sorbonne University.
 **Oran, Algeria**  
 **2016 - 2017**  
 - Major in Electrical Engineering.
-- Analog Electronics, Digital Systems, Power Electronics, and Renewable Energy.
+- Analog electronics, Digital systems, Electric and magnetic circuits, systems theory, Continuous linear systems, Measurement techniques, Power electronics, Sampled servo systems, State-space analysis and control, Instrumentation, Renewable energies and sustainable development.
 
 ---
 
