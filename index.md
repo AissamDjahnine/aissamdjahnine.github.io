@@ -27,6 +27,8 @@ Supervisors : [*Pr. Serge Muller*](), [*Dr. Andrei Petrovskii*]()<br><br>
 
 > In this internship, we focused on improving mammography systems for clinical diagnosis by utilizing deep learning techniques. We specifically explored the efficiency of a gradient-based NAS method called DARTS (Differentiable Architecture Search) for classification tasks on mammographic data. Through experiments, we achieved state-of-the-art results on mammography data classification, outperforming existing models. 
 
+<br>
+<br>
 
 ## <span style="color:  #267cb9;">Publications</span>
 
