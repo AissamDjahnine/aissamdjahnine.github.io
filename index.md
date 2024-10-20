@@ -25,8 +25,7 @@ Supervisors : [*Pr. Serge Muller*](), [*Dr. Andrei Petrovskii*]()<br><br>
 **Application to Mammographic Data within WHARe team (Women's Health Applied Research)**
 <br>
 
-> In this internship, we focused on improving mammography systems for clinical diagnosis by utilizing deep learning techniques. We specifically explored the efficiency of a gradient-based NAS method called DARTS (Differentiable Architecture Search) for classification tasks on mammographic data. Through experiments, we achieved state-of-the-art results on mammography data classification, outperforming existing models. 
-
+> During my internship, I collaborated with experts to advance mammography systems for clinical diagnosis, focusing on the application of deep learning techniques to enhance the accuracy of mammographic data classification. Specifically, we explored the potential of a gradient-based Neural Architecture Search (NAS) method, DARTS (Differentiable Architecture Search), to optimize model performance for classification tasks. Through extensive experimentation, we successfully achieved state-of-the-art results, surpassing existing models in mammography classification. This project not only provided valuable hands-on experience with AI-driven research but also inspired my decision to pursue a PhD in medical imaging and deep learning.
 <br>
 <br>
 
