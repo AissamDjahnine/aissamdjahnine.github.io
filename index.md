@@ -21,7 +21,9 @@ Supervisors : [*Pr. Loic Boussel*](https://www.spectralphotoncountingct.com/fr/t
 ## Computer Vision and Deep Learning Intern @ GE Healthcare
 <img src="images/GE.jpg?raw=true"/>
 Supervisors : [*Pr. Serge Muller*](), [*Dr. Andrei Petrovskii*]()<br><br>
-#### Investigation of automatic search methods for neural network hyperparameters (Neural Architecture Search). Application to Mammographic Data within WHARe team (Women's Health Applied Research)**<br>
+**Investigation of automatic search methods for neural network hyperparameters (Neural Architecture Search)**. 
+**Application to Mammographic Data within WHARe team (Women's Health Applied Research)**
+<br>
 
 > In this internship, we focused on improving mammography systems for clinical diagnosis by utilizing deep learning techniques. We specifically explored the efficiency of a gradient-based NAS method called DARTS (Differentiable Architecture Search) for classification tasks on mammographic data. Through experiments, we achieved state-of-the-art results on mammography data classification, outperforming existing models. 
 
