@@ -3,6 +3,7 @@
 #### October 2024 - Today
 ## AI Research Engineer @ DentalMonitoring
 <img src="images/DM.png?raw=true" style="width: 75%; height: 100%;"/>
+<br>
 Supervisors : [*Guillaume Ghyselinck*](https://www.linkedin.com/in/guillaume-ghyselinck-101857137/)<br><br>
 
 > I drive end-to-end AI solutions, from research and conception to deployment in production, with a focus on AI-based recognition systems for remote orthodontic monitoring. Leveraging expertise in computer vision, biomedical engineering, medical imaging, and AI research, I collaborate with a dynamic R&D team to innovate in orthodontic care.
