@@ -47,10 +47,14 @@
         /* Adjust the main content to not overlap with the fixed nav bar */
         .wrapper {
             display: flex;
+            flex-direction: row;
             width: 100%;
             overflow: hidden; /* Prevent sidebar from overflowing */
             margin-top: 80px; /* Same as the nav bar height */
             height: calc(100vh - 80px); /* Full viewport height minus nav bar */
+            justify-content: flex-start;
+            align-items: stretch;
+
         }
 
         /* Sidebar styling */
