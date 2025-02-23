@@ -47,14 +47,16 @@
         /* Adjust the main content to not overlap with the fixed nav bar */
         .wrapper {
             display: flex;
+            justify-content: center;
             flex-direction: row;
-            width: 100%;
+            width: fit-content;
+            max-width: 90%;
             overflow: hidden; /* Prevent sidebar from overflowing */
             margin-top: 80px; /* Same as the nav bar height */
-            height: auto; /* Full viewport height minus nav bar */
-            justify-content: center;
-            align-items: stretch;
-            gap: 0;
+            margin-left: auto;
+            margin-right: auto;
+            align-items: flex-start;
+            gap: 40;
 
         }
 
@@ -69,7 +71,6 @@
             /* Hide scrollbar */
             scrollbar-width: none; /* Firefox */
             -ms-overflow-style: none; /* Internet Explorer 10+ */
-            margin: 0;
         }
 
         .sidebar::-webkit-scrollbar {
@@ -79,7 +80,6 @@
         /* Main content area */
         .content {
             flex: 1 1 auto;
-            min-width: 0;
             max-width: 800px;
             overflow-y: auto; /* Enable vertical scrolling */
             padding: 20px;
@@ -87,7 +87,6 @@
             /* Hide scrollbar */
             scrollbar-width: none; /* Firefox */
             -ms-overflow-style: none; /* Internet Explorer 10+ */
-            margin: 0;
         }
 
         .content::-webkit-scrollbar {
