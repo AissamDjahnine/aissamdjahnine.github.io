@@ -51,8 +51,8 @@
             width: 100%;
             overflow: hidden; /* Prevent sidebar from overflowing */
             margin-top: 80px; /* Same as the nav bar height */
-            height: calc(100vh - 80px); /* Full viewport height minus nav bar */
-            justify-content: flex-start;
+            height: auto; /* Full viewport height minus nav bar */
+            justify-content: center;
             align-items: stretch;
             gap: 0;
 
@@ -60,7 +60,7 @@
 
         /* Sidebar styling */
         .sidebar {
-            flex: 0 0 400px; /* Increased from 300px to 400px */
+            flex: 0 1 auto; /* Increased from 300px to 400px */
             max-width: 400px;
             overflow-y: auto; /* Enable vertical scrolling if needed */
             background-color: #f4f4f4;
@@ -78,8 +78,9 @@
 
         /* Main content area */
         .content {
-            flex: 1;
+            flex: 1 1 auto;
             min-width: 0;
+            max-width: 800px;
             overflow-y: auto; /* Enable vertical scrolling */
             padding: 20px;
             box-sizing: border-box;
