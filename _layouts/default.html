@@ -44,12 +44,19 @@
             color: blue; /* Change to your preferred hover color */
         }
 
+        html, body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+
         /* Adjust the main content to not overlap with the fixed nav bar */
         .wrapper {
             display: flex;
             justify-content: center;
             flex-direction: row;
             width: 100%;
+            height: calc(100hv - 80px); /* Adjust the height to fill the remaining space */
             max-width: 1200px;
             overflow: hidden; /* Prevent sidebar from overflowing */
             margin: 80px auto 0 auto; /* Same as the nav bar height */
@@ -69,10 +76,12 @@
             box-sizing: border-box;
             /* Hide scrollbar */
             scrollbar-width: none; /* Firefox */
+            position: sticky;
             -ms-overflow-style: none; /* Internet Explorer 10+ */
+            top: 80px; /* Same as the nav bar height */
         }
 
-        .sidebar::-webkit-scrollbar {
+        .sidebar::-webkit-scrollbar{
             display: none; /* Chrome, Safari, Opera */
         }
 
@@ -80,16 +89,34 @@
         .content {
             flex: 1;
             max-width: 800px;
+            height: 100%;
             overflow-y: auto; /* Enable vertical scrolling */
             padding: 20px;
             box-sizing: border-box;
-            /* Hide scrollbar */
-            scrollbar-width: none; /* Firefox */
-            -ms-overflow-style: none; /* Internet Explorer 10+ */
         }
 
-        .content::-webkit-scrollbar {
-            display: none; /* Chrome, Safari, Opera */
+        .content::-webkit-scrollbar, .content::-webkit-scrollbar {
+            width: 8px; /* Chrome, Safari, Opera */
+        }
+
+        .sidebar::-webkit-scrollbar-thumb, .content::-webkit-scrollbar-thumb {
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+        }
+
+        /* Make it responsive */
+        @media (max-width: 768px) {
+            .wrapper {
+                flex-direction: column;
+                align-items: center;
+                height: auto;
+            }
+
+            .sidebar, .content {
+                max-width: 100%;
+                height: auto;
+                position: relative;
+            }
         }
 
         /* Ensure the sidebar content is not too wide */
