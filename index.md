@@ -32,6 +32,10 @@ Supervisors : [*Pr. Serge Muller*](), [*Dr. Andrei Petrovskii*]()<br><br>
 
 ## <span style="color:  #267cb9;">Publications</span>
 
+[*Leveraging Normalizing Flows for Unsupervised Detection of Pathological Pulmonary in CT scans*]()<br> 
+**A. Djahnine**, E. Jupin-delevaux, O. Nempont, S. A. Si-Mohamed, V. Cottin, A. Popoff, P. Douek, L. Boussel<br>
+*IEEE TRANSACTIONS ON MEDICAL IMAGING - IEEE TMI*[*In revision*]<br>
+
 [*Weakly-Supervised learning based Pathology Detection and Localization in 3D Chest Scans*](https://pubmed.ncbi.nlm.nih.gov/39140793/)<br> 
 **A. Djahnine**, E. Jupin-delevaux, O. Nempont, F. Craighero, S. A. Si-Mohamed, V. Cottin, P. Douek, A. Popoff, L. Boussel<br>
 *The International Journal of Medical Physics Research and Practice (Medical Physics)*<br>
