@@ -49,20 +49,19 @@
             display: flex;
             justify-content: center;
             flex-direction: row;
-            width: fit-content;
-            max-width: 90%;
+            width: 100%;
+            max-width: 1200px;
             overflow: hidden; /* Prevent sidebar from overflowing */
-            margin-top: 80px; /* Same as the nav bar height */
-            margin-left: auto;
-            margin-right: auto;
+            margin: 80px auto 0 auto; /* Same as the nav bar height */
+            padding: 20px;
             align-items: flex-start;
-            gap: 40;
+            gap: 40px;
 
         }
 
         /* Sidebar styling */
         .sidebar {
-            flex: 0 1 auto; /* Increased from 300px to 400px */
+            flex: 0 1 350px; /* Increased from 300px to 400px */
             max-width: 400px;
             overflow-y: auto; /* Enable vertical scrolling if needed */
             background-color: #f4f4f4;
@@ -79,7 +78,7 @@
 
         /* Main content area */
         .content {
-            flex: 1 1 auto;
+            flex: 1;
             max-width: 800px;
             overflow-y: auto; /* Enable vertical scrolling */
             padding: 20px;
