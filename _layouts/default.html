@@ -53,10 +53,10 @@
 
         /* Sidebar styling */
         .sidebar {
-            flex: 0 0 300px; /* Fixed width for the sidebar */
+            flex: 0 0 400px; /* Increased from 300px to 400px */
             overflow-y: auto; /* Enable vertical scrolling if needed */
             background-color: #f4f4f4;
-            padding: 20px;
+            padding: 30px; /* Increased padding from 20px to 30px */
             box-sizing: border-box;
 
             /* Hide scrollbar */
@@ -90,6 +90,12 @@
             height: auto;
             display: block;
             margin: 0 auto;
+        }
+
+        /* Adjust instagram embed size */
+        .instagram-media {
+            max-width: 100% !important; /* Changed from 80% to 100% */
+            margin: 0 auto !important;
         }
     </style>
 
@@ -155,7 +161,7 @@
 
             <!-- Social Feeds -->
             <p style="text-align: center; font-weight: bold;">Social feeds</p>
-            <blockquote class="instagram-media" style="max-width: 80%;" data-instgrm-permalink="https://www.instagram.com/aissam_dhn/" data-instgrm-version="12">
+            <blockquote class="instagram-media" style="max-width: 100% !important;" data-instgrm-permalink="https://www.instagram.com/aissam_dhn/" data-instgrm-version="12">
             </blockquote>
             <script src="https://www.instagram.com/embed.js"></script>
             <script type="text/javascript" src="https://www.embedista.com/j/instagramfeed.js"></script>
