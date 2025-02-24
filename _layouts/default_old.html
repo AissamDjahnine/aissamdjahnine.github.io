@@ -17,31 +17,31 @@
             left: 0;
             width: 100%;
             display: flex;
-            justify-content: center;
+            justify-content: center; /* Center the navigation */
             align-items: center;
-            height: 80px;
-            background-color: white;
-            z-index: 1000;
+            height: 80px; /* Adjust the height as needed */
+            background-color: white; /* Ensure the background is solid */
+            z-index: 1000; /* Keeps the nav bar above other content */
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         #nav-container ul {
             list-style: none;
             display: flex;
-            gap: 20px;
+            gap: 20px; /* Adjust the spacing between links */
             margin: 0;
             padding: 0;
         }
 
         #nav-container ul li a {
             text-decoration: none;
-            color: black;
+            color: black; /* Default link color */
             padding: 10px 15px;
-            transition: color 0.3s;
+            transition: color 0.3s; /* Smooth color transition */
         }
 
         #nav-container ul li a:hover {
-            color: blue;
+            color: blue; /* Change to your preferred hover color */
         }
 
         /* Adjust the main content to not overlap with the fixed nav bar */
@@ -51,68 +51,51 @@
             flex-direction: row;
             width: fit-content;
             max-width: 90%;
-            overflow: hidden;
-            margin-top: 20px;
+            overflow: hidden; /* Prevent sidebar from overflowing */
+            margin-top: 20px; /* Same as the nav bar height */
             margin-left: auto;
             margin-right: auto;
             align-items: flex-start;
             gap: 40px;
+
         }
 
         /* Sidebar styling */
         .sidebar {
             position: fixed;
-            flex: 0 1 auto;
+            flex: 0 1 auto; /* Increased from 300px to 400px */
             max-width: 400px;
             margin-left: -400px;
-            height: calc(100vh - 80px);
-            overflow-y: auto;
+            height: calc(100vh - 80px); /* Adjust the height to fit the screen */
+            overflow-y: auto; /* Enable vertical scrolling if needed */
             background-color: #f4f4f4;
-            padding: 20px;
+            padding: 20px; /* Increased padding from 20px to 30px */
             box-sizing: border-box;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
+            /* Hide scrollbar */
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* Internet Explorer 10+ */
             top: 80px;
         }
 
         .sidebar::-webkit-scrollbar {
-            display: none;
-        }
-
-        /* Right Sidebar styling */
-        .right-sidebar {
-            position: fixed;
-            right: 0;
-            width: 400px;
-            height: calc(100vh - 80px);
-            overflow-y: auto;
-            background-color: #f4f4f4;
-            padding: 20px;
-            box-sizing: border-box;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
-            top: 80px;
-        }
-
-        .right-sidebar::-webkit-scrollbar {
-            display: none;
+            display: none; /* Chrome, Safari, Opera */
         }
 
         /* Main content area */
         .content {
             flex: 1 1 auto;
             margin-left: 620px;
-            margin-right: 620px; /* Added right margin */
             max-width: 1200px;
-            overflow-y: auto;
+            overflow-y: auto; /* Enable vertical scrolling */
             padding: 10px;
             box-sizing: border-box;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
+            /* Hide scrollbar */
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* Internet Explorer 10+ */
         }
 
         .content::-webkit-scrollbar {
-            display: none;
+            display: none; /* Chrome, Safari, Opera */
         }
 
         /* Ensure the sidebar content is not too wide */
@@ -129,46 +112,9 @@
             min-width: unset !important;
             margin: 0 auto !important;
         }
-
+        
         .instagram-media iframe {
             width: 100% !important;
-        }
-
-        /* Right sidebar content styling */
-        .scholar-stats {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-
-        .stat-item {
-            display: flex;
-            justify-content: space-between;
-            margin: 10px 0;
-        }
-
-        .mini-card {
-            background: white;
-            border-radius: 8px;
-            padding: 15px;
-            margin-bottom: 15px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .mini-card h3 {
-            margin: 0 0 10px;
-            font-size: 1.1em;
-        }
-
-        .mini-card a {
-            color: blue;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .mini-card a:hover {
-            text-decoration: underline;
         }
     </style>
 
@@ -192,8 +138,9 @@
 
     <!-- Main Content Wrapper -->
     <div class="wrapper">
-        <!-- Left Sidebar -->
+        <!-- Sidebar -->
         <aside class="sidebar">
+            <!-- Your existing sidebar content -->
             <h1><a href="{{ '/' | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
             {% if site.logo %}
             <img src="{{ site.logo | relative_url }}" alt="Logo" />
@@ -212,6 +159,7 @@
                 <img src="https://aissamdjahnine.github.io/flags/denmark.png" alt="Denmark" style="width: 1.5em; height: 1.5em;">
             </div>
             <div style="display: flex; justify-content: center; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 10px;">
+                <!-- More flags -->
                 <img src="https://aissamdjahnine.github.io/flags/italy.png" alt="Italy" style="width: 1.5em; height: 1.5em;">
                 <img src="https://aissamdjahnine.github.io/flags/switzerland.png" alt="Switzerland" style="width: 1.5em; height: 1.5em;">
                 <img src="https://aissamdjahnine.github.io/flags/malaysia.png" alt="Malaysia" style="width: 1.5em; height: 1.5em;">
@@ -220,6 +168,7 @@
                 <img src="https://aissamdjahnine.github.io/flags/turkey.png" alt="Turkey" style="width: 1.5em; height: 1.5em;">
             </div>
             <div style="display: flex; justify-content: center; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 10px;">
+                <!-- Additional flags -->
                 <img src="https://aissamdjahnine.github.io/flags/thailand.png" alt="Thailand" style="width: 1.5em; height: 1.5em;">
                 <img src="https://aissamdjahnine.github.io/flags/egypt.png" alt="Egypt" style="width: 1.5em; height: 1.5em;">
                 <img src="https://aissamdjahnine.github.io/flags/tunisia.png" alt="Tunisia" style="width: 1.5em; height: 1.5em;">
@@ -227,6 +176,7 @@
                 <img src="https://aissamdjahnine.github.io/flags/monaco.png" alt="Monaco" style="width: 1.5em; height: 1.5em;">
                 <img src="https://aissamdjahnine.github.io/flags/libya.png" alt="Libya" style="width: 1.5em; height: 1.5em;">
             </div>
+            <p style="text-align: center; font-weight: bold;"></p>
 
             <!-- Social Feeds -->
             <p style="text-align: center; font-weight: bold;">Social feeds</p>
@@ -251,42 +201,6 @@
                 {% endif %}
             </footer>
         </div>
-
-        <!-- Right Sidebar -->
-        <aside class="right-sidebar">
-            <h2>Google Scholar Stats</h2>
-            <div class="scholar-stats">
-                <div class="stat-item">
-                    <span>Total Citations:</span>
-                    <strong>1,234</strong>
-                </div>
-                <div class="stat-item">
-                    <span>h-index:</span>
-                    <strong>18</strong>
-                </div>
-                <div class="stat-item">
-                    <span>i10-index:</span>
-                    <strong>27</strong>
-                </div>
-            </div>
-
-            <h2>Featured Projects</h2>
-            <div class="mini-card">
-                <h3>AI-Powered Climate Model</h3>
-                <p>Machine learning approach to predict climate patterns using satellite data</p>
-                <a href="#">View Project →</a>
-            </div>
-            <div class="mini-card">
-                <h3>Robotic Control System</h3>
-                <p>Real-time control system for industrial automation robots</p>
-                <a href="#">View Project →</a>
-            </div>
-            <div class="mini-card">
-                <h3>Quantum Computing Framework</h3>
-                <p>Development toolkit for quantum algorithm simulation</p>
-                <a href="#">View Project →</a>
-            </div>
-        </aside>
     </div>
 
     <!-- Scripts -->
@@ -302,4 +216,5 @@
     </script>
     {% endif %}
 </body>
+
 </html>
