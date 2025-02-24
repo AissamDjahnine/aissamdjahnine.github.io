@@ -60,9 +60,9 @@
             overflow-y: auto;
             background-color: #f4f4f4;
             padding: 20px;
-            position: sticky;
+            position: fixed;
+            left: 20px;
             top: 100px;
-            margin-left: 20px;
         }
 
         .right-sidebar {
@@ -71,56 +71,38 @@
             overflow-y: auto;
             background-color: #f4f4f4;
             padding: 20px;
-            position: sticky;
+            position: fixed;
+            right: 20px;
             top: 100px;
-            margin-right: 20px;
         }
 
         /* Main Content Area */
         .content {
             flex: 1;
             max-width: 800px;
+            margin: 0 340px; /* Adjusted for sidebars */
             padding: 20px;
-            margin: 0 auto;
-        }
-
-        /* Profile Image Fix */
-        .profile-header img {
-            width: 200px;
-            height: auto;
-            display: block;
-            margin: 0 auto 20px;
         }
 
         /* Flags Grid */
         .flag-grid {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
-            gap: 5px;
+            gap: 8px;
             margin: 15px 0;
         }
 
         .flag-grid img {
-            width: 1.2em;
-            height: 1.2em;
+            width: 24px;
+            height: 24px;
             transition: transform 0.2s;
         }
 
-        /* Scholar Stats */
-        .scholar-stats {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-
-        /* Project Cards */
-        .mini-card {
-            background: white;
-            border-radius: 8px;
-            padding: 15px;
-            margin-bottom: 15px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        /* Instagram Embed Fix */
+        .instagram-media {
+            min-width: 250px !important;
+            width: 100% !important;
+            margin: 20px 0 !important;
         }
     </style>
 
@@ -149,7 +131,7 @@
             <div class="profile-header">
                 <h1><a href="{{ '/' | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
                 {% if site.logo %}
-                <img src="{{ site.logo | relative_url }}" alt="Profile Photo">
+                <img src="{{ site.logo | relative_url }}" alt="Profile Photo" style="width: 200px; height: auto;">
                 {% endif %}
                 <p>{{ site.description | default: site.github.project_tagline }}</p>
             </div>
@@ -158,14 +140,35 @@
             <section>
                 <h3>Countries Visited</h3>
                 <div class="flag-grid">
-                    <!-- Flags remain the same -->
+                    <img src="https://aissamdjahnine.github.io/flags/sweden.png" alt="Sweden">
+                    <img src="https://aissamdjahnine.github.io/flags/finland.png" alt="Finland">
+                    <img src="https://aissamdjahnine.github.io/flags/united-kingdom.png" alt="United Kingdom">
+                    <img src="https://aissamdjahnine.github.io/flags/norway.png" alt="Norway">
+                    <img src="https://aissamdjahnine.github.io/flags/netherlands.png" alt="Netherlands">
+                    <img src="https://aissamdjahnine.github.io/flags/denmark.png" alt="Denmark">
+                    <img src="https://aissamdjahnine.github.io/flags/italy.png" alt="Italy">
+                    <img src="https://aissamdjahnine.github.io/flags/switzerland.png" alt="Switzerland">
+                    <img src="https://aissamdjahnine.github.io/flags/malaysia.png" alt="Malaysia">
+                    <img src="https://aissamdjahnine.github.io/flags/belgium.png" alt="Belgium">
+                    <img src="https://aissamdjahnine.github.io/flags/spain.png" alt="Spain">
+                    <img src="https://aissamdjahnine.github.io/flags/turkey.png" alt="Turkey">
+                    <img src="https://aissamdjahnine.github.io/flags/thailand.png" alt="Thailand">
+                    <img src="https://aissamdjahnine.github.io/flags/egypt.png" alt="Egypt">
+                    <img src="https://aissamdjahnine.github.io/flags/tunisia.png" alt="Tunisia">
+                    <img src="https://aissamdjahnine.github.io/flags/france.png" alt="France">
+                    <img src="https://aissamdjahnine.github.io/flags/monaco.png" alt="Monaco">
+                    <img src="https://aissamdjahnine.github.io/flags/libya.png" alt="Libya">
                 </div>
             </section>
 
             <!-- Social Feed -->
             <section>
                 <h3>Social Feed</h3>
-                <blockquote class="instagram-media"></blockquote>
+                <blockquote class="instagram-media" 
+                    data-instgrm-permalink="https://www.instagram.com/aissam_dhn/"
+                    data-instgrm-version="14"
+                    style="background:#FFF; border:0; margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+                </blockquote>
             </section>
         </aside>
 
@@ -178,13 +181,33 @@
         <aside class="right-sidebar">
             <!-- Scholar Stats -->
             <div class="scholar-stats">
-                <!-- Content remains the same -->
+                <h2>Academic Profile</h2>
+                <div class="stat-item">
+                    <span>Total Citations:</span>
+                    <strong>1,234</strong>
+                </div>
+                <div class="stat-item">
+                    <span>h-index:</span>
+                    <strong>18</strong>
+                </div>
+                <div class="stat-item">
+                    <span>i10-index:</span>
+                    <strong>27</strong>
+                </div>
+                <a href="#" style="display: block; margin-top: 15px; text-align: center;">
+                    View Full Profile →
+                </a>
             </div>
 
             <!-- Featured Projects -->
             <section>
                 <h2>Featured Projects</h2>
-                <!-- Project cards remain the same -->
+                <div class="mini-card">
+                    <h3>AI-Powered Climate Model</h3>
+                    <p>Machine learning approach to predict climate patterns using satellite data</p>
+                    <a href="#">View Project →</a>
+                </div>
+                <!-- Add more project cards -->
             </section>
         </aside>
     </div>
