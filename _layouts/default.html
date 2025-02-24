@@ -66,7 +66,7 @@
             flex: 0 1 auto; /* Increased from 300px to 400px */
             max-width: 400px;
             margin-left: -300px;
-            height: auto;
+            height: calc(100vh - 100px); /* Adjust the height to fit the screen */
             overflow-y: auto; /* Enable vertical scrolling if needed */
             background-color: #f4f4f4;
             padding: 20px; /* Increased padding from 20px to 30px */
@@ -74,6 +74,7 @@
             /* Hide scrollbar */
             scrollbar-width: none; /* Firefox */
             -ms-overflow-style: none; /* Internet Explorer 10+ */
+            top: 100px;
         }
 
         .sidebar::-webkit-scrollbar {
