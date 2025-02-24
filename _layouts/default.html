@@ -44,7 +44,7 @@
             color: blue;
         }
 
-        /* Main content wrapper */
+        /* Main layout */
         .wrapper {
             display: flex;
             justify-content: space-between;
@@ -80,8 +80,26 @@
         .content {
             flex: 1;
             max-width: 800px;
-            margin: 0 400px; /* Adjust based on sidebar widths */
+            margin: 0 400px;
             padding: 20px;
+        }
+
+        /* Travel Flags */
+        .flag-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 8px;
+            margin: 15px 0;
+        }
+
+        .flag-grid img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.2s;
+        }
+
+        .flag-grid img:hover {
+            transform: scale(1.1);
         }
 
         /* Scholar Stats */
@@ -90,37 +108,69 @@
             padding: 20px;
             border-radius: 8px;
             margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         .stat-item {
             display: flex;
             justify-content: space-between;
-            margin: 10px 0;
+            margin: 12px 0;
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
         }
 
-        /* Project Cards for Right Sidebar */
+        /* Project Cards */
         .mini-card {
             background: white;
             border-radius: 8px;
             padding: 15px;
             margin-bottom: 15px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .mini-card:hover {
+            transform: translateY(-3px);
         }
 
         .mini-card h3 {
-            margin: 0 0 10px;
+            margin: 0 0 8px;
             font-size: 1.1em;
+            color: #222;
+        }
+
+        .mini-card p {
+            margin: 0 0 10px;
+            color: #666;
+            font-size: 0.9em;
         }
 
         .mini-card a {
-            color: blue;
+            color: #0066cc;
             text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 5px;
         }
 
-        /* Instagram Embed Adjustments */
-        .instagram-media {
-            width: 100% !important;
-            margin: 20px 0 !important;
+        .mini-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Profile Section */
+        .profile-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .profile-header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 3px solid #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
     </style>
 
@@ -144,30 +194,60 @@
 
     <!-- Left Sidebar -->
     <aside class="left-sidebar">
-        <!-- Original sidebar content -->
-        <h1>{{ site.title }}</h1>
-        <img src="{{ site.logo }}" alt="Profile" style="width:200px; margin:10px auto; display:block;">
-        
-        <!-- Travel Section -->
-        <div class="travel-section">
-            <h3>Countries Visited</h3>
-            <!-- Your flag images here -->
+        <div class="profile-header">
+            <h1><a href="{{ '/' | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+            {% if site.logo %}
+            <img src="{{ site.logo | relative_url }}" alt="Profile Photo">
+            {% endif %}
+            <p>{{ site.description | default: site.github.project_tagline }}</p>
         </div>
 
-        <!-- Instagram Embed -->
-        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/aissam_dhn/"></blockquote>
+        <!-- Travel Section -->
+        <section>
+            <h3>Countries Visited</h3>
+            <div class="flag-grid">
+                <img src="https://aissamdjahnine.github.io/flags/sweden.png" alt="Sweden">
+                <img src="https://aissamdjahnine.github.io/flags/finland.png" alt="Finland">
+                <img src="https://aissamdjahnine.github.io/flags/united-kingdom.png" alt="United Kingdom">
+                <img src="https://aissamdjahnine.github.io/flags/norway.png" alt="Norway">
+                <img src="https://aissamdjahnine.github.io/flags/netherlands.png" alt="Netherlands">
+                <img src="https://aissamdjahnine.github.io/flags/denmark.png" alt="Denmark">
+                <img src="https://aissamdjahnine.github.io/flags/italy.png" alt="Italy">
+                <img src="https://aissamdjahnine.github.io/flags/switzerland.png" alt="Switzerland">
+                <img src="https://aissamdjahnine.github.io/flags/malaysia.png" alt="Malaysia">
+                <img src="https://aissamdjahnine.github.io/flags/belgium.png" alt="Belgium">
+                <img src="https://aissamdjahnine.github.io/flags/spain.png" alt="Spain">
+                <img src="https://aissamdjahnine.github.io/flags/turkey.png" alt="Turkey">
+                <img src="https://aissamdjahnine.github.io/flags/thailand.png" alt="Thailand">
+                <img src="https://aissamdjahnine.github.io/flags/egypt.png" alt="Egypt">
+                <img src="https://aissamdjahnine.github.io/flags/tunisia.png" alt="Tunisia">
+                <img src="https://aissamdjahnine.github.io/flags/france.png" alt="France">
+                <img src="https://aissamdjahnine.github.io/flags/monaco.png" alt="Monaco">
+                <img src="https://aissamdjahnine.github.io/flags/libya.png" alt="Libya">
+            </div>
+        </section>
+
+        <!-- Social Feed -->
+        <section>
+            <h3>Social Feed</h3>
+            <blockquote class="instagram-media" 
+                data-instgrm-permalink="https://www.instagram.com/aissam_dhn/"
+                data-instgrm-version="14"
+                style="background:#FFF; border:0; margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+            </blockquote>
+        </section>
     </aside>
 
     <!-- Main Content -->
-    <div class="content">
+    <main class="content">
         {{ content }}
-    </div>
+    </main>
 
     <!-- Right Sidebar -->
     <aside class="right-sidebar">
-        <!-- Google Scholar Stats -->
+        <!-- Scholar Stats -->
         <div class="scholar-stats">
-            <h2>Google Scholar Stats</h2>
+            <h2>Academic Profile</h2>
             <div class="stat-item">
                 <span>Total Citations:</span>
                 <strong>1,234</strong>
@@ -180,33 +260,70 @@
                 <span>i10-index:</span>
                 <strong>27</strong>
             </div>
+            <div class="stat-item">
+                <span>Publications:</span>
+                <strong>42</strong>
+            </div>
+            <a href="#" style="display: block; margin-top: 15px; text-align: center;">
+                View Full Profile →
+            </a>
         </div>
 
-        <!-- Project Cards -->
-        <h2>Featured Projects</h2>
-        <div class="mini-card">
-            <h3>AI Research Project</h3>
-            <p>Developed advanced ML models for natural language processing</p>
-            <a href="#">Read Case Study →</a>
-        </div>
+        <!-- Featured Projects -->
+        <section>
+            <h2>Featured Projects</h2>
+            <div class="mini-card">
+                <h3>AI-Powered Climate Model</h3>
+                <p>Machine learning approach to predict climate patterns using satellite data</p>
+                <a href="#">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                    View Project
+                </a>
+            </div>
 
-        <div class="mini-card">
-            <h3>Robotics Control System</h3>
-            <p>Real-time control system for industrial robots</p>
-            <a href="#">View Project →</a>
-        </div>
+            <div class="mini-card">
+                <h3>Robotic Control System</h3>
+                <p>Real-time control system for industrial automation robots</p>
+                <a href="#">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                    View Project
+                </a>
+            </div>
 
-        <div class="mini-card">
-            <h3>Climate Modeling</h3>
-            <p>Predictive models for climate change analysis</p>
-            <a href="#">Explore Research →</a>
-        </div>
+            <div class="mini-card">
+                <h3>Quantum Computing Framework</h3>
+                <p>Development toolkit for quantum algorithm simulation</p>
+                <a href="#">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                    View Project
+                </a>
+            </div>
+        </section>
     </aside>
 
     <!-- Scripts -->
     <script async src="https://www.instagram.com/embed.js"></script>
     {% if site.google_analytics %}
-    <!-- Google Analytics Script -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', '{{ site.google_analytics }}', 'auto');
+        ga('send', 'pageview');
+    </script>
     {% endif %}
 </body>
 </html>
