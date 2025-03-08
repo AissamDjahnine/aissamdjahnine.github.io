@@ -3,7 +3,7 @@ layout: default
 title: Projects
 permalink: /projects/
 ---
-## <span style="color: #267cb9;">Projects</span> :
+## <span style="color: #267cb9;">Projects</span>
 
 [**Segmentation and measurement of skeletal muscle areas on CT scans**]()
 

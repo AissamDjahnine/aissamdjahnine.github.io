@@ -3,11 +3,11 @@ layout: default
 title: Publications
 permalink: /publications/
 ---
-## <span style="color: #267cb9;">Publications</span> :
+## <span style="color: #267cb9;">Publications</span>
 
 [*Leveraging Normalizing Flows for Unsupervised Detection of Pathological Pulmonary in CT scans*]()<br> 
 **A. Djahnine**, E. Jupin-delevaux, O. Nempont, S. A. Si-Mohamed, V. Cottin, A. Popoff, P. Douek, L. Boussel<br>
-*IEEE TRANSACTIONS ON MEDICAL IMAGING - IEEE TMI*[*In revision*]<br>
+*IEEE TRANSACTIONS ON MEDICAL IMAGING - IEEE TMI* [*In revision*]<br>
 
 [*Weakly-Supervised learning based Pathology Detection and Localization in 3D Chest Scans*](https://pubmed.ncbi.nlm.nih.gov/39140793/)<br> 
 **A. Djahnine**, E. Jupin-delevaux, O. Nempont, F. Craighero, S. A. Si-Mohamed, V. Cottin, P. Douek, A. Popoff, L. Boussel<br>
