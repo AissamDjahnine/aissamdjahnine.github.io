@@ -15,9 +15,3 @@ permalink: /awards/
 
 * I was a member of the Philips team in collaboration with Hospices Civils de Lyon that won the JFR (les Journées Francophones de Radiologie) data challenge. The solution used Deep Learning for Computer Vision to detect pulmonary embolism in CT scans. ( [*Challenge Paper*](https://www.sciencedirect.com/science/article/abs/pii/S2211568423001183), [*Our Solution (Journal Paper)*](https://www.sciencedirect.com/science/article/abs/pii/S2211568423001808)) <br>
 <img src="/images/JFR_port.png?raw=true"/> 
-
-
-[*Run for Planet 2025 Finisher – 10 KM*](https://www.runforplanet.fr)
-
-*I was a participant in the 5th edition of the **Run for Planet** organized by Ethics Event. Proud to be a **10 KM Finisher**, supporting environmental causes through sport and raising awareness for sustainability.* 🌍🏃‍♂️ ([*Official Event Page*](https://www.runforplanet.fr), [*My Digital Medal*](https://app.unit3d.io/ticket/137993)) <br>
-<img src="/images/run-for-planet-10kM.png?raw=true" width="300"/>
