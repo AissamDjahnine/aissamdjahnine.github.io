@@ -20,4 +20,4 @@ permalink: /awards/
 [*Run for Planet 2025 Finisher – 10 KM*](https://www.runforplanet.fr)
 
 *I was a participant in the 5th edition of the **Run for Planet** organized by Ethics Event. Proud to be a **10 KM Finisher**, supporting environmental causes through sport and raising awareness for sustainability.* 🌍🏃‍♂️ ([*Official Event Page*](https://www.runforplanet.fr), [*My Digital Medal*](https://app.unit3d.io/ticket/137993)) <br>
-<img src="/images/runforplanet_medal.png?raw=true" width="300"/>
+<img src="/images/run-for-planet-10kM.png?raw=true" width="300"/>
