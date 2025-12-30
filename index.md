@@ -32,6 +32,10 @@ Supervisors : [*Pr. Serge Muller*](), [*Dr. Andrei Petrovskii*]()<br><br>
 
 ## <span style="color:  #267cb9;">Publications</span>
 
+[*eCAPRI: a novel tool combining clinical and imaging data for post-TAVI mortality prediction](https://link.springer.com/article/10.1007/s00330-025-12184-x)<br> 
+Pierre-Jean Lartaud, Brahim Harbaoui, Angelo Della Corte, **Aissam Djahnine**, Olivier Nempont, Jean-Michel Rouet, Anna Cecilia Vlachomitrou, Benjamin Riche, Muriel Rabilloud, Salim Si-Mohamed, Philippe Douek, François Derimay, Gilles Rioufol, Pierre Lantelme, Loïc Boussel<br>
+*European Radiology*<br>
+
 [*Leveraging Normalizing Flows for Unsupervised Detection of Pathological Pulmonary in CT scans*]()<br> 
 **A. Djahnine**, E. Jupin-delevaux, O. Nempont, S. A. Si-Mohamed, V. Cottin, A. Popoff, P. Douek, L. Boussel<br>
 *IEEE TRANSACTIONS ON MEDICAL IMAGING - IEEE TMI*[*In revision*]<br>
