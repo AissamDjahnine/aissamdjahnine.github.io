@@ -8,73 +8,111 @@
 
     {% seo %}
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;600&display=swap"
+        rel="stylesheet">
 
     <style>
         /* CSS Variables for Theming */
         :root {
-            --bg-color: #ffffff;
-            --text-color: #333333;
-            --sidebar-bg: #f4f4f4;
+            --bg-color: #f7f4ef;
+            --bg-accent: #f0e8dc;
+            --text-color: #1f1f1f;
+            --muted-text: #5f5b55;
+            --sidebar-bg: #ffffff;
             --card-bg: #ffffff;
-            --link-color: #000000;
-            --link-hover: blue;
-            --nav-bg: #ffffff;
-            --nav-shadow: rgba(0, 0, 0, 0.1);
-            --border-color: #e0e0e0;
+            --link-color: #1f1f1f;
+            --link-hover: #0b4bc1;
+            --nav-bg: rgba(255, 255, 255, 0.9);
+            --nav-shadow: rgba(31, 31, 31, 0.08);
+            --border-color: #e6e0d6;
+            --chip-bg: #f2ede3;
+            --accent: #0b4bc1;
+            --accent-soft: rgba(11, 75, 193, 0.08);
         }
 
         [data-theme="dark"] {
-            --bg-color: #1a1a1a;
-            --text-color: #e0e0e0;
-            --sidebar-bg: #2d2d2d;
-            --card-bg: #333333;
-            --link-color: #ffffff;
-            --link-hover: #4da6ff;
-            --nav-bg: #2d2d2d;
+            --bg-color: #0f1115;
+            --bg-accent: #151a20;
+            --text-color: #f0f0f0;
+            --muted-text: #a6a6a6;
+            --sidebar-bg: #161b22;
+            --card-bg: #1c222b;
+            --link-color: #f0f0f0;
+            --link-hover: #7fb0ff;
+            --nav-bg: rgba(22, 27, 34, 0.9);
             --nav-shadow: rgba(0, 0, 0, 0.5);
-            --border-color: #444444;
+            --border-color: #27303b;
+            --chip-bg: rgba(127, 176, 255, 0.12);
+            --accent: #7fb0ff;
+            --accent-soft: rgba(127, 176, 255, 0.12);
+        }
+
+        * {
+            box-sizing: border-box;
         }
 
         body {
             background-color: var(--bg-color);
             color: var(--text-color);
+            font-family: "Manrope", system-ui, -apple-system, sans-serif;
+            margin: 0;
+            line-height: 1.6;
             transition: background-color 0.3s, color 0.3s;
+            background-image: radial-gradient(circle at top right, var(--bg-accent), transparent 55%),
+                radial-gradient(circle at 10% 20%, rgba(11, 75, 193, 0.08), transparent 50%);
         }
 
         /* Navigation styling */
         #nav-container {
-            position: fixed;
+            position: sticky;
             top: 0;
             left: 0;
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 80px;
+            height: 72px;
             background-color: var(--nav-bg);
             z-index: 1000;
             box-shadow: 0px 2px 5px var(--nav-shadow);
             transition: background-color 0.3s;
+            backdrop-filter: blur(12px);
+        }
+
+        #nav-container nav {
+            width: min(1200px, 92vw);
         }
 
         #nav-container ul {
             list-style: none;
             display: flex;
-            gap: 20px;
+            gap: 12px;
             margin: 0;
             padding: 0;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         #nav-container ul li a {
             text-decoration: none;
             color: var(--link-color);
-            padding: 10px 15px;
-            transition: color 0.3s;
+            padding: 8px 14px;
+            border-radius: 999px;
+            font-weight: 600;
+            transition: color 0.3s, background-color 0.3s;
         }
 
         #nav-container ul li a:hover {
             color: var(--link-hover);
+            background-color: var(--accent-soft);
+        }
+
+        #nav-container ul li a[aria-current="page"] {
+            background-color: var(--accent);
+            color: #ffffff;
         }
 
         /* Dark Mode Toggle Button */
@@ -300,43 +338,64 @@
             text-decoration: underline;
         }
 
+        .mini-card img {
+            max-width: 90%;
+            height: auto;
+            margin: 12px auto 0;
+            border-radius: 12px;
+            display: block;
+            border: 1px solid var(--border-color);
+        }
+
+        .highlight-title {
+            font-family: "Fraunces", serif;
+            margin: 24px 0 12px;
+        }
+
+        .content section img {
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+        }
+
+        .content section img + br {
+            display: none;
+        }
+
+        .content section img {
+            margin: 12px 0 20px;
+        }
+
+        .content section hr {
+            border: none;
+            border-top: 1px solid var(--border-color);
+            margin: 32px 0;
+        }
+
         /* Responsive Design for Mobile/Tablet */
         @media (max-width: 1200px) {
-            .wrapper {
-                flex-direction: column;
-                align-items: center;
-                width: 100%;
-                max-width: 100%;
-                margin-top: 100px;
-                /* Space for fixed nav */
-                gap: 20px;
+            .page {
+                grid-template-columns: minmax(240px, 280px) minmax(0, 1fr);
+            }
+
+            .right-sidebar {
+                grid-column: span 2;
+            }
+        }
+
+        @media (max-width: 900px) {
+            #nav-container {
+                height: auto;
+                padding: 12px 0;
+            }
+
+            .page {
+                grid-template-columns: 1fr;
             }
 
             .sidebar,
-            .right-sidebar,
-            .content {
+            .right-sidebar {
                 position: static;
-                width: 90%;
-                max-width: 600px;
-                margin: 0 auto;
-                height: auto;
-                overflow: visible;
-            }
-
-            .content {
-                padding: 0;
-            }
-
-            /* Adjust nav for smaller screens if needed */
-            #nav-container {
-                height: auto;
-                min-height: 60px;
-                padding: 10px 0;
-            }
-
-            #nav-container ul {
-                flex-wrap: wrap;
-                justify-content: center;
+                max-height: none;
             }
         }
     </style>
@@ -348,13 +407,17 @@
 <body>
     <!-- Navigation Bar -->
     <div id="nav-container">
-        <nav>
+        <nav aria-label="Primary">
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/education/">Education</a></li>
-                <li><a href="/publications/">Publications</a></li>
-                <li><a href="/projects/">Projects</a></li>
-                <li><a href="/awards/">Awards</a></li>
+                {% if site.nav %}
+                {% for item in site.nav %}
+                {% assign is_current = page.url == item.url %}
+                <li>
+                    <a href="{{ item.url }}"
+                        {% if is_current %}aria-current="page"{% endif %}>{{ item.title }}</a>
+                </li>
+                {% endfor %}
+                {% endif %}
                 <li>
                     <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
                         <!-- Sun Icon -->
@@ -431,11 +494,11 @@
                 </p>
                 {% endif %}
             </footer>
-        </div>
+        </main>
 
         <!-- Right Sidebar -->
         <aside class="right-sidebar">
-            <h2>Cited by</h2>
+            <h2 class="highlight-title">Cited by</h2>
             <div class="scholar-stats">
                 <div class="stat-item">
                     <span>Total Citations:</span>
@@ -451,7 +514,7 @@
                 </div>
             </div>
 
-            <h2>Featured Projects</h2>
+            <h2 class="highlight-title">Featured Projects</h2>
             <div class="mini-card">
                 <h3>Segmentation and measurement of skeletal muscle areas on CT scans</h3>
                 <p>This project aims to segment and measure skeletal muscle areas on CT scans,
@@ -459,34 +522,30 @@
                     estimation using deep learning-based methods.</p>
                 <a href="#">View Project →</a>
             </div>
-            <h2>Personal</h2>
+            <h2 class="highlight-title">Personal</h2>
             <div class="mini-card" style="text-align: center;">
                 <h3>Milano25 Semi Marathon (21 KM)</h3>
                 <p>Proud <strong>21 KM Finisher</strong> at the 2025 edition of FollowYourPassion 🏃‍♂️🏅</p>
                 <a href="https://www.endu.net/en/events/milano21/results/2025/99707/8195" target="_blank">See results →</a>
-                <img src="/images/milano25-semi.png" alt="Results"
-                    style="max-width: 80%; height: auto; margin: 10px auto; border-radius: 8px;" />
+                <img src="/images/milano25-semi.png" alt="Results" />
             </div>
             <div class="mini-card" style="text-align: center;">
                 <h3>Odyssea Paris 2025 - 10 KM</h3>
                 <p>Proud <strong>10 KM Finisher</strong> at the 2025 edition of the Odyssea Paris 🏃‍♂️🏅</p>
                 <a href="https://www.sportinnovation.fr/Evenements/Resultats/6812" target="_blank">See results →</a>
-                <img src="/images/10-KM-ODYSSEA-2025.png?raw=true" alt="Results"
-                    style="max-width: 80%; height: auto; margin: 10px auto; border-radius: 8px;" />
+                <img src="/images/10-KM-ODYSSEA-2025.png?raw=true" alt="Results" />
             </div>
             <div class="mini-card" style="text-align: center;">
                 <h3>Run for Planet 2025 - 10 KM</h3>
                 <p>Proud <strong>10 KM Finisher</strong> at the 5th edition of the Run for Planet 2025 🌍🏃‍♂️</p>
                 <a href="https://www.runforplanet.fr" target="_blank">Event Page →</a>
-                <img src="/images/run-for-planet-10kM.png?raw=true" alt="Run for Planet Medal"
-                    style="max-width: 80%; height: auto; margin: 10px auto; border-radius: 8px;" />
+                <img src="/images/run-for-planet-10kM.png?raw=true" alt="Run for Planet Medal" />
             </div>
             <div class="mini-card" style="text-align: center;">
                 <h3>Parilly 2024 - 10 KM</h3>
                 <p>Proud <strong>10 KM Finisher</strong> at the 2024 edition of the 10 km de Parilly 🏃‍♂️🏅</p>
                 <a href="https://sgchrono.fr/live/10kmparilly24/" target="_blank">See Results →</a>
-                <img src="/images/10KM-PARILLY-LYON.png?raw=true" alt="Results"
-                    style="max-width: 80%; height: auto; margin: 10px auto; border-radius: 8px;" />
+                <img src="/images/10KM-PARILLY-LYON.png?raw=true" alt="Results" />
             </div>
         </aside>
     </div>
