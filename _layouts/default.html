@@ -260,6 +260,26 @@
             font-weight: 600;
         }
 
+        .cv-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 14px;
+            border-radius: 999px;
+            border: 1px solid var(--border-color);
+            background: var(--card-bg);
+            text-decoration: none;
+            font-weight: 600;
+            color: var(--link-color);
+            transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+        }
+
+        .cv-link:hover {
+            background: var(--accent-soft);
+            color: var(--link-hover);
+            border-color: var(--accent);
+        }
+
         .section-title {
             font-size: 0.85rem;
             letter-spacing: 0.12em;
@@ -665,6 +685,7 @@
                 {% endif %}
 
                 <p>{{ site.description | default: site.github.project_tagline }}</p>
+                <a class="cv-link" href="/docs/aissam_djahnine_cv_v11.pdf" target="_blank" rel="noopener">Download CV</a>
             </div>
 
             <!-- Travel Section -->
