@@ -449,18 +449,22 @@
             padding: 4px 10px;
         }
 
-        .date-pill {
+        .date-pill,
+        .pub-type {
             display: inline-block;
             font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 0.08em;
-            background: var(--accent-soft);
-            color: var(--accent);
-            border: 1px solid var(--border-color);
             border-radius: 999px;
             padding: 4px 10px;
-            margin: 0 0 8px 0;
             line-height: 1;
+            border: 1px solid var(--border-color);
+        }
+
+        .date-pill {
+            background: var(--accent-soft);
+            color: var(--accent);
+            margin: 0 0 8px 0;
         }
 
         .location-pill {
@@ -504,16 +508,8 @@
         }
 
         .pub-type {
-            display: inline-block;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
             background: var(--chip-bg);
             color: var(--text-color);
-            border: 1px solid var(--border-color);
-            border-radius: 999px;
-            padding: 4px 10px;
-            line-height: 1;
         }
 
         .pub-venue {
