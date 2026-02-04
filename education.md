@@ -17,7 +17,7 @@ permalink: /education/
   </div>
 
   <div class="timeline-item">
-    <div class="timeline-date">2018 - 2020</div>
+    <div class="timeline-date">September 2018 - August 2020</div>
     <span class="timeline-marker"></span>
     <div class="timeline-content">
       <h3 class="timeline-title">Pierre and Marie Curie University (Sorbonne Université)</h3>
@@ -30,7 +30,7 @@ permalink: /education/
   </div>
 
   <div class="timeline-item">
-    <div class="timeline-date">2019 - 2020</div>
+    <div class="timeline-date">September 2019 - August 2020</div>
     <span class="timeline-marker"></span>
     <div class="timeline-content">
       <h3 class="timeline-title">Télécom Paris</h3>
@@ -40,7 +40,7 @@ permalink: /education/
   </div>
 
   <div class="timeline-item">
-    <div class="timeline-date">2017 - 2018</div>
+    <div class="timeline-date">September 2017 - August 2018</div>
     <span class="timeline-marker"></span>
     <div class="timeline-content">
       <h3 class="timeline-title">Pierre and Marie Curie University (Sorbonne Université)</h3>
@@ -50,7 +50,7 @@ permalink: /education/
   </div>
 
   <div class="timeline-item">
-    <div class="timeline-date">2016 - 2017</div>
+    <div class="timeline-date">September 2016 - August 2017</div>
     <span class="timeline-marker"></span>
     <div class="timeline-content">
       <h3 class="timeline-title">Ecole Nationale Polytechnique d'Oran (ENPO)</h3>
@@ -60,7 +60,7 @@ permalink: /education/
   </div>
 
   <div class="timeline-item">
-    <div class="timeline-date">2014 - 2016</div>
+    <div class="timeline-date">September 2014 - August 2016</div>
     <span class="timeline-marker"></span>
     <div class="timeline-content">
       <h3 class="timeline-title">Ecole Préparatoire aux Sciences & Techniques (EPST)</h3>
