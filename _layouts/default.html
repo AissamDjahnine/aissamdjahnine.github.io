@@ -374,13 +374,13 @@
         .timeline {
             position: relative;
             margin: 24px 0;
-            padding-left: 32px;
+            padding-left: 0;
         }
 
         .timeline::before {
             content: "";
             position: absolute;
-            left: 10px;
+            left: 120px;
             top: 0;
             bottom: 0;
             width: 2px;
@@ -389,21 +389,27 @@
 
         .timeline-item {
             position: relative;
+            display: grid;
+            grid-template-columns: 110px 24px 1fr;
+            column-gap: 12px;
+            align-items: start;
             padding: 8px 0 24px 0;
         }
 
         .timeline-marker {
-            position: absolute;
-            left: 2px;
-            top: 16px;
-            width: 18px;
-            height: 18px;
+            grid-column: 2;
+            position: relative;
+            top: 8px;
+            width: 16px;
+            height: 16px;
             border-radius: 50%;
             background: var(--bg-color);
             border: 2px solid var(--accent);
+            margin-left: -7px;
         }
 
         .timeline-content {
+            grid-column: 3;
             background: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 16px;
@@ -412,11 +418,13 @@
         }
 
         .timeline-date {
+            grid-column: 1;
             font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 0.08em;
             color: var(--muted-text);
-            margin-bottom: 6px;
+            margin-top: 6px;
+            text-align: right;
         }
 
         .timeline-title {
@@ -435,12 +443,28 @@
         }
 
         @media (max-width: 900px) {
-            .timeline {
-                padding-left: 22px;
+            .timeline::before {
+                left: 12px;
+            }
+
+            .timeline-item {
+                grid-template-columns: 1fr;
+                padding-left: 24px;
+            }
+
+            .timeline-date {
+                text-align: left;
+                margin-bottom: 6px;
             }
 
             .timeline-marker {
-                left: -1px;
+                position: absolute;
+                left: 4px;
+                margin-left: 0;
+            }
+
+            .timeline-content {
+                grid-column: 1;
             }
         }
 
