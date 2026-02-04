@@ -51,6 +51,17 @@ permalink: /publications/
 
   <div class="pub-card">
     <div class="pub-badges">
+      <span class="date-pill">2024</span>
+      <span class="pub-type">Preprint</span>
+    </div>
+    <div class="pub-title"><a href="https://arxiv.org/abs/2403.18514">Leveraging 3D Normalizing Flows for Unsupervised Detection of Pathological Pulmonary CT Scans</a></div>
+    <div><strong>Djahnine Aissam</strong>, Popoff Alexandre, Jupin-Delevaux Emilien, Cottin Vincent, Nempont Olivier, Boussel Loic</div>
+    <div class="pub-venue">arXiv</div>
+    <img src="/images/GLOW_MIDL_recap.png?raw=true"/>
+  </div>
+
+  <div class="pub-card">
+    <div class="pub-badges">
       <span class="date-pill">2023</span>
       <span class="pub-type">Journal</span>
     </div>
@@ -62,12 +73,13 @@ permalink: /publications/
 
   <div class="pub-card">
     <div class="pub-badges">
-      <span class="date-pill">2024</span>
-      <span class="pub-type">Preprint</span>
+      <span class="date-pill">2022</span>
+      <span class="pub-type">Conference</span>
     </div>
-    <div class="pub-title"><a href="https://arxiv.org/abs/2403.18514">Leveraging 3D Normalizing Flows for Unsupervised Detection of Pathological Pulmonary CT Scans</a></div>
-    <div><strong>Djahnine Aissam</strong>, Popoff Alexandre, Jupin-Delevaux Emilien, Cottin Vincent, Nempont Olivier, Boussel Loic</div>
-    <div class="pub-venue">arXiv</div>
-    <img src="/images/GLOW_MIDL_recap.png?raw=true"/>
+    <div class="pub-title"><a href="https://doi.org/10.1016/j.redii.2023.100027">Tailored 3D CT contrastive pretraining to improve pulmonary pathology classification</a></div>
+    <div><strong>A. Djahnine</strong>, Popoff Alexandre,, E. Jupin-Delevaux, Cottin Vincent, Nempont Olivier, Boussel Loic</div>
+    <div class="pub-venue">16th IEEE International Conference on Signal Processing (ICSP)</div>
+    <img src="/images/ieee-contrastive.png?raw=true"/>
   </div>
+
 </div>
