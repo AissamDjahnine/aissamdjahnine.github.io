@@ -5,7 +5,7 @@ permalink: /internships/
 ---
 # <span style="color:  #267cb9;">Internships</span>
 
-#### March 2020 - August 2020
+<span class="date-pill">March 2020 - August 2020</span>
 ## Computer Vision and Deep Learning Intern @ GE Healthcare
 <img src="/images/GE.jpg?raw=true"/>
 Supervisors : [*Pr. Serge Muller*](), [*Dr. Andrei Petrovskii*]()<br><br>
@@ -17,7 +17,7 @@ Supervisors : [*Pr. Serge Muller*](), [*Dr. Andrei Petrovskii*]()<br><br>
 
 ---
 
-#### May 2019 - Aug 2019
+<span class="date-pill">May 2019 - Aug 2019</span>
 ## BIOMEDInnov Exchange Program Intern @ University of Waterloo
 **Ontario, Canada · On-site**  
 Selected from my Electrical Engineering Master’s program for the BIOMEDInnov exchange at the University of Waterloo, a venture aimed at pioneering Biomedical Engineering solutions. Contributed to a project designing energy-harvesting sensors and wireless systems to enhance sustainable biomedical technologies. The program involves Master students in research projects and strengthens innovation and entrepreneurship in biomedical engineering.  
@@ -26,7 +26,7 @@ Selected from my Electrical Engineering Master’s program for the BIOMEDInnov e
 
 ---
 
-#### Mar 2017 - Apr 2017
+<span class="date-pill">Mar 2017 - Apr 2017</span>
 ## Integrated Sensor Diagnostics Intern @ Halliburton
 **Hassi Messaoud, Ouargla, Algeria · On-site**  
 Observational internship at Halliburton Energy Services (Algeria Division) focused on integrated sensor diagnostics. Gained insights into deployment and maintenance of advanced sensor systems used in oilfield services, covering data acquisition, signal processing, and diagnostics. Shadowed engineers in calibration and troubleshooting of sensor equipment, contributing to data integrity and operational efficiency.  
@@ -34,7 +34,7 @@ Observational internship at Halliburton Energy Services (Algeria Division) focus
 
 ---
 
-#### Dec 2016 - Jan 2017
+<span class="date-pill">Dec 2016 - Jan 2017</span>
 ## Engineer Intern @ Sonatrach
 **Hassi Messaoud, Ouargla, Algeria · On-site**  
 Observational internship in the maintenance department of the oil industry. Gained understanding of operational challenges and maintenance strategies critical to energy production, with exposure to methods for sustaining and improving large-scale infrastructure.  
