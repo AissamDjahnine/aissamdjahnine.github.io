@@ -7,7 +7,7 @@ permalink: /education/
 
 <div class="timeline">
   <div class="timeline-item">
-    <div class="timeline-date">July 2021 - July 2024</div>
+    <div class="timeline-date">February 2021 - July 2024</div>
     <span class="timeline-marker"></span>
     <div class="timeline-content">
       <h3 class="timeline-title">INSA Lyon - Institut National des Sciences Appliquées de Lyon</h3>
