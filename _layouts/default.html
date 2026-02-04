@@ -510,9 +510,27 @@
         }
 
         .pub-type {
-            background: rgba(219, 39, 119, 0.12);
-            color: #be185d;
-            border-color: rgba(219, 39, 119, 0.35);
+            background: var(--chip-bg);
+            color: var(--text-color);
+            border-color: var(--border-color);
+        }
+
+        .pub-type.is-journal {
+            background: rgba(16, 185, 129, 0.14);
+            color: #047857;
+            border-color: rgba(16, 185, 129, 0.35);
+        }
+
+        .pub-type.is-conference {
+            background: rgba(245, 158, 11, 0.14);
+            color: #b45309;
+            border-color: rgba(245, 158, 11, 0.35);
+        }
+
+        .pub-type.is-preprint {
+            background: rgba(168, 85, 247, 0.14);
+            color: #7c3aed;
+            border-color: rgba(168, 85, 247, 0.35);
         }
 
         .pub-venue {
