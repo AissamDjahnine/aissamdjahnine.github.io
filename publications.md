@@ -5,13 +5,14 @@ permalink: /publications/
 ---
 ## <span style="color: #267cb9;">Publications</span>
 
-[*eCAPRI: a novel tool combining clinical and imaging data for post-TAVI mortality prediction*](https://link.springer.com/article/10.1007/s00330-025-12184-x)<br> 
-PJ. Lartaud, B. Harbaoui, A. Della Corte, **A. Djahnine**, O. Nempont, JM. Rouet, A. Cecilia Vlachomitrou, B. Riche, M. Rabilloud, S. Si-Mohamed, P. Douek, F. Derimay, G. Rioufol, P. Lantelme, L. Boussel<br>
-*European Radiology*<br>
-
 [*Leveraging Normalizing Flows for Unsupervised Detection of Pathological Pulmonary in CT scans*]()<br> 
 **A. Djahnine**, E. Jupin-delevaux, O. Nempont, S. A. Si-Mohamed, V. Cottin, A. Popoff, P. Douek, L. Boussel<br>
 *IEEE TRANSACTIONS ON MEDICAL IMAGING - IEEE TMI* [*In revision*]<br>
+
+[*eCAPRI: a novel tool combining clinical and imaging data for post-TAVI mortality prediction*](https://link.springer.com/article/10.1007/s00330-025-12184-x)<br> 
+PJ. Lartaud, B. Harbaoui, A. Della Corte, **A. Djahnine**, O. Nempont, JM. Rouet, A. Cecilia Vlachomitrou, B. Riche, M. Rabilloud, S. Si-Mohamed, P. Douek, F. Derimay, G. Rioufol, P. Lantelme, L. Boussel<br>
+*European Radiology*<br>
+<img src="/images/CAPRI_recap.png?raw=true"/><br>
 
 [*Weakly-Supervised learning based Pathology Detection and Localization in 3D Chest Scans*](https://pubmed.ncbi.nlm.nih.gov/39140793/)<br> 
 **A. Djahnine**, E. Jupin-delevaux, O. Nempont, F. Craighero, S. A. Si-Mohamed, V. Cottin, P. Douek, A. Popoff, L. Boussel<br>
@@ -27,11 +28,6 @@ PJ. Lartaud, B. Harbaoui, A. Della Corte, **A. Djahnine**, O. Nempont, JM. Rouet
 E. Jupin-Delevaux, **A. Djahnine**, F. Talbot, A. Richard, S. Gouttard, A. Mansuy, P. Douek, S. A. Si-Mohamed, L. Boussel<br>
 *Research in Diagnostic and Interventional Imaging Journal (ReDII)*<br>
 <img src="/images/BERT_recap.png?raw=true"/><br>
-
-[*Automatization and development of the TAVI CAPRI risk score with imaging biomarkers*]()<br> 
-P.-J. Lartaud, B. Harbaoui, **A. Djahnine**, O. Nempont, J.-M. Rouet, Anna Vlachomitrou, B. Riche, M. Rabilloud, S. Si-Mohamed P. Douek, F. Derimay, G. Rioufol, P. Lantelme, L. Boussel<br>
-*Radiology Advances : Oxford Academic*[*In revision*]()<br>
-<img src="/images/CAPRI_recap.png?raw=true"/><br>
 
 
 [*Leveraging 3D Normalizing Flows for Unsupervised Detection of Pathological Pulmonary CT Scans*](https://arxiv.org/abs/2403.18514)<br>
