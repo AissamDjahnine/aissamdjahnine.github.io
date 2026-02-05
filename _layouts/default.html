@@ -603,6 +603,9 @@
         }
 
         .gh-stars {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
             font-size: 0.85rem;
             color: var(--muted-text);
         }
@@ -618,6 +621,32 @@
 
         .gh-link:hover {
             color: var(--link-hover);
+        }
+
+        .gh-description {
+            color: var(--text-color);
+            margin: 0 0 10px;
+        }
+
+        .gh-langs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .gh-lang {
+            display: inline-flex;
+            align-items: center;
+            height: 26px;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            border-radius: 999px;
+            padding: 0 10px;
+            line-height: 1;
+            background: var(--chip-bg);
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
         }
 
         .timeline-title {
