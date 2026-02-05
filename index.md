@@ -94,15 +94,6 @@ Oxford, United Kingdom <br>
 <br>
 <br>
 
-## <span style="color:  #267cb9;">Academic Services</span>
-
-**Reviewer** : 20th IEEE International Symposium on Biomedical Imaging, ISBI 2023<br>
-
-**Academic Tutor** : Assisted undergraduate students with academic projects and lab sessions, focusing on mathematics, linear algebra problem-solving, analog and digital electronics applications, as well as programming in C, MATLAB, and VHDL at Sorbonne University (2019)<br>
-
-<br>
-<br>
-
 ## <span style="color:  #267cb9;">Research Projects</span>
 
 #### PRE-PHD SHORT CONTRACT WITH HOSPICES CIVILS DE LYON  
