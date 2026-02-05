@@ -985,7 +985,7 @@
                         const data = await res.json();
                         cache.set(repo, data.stargazers_count ?? 0);
                     }
-                    target.textContent = `${cache.get(repo)} ★`;
+                    target.textContent = `${cache.get(repo)}`;
                 } catch (err) {
                     target.textContent = '—';
                 }
