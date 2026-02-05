@@ -560,7 +560,7 @@
 
         .gh-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-columns: 1fr;
             gap: 16px;
             margin: 16px 0 24px;
         }
@@ -571,6 +571,10 @@
             border-radius: 16px;
             padding: 16px 18px;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+            display: grid;
+            grid-template-columns: 160px 1fr;
+            gap: 16px;
+            align-items: center;
         }
 
         .gh-title {
@@ -647,6 +651,50 @@
             background: var(--chip-bg);
             color: var(--text-color);
             border: 1px solid var(--border-color);
+        }
+
+        .gh-tag-chip {
+            display: inline-flex;
+            align-items: center;
+            height: 26px;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            border-radius: 999px;
+            padding: 0 10px;
+            line-height: 1;
+            background: rgba(14, 116, 144, 0.12);
+            color: #0e7490;
+            border: 1px solid rgba(14, 116, 144, 0.3);
+        }
+
+        .gh-media {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            background: linear-gradient(135deg, var(--accent-soft), rgba(14, 116, 144, 0.08));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted-text);
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 8px;
+        }
+
+        .gh-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            margin-top: 8px;
+        }
+
+        @media (max-width: 900px) {
+            .gh-card {
+                grid-template-columns: 1fr;
+            }
         }
 
         .timeline-title {
