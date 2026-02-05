@@ -11,7 +11,6 @@ permalink: /github-repos/
     <div>
       <div class="gh-meta">
         <span class="gh-stars"><span class="gh-star-icon">★</span><span data-stars>—</span></span>
-        <span class="gh-tag-chip">Chrome Extension</span>
       </div>
       <div class="gh-title">lateness-estimator</div>
       <div class="gh-description">A Chrome Extension that injects humorous “arrival estimate” labels next to attendees in Google Calendar event details.</div>
@@ -30,7 +29,6 @@ permalink: /github-repos/
     <div>
       <div class="gh-meta">
         <span class="gh-stars"><span class="gh-star-icon">★</span><span data-stars>—</span></span>
-        <span class="gh-tag-chip">App</span>
       </div>
       <div class="gh-title">vacation_optimizer</div>
       <div class="gh-description">An app to optimize vacation days by strategically planning time off around holidays and weekends.</div>
@@ -49,7 +47,6 @@ permalink: /github-repos/
     <div>
       <div class="gh-meta">
         <span class="gh-stars"><span class="gh-star-icon">★</span><span data-stars>—</span></span>
-        <span class="gh-tag-chip">Research</span>
       </div>
       <div class="gh-title">Mouvement_estimation</div>
       <div class="gh-description">Movement estimation implementation using the Horn &amp; Schunk optical flow method for pixel-level motion analysis.</div>
@@ -68,7 +65,6 @@ permalink: /github-repos/
     <div>
       <div class="gh-meta">
         <span class="gh-stars"><span class="gh-star-icon">★</span><span data-stars>—</span></span>
-        <span class="gh-tag-chip">Research</span>
       </div>
       <div class="gh-title">ColorTransfer</div>
       <div class="gh-description">Color transfer between images in a correlated color space for artistic and technical image manipulation.</div>
@@ -87,7 +83,6 @@ permalink: /github-repos/
     <div>
       <div class="gh-meta">
         <span class="gh-stars"><span class="gh-star-icon">★</span><span data-stars>—</span></span>
-        <span class="gh-tag-chip">Deep Learning</span>
       </div>
       <div class="gh-title">CycleGAN</div>
       <div class="gh-description">Automated segmentation of cell images using Cycle-Consistent Generative Adversarial Networks for medical imaging.</div>
@@ -106,7 +101,6 @@ permalink: /github-repos/
     <div>
       <div class="gh-meta">
         <span class="gh-stars"><span class="gh-star-icon">★</span><span data-stars>—</span></span>
-        <span class="gh-tag-chip">Deep Learning</span>
       </div>
       <div class="gh-title">gans</div>
       <div class="gh-description">Generative Adversarial Networks implemented in PyTorch for various GAN architectures and experiments.</div>
@@ -125,7 +119,6 @@ permalink: /github-repos/
     <div>
       <div class="gh-meta">
         <span class="gh-stars"><span class="gh-star-icon">★</span><span data-stars>—</span></span>
-        <span class="gh-tag-chip">AI</span>
       </div>
       <div class="gh-title">Search-Algorithms-in-AI</div>
       <div class="gh-description">Implementation of AI search algorithms including BFS, DFS, and A* for pathfinding and graph traversal problems.</div>
@@ -144,7 +137,6 @@ permalink: /github-repos/
     <div>
       <div class="gh-meta">
         <span class="gh-stars"><span class="gh-star-icon">★</span><span data-stars>—</span></span>
-        <span class="gh-tag-chip">Algorithms</span>
       </div>
       <div class="gh-title">Dijkstra</div>
       <div class="gh-description">Application of Dijkstra's shortest path algorithm for graph optimization problems.</div>
@@ -163,7 +155,6 @@ permalink: /github-repos/
     <div>
       <div class="gh-meta">
         <span class="gh-stars"><span class="gh-star-icon">★</span><span data-stars>—</span></span>
-        <span class="gh-tag-chip">Signal Processing</span>
       </div>
       <div class="gh-title">Spectral Subtraction</div>
       <div class="gh-description">Speech enhancement using spectral subtraction technique based on Steve F. Boli's research work.</div>
@@ -182,7 +173,6 @@ permalink: /github-repos/
     <div>
       <div class="gh-meta">
         <span class="gh-stars"><span class="gh-star-icon">★</span><span data-stars>—</span></span>
-        <span class="gh-tag-chip">Networking</span>
       </div>
       <div class="gh-title">TCP-Server-Client</div>
       <div class="gh-description">Basic TCP server-client implementation demonstrating socket programming and network communication protocols.</div>
@@ -201,7 +191,6 @@ permalink: /github-repos/
     <div>
       <div class="gh-meta">
         <span class="gh-stars"><span class="gh-star-icon">★</span><span data-stars>—</span></span>
-        <span class="gh-tag-chip">Reinforcement Learning</span>
       </div>
       <div class="gh-title">MDP with Value/Policy Iteration</div>
       <div class="gh-description">Value and Policy Iteration algorithms explained for solving Markov Decision Processes in reinforcement learning.</div>
@@ -220,7 +209,6 @@ permalink: /github-repos/
     <div>
       <div class="gh-meta">
         <span class="gh-stars"><span class="gh-star-icon">★</span><span data-stars>—</span></span>
-        <span class="gh-tag-chip">Portfolio Website</span>
       </div>
       <div class="gh-title">aissamdjahnine.github.io</div>
       <div class="gh-description">Developer and data science portfolio website based on a minimal Jekyll theme for GitHub Pages.</div>
