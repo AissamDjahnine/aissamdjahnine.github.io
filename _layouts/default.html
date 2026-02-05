@@ -558,6 +558,68 @@
             margin: 6px 0 10px;
         }
 
+        .gh-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+            margin: 16px 0 24px;
+        }
+
+        .gh-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 16px 18px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        .gh-title {
+            font-family: "Fraunces", serif;
+            font-size: 1.05rem;
+            margin: 0 0 8px;
+        }
+
+        .gh-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .gh-tag {
+            display: inline-flex;
+            align-items: center;
+            height: 28px;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            border-radius: 999px;
+            padding: 0 12px;
+            line-height: 1;
+            background: var(--chip-bg);
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+        }
+
+        .gh-stars {
+            font-size: 0.85rem;
+            color: var(--muted-text);
+        }
+
+        .gh-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            color: var(--link-color);
+        }
+
+        .gh-link:hover {
+            color: var(--link-hover);
+        }
+
         .timeline-title {
             font-family: "Fraunces", serif;
             font-size: 1.2rem;
@@ -824,6 +886,31 @@
                 moonIcon.style.display = 'none';
             }
         });
+    </script>
+
+    <script>
+        async function hydrateGithubStars() {
+            const cards = document.querySelectorAll('[data-repo]');
+            if (!cards.length) return;
+            const cache = new Map();
+            for (const card of cards) {
+                const repo = card.getAttribute('data-repo');
+                const target = card.querySelector('[data-stars]');
+                if (!repo || !target) continue;
+                try {
+                    if (!cache.has(repo)) {
+                        const res = await fetch(`https://api.github.com/repos/${repo}`);
+                        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                        const data = await res.json();
+                        cache.set(repo, data.stargazers_count ?? 0);
+                    }
+                    target.textContent = `${cache.get(repo)} ★`;
+                } catch (err) {
+                    target.textContent = '—';
+                }
+            }
+        }
+        hydrateGithubStars();
     </script>
 
     {% if site.google_analytics %}

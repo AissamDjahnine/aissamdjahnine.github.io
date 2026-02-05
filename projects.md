@@ -5,6 +5,82 @@ permalink: /projects/
 ---
 ## <span style="color: #267cb9;">Projects</span>
 
+## <span style="color: #267cb9;">GitHub Projects</span>
+
+<div class="gh-grid">
+  <div class="gh-card" data-repo="AissamDjahnine/lateness-estimator">
+    <div class="gh-meta">
+      <span class="gh-tag">Chrome Extension</span>
+      <span class="gh-stars" data-stars>—</span>
+    </div>
+    <div class="gh-title">lateness-estimator</div>
+    <a class="gh-link" href="https://github.com/AissamDjahnine/lateness-estimator" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+
+  <div class="gh-card" data-repo="AissamDjahnine/vacation_optimizer">
+    <div class="gh-meta">
+      <span class="gh-tag">App</span>
+      <span class="gh-stars" data-stars>—</span>
+    </div>
+    <div class="gh-title">vacation_optimizer</div>
+    <a class="gh-link" href="https://github.com/AissamDjahnine/vacation_optimizer" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+
+  <div class="gh-card" data-repo="AissamDjahnine/CycleGAN">
+    <div class="gh-meta">
+      <span class="gh-tag">Research</span>
+      <span class="gh-stars" data-stars>—</span>
+    </div>
+    <div class="gh-title">CycleGAN</div>
+    <a class="gh-link" href="https://github.com/AissamDjahnine/CycleGAN" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+
+  <div class="gh-card" data-repo="AissamDjahnine/ColorTransfer">
+    <div class="gh-meta">
+      <span class="gh-tag">Research</span>
+      <span class="gh-stars" data-stars>—</span>
+    </div>
+    <div class="gh-title">ColorTransfer</div>
+    <a class="gh-link" href="https://github.com/AissamDjahnine/ColorTransfer" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+
+  <div class="gh-card" data-repo="AissamDjahnine/gans">
+    <div class="gh-meta">
+      <span class="gh-tag">Research</span>
+      <span class="gh-stars" data-stars>—</span>
+    </div>
+    <div class="gh-title">gans</div>
+    <a class="gh-link" href="https://github.com/AissamDjahnine/gans" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+
+  <div class="gh-card" data-repo="AissamDjahnine/Mouvement_estimation">
+    <div class="gh-meta">
+      <span class="gh-tag">Computer Vision</span>
+      <span class="gh-stars" data-stars>—</span>
+    </div>
+    <div class="gh-title">Mouvement_estimation</div>
+    <a class="gh-link" href="https://github.com/AissamDjahnine/Mouvement_estimation" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+
+  <div class="gh-card" data-repo="AissamDjahnine/Search-Algorithms-in-AI">
+    <div class="gh-meta">
+      <span class="gh-tag">Algorithms</span>
+      <span class="gh-stars" data-stars>—</span>
+    </div>
+    <div class="gh-title">Search-Algorithms-in-AI</div>
+    <a class="gh-link" href="https://github.com/AissamDjahnine/Search-Algorithms-in-AI" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+
+  <div class="gh-card" data-repo="AissamDjahnine/Suppression-of-Acoustic-Noise-in-Speech-Using-Spectral-Subtraction-">
+    <div class="gh-meta">
+      <span class="gh-tag">Signal Processing</span>
+      <span class="gh-stars" data-stars>—</span>
+    </div>
+    <div class="gh-title">Spectral Subtraction</div>
+    <a class="gh-link" href="https://github.com/AissamDjahnine/Suppression-of-Acoustic-Noise-in-Speech-Using-Spectral-Subtraction-" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+</div>
+
 [**Segmentation and measurement of skeletal muscle areas on CT scans**]()
 
 * This project aims to segment and measure skeletal muscle areas on CT scans, specifically at the L3, L2, and L1 vertebrae levels, to improve sarcopenia estimation using deep learning-based methods. By leveraging advanced data augmentation techniques, such as applying filters, rotations, and adding artificial elements, the dataset's diversity and robustness were significantly improved. Post-processing methods were developed to remove artifacts like ribs, ensuring cleaner and more accurate segmentations. The approach showed promising results in accurately segmenting muscle areas, leading to more reliable sarcopenia assessments and potential further improvements.
