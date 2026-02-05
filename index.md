@@ -116,17 +116,6 @@ Oxford, United Kingdom <br>
 * Inpainting spatio-temporal sequences is an active research topic that relies heavily on supervision with large datasets. In this work, we consider the problem of reconstructing missing information with an unsupervised learning approach. Following the work of Kim et al. We train a generative model on the occluded sequences. We ensure that the models captured both frame-based and sequential based information. Our proposed model is adapted to large-scale images and can be used to different types of sequences and occlusion processes.
 <img src="images/unsupervised.png?raw=true"/> 
 
-[**Cell Images Segmentation Using Cycle Generative Adversarial Network**](https://github.com/AissamDjahnine/CycleGAN)
-
-<img src="images/INSTITUT_PASTEUR_LOGO_2020.jpg?raw=true" width="300"/> 
-* During our 6-month curriculum project with Institut Pasteur and Sorbonne University, we focused on cell image segmentation for various medical applications. Recognizing the significance of labeled data for training accurate convolutional neural networks (CNNs), we adopted a cycleGAN framework to overcome the challenge of limited data. Our research objectives were two-fold: first, to generate synthetic cell images that mimic the distribution of input images for data augmentation, combining them with real cell images to train a context-aware CNN for precise cell segmentation. Second, we proposed a segmentation method based on cycle-consistent generative adversarial networks (CycleGANs), which allowed us to train the model even in the absence of prepared image-mask pairs.
-<img src="images/cycleGan.jpg?raw=true"/>
-
-[**Histopathological Images Generation Using Generative Adversarial Network**](https://github.com/AissamDjahnine/gans)
-* Here, we implement an approach to histopathological image generation that overcomes the challenge of dataset size (small datasets) in medical field by utilizing a GAN framework (Generative adversarial network). The main objective of this research project is :
-* Generate synthetic histopathological images that model the distribution of the input images for data augmentation. Use both of the synthetic and real images for training in different tasks (detection/segmentation/tracking).<br>
-<img src="images/gans_ex.png?raw=true"/>
-
 <br>
 <br>
 
