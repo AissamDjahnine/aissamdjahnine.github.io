@@ -7,7 +7,7 @@ permalink: /github-repos/
 
 <div class="gh-grid">
   <div class="gh-card" data-repo="AissamDjahnine/lateness-estimator">
-    <div class="gh-media">Add image</div>
+    <img class="gh-media-img" src="/images/github-projects/lateness.png" alt="lateness-estimator preview"/>
     <div>
       <div class="gh-meta"></div>
       <div class="gh-title">lateness-estimator</div>
@@ -24,7 +24,7 @@ permalink: /github-repos/
   </div>
 
   <div class="gh-card" data-repo="AissamDjahnine/vacation_optimizer">
-    <div class="gh-media">Add image</div>
+    <img class="gh-media-img" src="/images/github-projects/vacation-optimizer.png" alt="vacation_optimizer preview"/>
     <div>
       <div class="gh-meta"></div>
       <div class="gh-title">vacation_optimizer</div>
@@ -41,7 +41,7 @@ permalink: /github-repos/
   </div>
 
   <div class="gh-card" data-repo="AissamDjahnine/Mouvement_estimation">
-    <div class="gh-media">Add image</div>
+    <img class="gh-media-img" src="/images/github-projects/mouvement-estimation.png" alt="Mouvement_estimation preview"/>
     <div>
       <div class="gh-meta"></div>
       <div class="gh-title">Mouvement_estimation</div>
@@ -75,7 +75,7 @@ permalink: /github-repos/
   </div>
 
   <div class="gh-card" data-repo="AissamDjahnine/CycleGAN">
-    <div class="gh-media">Add image</div>
+    <img class="gh-media-img" src="/images/github-projects/gan.png" alt="CycleGAN preview"/>
     <div>
       <div class="gh-meta"></div>
       <div class="gh-title">CycleGAN</div>
@@ -92,7 +92,7 @@ permalink: /github-repos/
   </div>
 
   <div class="gh-card" data-repo="AissamDjahnine/gans">
-    <div class="gh-media">Add image</div>
+    <img class="gh-media-img" src="/images/github-projects/gan.png" alt="gans preview"/>
     <div>
       <div class="gh-meta"></div>
       <div class="gh-title">gans</div>
@@ -109,7 +109,7 @@ permalink: /github-repos/
   </div>
 
   <div class="gh-card" data-repo="AissamDjahnine/Search-Algorithms-in-AI">
-    <div class="gh-media">Add image</div>
+    <img class="gh-media-img" src="/images/github-projects/AI-path-finder.png" alt="Search-Algorithms-in-AI preview"/>
     <div>
       <div class="gh-meta"></div>
       <div class="gh-title">Search-Algorithms-in-AI</div>
@@ -160,7 +160,7 @@ permalink: /github-repos/
   </div>
 
   <div class="gh-card" data-repo="AissamDjahnine/TCP-Server-Client">
-    <div class="gh-media">Add image</div>
+    <img class="gh-media-img" src="/images/github-projects/server-tcp.png" alt="TCP-Server-Client preview"/>
     <div>
       <div class="gh-meta"></div>
       <div class="gh-title">TCP-Server-Client</div>
@@ -194,7 +194,7 @@ permalink: /github-repos/
   </div>
 
   <div class="gh-card" data-repo="AissamDjahnine/aissamdjahnine.github.io">
-    <div class="gh-media">Add image</div>
+    <img class="gh-media-img" src="/images/github-projects/portfolio.png" alt="aissamdjahnine.github.io preview"/>
     <div>
       <div class="gh-meta"></div>
       <div class="gh-title">aissamdjahnine.github.io</div>
