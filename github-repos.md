@@ -91,23 +91,6 @@ permalink: /github-repos/
     </div>
   </div>
 
-  <div class="gh-card" data-repo="AissamDjahnine/gans">
-    <img class="gh-media-img" src="/images/github-projects/gan-project.png" alt="gans preview"/>
-    <div>
-      <div class="gh-meta"></div>
-      <div class="gh-title">gans</div>
-      <div class="gh-description">Generative Adversarial Networks implemented in PyTorch for various GAN architectures and experiments.</div>
-      <div class="gh-langs">
-        <span class="gh-lang">Python</span>
-        <span class="gh-tag-chip">Deep Learning</span>
-      </div>
-      <div class="gh-actions">
-        <a class="gh-link" href="https://github.com/AissamDjahnine/gans" target="_blank" rel="noopener">GitHub ↗</a>
-        <span class="gh-stars"><span class="gh-star-icon">★</span><span data-stars>—</span></span>
-      </div>
-    </div>
-  </div>
-
   <div class="gh-card" data-repo="AissamDjahnine/Search-Algorithms-in-AI">
     <img class="gh-media-img" src="/images/github-projects/AI-path-finder.png" alt="Search-Algorithms-in-AI preview"/>
     <div>
