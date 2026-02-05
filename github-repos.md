@@ -75,7 +75,7 @@ permalink: /github-repos/
   </div>
 
   <div class="gh-card" data-repo="AissamDjahnine/CycleGAN">
-    <img class="gh-media-img" src="/images/github-projects/gan.png" alt="CycleGAN preview"/>
+    <img class="gh-media-img" src="/images/github-projects/gan-project.png" alt="CycleGAN preview"/>
     <div>
       <div class="gh-meta"></div>
       <div class="gh-title">CycleGAN</div>
@@ -92,7 +92,7 @@ permalink: /github-repos/
   </div>
 
   <div class="gh-card" data-repo="AissamDjahnine/gans">
-    <img class="gh-media-img" src="/images/github-projects/gan.png" alt="gans preview"/>
+    <img class="gh-media-img" src="/images/github-projects/gan-project.png" alt="gans preview"/>
     <div>
       <div class="gh-meta"></div>
       <div class="gh-title">gans</div>
@@ -126,7 +126,7 @@ permalink: /github-repos/
   </div>
 
   <div class="gh-card" data-repo="AissamDjahnine/Dijkstra">
-    <div class="gh-media">Add image</div>
+    <img class="gh-media-img" src="/images/github-projects/disjtra.png" alt="Dijkstra preview"/>
     <div>
       <div class="gh-meta"></div>
       <div class="gh-title">Dijkstra</div>
@@ -143,7 +143,7 @@ permalink: /github-repos/
   </div>
 
   <div class="gh-card" data-repo="AissamDjahnine/Suppression-of-Acoustic-Noise-in-Speech-Using-Spectral-Subtraction-">
-    <div class="gh-media">Add image</div>
+    <img class="gh-media-img" src="/images/github-projects/noise-canceling.png" alt="Spectral Subtraction preview"/>
     <div>
       <div class="gh-meta"></div>
       <div class="gh-title">Spectral Subtraction</div>
@@ -177,7 +177,7 @@ permalink: /github-repos/
   </div>
 
   <div class="gh-card" data-repo="AissamDjahnine/MDP-with-Value-Iteration-and-Policy-Iteration">
-    <div class="gh-media">Add image</div>
+    <img class="gh-media-img" src="/images/github-projects/MDP-markov.png" alt="MDP with Value/Policy Iteration preview"/>
     <div>
       <div class="gh-meta"></div>
       <div class="gh-title">MDP with Value/Policy Iteration</div>
