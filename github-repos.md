@@ -58,7 +58,7 @@ permalink: /github-repos/
   </div>
 
   <div class="gh-card" data-repo="AissamDjahnine/ColorTransfer">
-    <div class="gh-media">Add image</div>
+    <img class="gh-media-img" src="/images/github-projects/color-transfer.png" alt="ColorTransfer preview"/>
     <div>
       <div class="gh-meta"></div>
       <div class="gh-title">ColorTransfer</div>
