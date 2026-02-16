@@ -7,7 +7,7 @@ nav:
     url: "/academic-services/"
   - title: "Internships"
     url: "/internships/"
-  - title: "GitHub Repository Projects"
+  - title: "GitHub Projects"
     url: "/github-repos/"
   - title: "Publications"
     url: "/publications/"

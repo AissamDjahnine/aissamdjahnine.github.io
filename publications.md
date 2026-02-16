@@ -76,7 +76,7 @@ permalink: /publications/
       <span class="date-pill">2022</span>
       <span class="pub-type is-conference">Conference</span>
     </div>
-    <div class="pub-title"><a href="https://doi.org/10.1016/j.redii.2023.100027">Tailored 3D CT contrastive pretraining to improve pulmonary pathology classification</a></div>
+    <div class="pub-title"><a href="https://ieeexplore.ieee.org/document/9965218">Tailored 3D CT contrastive pretraining to improve pulmonary pathology classification</a></div>
     <div><strong>A. Djahnine</strong>, Popoff Alexandre,, E. Jupin-Delevaux, Cottin Vincent, Nempont Olivier, Boussel Loic</div>
     <div class="pub-venue">16th IEEE International Conference on Signal Processing (ICSP)</div>
     <img src="/images/ieee-contrastive.png?raw=true"/>

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: GitHub Repository Projects
+title: GitHub Projects
 permalink: /github-repos/
 ---
 # <span style="color: #267cb9;">GitHub Repository Projects</span>
