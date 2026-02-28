@@ -35,17 +35,17 @@
         }
 
         [data-theme="dark"] {
-            --bg-color: #0c121b;
-            --bg-accent: #121c29;
+            --bg-color: #0f1a28;
+            --bg-accent: #142133;
             --text-color: #e6edf7;
             --muted-text: #b4c0d0;
             --sidebar-bg: #131d2a;
             --card-bg: #1a2533;
             --link-color: #d8e6ff;
             --link-hover: #9fc3ff;
-            --nav-bg: rgba(19, 32, 48, 0.93);
-            --nav-shadow: rgba(8, 16, 28, 0.28);
-            --border-color: #324459;
+            --nav-bg: rgba(17, 29, 44, 0.92);
+            --nav-shadow: rgba(6, 12, 20, 0.22);
+            --border-color: #2b3d52;
             --chip-bg: rgba(159, 195, 255, 0.14);
             --accent: #78a8ff;
             --accent-soft: rgba(120, 168, 255, 0.18);
@@ -393,12 +393,12 @@
 
         .scroll-focus {
             border-color: rgba(120, 168, 255, 0.55) !important;
-            box-shadow: 0 0 0 2px rgba(120, 168, 255, 0.22);
+            box-shadow: 0 0 0 1px rgba(120, 168, 255, 0.18);
         }
 
         .content.scroll-focus {
-            background-color: rgba(120, 168, 255, 0.05);
-            box-shadow: 0 0 0 1px rgba(120, 168, 255, 0.25) inset;
+            background-color: transparent;
+            box-shadow: none;
         }
 
         .mini-card img {
@@ -762,11 +762,11 @@
         }
 
         [data-theme="dark"] body {
-            background-image: radial-gradient(circle at 20% 0%, rgba(120, 168, 255, 0.12) 0%, rgba(12, 18, 27, 0) 38%);
+            background-image: radial-gradient(circle at 18% 0%, rgba(120, 168, 255, 0.08) 0%, rgba(15, 26, 40, 0) 56%);
         }
 
         [data-theme="dark"] #nav-container {
-            background: linear-gradient(180deg, rgba(24, 37, 56, 0.94) 0%, rgba(16, 28, 43, 0.92) 100%);
+            background: var(--nav-bg);
         }
 
         [data-theme="dark"] #nav-container ul li a[aria-current="page"] {
@@ -825,7 +825,7 @@
         [data-theme="dark"] .gh-card,
         [data-theme="dark"] .timeline-content {
             background: #1a2635;
-            border-color: rgba(152, 182, 216, 0.26);
+            border-color: rgba(152, 182, 216, 0.2);
             box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
         }
 
