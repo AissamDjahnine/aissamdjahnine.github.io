@@ -1171,15 +1171,16 @@
         sideScrollZones.forEach((zone) => {
             zone.addEventListener('wheel', (event) => {
                 if (window.matchMedia('(max-width: 900px)').matches) return;
-                if (zone.scrollHeight <= zone.clientHeight) return;
+                if (zone.scrollHeight <= zone.clientHeight) {
+                    event.preventDefault();
+                    return;
+                }
 
                 const delta = event.deltaY;
-                const atTop = zone.scrollTop <= 0;
-                const atBottom = zone.scrollTop + zone.clientHeight >= zone.scrollHeight - 1;
-                if ((delta < 0 && atTop) || (delta > 0 && atBottom)) return;
-
                 event.preventDefault();
-                zone.scrollTop += delta;
+                const maxScrollTop = zone.scrollHeight - zone.clientHeight;
+                const next = Math.min(maxScrollTop, Math.max(0, zone.scrollTop + delta));
+                zone.scrollTop = next;
             }, { passive: false });
         });
 
