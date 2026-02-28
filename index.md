@@ -20,7 +20,7 @@ Supervisors : [*Pr. Loic Boussel*](https://www.spectralphotoncountingct.com/fr/t
 #### March 2020 - August 2020
 ## Computer Vision and Deep Learning Intern @ GE Healthcare
 <img src="images/GE.jpg?raw=true"/>
-Supervisors : [*Pr. Serge Muller*](), [*Dr. Andrei Petrovskii*]()<br><br>
+Supervisors : *Pr. Serge Muller*, *Dr. Andrei Petrovskii*<br><br>
 **Investigation of automatic search methods for neural network hyperparameters (Neural Architecture Search)**. 
 **Application to Mammographic Data within WHARe team (Women's Health Applied Research)**
 <br>
@@ -31,7 +31,7 @@ Supervisors : [*Pr. Serge Muller*](), [*Dr. Andrei Petrovskii*]()<br><br>
 
 ## <span style="color:  #267cb9;">Publications</span>
 
-[*Leveraging Normalizing Flows for Unsupervised Detection of Pathological Pulmonary in CT scans*]()<br> 
+*Leveraging Normalizing Flows for Unsupervised Detection of Pathological Pulmonary in CT scans*<br> 
 **A. Djahnine**, E. Jupin-delevaux, O. Nempont, S. A. Si-Mohamed, V. Cottin, A. Popoff, P. Douek, L. Boussel<br>
 *IEEE TRANSACTIONS ON MEDICAL IMAGING - IEEE TMI*[*In revision*]<br>
 
@@ -82,7 +82,7 @@ Oxford, United Kingdom <br>
 [*JFR 2023 Data Challenge WINNER : Pancreatic masses detection in 3D CT scans*](https://www.linkedin.com/feed/update/urn:li:activity:7119672599088914432/)
 
 * I was a member of the Philips team in collaboration with Hospices Civils de Lyon that won the JFR (les Journées Francophones de Radiologie) data challenge. The solution used deep learning-based algorithm to detect pancreatic masses in 3D CT scans. 
-<!---( [*Challenge Paper*](), [*Our Solution (Journal Paper)*]())-->
+<!-- Challenge and solution links intentionally omitted -->
 <img src="images/JFR_23.jpg?raw=true"/> 
 <br>
 

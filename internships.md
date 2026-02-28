@@ -8,7 +8,7 @@ permalink: /internships/
 <span class="date-pill">March 2020 - August 2020</span><span class="location-pill">Buc, France</span>
 ## Computer Vision and Deep Learning Intern @ GE Healthcare
 <img src="/images/GE.jpg?raw=true"/>
-Supervisors : [*Pr. Serge Muller*](), [*Dr. Andrei Petrovskii*]()<br><br>
+Supervisors : *Pr. Serge Muller*, *Dr. Andrei Petrovskii*<br><br>
 **Investigation of automatic search methods for neural network hyperparameters (Neural Architecture Search)**.
 **Application to Mammographic Data within WHARe team (Women's Health Applied Research)**
 <br>

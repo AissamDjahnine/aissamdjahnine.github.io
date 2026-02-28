@@ -5,7 +5,7 @@ permalink: /projects/
 ---
 ## <span style="color: #267cb9;">Projects</span>
 
-[**Segmentation and measurement of skeletal muscle areas on CT scans**]()
+**Segmentation and measurement of skeletal muscle areas on CT scans**
 
 * This project aims to segment and measure skeletal muscle areas on CT scans, specifically at the L3, L2, and L1 vertebrae levels, to improve sarcopenia estimation using deep learning-based methods. By leveraging advanced data augmentation techniques, such as applying filters, rotations, and adding artificial elements, the dataset's diversity and robustness were significantly improved. Post-processing methods were developed to remove artifacts like ribs, ensuring cleaner and more accurate segmentations. The approach showed promising results in accurately segmenting muscle areas, leading to more reliable sarcopenia assessments and potential further improvements.
 
@@ -28,7 +28,7 @@ permalink: /projects/
 
 <img src="/images/colortransfer.jpg?raw=true" />
 
-[**Search Algorithms Implementation ( BFS, DFS, DIJKSTR ,A-Star )**](https://github.com/AissamDjahnine/Suppression-of-Acoustic-Noise-in-Speech-Using-Spectral-Subtraction-)
+[**Search Algorithms Implementation ( BFS, DFS, DIJKSTR ,A-Star )**](https://github.com/AissamDjahnine/Search-Algorithms-in-AI)
 * This master project aims to provide newcomers in the field of AI with an introduction to the fundamental technique of problem solving: searching. The project covers various search algorithms, including brute-force strategies such as Breadth-First Search (BFS) and Depth-First Search (DFS). It also delves into informed search strategies, specifically focusing on the popular A* algorithm, which is implemented using two heuristic methods: the Manhattan Distance Heuristic and the Euclidean Distance Heuristic. By exploring these algorithms and heuristics, participants will gain a solid foundation in AI problem-solving techniques.<br>
 
 <img src="/images/searchalgorithms.jpg?raw=true"/>

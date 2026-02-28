@@ -24,7 +24,7 @@ description: > # your text below (remove <br> elements if you don't need line br
   <a href="https://github.com/AissamDjahnine">View My GitHub Profile</a><br>
   <a href="https://www.linkedin.com/in/aissamdjahnine/">View My LinkedIn Profile</a><br>
   <a href="https://orcid.org/0000-0001-8633-4092">View My ORCID</a><br>
-  <a href="https://scholar.google.com/citations?user=uRNOC9sAAAAJ&hl=enttps://github.com/AissamDjahnine">View My Google Scholar</a><br>
+  <a href="https://scholar.google.com/citations?user=uRNOC9sAAAAJ&hl=en">View My Google Scholar</a><br>
   <a href="https://www.researchgate.net/profile/Aissam-Djahnine-2">View My ResearchGate</a><br>
 
 theme: jekyll-theme-minimal

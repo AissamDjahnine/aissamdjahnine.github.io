@@ -11,7 +11,7 @@ permalink: /publications/
       <span class="date-pill">In Revision</span>
       <span class="pub-type is-journal">Journal</span>
     </div>
-    <div class="pub-title"><a href="">Leveraging Normalizing Flows for Unsupervised Detection of Pathological Pulmonary in CT scans</a></div>
+    <div class="pub-title">Leveraging Normalizing Flows for Unsupervised Detection of Pathological Pulmonary in CT scans</div>
     <div><strong>A. Djahnine</strong>, E. Jupin-delevaux, O. Nempont, S. A. Si-Mohamed, V. Cottin, A. Popoff, P. Douek, L. Boussel</div>
     <div class="pub-venue">IEEE Transactions on Medical Imaging (IEEE TMI)</div>
   </div>
