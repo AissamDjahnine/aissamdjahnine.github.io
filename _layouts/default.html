@@ -158,15 +158,15 @@
             position: sticky;
             top: 96px;
             height: fit-content;
-            max-height: none;
-            overflow-y: visible;
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
             background-color: var(--sidebar-bg);
             padding: 20px;
             border-radius: 20px;
             border: 1px solid var(--border-color);
             scrollbar-width: none;
             -ms-overflow-style: none;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, border-color 0.25s, box-shadow 0.25s;
         }
 
         .sidebar {
@@ -198,6 +198,8 @@
             min-width: 0;
             margin-left: 0;
             padding-left: calc(var(--sidebar-width) - 80px);
+            border-radius: 16px;
+            transition: background-color 0.25s, box-shadow 0.25s;
         }
 
         .content h1,
@@ -352,6 +354,11 @@
             color: var(--muted-text);
         }
 
+        .stat-item strong {
+            color: var(--text-color);
+            font-weight: 700;
+        }
+
         .mini-card {
             background: var(--card-bg);
             border-radius: 16px;
@@ -383,6 +390,16 @@
             color: var(--link-hover);
         }
 
+        .scroll-focus {
+            border-color: rgba(120, 168, 255, 0.55) !important;
+            box-shadow: 0 0 0 2px rgba(120, 168, 255, 0.22);
+        }
+
+        .content.scroll-focus {
+            background-color: rgba(120, 168, 255, 0.05);
+            box-shadow: 0 0 0 1px rgba(120, 168, 255, 0.25) inset;
+        }
+
         .mini-card img {
             max-width: 90%;
             height: auto;
@@ -402,6 +419,14 @@
             border-radius: 16px;
             border: 1px solid var(--border-color);
             display: block;
+        }
+
+        .content img[src*="DM.png"] {
+            background: #ffffff;
+            border: 1px solid rgba(15, 23, 42, 0.18);
+            border-radius: 14px;
+            padding: 6px 10px;
+            display: inline-block;
         }
 
         .content section img + br {
@@ -777,6 +802,10 @@
             color: var(--muted-text);
         }
 
+        [data-theme="dark"] .stat-item strong {
+            color: #d6e6ff;
+        }
+
         [data-theme="dark"] .content blockquote {
             color: #d5e2f3;
             background: rgba(120, 168, 255, 0.06);
@@ -807,6 +836,11 @@
         [data-theme="dark"] .mini-card a:hover {
             color: #d8e8ff;
             text-decoration-color: #d8e8ff;
+        }
+
+        [data-theme="dark"] .content img[src*="DM.png"] {
+            border-color: rgba(214, 230, 255, 0.35);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.24);
         }
 
         [data-theme="dark"] .pub-type.is-journal {
@@ -908,6 +942,7 @@
             .right-sidebar {
                 position: static;
                 max-height: none;
+                overflow-y: visible;
             }
         }
     </style>
@@ -1098,6 +1133,46 @@
                 sunIcon.style.display = 'block';
                 moonIcon.style.display = 'none';
             }
+        });
+
+        const scrollZones = Array.from(document.querySelectorAll('.sidebar, .right-sidebar, .content'));
+        const sideScrollZones = Array.from(document.querySelectorAll('.sidebar, .right-sidebar'));
+        let scrollFocusTimer = null;
+
+        function setScrollFocus(zone) {
+            scrollZones.forEach((el) => el.classList.remove('scroll-focus'));
+            if (zone) zone.classList.add('scroll-focus');
+            if (scrollFocusTimer) clearTimeout(scrollFocusTimer);
+            scrollFocusTimer = setTimeout(() => {
+                scrollZones.forEach((el) => el.classList.remove('scroll-focus'));
+            }, 900);
+        }
+
+        scrollZones.forEach((zone) => {
+            zone.addEventListener('mouseenter', () => setScrollFocus(zone));
+            zone.addEventListener('focusin', () => setScrollFocus(zone));
+            zone.addEventListener('wheel', () => setScrollFocus(zone), { passive: true });
+        });
+
+        sideScrollZones.forEach((zone) => {
+            zone.addEventListener('wheel', (event) => {
+                if (window.matchMedia('(max-width: 900px)').matches) return;
+                if (zone.scrollHeight <= zone.clientHeight) return;
+
+                const delta = event.deltaY;
+                const atTop = zone.scrollTop <= 0;
+                const atBottom = zone.scrollTop + zone.clientHeight >= zone.scrollHeight - 1;
+                if ((delta < 0 && atTop) || (delta > 0 && atBottom)) return;
+
+                event.preventDefault();
+                zone.scrollTop += delta;
+            }, { passive: false });
+        });
+
+        window.addEventListener('load', () => {
+            sideScrollZones.forEach((zone) => {
+                zone.scrollTop = 0;
+            });
         });
     </script>
 
