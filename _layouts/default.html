@@ -43,8 +43,8 @@
             --card-bg: #1a2533;
             --link-color: #d8e6ff;
             --link-hover: #9fc3ff;
-            --nav-bg: rgba(15, 22, 32, 0.92);
-            --nav-shadow: rgba(0, 0, 0, 0.45);
+            --nav-bg: rgba(19, 32, 48, 0.93);
+            --nav-shadow: rgba(8, 16, 28, 0.28);
             --border-color: #324459;
             --chip-bg: rgba(159, 195, 255, 0.14);
             --accent: #78a8ff;
@@ -80,6 +80,7 @@
             box-shadow: 0px 2px 5px var(--nav-shadow);
             transition: background-color 0.3s;
             backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(120, 168, 255, 0.14);
         }
 
         #nav-container nav {
@@ -764,6 +765,10 @@
             background-image: radial-gradient(circle at 20% 0%, rgba(120, 168, 255, 0.12) 0%, rgba(12, 18, 27, 0) 38%);
         }
 
+        [data-theme="dark"] #nav-container {
+            background: linear-gradient(180deg, rgba(24, 37, 56, 0.94) 0%, rgba(16, 28, 43, 0.92) 100%);
+        }
+
         [data-theme="dark"] #nav-container ul li a[aria-current="page"] {
             background-color: #9fc3ff;
             color: #0b1b34;
@@ -1136,7 +1141,7 @@
             }
         });
 
-        const scrollZones = Array.from(document.querySelectorAll('.sidebar, .right-sidebar, .content'));
+        const scrollZones = Array.from(document.querySelectorAll('.sidebar, .right-sidebar'));
         const sideScrollZones = Array.from(document.querySelectorAll('.sidebar, .right-sidebar'));
         let scrollFocusTimer = null;
 
