@@ -35,20 +35,20 @@
         }
 
         [data-theme="dark"] {
-            --bg-color: #0f1115;
-            --bg-accent: #151a20;
-            --text-color: #f0f0f0;
-            --muted-text: #a6a6a6;
-            --sidebar-bg: #161b22;
-            --card-bg: #1c222b;
-            --link-color: #f0f0f0;
-            --link-hover: #7fb0ff;
-            --nav-bg: rgba(22, 27, 34, 0.9);
-            --nav-shadow: rgba(0, 0, 0, 0.5);
-            --border-color: #27303b;
-            --chip-bg: rgba(127, 176, 255, 0.12);
-            --accent: #7fb0ff;
-            --accent-soft: rgba(127, 176, 255, 0.12);
+            --bg-color: #0c121b;
+            --bg-accent: #121c29;
+            --text-color: #e6edf7;
+            --muted-text: #b4c0d0;
+            --sidebar-bg: #131d2a;
+            --card-bg: #1a2533;
+            --link-color: #d8e6ff;
+            --link-hover: #9fc3ff;
+            --nav-bg: rgba(15, 22, 32, 0.92);
+            --nav-shadow: rgba(0, 0, 0, 0.45);
+            --border-color: #324459;
+            --chip-bg: rgba(159, 195, 255, 0.14);
+            --accent: #78a8ff;
+            --accent-soft: rgba(120, 168, 255, 0.18);
         }
 
         * {
@@ -202,6 +202,7 @@
         .content h3 {
             font-family: "Fraunces", serif;
             letter-spacing: -0.01em;
+            color: var(--text-color);
         }
 
         .content h2 {
@@ -358,6 +359,7 @@
         .mini-card h3 {
             margin: 0 0 10px;
             font-size: 1.05rem;
+            color: var(--text-color);
         }
 
         .mini-card a {
@@ -382,6 +384,7 @@
         .highlight-title {
             font-family: "Fraunces", serif;
             margin: 24px 0 12px;
+            color: var(--text-color);
         }
 
         .content section img {
@@ -520,6 +523,7 @@
             font-family: "Fraunces", serif;
             font-size: 1.1rem;
             margin: 6px 0 6px;
+            color: var(--text-color);
         }
 
         .pub-badges {
@@ -581,6 +585,7 @@
             font-family: "Fraunces", serif;
             font-size: 1.05rem;
             margin: 0 0 8px;
+            color: var(--text-color);
         }
 
         .gh-meta {
@@ -715,6 +720,94 @@
             font-family: "Fraunces", serif;
             font-size: 1.2rem;
             margin: 0 0 6px;
+            color: var(--text-color);
+        }
+
+        [data-theme="dark"] body {
+            background-image: radial-gradient(circle at 20% 0%, rgba(120, 168, 255, 0.12) 0%, rgba(12, 18, 27, 0) 38%);
+        }
+
+        [data-theme="dark"] #nav-container ul li a[aria-current="page"] {
+            color: #0f1a2a;
+        }
+
+        [data-theme="dark"] .theme-toggle {
+            background-color: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-color);
+        }
+
+        [data-theme="dark"] .content h1,
+        [data-theme="dark"] .content h2,
+        [data-theme="dark"] .content h3,
+        [data-theme="dark"] .content h4,
+        [data-theme="dark"] .content h5,
+        [data-theme="dark"] .content h6,
+        [data-theme="dark"] .highlight-title,
+        [data-theme="dark"] .mini-card h3,
+        [data-theme="dark"] .pub-title,
+        [data-theme="dark"] .gh-title,
+        [data-theme="dark"] .timeline-title {
+            color: var(--text-color);
+        }
+
+        [data-theme="dark"] .content p,
+        [data-theme="dark"] .content li,
+        [data-theme="dark"] .content strong,
+        [data-theme="dark"] .timeline-meta {
+            color: var(--text-color);
+        }
+
+        [data-theme="dark"] .stat-item,
+        [data-theme="dark"] .pub-venue,
+        [data-theme="dark"] .gh-stars {
+            color: var(--muted-text);
+        }
+
+        [data-theme="dark"] .content blockquote {
+            color: #d5e2f3;
+            background: rgba(120, 168, 255, 0.06);
+            border-radius: 10px;
+            padding: 12px 14px;
+        }
+
+        [data-theme="dark"] .scholar-stats,
+        [data-theme="dark"] .mini-card,
+        [data-theme="dark"] .pub-card,
+        [data-theme="dark"] .gh-card,
+        [data-theme="dark"] .timeline-content {
+            background: #1a2635;
+            border-color: #39506a;
+            box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35);
+        }
+
+        [data-theme="dark"] .pub-type.is-journal {
+            background: rgba(16, 185, 129, 0.2);
+            color: #6ee7b7;
+            border-color: rgba(110, 231, 183, 0.45);
+        }
+
+        [data-theme="dark"] .pub-type.is-conference {
+            background: rgba(245, 158, 11, 0.22);
+            color: #fcd34d;
+            border-color: rgba(252, 211, 77, 0.4);
+        }
+
+        [data-theme="dark"] .pub-type.is-preprint {
+            background: rgba(168, 85, 247, 0.24);
+            color: #d8b4fe;
+            border-color: rgba(216, 180, 254, 0.45);
+        }
+
+        [data-theme="dark"] .gh-tag-chip {
+            background: rgba(34, 211, 238, 0.2);
+            color: #a5f3fc;
+            border-color: rgba(165, 243, 252, 0.38);
+        }
+
+        [data-theme="dark"] .location-pill {
+            background: rgba(74, 222, 128, 0.16);
+            color: #86efac;
+            border-color: rgba(134, 239, 172, 0.38);
         }
 
         .timeline-meta {
