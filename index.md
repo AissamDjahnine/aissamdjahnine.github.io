@@ -1,17 +1,17 @@
 <br>
 
-#### October 2024 - Today
+#### October 2024 - Present
 ## AI Research Engineer @ DentalMonitoring
 <img src="images/DM.png?raw=true" style="width: 75%; height: auto;"/><br>
-Supervisors : [*Guillaume Ghyselinck*](https://www.linkedin.com/in/guillaume-ghyselinck-101857137/)<br><br>
+Supervisors: [*Guillaume Ghyselinck*](https://www.linkedin.com/in/guillaume-ghyselinck-101857137/)<br><br>
 
-> As an AI Research Engineer at Dental Monitoring, I Innovate end-to-end projects, from conception to deployment. I design and implement AI-based recognition systems for remote orthodontic monitoring, leveraging advanced machine learning techniques. Proficient in computer vision, biomedical engineering, medical imaging, and general AI research, I collaborate with a dynamic R&D team.
+> As an AI Research Engineer at Dental Monitoring, I innovate end-to-end projects, from conception to deployment. I design and implement AI-based recognition systems for remote orthodontic monitoring, leveraging advanced machine learning techniques. Proficient in computer vision, biomedical engineering, medical imaging, and general AI research, I collaborate with a dynamic R&D team.
 <br>
 
 #### July 2021 - September 2024
 ## PhD Candidate | Machine Learning Engineer @ Philips Health Technology Innovation - AI Research Hub France
 <img src="images/PHD2.png?raw=true"/> 
-Supervisors : [*Pr. Loic Boussel*](https://www.spectralphotoncountingct.com/fr/team/members/2/show), [*Dr. Nicolas Villain*](https://www.linkedin.com/in/nicolas-villain-9422122/)<br><br>
+Supervisors: [*Pr. Loic Boussel*](https://www.spectralphotoncountingct.com/fr/team/members/2/show), [*Dr. Nicolas Villain*](https://www.linkedin.com/in/nicolas-villain-9422122/)<br><br>
 
 > I completed a CIFRE PhD in collaboration with Philips Health Technology Innovation, INSA Lyon, and Hospices Civils de Lyon (HCL), under the supervision of Prof. Loïc Boussel, Dr. Nicolas Villain, Dr. Olivier Nempont, and Dr. Alexandre Popoff. My research explored the development of AI-driven pathology detection systems for conventional CT scans, combining computer vision, medical imaging, and deep learning. Working closely with teams in healthcare and research, I contributed to the design of automated tools that could potentially improve the precision and efficiency of clinical workflows. This research led to several publications, and I gained valuable experience in Python and deep learning frameworks throughout the process.
 <br>
@@ -20,7 +20,7 @@ Supervisors : [*Pr. Loic Boussel*](https://www.spectralphotoncountingct.com/fr/t
 #### March 2020 - August 2020
 ## Computer Vision and Deep Learning Intern @ GE Healthcare
 <img src="images/GE.jpg?raw=true"/>
-Supervisors : *Pr. Serge Muller*, *Dr. Andrei Petrovskii*<br><br>
+Supervisors: *Pr. Serge Muller*, *Dr. Andrei Petrovskii*<br><br>
 **Investigation of automatic search methods for neural network hyperparameters (Neural Architecture Search)**. 
 **Application to Mammographic Data within WHARe team (Women's Health Applied Research)**
 <br>
@@ -33,7 +33,7 @@ Supervisors : *Pr. Serge Muller*, *Dr. Andrei Petrovskii*<br><br>
 
 *Leveraging Normalizing Flows for Unsupervised Detection of Pathological Pulmonary in CT scans*<br> 
 **A. Djahnine**, E. Jupin-delevaux, O. Nempont, S. A. Si-Mohamed, V. Cottin, A. Popoff, P. Douek, L. Boussel<br>
-*IEEE TRANSACTIONS ON MEDICAL IMAGING - IEEE TMI*[*In revision*]<br>
+*IEEE TRANSACTIONS ON MEDICAL IMAGING - IEEE TMI* [*In Revision*]<br>
 
 [*eCAPRI: a novel tool combining clinical and imaging data for post-TAVI mortality prediction*](https://link.springer.com/article/10.1007/s00330-025-12184-x)<br> 
 PJ. Lartaud, B. Harbaoui, A. Della Corte, **A. Djahnine**, O. Nempont, JM. Rouet, A. Cecilia Vlachomitrou, B. Riche, M. Rabilloud, S. Si-Mohamed, P. Douek, F. Derimay, G. Rioufol, P. Lantelme, L. Boussel<br>
@@ -57,19 +57,19 @@ E. Jupin-Delevaux, **A. Djahnine**, F. Talbot, A. Richard, S. Gouttard, A. Mansu
 
 [*Leveraging 3D Normalizing Flows for Unsupervised Detection of Pathological Pulmonary CT Scans*](https://arxiv.org/abs/2403.18514)<br>
 **Djahnine Aissam**, Popoff Alexandre, Jupin-Delevaux Emilien, Cottin Vincent, Nempont Olivier, Boussel Loic<br>
-*Arxiv*<br>
+*arXiv*<br>
 <img src="images/GLOW_MIDL_recap.png?raw=true"/><br>
 
 
 ## <span style="color:  #267cb9;">Conferences & Summer Schools</span>
 
-**16 th IEEE International Conference on Signal Processing (ICSP)**<br>
+**16th IEEE International Conference on Signal Processing (ICSP)**<br>
 21 - 24 October 2022<br>
 Beijing, China<br>
 [*Tailored 3D CT contrastive pretraining to improve pulmonary pathology classification*](https://ieeexplore.ieee.org/document/9965218)<br>
 **A. Djahnine**, A. Popoff, E. Jupin-Delevaux, V. Cottin, O. Nempont, L. Boussel<br>
 
-**Oxford Machine Learning Summer School (OxML 2023)(ML x Health Track, In Person)**
+**Oxford Machine Learning Summer School (OxML 2023) (ML x Health Track, In Person)**
 [*Certificate of Participation*](https://drive.google.com/file/d/1Uozg6swQc0m2EvBPusXh2hW82zTxeIlz/view)<br>
 13 - 16 July 2023 <br>
 Oxford, United Kingdom <br>
@@ -79,16 +79,16 @@ Oxford, United Kingdom <br>
 
 ## <span style="color:  #267cb9;">Honors & awards</span>
 
-[*JFR 2023 Data Challenge WINNER : Pancreatic masses detection in 3D CT scans*](https://www.linkedin.com/feed/update/urn:li:activity:7119672599088914432/)
+[*JFR 2023 Data Challenge WINNER: Pancreatic masses detection in 3D CT scans*](https://www.linkedin.com/feed/update/urn:li:activity:7119672599088914432/)
 
 * I was a member of the Philips team in collaboration with Hospices Civils de Lyon that won the JFR (les Journées Francophones de Radiologie) data challenge. The solution used deep learning-based algorithm to detect pancreatic masses in 3D CT scans. 
 <!-- Challenge and solution links intentionally omitted -->
 <img src="images/JFR_23.jpg?raw=true"/> 
 <br>
 
-[*JFR 2022 Data Challenge WINNER : Pulmonary embolism detection in 3D CT scans*](https://www.linkedin.com/posts/nicolas-villain-9422122_fier-de-cette-belle-%C3%A9quipe-bravo-pour-activity-6985258006707851264-w3i9?utm_source=share&utm_medium=member_desktop)
+[*JFR 2022 Data Challenge WINNER: Pulmonary embolism detection in 3D CT scans*](https://www.linkedin.com/posts/nicolas-villain-9422122_fier-de-cette-belle-%C3%A9quipe-bravo-pour-activity-6985258006707851264-w3i9?utm_source=share&utm_medium=member_desktop)
 
-* I was a member of the Philips team in collaboration with Hospices Civils de Lyon that won the JFR (les Journées Francophones de Radiologie) data challenge. The solution used Deep Learning for Computer Vision to detect pulmonary embolism in CT scans. ( [*Challenge Paper*](https://www.sciencedirect.com/science/article/abs/pii/S2211568423001183), [*Our Solution (Journal Paper)*](https://www.sciencedirect.com/science/article/abs/pii/S2211568423001808))
+* I was a member of the Philips team in collaboration with Hospices Civils de Lyon that won the JFR (les Journées Francophones de Radiologie) data challenge. The solution used deep learning for computer vision to detect pulmonary embolism in CT scans. ([*Challenge Paper*](https://www.sciencedirect.com/science/article/abs/pii/S2211568423001183), [*Our Solution (Journal Paper)*](https://www.sciencedirect.com/science/article/abs/pii/S2211568423001808))
 <img src="images/JFR_port.png?raw=true"/> 
 
 <br>
@@ -111,8 +111,8 @@ Oxford, United Kingdom <br>
 <img src="images/GE_INTERNSHIP.jpg?raw=true"/> 
 
 [**Unsupervised Spatiotemporal Data Inpainting**](https://github.com/raoufkeskes/Unsupervised-Spatiotemporal-Data-Inpainting)
-* This a PyTorch implementaiton of this paper : [**Unsupervised Spatiotemporal Data Inpainting**](https://openreview.net/forum?id=rylqmxBKvH) Under review at ICLR 2020.
-* The code is implemented in collaboration of : Ilyas aroui [Github](https://github.com/ily-R), Raouf Keskes [Github](https://github.com/raoufkeskes)
+* This is a PyTorch implementation of this paper: [**Unsupervised Spatiotemporal Data Inpainting**](https://openreview.net/forum?id=rylqmxBKvH), under review at ICLR 2020.
+* The code was implemented in collaboration with Ilyas Aroui [GitHub](https://github.com/ily-R) and Raouf Keskes [GitHub](https://github.com/raoufkeskes).
 * Inpainting spatio-temporal sequences is an active research topic that relies heavily on supervision with large datasets. In this work, we consider the problem of reconstructing missing information with an unsupervised learning approach. Following the work of Kim et al. We train a generative model on the occluded sequences. We ensure that the models captured both frame-based and sequential based information. Our proposed model is adapted to large-scale images and can be used to different types of sequences and occlusion processes.
 <img src="images/unsupervised.png?raw=true"/> 
 
@@ -121,6 +121,6 @@ Oxford, United Kingdom <br>
 
 ## <span style="color:  #267cb9;">Online Courses</span>
 
-* **Coursera** : Deep learning Specialization
-* **Udemy** : 
+* **Coursera:** Deep Learning Specialization
+* **Udemy:**
    * Python for Data Science and Machine Learning Bootcamp Certificate.
