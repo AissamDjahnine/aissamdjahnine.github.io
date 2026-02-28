@@ -102,7 +102,8 @@
             padding: 8px 14px;
             border-radius: 999px;
             font-weight: 600;
-            transition: color 0.3s, background-color 0.3s;
+            border: 1px solid transparent;
+            transition: color 0.3s, background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
         }
 
         #nav-container ul li a:hover {
@@ -113,6 +114,8 @@
         #nav-container ul li a[aria-current="page"] {
             background-color: var(--accent);
             color: #ffffff;
+            border-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 8px 18px rgba(11, 75, 193, 0.25);
         }
 
         /* Dark Mode Toggle Button */
@@ -155,8 +158,8 @@
             position: sticky;
             top: 96px;
             height: fit-content;
-            max-height: calc(100vh - 120px);
-            overflow-y: auto;
+            max-height: none;
+            overflow-y: visible;
             background-color: var(--sidebar-bg);
             padding: 20px;
             border-radius: 20px;
@@ -223,6 +226,9 @@
             margin: 16px 0;
             padding-left: 16px;
             color: var(--muted-text);
+            font-style: normal;
+            line-height: 1.72;
+            font-size: 1.03rem;
         }
 
         a {
@@ -362,14 +368,19 @@
             color: var(--text-color);
         }
 
+        .mini-card p {
+            color: var(--text-color);
+        }
+
         .mini-card a {
-            color: var(--link-hover);
-            text-decoration: none;
+            color: var(--accent);
+            text-decoration: underline;
+            text-underline-offset: 3px;
             font-weight: bold;
         }
 
         .mini-card a:hover {
-            text-decoration: underline;
+            color: var(--link-hover);
         }
 
         .mini-card img {
@@ -728,7 +739,10 @@
         }
 
         [data-theme="dark"] #nav-container ul li a[aria-current="page"] {
-            color: #0f1a2a;
+            background-color: #9fc3ff;
+            color: #0b1b34;
+            border-color: #c4dcff;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.28);
         }
 
         [data-theme="dark"] .theme-toggle {
@@ -776,8 +790,23 @@
         [data-theme="dark"] .gh-card,
         [data-theme="dark"] .timeline-content {
             background: #1a2635;
-            border-color: #39506a;
-            box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35);
+            border-color: rgba(152, 182, 216, 0.26);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+        }
+
+        [data-theme="dark"] .mini-card p,
+        [data-theme="dark"] .mini-card p strong {
+            color: #dde8f7;
+        }
+
+        [data-theme="dark"] .mini-card a {
+            color: #b9d6ff;
+            text-decoration-color: rgba(185, 214, 255, 0.9);
+        }
+
+        [data-theme="dark"] .mini-card a:hover {
+            color: #d8e8ff;
+            text-decoration-color: #d8e8ff;
         }
 
         [data-theme="dark"] .pub-type.is-journal {
