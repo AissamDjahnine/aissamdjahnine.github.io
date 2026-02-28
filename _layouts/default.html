@@ -75,12 +75,12 @@
             justify-content: center;
             align-items: center;
             height: 72px;
-            background-color: var(--nav-bg);
+            background-color: transparent;
             z-index: 1000;
             box-shadow: none;
             transition: background-color 0.3s;
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(111, 129, 156, 0.26);
+            backdrop-filter: none;
+            border-bottom: none;
         }
 
         #nav-container nav {
@@ -764,10 +764,6 @@
 
         [data-theme="dark"] body {
             background-image: radial-gradient(circle at 18% 0%, rgba(120, 168, 255, 0.08) 0%, rgba(15, 26, 40, 0) 56%);
-        }
-
-        [data-theme="dark"] #nav-container {
-            background: var(--nav-bg);
         }
 
         [data-theme="dark"] #nav-container ul li a {
