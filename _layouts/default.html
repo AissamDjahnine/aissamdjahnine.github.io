@@ -150,6 +150,45 @@
             fill: currentColor;
         }
 
+        .back-to-top {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            width: 44px;
+            height: 44px;
+            border-radius: 999px;
+            border: 1px solid var(--border-color);
+            background: var(--card-bg);
+            color: var(--link-color);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+            opacity: 0;
+            transform: translateY(8px);
+            pointer-events: none;
+            transition: opacity 0.2s ease, transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+            z-index: 1100;
+        }
+
+        .back-to-top:hover {
+            background: var(--accent-soft);
+            border-color: var(--accent);
+        }
+
+        .back-to-top svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
         .page {
             display: grid;
             grid-template-columns: minmax(0, 1fr) minmax(240px, 320px);
@@ -806,6 +845,18 @@
             background-color: rgba(132, 167, 214, 0.4);
         }
 
+        [data-theme="dark"] .back-to-top {
+            background: #1a2635;
+            border-color: rgba(152, 182, 216, 0.28);
+            color: #d7e6ff;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.26);
+        }
+
+        [data-theme="dark"] .back-to-top:hover {
+            background: rgba(120, 168, 255, 0.22);
+            border-color: rgba(175, 204, 238, 0.45);
+        }
+
         [data-theme="dark"] .content h1,
         [data-theme="dark"] .content h2,
         [data-theme="dark"] .content h3,
@@ -992,6 +1043,13 @@
                 max-height: none;
                 overflow-y: visible;
             }
+
+            .back-to-top {
+                right: 14px;
+                bottom: 14px;
+                width: 40px;
+                height: 40px;
+            }
         }
     </style>
 
@@ -1031,6 +1089,12 @@
             </ul>
         </nav>
     </div>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 5.5l-7 7 1.41 1.41L11 9.33V20h2V9.33l4.59 4.58L19 12.5z" />
+        </svg>
+    </button>
 
     <!-- Main Content Wrapper -->
     <div class="page">
@@ -1152,6 +1216,7 @@
     <!-- Dark Mode Script -->
     <script>
         const toggleButton = document.getElementById('theme-toggle');
+        const backToTopButton = document.getElementById('back-to-top');
         const sunIcon = document.querySelector('.sun-icon');
         const moonIcon = document.querySelector('.moon-icon');
 
@@ -1223,6 +1288,23 @@
                 zone.scrollTop = 0;
             });
         });
+
+        function refreshBackToTopVisibility() {
+            if (!backToTopButton) return;
+            if (window.scrollY > 480) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        }
+
+        if (backToTopButton) {
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+            window.addEventListener('scroll', refreshBackToTopVisibility, { passive: true });
+            refreshBackToTopVisibility();
+        }
     </script>
 
     <script>
