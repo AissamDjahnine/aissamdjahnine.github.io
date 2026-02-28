@@ -1311,6 +1311,65 @@
             window.addEventListener('scroll', refreshBackToTopVisibility, { passive: true });
             refreshBackToTopVisibility();
         }
+
+        function normalizePath(path) {
+            const trimmed = (path || '').replace(/\/+$/, '');
+            return trimmed === '' ? '/' : trimmed;
+        }
+
+        const navLinks = Array.from(document.querySelectorAll('#nav-container nav a[href]'));
+        const currentPath = normalizePath(window.location.pathname);
+        const isHomePage = currentPath === '/';
+
+        function setActiveNavLink(activeLink) {
+            navLinks.forEach((link) => link.removeAttribute('aria-current'));
+            if (activeLink) activeLink.setAttribute('aria-current', 'page');
+        }
+
+        if (isHomePage) {
+            const homeLink = navLinks.find((link) => {
+                const url = new URL(link.getAttribute('href'), window.location.origin);
+                return normalizePath(url.pathname) === '/';
+            });
+
+            const headings = Array.from(document.querySelectorAll('.content h2, .content h3'));
+            const sectionDefs = [
+                { navTitle: 'Publications', pattern: /publications/i },
+                { navTitle: 'Projects', pattern: /(research projects|projects)/i },
+                { navTitle: 'Awards', pattern: /(honors?\s*&\s*awards?|awards?)/i }
+            ];
+
+            const sectionTargets = sectionDefs
+                .map((def) => {
+                    const navLink = navLinks.find((link) => link.textContent.trim() === def.navTitle);
+                    const heading = headings.find((h) => def.pattern.test(h.textContent || ''));
+                    return navLink && heading ? { navLink, heading } : null;
+                })
+                .filter(Boolean);
+
+            const stickyOffset = 96;
+
+            sectionTargets.forEach(({ navLink, heading }) => {
+                navLink.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    const top = heading.getBoundingClientRect().top + window.scrollY - stickyOffset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                });
+            });
+
+            function updateHomeScrollspy() {
+                if (!sectionTargets.length) return;
+                let active = homeLink || null;
+                for (const target of sectionTargets) {
+                    const top = target.heading.getBoundingClientRect().top + window.scrollY - stickyOffset;
+                    if (window.scrollY + 8 >= top) active = target.navLink;
+                }
+                setActiveNavLink(active);
+            }
+
+            window.addEventListener('scroll', updateHomeScrollspy, { passive: true });
+            updateHomeScrollspy();
+        }
     </script>
 
     <script>
