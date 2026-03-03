@@ -104,19 +104,19 @@
 
         #nav-container ul li a {
             text-decoration: none;
-            color: #1b3f88;
+            color: #2f4f8e;
             padding: 8px 14px;
             border-radius: 12px;
             font-weight: 600;
-            background-color: #edf3ff;
-            border: 1px solid #cad8f1;
+            background-color: #f4f8ff;
+            border: 1px solid #d6e0f2;
             transition: color 0.3s, background-color 0.3s, border-color 0.3s;
         }
 
         #nav-container ul li a:hover {
             color: #123b8f;
-            background-color: #e4edff;
-            border-color: #bacdf2;
+            background-color: #ebf2ff;
+            border-color: #c4d3ef;
         }
 
         #nav-container ul li a[aria-current="page"] {
@@ -816,15 +816,15 @@
         }
 
         [data-theme="dark"] #nav-container ul li a {
-            color: #d7e6ff;
-            background-color: rgba(118, 152, 195, 0.3);
-            border-color: rgba(162, 191, 228, 0.3);
+            color: #c8daff;
+            background-color: rgba(118, 152, 195, 0.2);
+            border-color: rgba(162, 191, 228, 0.24);
         }
 
         [data-theme="dark"] #nav-container ul li a:hover {
             color: #e7f1ff;
-            background-color: rgba(132, 167, 214, 0.4);
-            border-color: rgba(175, 204, 238, 0.4);
+            background-color: rgba(132, 167, 214, 0.3);
+            border-color: rgba(175, 204, 238, 0.34);
         }
 
         [data-theme="dark"] #nav-container ul li a[aria-current="page"] {
@@ -1325,6 +1325,19 @@
             navLinks.forEach((link) => link.removeAttribute('aria-current'));
             if (activeLink) activeLink.setAttribute('aria-current', 'page');
         }
+
+        function findNavLinkForCurrentPath() {
+            const matches = navLinks.filter((link) => {
+                const url = new URL(link.getAttribute('href'), window.location.origin);
+                return normalizePath(url.pathname) === currentPath;
+            });
+            if (!matches.length) return null;
+            return matches.sort((a, b) => b.getAttribute('href').length - a.getAttribute('href').length)[0];
+        }
+
+        // Enforce a single active nav item regardless of server-side rendering quirks.
+        const initialActiveLink = findNavLinkForCurrentPath();
+        if (initialActiveLink) setActiveNavLink(initialActiveLink);
 
         if (isHomePage) {
             const homeLink = navLinks.find((link) => {
