@@ -726,6 +726,38 @@
             margin: 6px 0 10px;
         }
 
+        .pub-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .pub-action-btn,
+        .pub-action-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            border: 1px solid var(--border-color);
+            background: var(--chip-bg);
+            color: var(--text-color);
+            font-size: 0.76rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 6px 10px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: border-color 0.2s, color 0.2s, background-color 0.2s;
+        }
+
+        .pub-action-btn:hover,
+        .pub-action-link:hover {
+            border-color: var(--accent);
+            color: var(--link-hover);
+        }
+
         .gh-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -1026,6 +1058,13 @@
             background: rgba(168, 85, 247, 0.24);
             color: #d8b4fe;
             border-color: rgba(216, 180, 254, 0.45);
+        }
+
+        [data-theme="dark"] .pub-action-btn,
+        [data-theme="dark"] .pub-action-link {
+            background: rgba(120, 168, 255, 0.1);
+            border-color: rgba(152, 182, 216, 0.35);
+            color: #d6e6ff;
         }
 
         [data-theme="dark"] .pub-filter-btn,
@@ -1536,6 +1575,122 @@
             }
         }
 
+        function publicationYearFromText(dateText) {
+            const yearMatch = (dateText || '').match(/\b(19|20)\d{2}\b/);
+            return yearMatch ? yearMatch[0] : 'n.d.';
+        }
+
+        function slugToken(text, fallback = 'work') {
+            const normalized = (text || '')
+                .toLowerCase()
+                .replace(/[^a-z0-9\s]/g, ' ')
+                .trim()
+                .split(/\s+/)
+                .filter(Boolean);
+            return normalized[0] || fallback;
+        }
+
+        function escapeBibValue(value) {
+            return (value || '')
+                .replace(/\\/g, '\\\\')
+                .replace(/{/g, '\\{')
+                .replace(/}/g, '\\}')
+                .replace(/"/g, '\\"');
+        }
+
+        async function copyTextWithFeedback(text, button, defaultLabel, doneLabel) {
+            try {
+                await navigator.clipboard.writeText(text);
+                if (!button) return;
+                const old = button.textContent;
+                button.textContent = doneLabel;
+                setTimeout(() => { button.textContent = old || defaultLabel; }, 1200);
+            } catch {
+                if (!button) return;
+                button.textContent = 'Copy Failed';
+                setTimeout(() => { button.textContent = defaultLabel; }, 1200);
+            }
+        }
+
+        function buildBibtexForCard(card) {
+            const titleNode = card.querySelector('.pub-title');
+            const titleLink = titleNode?.querySelector('a[href]');
+            const title = (titleNode?.textContent || '').trim();
+            const authors = (titleNode?.nextElementSibling?.textContent || '').trim();
+            const venue = (card.querySelector('.pub-venue')?.textContent || '').trim();
+            const dateText = (card.querySelector('.date-pill')?.textContent || '').trim();
+            const year = publicationYearFromText(dateText);
+            const pubType = card.querySelector('.pub-type');
+            const typeClass = Array.from(pubType?.classList || []).find((name) => name.startsWith('is-')) || '';
+            const bibType = typeClass.includes('conference') ? 'inproceedings' : (typeClass.includes('preprint') ? 'misc' : 'article');
+            const authorToken = slugToken(authors, 'djahnine');
+            const titleToken = slugToken(title, 'publication');
+            const bibKey = `${authorToken}${year}${titleToken}`;
+            const url = titleLink?.href || '';
+
+            const fields = [
+                `  title = "${escapeBibValue(title)}"`,
+                `  author = "${escapeBibValue(authors)}"`,
+                year !== 'n.d.' ? `  year = "${year}"` : '',
+                venue ? `  journal = "${escapeBibValue(venue)}"` : '',
+                url ? `  url = "${escapeBibValue(url)}"` : ''
+            ].filter(Boolean).join(',\n');
+
+            return `@${bibType}{${bibKey},\n${fields}\n}`;
+        }
+
+        function initPublicationActions() {
+            const cards = Array.from(document.querySelectorAll('.pub-list .pub-card'));
+            if (!cards.length) return;
+
+            cards.forEach((card) => {
+                if (card.querySelector('.pub-actions')) return;
+
+                const titleNode = card.querySelector('.pub-title');
+                const titleLink = titleNode?.querySelector('a[href]');
+                const title = (titleNode?.textContent || '').trim();
+                const authors = (titleNode?.nextElementSibling?.textContent || '').trim();
+                const venue = (card.querySelector('.pub-venue')?.textContent || '').trim();
+                const dateText = (card.querySelector('.date-pill')?.textContent || '').trim();
+                const year = publicationYearFromText(dateText);
+                const citation = `${authors} (${year}). ${title}. ${venue}.`.replace(/\s+/g, ' ').trim();
+                const bibtex = buildBibtexForCard(card);
+
+                const actions = document.createElement('div');
+                actions.className = 'pub-actions';
+
+                const copyCitationBtn = document.createElement('button');
+                copyCitationBtn.type = 'button';
+                copyCitationBtn.className = 'pub-action-btn';
+                copyCitationBtn.textContent = 'Copy Citation';
+                copyCitationBtn.addEventListener('click', () => {
+                    copyTextWithFeedback(citation, copyCitationBtn, 'Copy Citation', 'Copied');
+                });
+                actions.appendChild(copyCitationBtn);
+
+                const copyBibBtn = document.createElement('button');
+                copyBibBtn.type = 'button';
+                copyBibBtn.className = 'pub-action-btn';
+                copyBibBtn.textContent = 'Copy BibTeX';
+                copyBibBtn.addEventListener('click', () => {
+                    copyTextWithFeedback(bibtex, copyBibBtn, 'Copy BibTeX', 'Copied');
+                });
+                actions.appendChild(copyBibBtn);
+
+                if (titleLink) {
+                    const openLink = document.createElement('a');
+                    openLink.className = 'pub-action-link';
+                    openLink.href = titleLink.href;
+                    openLink.target = '_blank';
+                    openLink.rel = 'noopener';
+                    openLink.textContent = 'Open Link';
+                    actions.appendChild(openLink);
+                }
+
+                card.appendChild(actions);
+            });
+        }
+
         function initPublicationFilters() {
             const toolbar = document.querySelector('[data-pub-toolbar]');
             const list = document.querySelector('.pub-list');
@@ -1686,6 +1841,7 @@
                 applyActiveNav(currentPath);
                 setupHomeScrollspy(currentPath);
                 hydrateGithubStars();
+                initPublicationActions();
                 initPublicationFilters();
                 window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
                 refreshBackToTopVisibility();
@@ -1714,6 +1870,7 @@
         applyActiveNav(currentPath);
         setupHomeScrollspy(currentPath);
         hydrateGithubStars();
+        initPublicationActions();
         initPublicationFilters();
     </script>
 
