@@ -1062,14 +1062,16 @@
     <link rel="shortcut icon" href="images/fcon.png" type="image/x-icon">
 </head>
 
-<body>
+<body data-page-url="{{ page.url | default: '/' }}">
     <!-- Navigation Bar -->
     <div id="nav-container">
         <nav aria-label="Primary">
             <ul>
                 {% if site.nav %}
                 {% for item in site.nav %}
-                {% assign is_current = page.url == item.url %}
+                {% assign normalized_page_url = page.url | default: '/' | replace: 'index.html', '' %}
+                {% assign normalized_item_url = item.url | replace: 'index.html', '' %}
+                {% assign is_current = normalized_page_url == normalized_item_url %}
                 <li>
                     <a href="{{ item.url }}"
                         {% if is_current %}aria-current="page"{% endif %}>{{ item.title }}</a>
@@ -1313,12 +1315,25 @@
         }
 
         function normalizePath(path) {
-            const trimmed = (path || '').replace(/\/+$/, '');
+            const withNoIndex = (path || '').replace(/index\.html$/i, '');
+            const trimmed = withNoIndex.replace(/\/+$/, '');
             return trimmed === '' ? '/' : trimmed;
         }
 
+        function stripBasePath(path, basePath) {
+            if (!basePath || basePath === '/') return path;
+            return path.startsWith(basePath) ? path.slice(basePath.length) || '/' : path;
+        }
+
+        function canonicalPath(path, basePath) {
+            return normalizePath(stripBasePath(normalizePath(path), basePath));
+        }
+
         const navLinks = Array.from(document.querySelectorAll('#nav-container nav a[href]'));
-        const currentPath = normalizePath(window.location.pathname);
+        const basePath = normalizePath('{{ site.baseurl | default: "" }}');
+        const serverPagePath = canonicalPath(document.body.dataset.pageUrl || '/', basePath);
+        const browserPath = canonicalPath(window.location.pathname, basePath);
+        const currentPath = browserPath === '/' && serverPagePath !== '/' ? serverPagePath : browserPath;
         const isHomePage = currentPath === '/';
 
         function setActiveNavLink(activeLink) {
@@ -1329,20 +1344,22 @@
         function findNavLinkForCurrentPath() {
             const matches = navLinks.filter((link) => {
                 const url = new URL(link.getAttribute('href'), window.location.origin);
-                return normalizePath(url.pathname) === currentPath;
+                return canonicalPath(url.pathname, basePath) === currentPath;
             });
             if (!matches.length) return null;
             return matches.sort((a, b) => b.getAttribute('href').length - a.getAttribute('href').length)[0];
         }
 
         // Enforce a single active nav item regardless of server-side rendering quirks.
-        const initialActiveLink = findNavLinkForCurrentPath();
+        const initialActiveLink = findNavLinkForCurrentPath()
+            || navLinks.find((link) => link.getAttribute('aria-current') === 'page')
+            || null;
         if (initialActiveLink) setActiveNavLink(initialActiveLink);
 
         if (isHomePage) {
             const homeLink = navLinks.find((link) => {
                 const url = new URL(link.getAttribute('href'), window.location.origin);
-                return normalizePath(url.pathname) === '/';
+                return canonicalPath(url.pathname, basePath) === '/';
             });
 
             const headings = Array.from(document.querySelectorAll('.content h2, .content h3'));
