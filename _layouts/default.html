@@ -274,6 +274,15 @@
             color: var(--text-color);
         }
 
+        .content section {
+            transition: opacity 0.14s ease, transform 0.14s ease;
+        }
+
+        .content section.is-swapping {
+            opacity: 0;
+            transform: translateY(6px);
+        }
+
         .content blockquote {
             border-left: 3px solid var(--accent);
             margin: 16px 0;
@@ -1330,39 +1339,53 @@
         }
 
         const navLinks = Array.from(document.querySelectorAll('#nav-container nav a[href]'));
+        const mainSectionSelector = '.content section';
         const basePath = normalizePath('{{ site.baseurl | default: "" }}');
         const serverPagePath = canonicalPath(document.body.dataset.pageUrl || '/', basePath);
         const browserPath = canonicalPath(window.location.pathname, basePath);
-        const currentPath = browserPath === '/' && serverPagePath !== '/' ? serverPagePath : browserPath;
-        const isHomePage = currentPath === '/';
+        let currentPath = browserPath === '/' && serverPagePath !== '/' ? serverPagePath : browserPath;
+        let homeScrollspyCleanup = null;
+        let isNavigating = false;
+        const githubStarsCache = new Map();
 
         function setActiveNavLink(activeLink) {
             navLinks.forEach((link) => link.removeAttribute('aria-current'));
             if (activeLink) activeLink.setAttribute('aria-current', 'page');
         }
 
-        function findNavLinkForCurrentPath() {
+        function findNavLinkForPath(path) {
             const matches = navLinks.filter((link) => {
                 const url = new URL(link.getAttribute('href'), window.location.origin);
-                return canonicalPath(url.pathname, basePath) === currentPath;
+                return canonicalPath(url.pathname, basePath) === path;
             });
             if (!matches.length) return null;
             return matches.sort((a, b) => b.getAttribute('href').length - a.getAttribute('href').length)[0];
         }
 
-        // Enforce a single active nav item regardless of server-side rendering quirks.
-        const initialActiveLink = findNavLinkForCurrentPath()
-            || navLinks.find((link) => link.getAttribute('aria-current') === 'page')
-            || null;
-        if (initialActiveLink) setActiveNavLink(initialActiveLink);
+        function applyActiveNav(path) {
+            const activeLink = findNavLinkForPath(path)
+                || navLinks.find((link) => link.getAttribute('aria-current') === 'page')
+                || null;
+            setActiveNavLink(activeLink);
+        }
 
-        if (isHomePage) {
+        function clearHomeScrollspy() {
+            if (homeScrollspyCleanup) {
+                homeScrollspyCleanup();
+                homeScrollspyCleanup = null;
+            }
+        }
+
+        function setupHomeScrollspy(path) {
+            clearHomeScrollspy();
+            if (path !== '/') return;
+
             const homeLink = navLinks.find((link) => {
                 const url = new URL(link.getAttribute('href'), window.location.origin);
                 return canonicalPath(url.pathname, basePath) === '/';
             });
 
-            const headings = Array.from(document.querySelectorAll('.content h2, .content h3'));
+            const headings = Array.from(document.querySelectorAll(`${mainSectionSelector} h2, ${mainSectionSelector} h3`));
             const sectionDefs = [
                 { navTitle: 'Publications', pattern: /publications/i },
                 { navTitle: 'Projects', pattern: /(research projects|projects)/i },
@@ -1378,13 +1401,16 @@
                 .filter(Boolean);
 
             const stickyOffset = 96;
+            const handlers = [];
 
             sectionTargets.forEach(({ navLink, heading }) => {
-                navLink.addEventListener('click', (event) => {
+                const clickHandler = (event) => {
                     event.preventDefault();
                     const top = heading.getBoundingClientRect().top + window.scrollY - stickyOffset;
                     window.scrollTo({ top, behavior: 'smooth' });
-                });
+                };
+                navLink.addEventListener('click', clickHandler);
+                handlers.push({ navLink, clickHandler });
             });
 
             function updateHomeScrollspy() {
@@ -1399,31 +1425,113 @@
 
             window.addEventListener('scroll', updateHomeScrollspy, { passive: true });
             updateHomeScrollspy();
-        }
-    </script>
 
-    <script>
+            homeScrollspyCleanup = () => {
+                window.removeEventListener('scroll', updateHomeScrollspy);
+                handlers.forEach(({ navLink, clickHandler }) => {
+                    navLink.removeEventListener('click', clickHandler);
+                });
+            };
+        }
+
         async function hydrateGithubStars() {
             const cards = document.querySelectorAll('[data-repo]');
             if (!cards.length) return;
-            const cache = new Map();
             for (const card of cards) {
                 const repo = card.getAttribute('data-repo');
                 const target = card.querySelector('[data-stars]');
                 if (!repo || !target) continue;
                 try {
-                    if (!cache.has(repo)) {
+                    if (!githubStarsCache.has(repo)) {
                         const res = await fetch(`https://api.github.com/repos/${repo}`);
                         if (!res.ok) throw new Error(`HTTP ${res.status}`);
                         const data = await res.json();
-                        cache.set(repo, data.stargazers_count ?? 0);
+                        githubStarsCache.set(repo, data.stargazers_count ?? 0);
                     }
-                    target.textContent = `${cache.get(repo)}`;
+                    target.textContent = `${githubStarsCache.get(repo)}`;
                 } catch (err) {
                     target.textContent = '—';
                 }
             }
         }
+
+        function isPjaxEligible(event, link) {
+            if (!link) return false;
+            if (event.defaultPrevented) return false;
+            if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return false;
+            if (link.hasAttribute('download')) return false;
+            if ((link.getAttribute('target') || '').toLowerCase() === '_blank') return false;
+            if ((link.getAttribute('rel') || '').toLowerCase().includes('external')) return false;
+            const url = new URL(link.getAttribute('href'), window.location.origin);
+            if (url.origin !== window.location.origin) return false;
+            if (url.hash) return false;
+            if (!document.querySelector(mainSectionSelector)) return false;
+            return true;
+        }
+
+        async function navigateWithPjax(url, { push = true } = {}) {
+            if (isNavigating) return;
+            const targetPath = canonicalPath(url.pathname, basePath);
+            if (targetPath === currentPath && url.search === window.location.search) return;
+
+            isNavigating = true;
+            const currentSection = document.querySelector(mainSectionSelector);
+            if (!currentSection) {
+                isNavigating = false;
+                window.location.href = `${url.pathname}${url.search}`;
+                return;
+            }
+            if (currentSection) currentSection.classList.add('is-swapping');
+
+            try {
+                const response = await fetch(`${url.pathname}${url.search}`, {
+                    headers: { 'X-Requested-With': 'fetch' },
+                    credentials: 'same-origin'
+                });
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+                const html = await response.text();
+                const doc = new DOMParser().parseFromString(html, 'text/html');
+                const nextSection = doc.querySelector(mainSectionSelector);
+                if (!nextSection) throw new Error('No main content found');
+
+                nextSection.classList.add('is-swapping');
+                currentSection.replaceWith(nextSection);
+                requestAnimationFrame(() => nextSection.classList.remove('is-swapping'));
+
+                document.title = doc.title || document.title;
+                document.body.dataset.pageUrl = doc.body?.dataset?.pageUrl || url.pathname;
+                currentPath = targetPath;
+
+                applyActiveNav(currentPath);
+                setupHomeScrollspy(currentPath);
+                hydrateGithubStars();
+                window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+                refreshBackToTopVisibility();
+
+                if (push) history.pushState({ path: `${url.pathname}${url.search}` }, '', `${url.pathname}${url.search}`);
+            } catch (error) {
+                window.location.href = `${url.pathname}${url.search}`;
+            } finally {
+                isNavigating = false;
+            }
+        }
+
+        document.addEventListener('click', (event) => {
+            const link = event.target.closest('a[href]');
+            if (!isPjaxEligible(event, link)) return;
+            const url = new URL(link.getAttribute('href'), window.location.origin);
+            event.preventDefault();
+            navigateWithPjax(url, { push: true });
+        });
+
+        window.addEventListener('popstate', () => {
+            const url = new URL(window.location.href);
+            navigateWithPjax(url, { push: false });
+        });
+
+        applyActiveNav(currentPath);
+        setupHomeScrollspy(currentPath);
         hydrateGithubStars();
     </script>
 
