@@ -426,7 +426,7 @@
             margin-bottom: 15px;
             border: 1px solid var(--border-color);
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
         }
 
         .mini-card h3 {
@@ -448,6 +448,12 @@
 
         .mini-card a:hover {
             color: var(--link-hover);
+        }
+
+        .mini-card.personal-card:hover {
+            transform: scale(1.015);
+            box-shadow: 0 16px 34px rgba(0, 0, 0, 0.12);
+            border-color: rgba(11, 75, 193, 0.35);
         }
 
         .scroll-focus {
@@ -1328,25 +1334,25 @@
                 <a href="/projects/">View Project →</a>
             </div>
             <h2 class="highlight-title">Personal</h2>
-            <div class="mini-card" style="text-align: center;">
+            <div class="mini-card personal-card" style="text-align: center;">
                 <h3>Milano25 Semi Marathon (21 KM)</h3>
                 <p>Proud <strong>21 KM Finisher</strong> at the 2025 edition of FollowYourPassion 🏃‍♂️🏅</p>
                 <a href="https://www.endu.net/en/events/milano21/results/2025/99707/8195" target="_blank">See results →</a>
                 <img src="/images/milano25-semi.png" alt="Results" />
             </div>
-            <div class="mini-card" style="text-align: center;">
+            <div class="mini-card personal-card" style="text-align: center;">
                 <h3>Odyssea Paris 2025 - 10 KM</h3>
                 <p>Proud <strong>10 KM Finisher</strong> at the 2025 edition of the Odyssea Paris 🏃‍♂️🏅</p>
                 <a href="https://www.sportinnovation.fr/Evenements/Resultats/6812" target="_blank">See results →</a>
                 <img src="/images/10-KM-ODYSSEA-2025.png?raw=true" alt="Results" />
             </div>
-            <div class="mini-card" style="text-align: center;">
+            <div class="mini-card personal-card" style="text-align: center;">
                 <h3>Run for Planet 2025 - 10 KM</h3>
                 <p>Proud <strong>10 KM Finisher</strong> at the 5th edition of the Run for Planet 2025 🌍🏃‍♂️</p>
                 <a href="https://www.runforplanet.fr" target="_blank">Event Page →</a>
                 <img src="/images/run-for-planet-10kM.png?raw=true" alt="Run for Planet Medal" />
             </div>
-            <div class="mini-card" style="text-align: center;">
+            <div class="mini-card personal-card" style="text-align: center;">
                 <h3>Parilly 2024 - 10 KM</h3>
                 <p>Proud <strong>10 KM Finisher</strong> at the 2024 edition of the 10 km de Parilly 🏃‍♂️🏅</p>
                 <a href="https://sgchrono.fr/live/10kmparilly24/" target="_blank">See Results →</a>
