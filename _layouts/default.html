@@ -608,6 +608,73 @@
             margin: 16px 0 24px;
         }
 
+        .pub-toolbar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            margin: 8px 0 14px;
+        }
+
+        .pub-filter-group {
+            display: inline-flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .pub-filter-btn,
+        .pub-collapse-btn {
+            border: 1px solid var(--border-color);
+            background: var(--chip-bg);
+            color: var(--text-color);
+            border-radius: 999px;
+            padding: 6px 12px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+        }
+
+        .pub-filter-btn:hover,
+        .pub-collapse-btn:hover {
+            border-color: var(--accent);
+            color: var(--link-hover);
+        }
+
+        .pub-filter-btn.is-active {
+            background: var(--accent-soft);
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .pub-year-filter {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--muted-text);
+            font-weight: 700;
+        }
+
+        .pub-year-filter select {
+            min-width: 130px;
+            border-radius: 999px;
+            border: 1px solid var(--border-color);
+            background: var(--card-bg);
+            color: var(--text-color);
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 6px 10px;
+        }
+
+        .pub-card.is-hidden {
+            display: none;
+        }
+
         .pub-card {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
@@ -959,6 +1026,20 @@
             background: rgba(168, 85, 247, 0.24);
             color: #d8b4fe;
             border-color: rgba(216, 180, 254, 0.45);
+        }
+
+        [data-theme="dark"] .pub-filter-btn,
+        [data-theme="dark"] .pub-collapse-btn,
+        [data-theme="dark"] .pub-year-filter select {
+            background: rgba(120, 168, 255, 0.1);
+            border-color: rgba(152, 182, 216, 0.35);
+            color: #d6e6ff;
+        }
+
+        [data-theme="dark"] .pub-filter-btn.is-active {
+            background: rgba(120, 168, 255, 0.2);
+            border-color: rgba(181, 207, 239, 0.48);
+            color: #cfe4ff;
         }
 
         [data-theme="dark"] .gh-tag-chip {
@@ -1455,6 +1536,105 @@
             }
         }
 
+        function initPublicationFilters() {
+            const toolbar = document.querySelector('[data-pub-toolbar]');
+            const list = document.querySelector('.pub-list');
+            if (!toolbar || !list) return;
+
+            const cards = Array.from(list.querySelectorAll('.pub-card'));
+            if (!cards.length) return;
+
+            const typeButtons = Array.from(toolbar.querySelectorAll('[data-pub-type]'));
+            const yearSelect = toolbar.querySelector('[data-pub-year]');
+            const toggleButton = toolbar.querySelector('[data-pub-toggle]');
+            const collapsedLimit = 4;
+            const state = { type: 'all', year: 'all', expanded: false };
+
+            cards.forEach((card) => {
+                const typeNode = card.querySelector('.pub-type');
+                const dateNode = card.querySelector('.date-pill');
+                const typeClass = Array.from(typeNode?.classList || []).find((name) => name.startsWith('is-')) || '';
+                const type = typeClass.replace('is-', '') || (typeNode?.textContent || '').trim().toLowerCase() || 'other';
+                const dateText = (dateNode?.textContent || '').trim();
+                const yearMatch = dateText.match(/\b(19|20)\d{2}\b/);
+                const year = yearMatch ? yearMatch[0] : dateText.toLowerCase();
+                card.dataset.pubType = type;
+                card.dataset.pubYear = year;
+            });
+
+            if (yearSelect && yearSelect.options.length <= 1) {
+                const years = Array.from(new Set(cards.map((card) => card.dataset.pubYear)))
+                    .sort((a, b) => {
+                        const numA = Number.parseInt(a, 10);
+                        const numB = Number.parseInt(b, 10);
+                        const validA = Number.isFinite(numA);
+                        const validB = Number.isFinite(numB);
+                        if (validA && validB) return numB - numA;
+                        if (validA) return -1;
+                        if (validB) return 1;
+                        return a.localeCompare(b);
+                    });
+
+                years.forEach((year) => {
+                    const option = document.createElement('option');
+                    option.value = year;
+                    option.textContent = year === 'in revision' ? 'In Revision' : year;
+                    yearSelect.appendChild(option);
+                });
+            }
+
+            function applyFilters() {
+                const filtered = cards.filter((card) => {
+                    const typeOk = state.type === 'all' || card.dataset.pubType === state.type;
+                    const yearOk = state.year === 'all' || card.dataset.pubYear === state.year;
+                    return typeOk && yearOk;
+                });
+
+                cards.forEach((card) => card.classList.add('is-hidden'));
+
+                filtered.forEach((card, index) => {
+                    const hideForLimit = !state.expanded && index >= collapsedLimit;
+                    card.classList.toggle('is-hidden', hideForLimit);
+                });
+
+                const hiddenByLimit = Math.max(0, filtered.length - collapsedLimit);
+                if (toggleButton) {
+                    if (hiddenByLimit <= 0) {
+                        toggleButton.hidden = true;
+                    } else {
+                        toggleButton.hidden = false;
+                        toggleButton.textContent = state.expanded ? 'Show Less' : `Show ${hiddenByLimit} More`;
+                    }
+                }
+            }
+
+            typeButtons.forEach((button) => {
+                button.addEventListener('click', () => {
+                    state.type = button.dataset.pubType || 'all';
+                    state.expanded = false;
+                    typeButtons.forEach((btn) => btn.classList.toggle('is-active', btn === button));
+                    applyFilters();
+                });
+            });
+
+            if (yearSelect) {
+                yearSelect.addEventListener('change', () => {
+                    state.year = yearSelect.value || 'all';
+                    state.expanded = false;
+                    applyFilters();
+                });
+            }
+
+            if (toggleButton) {
+                toggleButton.addEventListener('click', () => {
+                    state.expanded = !state.expanded;
+                    applyFilters();
+                });
+            }
+
+            applyFilters();
+        }
+
         function isPjaxEligible(event, link) {
             if (!link) return false;
             if (event.defaultPrevented) return false;
@@ -1506,6 +1686,7 @@
                 applyActiveNav(currentPath);
                 setupHomeScrollspy(currentPath);
                 hydrateGithubStars();
+                initPublicationFilters();
                 window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
                 refreshBackToTopVisibility();
 
@@ -1533,6 +1714,7 @@
         applyActiveNav(currentPath);
         setupHomeScrollspy(currentPath);
         hydrateGithubStars();
+        initPublicationFilters();
     </script>
 
     {% if site.google_analytics %}

@@ -5,6 +5,22 @@ permalink: /publications/
 ---
 ## <span style="color: #267cb9;">Publications</span>
 
+<div class="pub-toolbar" data-pub-toolbar>
+  <div class="pub-filter-group" role="group" aria-label="Publication type filter">
+    <button type="button" class="pub-filter-btn is-active" data-pub-type="all">All</button>
+    <button type="button" class="pub-filter-btn" data-pub-type="journal">Journal</button>
+    <button type="button" class="pub-filter-btn" data-pub-type="conference">Conference</button>
+    <button type="button" class="pub-filter-btn" data-pub-type="preprint">Preprint</button>
+  </div>
+  <label class="pub-year-filter">
+    <span>Year</span>
+    <select data-pub-year>
+      <option value="all">All years</option>
+    </select>
+  </label>
+  <button type="button" class="pub-collapse-btn" data-pub-toggle hidden>Show more</button>
+</div>
+
 <div class="pub-list">
   <div class="pub-card">
     <div class="pub-badges">
