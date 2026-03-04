@@ -18,12 +18,6 @@ permalink: /open-source/
       <hr class="oss-divider"/>
       <div class="gh-description"><strong>Programming language:</strong> Rust</div>
       <div class="gh-description oss-proof-row">
-        <strong>PRs:</strong>
-        <span class="gh-tag-chip"><a href="https://github.com/AlexsJones/llmfit/pull/151" target="_blank" rel="noopener">#151</a></span>
-        <span class="gh-tag-chip"><a href="https://github.com/AlexsJones/llmfit/pull/133" target="_blank" rel="noopener">#133</a></span>
-        <span class="gh-tag-chip"><a href="https://github.com/AlexsJones/llmfit/pull/111" target="_blank" rel="noopener">#111</a></span>
-      </div>
-      <div class="gh-description oss-proof-row">
         <strong>Releases:</strong>
         <span class="gh-tag-chip"><a href="https://github.com/AlexsJones/llmfit/releases/tag/v0.5.6" target="_blank" rel="noopener">v0.5.6</a></span>
         <span class="gh-tag-chip"><a href="https://github.com/AlexsJones/llmfit/releases/tag/v0.5.5" target="_blank" rel="noopener">v0.5.5</a></span>
