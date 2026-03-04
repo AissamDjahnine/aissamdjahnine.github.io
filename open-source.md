@@ -15,7 +15,7 @@ permalink: /open-source/
       </div>
       <div class="gh-title">llmfit (Contributor)</div>
       <div class="gh-description">Contributed merged improvements to CLI usability and model-estimation reliability in a widely used LLM benchmarking tool.</div>
-      <div class="gh-description"><strong>Programming language:</strong> Python</div>
+      <div class="gh-description"><strong>Programming language:</strong> Rust</div>
       <div class="gh-description"><strong>PRs:</strong>
         <a href="https://github.com/AlexsJones/llmfit/pull/151" target="_blank" rel="noopener">#151</a> ·
         <a href="https://github.com/AlexsJones/llmfit/pull/133" target="_blank" rel="noopener">#133</a> ·
