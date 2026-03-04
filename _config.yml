@@ -9,6 +9,8 @@ nav:
     url: "/internships/"
   - title: "GitHub Projects"
     url: "/github-repos/"
+  - title: "Open Source"
+    url: "/open-source/"
   - title: "Publications"
     url: "/publications/"
   - title: "Projects"
