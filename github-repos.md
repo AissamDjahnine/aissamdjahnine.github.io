@@ -5,6 +5,31 @@ permalink: /github-repos/
 ---
 # <span style="color: #267cb9;">GitHub Repository Projects</span>
 
+## <span style="color: #267cb9;">Open Source Contributions</span>
+
+<div class="gh-grid">
+  <div class="gh-card" data-repo="AlexsJones/llmfit">
+    <img class="gh-media-img" src="/images/github-projects/portfolio.png" alt="llmfit open source repository preview"/>
+    <div>
+      <div class="gh-meta">
+        <span class="gh-tag">Open Source</span>
+      </div>
+      <div class="gh-title">llmfit</div>
+      <div class="gh-description">Contributed merged pull requests to improve CLI behavior, reliability, and user experience in the llmfit project.</div>
+      <div class="gh-langs">
+        <span class="gh-lang">Python</span>
+        <span class="gh-tag-chip">Contributor</span>
+      </div>
+      <div class="gh-actions">
+        <a class="gh-link" href="https://github.com/AlexsJones/llmfit" target="_blank" rel="noopener">GitHub ↗</a>
+        <span class="gh-stars"><span class="gh-star-icon">★</span><span data-stars>—</span></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+## <span style="color: #267cb9;">Personal Projects</span>
+
 <div class="gh-grid">
   <div class="gh-card" data-repo="AissamDjahnine/lateness-estimator">
     <img class="gh-media-img" src="/images/github-projects/lateness.png" alt="lateness-estimator preview"/>
