@@ -913,6 +913,10 @@
             margin: 0 0 8px;
         }
 
+        .oss-proof-row.no-wrap {
+            flex-wrap: nowrap;
+        }
+
         .gh-media {
             width: 100%;
             aspect-ratio: 16 / 9;
@@ -936,6 +940,12 @@
             border: 1px solid var(--border-color);
             object-fit: cover;
             background: var(--card-bg);
+        }
+
+        .gh-media-img.logo-only {
+            object-fit: contain;
+            padding: 28px;
+            background: linear-gradient(135deg, var(--accent-soft), rgba(14, 116, 144, 0.08));
         }
 
         .gh-actions {
