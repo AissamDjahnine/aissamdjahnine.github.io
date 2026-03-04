@@ -11,6 +11,7 @@ permalink: /open-source/
       <div class="gh-meta">
         <span class="gh-tag">Open Source</span>
         <span class="gh-tag">Contributor</span>
+        <span class="gh-stars gh-stars-inline"><span class="gh-star-icon">★</span><span data-stars>—</span></span>
       </div>
       <div class="gh-title">llmfit (Contributor)</div>
       <div class="gh-description">Merged contributions improving CLI usability and estimation clarity in a widely used LLM benchmarking tool.</div>
@@ -26,7 +27,6 @@ permalink: /open-source/
         <a class="gh-link" href="https://github.com/AlexsJones/llmfit" target="_blank" rel="noopener">View Repository ↗</a>
         <a class="gh-link" href="https://github.com/AlexsJones/llmfit/pulls?q=is%3Apr+author%3AAissamDjahnine" target="_blank" rel="noopener">View My PRs ↗</a>
         <a class="gh-link" href="https://github.com/AlexsJones/llmfit/releases" target="_blank" rel="noopener">View Releases ↗</a>
-        <span class="gh-stars"><span class="gh-star-icon">★</span><span data-stars>—</span></span>
       </div>
     </div>
   </div>
