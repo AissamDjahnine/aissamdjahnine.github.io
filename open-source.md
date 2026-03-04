@@ -6,8 +6,7 @@ permalink: /open-source/
 # <span style="color: #267cb9;">Open Source Contributions</span>
 
 <div class="gh-grid">
-  <div class="gh-card" data-repo="AlexsJones/llmfit">
-    <img class="gh-media-img logo-only" src="/icons/github.svg" alt="GitHub logo"/>
+  <div class="gh-card no-media" data-repo="AlexsJones/llmfit">
     <div>
       <div class="gh-meta">
         <span class="gh-tag">Open Source</span>
