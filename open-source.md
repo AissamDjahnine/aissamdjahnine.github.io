@@ -14,12 +14,12 @@ permalink: /open-source/
         <span class="gh-stars gh-stars-inline"><span class="gh-star-icon">★</span><span data-stars>—</span></span>
       </div>
       <div class="gh-title">llmfit (Contributor)</div>
-      <div class="gh-description">Open-source LLM benchmarking CLI with strong community adoption and active releases.</div>
+      <div class="gh-description">Hundreds of models & providers. One command to find what LLM runs on your hardware.</div>
       <hr class="oss-divider"/>
       <ul>
-        <li>Added sortable fit output (`--sort`) for faster model comparison in CLI workflows.</li>
-        <li>Improved MoE throughput estimation and baseline labeling clarity for more reliable benchmarking.</li>
-        <li>Introduced context-length cap support (`--max-context`) for safer memory estimation.</li>
+        <li><strong>Add --sort option for fit output</strong><br>Added a <code>--sort</code> option to rank and compare benchmark results quickly.</li>
+        <li><strong>Improve MoE tok/s estimation and baseline speed labels</strong><br>Improved MoE throughput reporting so speed estimates are clearer and less misleading.</li>
+        <li><strong>Add context-length cap for memory estimation (--max-context)</strong><br>Added a <code>--max-context</code> guard to make memory estimation safer on limited hardware.</li>
       </ul>
       <div class="gh-description oss-proof-row no-wrap">
         <strong>Releases:</strong>
