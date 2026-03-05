@@ -9,14 +9,18 @@ permalink: /open-source/
   <div class="gh-card no-media" data-repo="AlexsJones/llmfit">
     <div>
       <div class="gh-meta">
-        <span class="gh-tag">Open Source</span>
-        <span class="gh-tag">Contributor</span>
+        <span class="gh-tag is-contributor">Contributor</span>
+        <span class="gh-tag is-year">2026</span>
         <span class="gh-stars gh-stars-inline"><span class="gh-star-icon">★</span><span data-stars>—</span></span>
       </div>
       <div class="gh-title">llmfit (Contributor)</div>
-      <div class="gh-description">Merged contributions improving CLI usability and estimation clarity in a widely used LLM benchmarking tool.</div>
+      <div class="gh-description">Open-source LLM benchmarking CLI with strong community adoption and active releases.</div>
       <hr class="oss-divider"/>
-      <div class="gh-description"><strong>Programming language:</strong> Rust</div>
+      <ul>
+        <li>Added sortable fit output (`--sort`) for faster model comparison in CLI workflows.</li>
+        <li>Improved MoE throughput estimation and baseline labeling clarity for more reliable benchmarking.</li>
+        <li>Introduced context-length cap support (`--max-context`) for safer memory estimation.</li>
+      </ul>
       <div class="gh-description oss-proof-row no-wrap">
         <strong>Releases:</strong>
         <span class="gh-tag-chip"><a href="https://github.com/AlexsJones/llmfit/releases/tag/v0.5.6" target="_blank" rel="noopener">v0.5.6</a></span>

@@ -836,6 +836,18 @@
             border: 1px solid var(--border-color);
         }
 
+        .gh-tag.is-contributor {
+            background: rgba(14, 116, 144, 0.12);
+            color: #0e7490;
+            border-color: rgba(14, 116, 144, 0.3);
+        }
+
+        .gh-tag.is-year {
+            background: rgba(11, 75, 193, 0.1);
+            color: #1f4fb4;
+            border-color: rgba(11, 75, 193, 0.28);
+        }
+
         .gh-stars {
             display: inline-flex;
             align-items: center;
@@ -924,6 +936,12 @@
 
         .oss-proof-row.no-wrap {
             flex-wrap: nowrap;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+
+        .oss-proof-row.no-wrap::-webkit-scrollbar {
+            display: none;
         }
 
         .gh-media {
@@ -1144,6 +1162,18 @@
             background: rgba(34, 211, 238, 0.2);
             color: #a5f3fc;
             border-color: rgba(165, 243, 252, 0.38);
+        }
+
+        [data-theme="dark"] .gh-tag.is-contributor {
+            background: rgba(34, 211, 238, 0.18);
+            color: #a5f3fc;
+            border-color: rgba(165, 243, 252, 0.38);
+        }
+
+        [data-theme="dark"] .gh-tag.is-year {
+            background: rgba(120, 168, 255, 0.2);
+            color: #cfe4ff;
+            border-color: rgba(181, 207, 239, 0.4);
         }
 
         [data-theme="dark"] .location-pill {
