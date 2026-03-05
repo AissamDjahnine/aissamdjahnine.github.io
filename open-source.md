@@ -6,20 +6,20 @@ permalink: /open-source/
 # <span style="color: #267cb9;">Open Source Contributions</span>
 
 <div class="gh-grid">
-  <div class="gh-card no-media" data-repo="AlexsJones/llmfit">
+  <div class="gh-card no-media open-source-card" data-repo="AlexsJones/llmfit">
     <div>
       <div class="gh-meta">
         <span class="gh-tag is-contributor">Contributor</span>
         <span class="gh-tag is-year">2026</span>
         <span class="gh-stars gh-stars-inline"><span class="gh-star-icon">★</span><span data-stars>—</span></span>
       </div>
-      <div class="gh-title">llmfit (Contributor)</div>
-      <div class="gh-description">Hundreds of models & providers. One command to find what LLM runs on your hardware.</div>
+      <div class="gh-title oss-title">llmfit (Contributor)</div>
+      <div class="gh-description oss-lede">Hundreds of models & providers. One command to find what LLM runs on your hardware.</div>
       <hr class="oss-divider"/>
-      <ul>
-        <li><strong>Add --sort option for fit output</strong><br>Added a <code>--sort</code> option to rank and compare benchmark results quickly.</li>
-        <li><strong>Improve MoE tok/s estimation and baseline speed labels</strong><br>Improved MoE throughput reporting so speed estimates are clearer and less misleading.</li>
-        <li><strong>Add context-length cap for memory estimation (--max-context)</strong><br>Added a <code>--max-context</code> guard to make memory estimation safer on limited hardware.</li>
+      <ul class="oss-list">
+        <li><code>--sort</code> ranks fit results quickly for easier side-by-side comparison.</li>
+        <li>MoE token/s estimation now uses active parameters, with clearer baseline speed labels.</li>
+        <li><code>--max-context</code> adds a safe upper bound for memory estimation on limited hardware.</li>
       </ul>
       <div class="gh-description oss-proof-row no-wrap">
         <strong>Releases:</strong>
