@@ -195,20 +195,4 @@ permalink: /github-repos/
     </div>
   </div>
 
-  <div class="gh-card" data-repo="AissamDjahnine/aissamdjahnine.github.io">
-    <img class="gh-media-img" src="/images/github-projects/portfolio.png" alt="aissamdjahnine.github.io preview"/>
-    <div>
-      <div class="gh-meta"></div>
-      <div class="gh-title">aissamdjahnine.github.io</div>
-      <div class="gh-description">Developer and data science portfolio website based on a minimal Jekyll theme for GitHub Pages.</div>
-      <div class="gh-langs">
-        <span class="gh-lang">HTML</span>
-        <span class="gh-tag-chip">Portfolio</span>
-      </div>
-      <div class="gh-actions">
-        <a class="gh-link" href="https://github.com/AissamDjahnine/aissamdjahnine.github.io" target="_blank" rel="noopener">GitHub ↗</a>
-        <span class="gh-stars"><span class="gh-star-icon">★</span><span data-stars>—</span></span>
-      </div>
-    </div>
-  </div>
 </div>
