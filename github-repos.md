@@ -8,6 +8,23 @@ permalink: /github-repos/
 ## <span style="color: #267cb9;">Personal Projects</span>
 
 <div class="gh-grid">
+  <div class="gh-card" data-repo="AissamDjahnine/video-unscramble">
+    <img class="gh-media-img" src="/images/github-projects/video_unscramble.png" alt="video-unscramble preview"/>
+    <div>
+      <div class="gh-meta"></div>
+      <div class="gh-title">video-unscramble</div>
+      <div class="gh-description">Tooling to reconstruct or re-order scrambled video content, focusing on recovering coherent frame sequences from disrupted footage.</div>
+      <div class="gh-langs">
+        <span class="gh-lang">Python</span>
+        <span class="gh-tag-chip">Video</span>
+      </div>
+      <div class="gh-actions">
+        <a class="gh-link" href="https://github.com/AissamDjahnine/video-unscramble" target="_blank" rel="noopener">GitHub ↗</a>
+        <span class="gh-stars"><span class="gh-star-icon">★</span><span data-stars>—</span></span>
+      </div>
+    </div>
+  </div>
+
   <div class="gh-card" data-repo="AissamDjahnine/lateness-estimator">
     <img class="gh-media-img" src="/images/github-projects/lateness.png" alt="lateness-estimator preview"/>
     <div>
