@@ -1,5 +1,3 @@
-<br>
-
 ## About
 
 > PhD in Medical Imaging and AI. 4+ years designing and deploying computer vision systems across biomedical engineering and applied AI.
@@ -10,7 +8,6 @@
 Supervisors: [*Guillaume Ghyselinck*](https://www.linkedin.com/in/guillaume-ghyselinck-101857137/)<br><br>
 
 > AI Research Engineer at DentalMonitoring. I design and deploy the computer vision systems that power remote orthodontic monitoring, transforming raw patient data into reliable clinical insights for doctors worldwide.
-<br>
 
 ## PhD Candidate | Machine Learning Engineer @ Philips Health Technology Innovation - AI Research Hub France
 <div class="date-pill">July 2021 - September 2024</div>
@@ -18,8 +15,6 @@ Supervisors: [*Guillaume Ghyselinck*](https://www.linkedin.com/in/guillaume-ghys
 Supervisors: [*Pr. Loic Boussel*](https://www.spectralphotoncountingct.com/fr/team/members/2/show), [*Dr. Nicolas Villain*](https://www.linkedin.com/in/nicolas-villain-9422122/)<br><br>
 
 > I completed a CIFRE PhD in collaboration with Philips Health Technology Innovation, INSA Lyon, and Hospices Civils de Lyon (HCL), under the supervision of Prof. Loïc Boussel, Dr. Nicolas Villain, Dr. Olivier Nempont, and Dr. Alexandre Popoff. My research explored the development of AI-driven pathology detection systems for conventional CT scans, combining computer vision, medical imaging, and deep learning. Working closely with teams in healthcare and research, I contributed to the design of automated tools that could potentially improve the precision and efficiency of clinical workflows. This research led to several publications, and I gained valuable experience in Python and deep learning frameworks throughout the process.
-<br>
-<br>
 
 ## Computer Vision and Deep Learning Intern @ GE Healthcare
 <div class="date-pill">March 2020 - August 2020</div>
@@ -27,11 +22,8 @@ Supervisors: [*Pr. Loic Boussel*](https://www.spectralphotoncountingct.com/fr/te
 Supervisors: *Pr. Serge Muller*, *Dr. Andrei Petrovskii*<br><br>
 **Investigation of automatic search methods for neural network hyperparameters (Neural Architecture Search)**. 
 **Application to Mammographic Data within WHARe team (Women's Health Applied Research)**
-<br>
 
 > During my internship, I collaborated with experts to advance mammography systems for clinical diagnosis, focusing on the application of deep learning techniques to enhance the accuracy of mammographic data classification. Specifically, we explored the potential of a gradient-based Neural Architecture Search (NAS) method, DARTS (Differentiable Architecture Search), to optimize model performance for classification tasks. Through extensive experimentation, we successfully achieved state-of-the-art results, surpassing existing models in mammography classification. This project not only provided valuable hands-on experience with AI-driven research but also inspired my decision to pursue a PhD in medical imaging and deep learning.
-<br>
-<br>
 
 ## <span style="color:  #267cb9;">Publications</span>
 
