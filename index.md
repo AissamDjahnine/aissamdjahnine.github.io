@@ -1,11 +1,15 @@
 <br>
 
+## About
+
+PhD in Medical Imaging and AI. 4+ years designing and deploying computer vision systems across biomedical engineering and applied AI.
+
 #### October 2024 - Present
 ## AI Research Engineer @ DentalMonitoring
 <img src="images/DM.png?raw=true" style="width: 75%; height: auto;"/><br>
 Supervisors: [*Guillaume Ghyselinck*](https://www.linkedin.com/in/guillaume-ghyselinck-101857137/)<br><br>
 
-> As an AI Research Engineer at Dental Monitoring, I innovate end-to-end projects, from conception to deployment. I design and implement AI-based recognition systems for remote orthodontic monitoring, leveraging advanced machine learning techniques. Proficient in computer vision, biomedical engineering, medical imaging, and general AI research, I collaborate with a dynamic R&D team.
+> AI Research Engineer at DentalMonitoring. I design and deploy the computer vision systems that power remote orthodontic monitoring, transforming raw patient data into reliable clinical insights for doctors worldwide.
 <br>
 
 #### July 2021 - September 2024
