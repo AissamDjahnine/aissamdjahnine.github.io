@@ -4,16 +4,16 @@
 
 > PhD in Medical Imaging and AI. 4+ years designing and deploying computer vision systems across biomedical engineering and applied AI.
 
-<div class="date-pill">October 2024 - Present</div>
 ## AI Research Engineer @ DentalMonitoring
+<div class="date-pill">October 2024 - Present</div>
 <img src="images/DM.png?raw=true" style="width: 75%; height: auto;"/><br>
 Supervisors: [*Guillaume Ghyselinck*](https://www.linkedin.com/in/guillaume-ghyselinck-101857137/)<br><br>
 
 > AI Research Engineer at DentalMonitoring. I design and deploy the computer vision systems that power remote orthodontic monitoring, transforming raw patient data into reliable clinical insights for doctors worldwide.
 <br>
 
-<div class="date-pill">July 2021 - September 2024</div>
 ## PhD Candidate | Machine Learning Engineer @ Philips Health Technology Innovation - AI Research Hub France
+<div class="date-pill">July 2021 - September 2024</div>
 <img src="images/PHD2.png?raw=true"/> 
 Supervisors: [*Pr. Loic Boussel*](https://www.spectralphotoncountingct.com/fr/team/members/2/show), [*Dr. Nicolas Villain*](https://www.linkedin.com/in/nicolas-villain-9422122/)<br><br>
 
@@ -21,8 +21,8 @@ Supervisors: [*Pr. Loic Boussel*](https://www.spectralphotoncountingct.com/fr/te
 <br>
 <br>
 
-<div class="date-pill">March 2020 - August 2020</div>
 ## Computer Vision and Deep Learning Intern @ GE Healthcare
+<div class="date-pill">March 2020 - August 2020</div>
 <img src="images/GE.jpg?raw=true"/>
 Supervisors: *Pr. Serge Muller*, *Dr. Andrei Petrovskii*<br><br>
 **Investigation of automatic search methods for neural network hyperparameters (Neural Architecture Search)**. 
