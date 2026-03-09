@@ -407,16 +407,122 @@
             transition: background-color 0.3s;
         }
 
-        .stat-item {
-            display: flex;
-            justify-content: space-between;
-            margin: 10px 0;
+        .scholar-header {
+            display: grid;
+            grid-template-columns: 1.4fr 0.8fr 0.8fr;
+            gap: 10px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 10px;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
             color: var(--muted-text);
+        }
+
+        .scholar-header span:first-child {
+            color: transparent;
+        }
+
+        .stat-item {
+            display: grid;
+            grid-template-columns: 1.4fr 0.8fr 0.8fr;
+            gap: 10px;
+            margin: 8px 0;
+            color: var(--muted-text);
+            align-items: center;
         }
 
         .stat-item strong {
             color: var(--text-color);
             font-weight: 700;
+            justify-self: end;
+        }
+
+        .scholar-chart {
+            margin-top: 16px;
+            padding-top: 14px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .scholar-chart-grid {
+            position: relative;
+            height: 132px;
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 12px;
+            align-items: end;
+            padding: 8px 34px 0 0;
+        }
+
+        .scholar-chart-grid::before,
+        .scholar-chart-grid::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 34px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .scholar-chart-grid::before {
+            top: 24px;
+        }
+
+        .scholar-chart-grid::after {
+            top: 76px;
+        }
+
+        .scholar-bar-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: end;
+            gap: 8px;
+            height: 100%;
+            position: relative;
+        }
+
+        .scholar-bar {
+            width: 16px;
+            border-radius: 0;
+            background: #8d8d8d;
+            min-height: 6px;
+        }
+
+        .scholar-bar-value {
+            position: absolute;
+            right: -30px;
+            top: 8px;
+            font-size: 0.75rem;
+            color: var(--muted-text);
+        }
+
+        .scholar-year {
+            font-size: 0.78rem;
+            color: var(--muted-text);
+        }
+
+        .scholar-zero {
+            position: absolute;
+            right: 0;
+            bottom: 18px;
+            font-size: 0.75rem;
+            color: var(--muted-text);
+        }
+
+        .scholar-link {
+            margin-top: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.86rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--accent);
+        }
+
+        .scholar-link:hover {
+            color: var(--link-hover);
         }
 
         .mini-card {
@@ -1119,6 +1225,17 @@
             color: #d6e6ff;
         }
 
+        [data-theme="dark"] .scholar-header,
+        [data-theme="dark"] .scholar-year,
+        [data-theme="dark"] .scholar-bar-value,
+        [data-theme="dark"] .scholar-zero {
+            color: #b9c7d8;
+        }
+
+        [data-theme="dark"] .scholar-bar {
+            background: #8f98a7;
+        }
+
         [data-theme="dark"] .content blockquote {
             color: #d5e2f3;
             background: rgba(120, 168, 255, 0.06);
@@ -1428,17 +1545,49 @@
         <aside class="right-sidebar">
             <h2 class="highlight-title">Cited by</h2>
             <div class="scholar-stats">
-                <div class="stat-item">
-                    <span>Total Citations:</span>
-                    <strong>53</strong>
+                <div class="scholar-header">
+                    <span>Metric</span>
+                    <span>All</span>
+                    <span>Since 2021</span>
                 </div>
                 <div class="stat-item">
-                    <span>h-index:</span>
+                    <span>Citations</span>
+                    <strong>54</strong>
+                    <strong>54</strong>
+                </div>
+                <div class="stat-item">
+                    <span>h-index</span>
+                    <strong>3</strong>
                     <strong>3</strong>
                 </div>
                 <div class="stat-item">
-                    <span>i10-index:</span>
+                    <span>i10-index</span>
                     <strong>2</strong>
+                    <strong>2</strong>
+                </div>
+                <div class="scholar-chart">
+                    <div class="scholar-chart-grid">
+                        <div class="scholar-bar-wrap">
+                            <div class="scholar-bar" style="height: 10px;"></div>
+                            <span class="scholar-year">2023</span>
+                        </div>
+                        <div class="scholar-bar-wrap">
+                            <div class="scholar-bar" style="height: 40px;"></div>
+                            <span class="scholar-year">2024</span>
+                        </div>
+                        <div class="scholar-bar-wrap">
+                            <div class="scholar-bar" style="height: 108px;"></div>
+                            <span class="scholar-bar-value">36</span>
+                            <span class="scholar-year">2025</span>
+                        </div>
+                        <div class="scholar-bar-wrap">
+                            <div class="scholar-bar" style="height: 18px;"></div>
+                            <span class="scholar-year">2026</span>
+                        </div>
+                        <span class="scholar-zero">0</span>
+                    </div>
+                    <a class="scholar-link" href="https://scholar.google.com/citations?user=uRNOC9sAAAAJ&hl=en"
+                        target="_blank" rel="noopener">View Google Scholar ↗</a>
                 </div>
             </div>
 
