@@ -2,7 +2,7 @@
 
 ## About
 
-PhD in Medical Imaging and AI. 4+ years designing and deploying computer vision systems across biomedical engineering and applied AI.
+> PhD in Medical Imaging and AI. 4+ years designing and deploying computer vision systems across biomedical engineering and applied AI.
 
 #### October 2024 - Present
 ## AI Research Engineer @ DentalMonitoring
