@@ -11,6 +11,8 @@ nav:
     url: "/github-repos/"
   - title: "Open Source"
     url: "/open-source/"
+  - title: "Licenses & Certifications"
+    url: "/licenses-certifications/"
   - title: "Publications"
     url: "/publications/"
   - title: "Research"
