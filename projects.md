@@ -20,8 +20,8 @@ permalink: /projects/
     <div class="gh-meta">
       <span class="gh-tag-chip">{{ site.data.thesis_stats.views }} Views</span>
       <span class="gh-tag-chip">{{ site.data.thesis_stats.downloads }} Downloads</span>
-      <span class="gh-tag-chip">Updated {{ site.data.thesis_stats.updated_at }}</span>
     </div>
+    <div class="gh-description" style="margin-top: -2px; color: var(--muted-text); font-size: 0.92rem;">Updated {{ site.data.thesis_stats.updated_at }}</div>
     <div class="gh-actions">
       <a class="gh-link" href="https://theses.hal.science/tel-05263492/" target="_blank" rel="noopener">Read Manuscript ↗</a>
       <a class="gh-link" href="https://hal.science/tel-05263492/" target="_blank" rel="noopener">HAL ↗</a>
