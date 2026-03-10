@@ -3,12 +3,13 @@ layout: default
 title: Research Projects
 permalink: /projects/
 ---
-## <span style="color: #267cb9;">Research Projects</span>
+## <span style="color: #267cb9;">Research</span>
+
+### PhD Thesis
 
 <div class="gh-card no-media">
   <div>
     <div class="gh-meta">
-      <span class="gh-tag">PhD Thesis</span>
       <span class="gh-tag">Biomedical Imaging</span>
       <span class="gh-tag">INSA Lyon</span>
       <span class="gh-tag">CREATIS</span>
@@ -29,6 +30,8 @@ permalink: /projects/
     </div>
   </div>
 </div>
+
+### Projects
 
 <div class="gh-grid">
   <div class="gh-card">
