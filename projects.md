@@ -7,7 +7,7 @@ permalink: /projects/
 
 ### PhD Thesis
 
-<div class="gh-card no-media">
+<div class="gh-card no-media thesis-card">
   <div>
     <div class="gh-meta">
       <span class="gh-tag">Biomedical Imaging</span>
@@ -18,15 +18,22 @@ permalink: /projects/
     <div class="gh-title">Automatic Detection of Pathologies in Conventional Scanner Data</div>
     <div class="gh-description">This thesis investigates AI-based detection and characterization of pulmonary pathologies in conventional CT scans, with a focus on reducing annotation requirements. It explores supervised, weakly supervised, and unsupervised learning strategies to detect anomalies and support radiologists in identifying incidental findings beyond the initial clinical indication.</div>
     <div class="gh-description"><strong>Author:</strong> Aissam Djahnine · <strong>Supervisor:</strong> Loïc Boussel</div>
-    <div class="gh-meta">
-      <span class="gh-tag-chip">{{ site.data.thesis_stats.views }} Views</span>
-      <span class="gh-tag-chip">{{ site.data.thesis_stats.downloads }} Downloads</span>
-    </div>
-    <div class="gh-description" style="margin-top: -2px; color: var(--muted-text); font-size: 0.92rem;">Updated {{ site.data.thesis_stats.updated_at }}</div>
-    <div class="gh-actions">
-      <a class="gh-link" href="https://theses.hal.science/tel-05263492/" target="_blank" rel="noopener">Read Manuscript ↗</a>
-      <a class="gh-link" href="https://hal.science/tel-05263492/" target="_blank" rel="noopener">HAL ↗</a>
-      <a class="gh-link" href="https://theses.fr/2024LYO10167" target="_blank" rel="noopener">theses.fr ↗</a>
+    <div class="thesis-footer">
+      <div class="gh-actions">
+        <a class="gh-link" href="https://theses.hal.science/tel-05263492/" target="_blank" rel="noopener">Read Manuscript ↗</a>
+        <a class="gh-link" href="https://hal.science/tel-05263492/" target="_blank" rel="noopener">HAL ↗</a>
+        <a class="gh-link" href="https://theses.fr/2024LYO10167" target="_blank" rel="noopener">theses.fr ↗</a>
+      </div>
+      <div class="thesis-stats" aria-label="Thesis metrics">
+        <span class="thesis-stat">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5c-5.23 0-9.27 4.11-10.5 6 1.23 1.89 5.27 6 10.5 6s9.27-4.11 10.5-6C21.27 9.11 17.23 5 12 5zm0 10a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2.2A1.8 1.8 0 1 0 12 9.2a1.8 1.8 0 0 0 0 3.6z"/></svg>
+          {{ site.data.thesis_stats.views }}
+        </span>
+        <span class="thesis-stat">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a1 1 0 0 1 1 1v8.59l2.3-2.29a1 1 0 1 1 1.4 1.41l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.41L11 12.59V4a1 1 0 0 1 1-1zm-7 14a1 1 0 0 1 1 1v1h12v-1a1 1 0 1 1 2 0v2a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1z"/></svg>
+          {{ site.data.thesis_stats.downloads }}
+        </span>
+      </div>
     </div>
   </div>
 </div>

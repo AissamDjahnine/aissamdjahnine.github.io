@@ -1168,6 +1168,50 @@
             margin-top: 8px;
         }
 
+        .thesis-card .thesis-footer {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-top: 8px;
+        }
+
+        .thesis-card .gh-actions {
+            margin-top: 0;
+        }
+
+        .thesis-stats {
+            display: inline-flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-left: auto;
+        }
+
+        .thesis-stat {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            height: 28px;
+            padding: 0 10px;
+            border-radius: 999px;
+            border: 1px solid rgba(14, 116, 144, 0.3);
+            background: rgba(14, 116, 144, 0.12);
+            color: #0e7490;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+
+        .thesis-stat svg {
+            width: 14px;
+            height: 14px;
+            fill: currentColor;
+            flex: 0 0 auto;
+        }
+
         @media (max-width: 900px) {
             .gh-card {
                 grid-template-columns: 1fr;
@@ -1413,6 +1457,12 @@
             background: rgba(34, 211, 238, 0.2);
             color: #a5f3fc;
             border-color: rgba(165, 243, 252, 0.38);
+        }
+
+        [data-theme="dark"] .thesis-stat {
+            background: rgba(34, 211, 238, 0.18);
+            color: #a5f3fc;
+            border-color: rgba(165, 243, 252, 0.34);
         }
 
         [data-theme="dark"] .gh-tag.is-contributor {
