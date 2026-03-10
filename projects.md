@@ -38,6 +38,8 @@ permalink: /projects/
   </div>
 </div>
 
+<div style="height: 18px;"></div>
+
 ### Projects
 
 <div class="gh-grid">
