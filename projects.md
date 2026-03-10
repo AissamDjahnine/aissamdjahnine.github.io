@@ -5,6 +5,31 @@ permalink: /projects/
 ---
 ## <span style="color: #267cb9;">Research Projects</span>
 
+<div class="gh-card no-media">
+  <div>
+    <div class="gh-meta">
+      <span class="gh-tag">PhD Thesis</span>
+      <span class="gh-tag">Biomedical Imaging</span>
+      <span class="gh-tag">INSA Lyon</span>
+      <span class="gh-tag">CREATIS</span>
+      <span class="gh-tag">Defended Sep 17, 2024</span>
+    </div>
+    <div class="gh-title">Automatic Detection of Pathologies in Conventional Scanner Data</div>
+    <div class="gh-description">This thesis investigates AI-based detection and characterization of pulmonary pathologies in conventional CT scans, with a focus on reducing annotation requirements. It explores supervised, weakly supervised, and unsupervised learning strategies to detect anomalies and support radiologists in identifying incidental findings beyond the initial clinical indication.</div>
+    <div class="gh-description"><strong>Author:</strong> Aissam Djahnine · <strong>Supervisor:</strong> Loïc Boussel</div>
+    <div class="gh-meta">
+      <span class="gh-tag-chip">{{ site.data.thesis_stats.views }} Views</span>
+      <span class="gh-tag-chip">{{ site.data.thesis_stats.downloads }} Downloads</span>
+      <span class="gh-tag-chip">Updated {{ site.data.thesis_stats.updated_at }}</span>
+    </div>
+    <div class="gh-actions">
+      <a class="gh-link" href="https://theses.hal.science/tel-05263492/" target="_blank" rel="noopener">Read Manuscript ↗</a>
+      <a class="gh-link" href="https://hal.science/tel-05263492/" target="_blank" rel="noopener">HAL ↗</a>
+      <a class="gh-link" href="https://theses.fr/2024LYO10167" target="_blank" rel="noopener">theses.fr ↗</a>
+    </div>
+  </div>
+</div>
+
 <div class="gh-grid">
   <div class="gh-card">
     <img class="gh-media-img" src="/images/SARCO_PROJECT.png?raw=true" alt="Sarcopenia muscle segmentation project preview"/>
