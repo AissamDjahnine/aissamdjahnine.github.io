@@ -218,6 +218,11 @@
             -webkit-backdrop-filter: blur(8px);
         }
 
+        .mobile-home-profile,
+        .mobile-home-personal {
+            display: none;
+        }
+
         .mobile-nav-panel ul {
             list-style: none;
             display: flex;
@@ -486,6 +491,39 @@
             color: var(--muted-text);
         }
 
+        .mobile-home-intro {
+            margin: 0;
+            color: var(--muted-text);
+            font-weight: 600;
+        }
+
+        .mobile-home-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .mobile-home-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 34px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            border: 1px solid var(--border-color);
+            background: var(--card-bg);
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--link-color);
+        }
+
+        .mobile-home-links a:hover {
+            background: var(--accent-soft);
+            color: var(--link-hover);
+            border-color: var(--accent);
+        }
+
         .sidebar .profile a {
             color: var(--accent);
             font-weight: 600;
@@ -557,6 +595,18 @@
 
         .instagram-media iframe {
             width: 100% !important;
+        }
+
+        .mobile-home-personal {
+            margin-top: 28px;
+        }
+
+        .mobile-home-personal .personal-card-section {
+            margin-top: 18px;
+        }
+
+        .mobile-home-personal .instagram-media {
+            max-width: 420px !important;
         }
 
         /* Right sidebar content styling */
@@ -1888,6 +1938,7 @@
                 justify-content: center;
                 flex-direction: column;
                 align-items: center;
+                position: relative;
             }
 
             #nav-container .desktop-nav {
@@ -1904,7 +1955,14 @@
             }
 
             .mobile-nav-panel {
-                width: calc(100% - 24px);
+                position: absolute;
+                top: calc(100% + 6px);
+                left: 12px;
+                right: 12px;
+                width: auto;
+                margin-top: 0;
+                z-index: 1005;
+                box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
             }
 
             .page {
@@ -1913,15 +1971,57 @@
                 gap: 24px;
             }
 
-            .content {
+            body[data-page-url]:not([data-page-url="/"]) .sidebar,
+            body[data-page-url]:not([data-page-url="/"]) .right-sidebar {
+                display: none;
+            }
+
+            body[data-page-url="/"] .sidebar {
+                display: block;
                 order: 1;
+                width: 100%;
+            }
+
+            body[data-page-url="/"] .content {
+                order: 2;
                 width: 100%;
                 margin-left: 0;
             }
 
-            body[data-page-url]:not([data-page-url="/"]) .sidebar,
-            body[data-page-url]:not([data-page-url="/"]) .right-sidebar {
+            body[data-page-url="/"] .right-sidebar {
+                display: block;
+                order: 3;
+                width: 100%;
+            }
+
+            body[data-page-url="/"] .sidebar .profile img {
+                max-width: 210px;
+            }
+
+            body[data-page-url="/"] .sidebar .profile > p {
                 display: none;
+            }
+
+            body[data-page-url="/"] .mobile-home-profile {
+                display: grid;
+                gap: 12px;
+            }
+
+            body[data-page-url="/"] .sidebar .section-title,
+            body[data-page-url="/"] .sidebar .flag-grid,
+            body[data-page-url="/"] .sidebar .instagram-media,
+            body[data-page-url="/"] .sidebar script {
+                display: none !important;
+            }
+
+            body[data-page-url="/"] .mobile-home-personal {
+                display: block;
+            }
+
+            body[data-page-url]:not([data-page-url="/"]) .content {
+                order: 1;
+                width: 100%;
+                margin-left: 0;
             }
 
             .sidebar,
@@ -2077,6 +2177,17 @@
                 {% endif %}
 
                 <p>{{ site.description }}</p>
+                <div class="mobile-home-profile" aria-label="Profile links">
+                    <p class="mobile-home-intro">Hi, I am Aissam</p>
+                    <div class="mobile-home-links">
+                        <a href="https://github.com/AissamDjahnine" target="_blank" rel="noopener">GitHub</a>
+                        <a href="https://www.linkedin.com/in/aissamdjahnine/" target="_blank"
+                            rel="noopener">LinkedIn</a>
+                        <a href="https://orcid.org/0000-0001-8633-4092" target="_blank" rel="noopener">ORCID</a>
+                        <a href="https://www.researchgate.net/profile/Aissam-Djahnine-2" target="_blank"
+                            rel="noopener">ResearchGate</a>
+                    </div>
+                </div>
                 <a class="cv-link" href="/docs/aissam_djahnine_v11.pdf" target="_blank" rel="noopener">Download CV</a>
             </div>
 
@@ -2115,6 +2226,41 @@
         <main class="content">
             <section>
                 {{ content }}
+
+                {% if page.url == '/' %}
+                <div class="mobile-home-personal">
+                    <h2>Personal</h2>
+                    <div class="personal-card-section">
+                        <div class="section-title">Travel</div>
+                        <div class="flag-grid">
+                            <img src="https://aissamdjahnine.github.io/flags/sweden.png" alt="Sweden">
+                            <img src="https://aissamdjahnine.github.io/flags/finland.png" alt="Finland">
+                            <img src="https://aissamdjahnine.github.io/flags/united-kingdom.png" alt="United Kingdom">
+                            <img src="https://aissamdjahnine.github.io/flags/norway.png" alt="Norway">
+                            <img src="https://aissamdjahnine.github.io/flags/netherlands.png" alt="Netherlands">
+                            <img src="https://aissamdjahnine.github.io/flags/denmark.png" alt="Denmark">
+                            <img src="https://aissamdjahnine.github.io/flags/italy.png" alt="Italy">
+                            <img src="https://aissamdjahnine.github.io/flags/switzerland.png" alt="Switzerland">
+                            <img src="https://aissamdjahnine.github.io/flags/malaysia.png" alt="Malaysia">
+                            <img src="https://aissamdjahnine.github.io/flags/belgium.png" alt="Belgium">
+                            <img src="https://aissamdjahnine.github.io/flags/spain.png" alt="Spain">
+                            <img src="https://aissamdjahnine.github.io/flags/turkey.png" alt="Turkey">
+                            <img src="https://aissamdjahnine.github.io/flags/thailand.png" alt="Thailand">
+                            <img src="https://aissamdjahnine.github.io/flags/egypt.png" alt="Egypt">
+                            <img src="https://aissamdjahnine.github.io/flags/tunisia.png" alt="Tunisia">
+                            <img src="https://aissamdjahnine.github.io/flags/france.png" alt="France">
+                            <img src="https://aissamdjahnine.github.io/flags/monaco.png" alt="Monaco">
+                            <img src="https://aissamdjahnine.github.io/flags/libya.png" alt="Libya">
+                        </div>
+                    </div>
+                    <div class="personal-card-section">
+                        <div class="section-title">Social Feeds</div>
+                        <blockquote class="instagram-media" style="background: #FFF; border: O; margin: 0 auto;"
+                            data-instgrm-permalink="https://www.instagram.com/aissam_dhn/" data-instgrm-version="14">
+                        </blockquote>
+                    </div>
+                </div>
+                {% endif %}
             </section>
 
             <!-- Footer -->
