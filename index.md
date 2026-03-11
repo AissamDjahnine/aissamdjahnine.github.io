@@ -89,34 +89,3 @@ Oxford, United Kingdom <br>
 
 <br>
 <br>
-
-## <span style="color:  #267cb9;">Research Projects</span>
-
-#### PRE-PHD SHORT CONTRACT WITH HOSPICES CIVILS DE LYON  
-**Segmentation and measurement of skeletal muscle areas on CT scans**
-
-* This project aims to segment and measure skeletal muscle areas on CT scans, specifically at the L3, L2, and L1 vertebrae levels, to improve sarcopenia estimation using deep learning-based methods. By leveraging advanced data augmentation techniques, such as applying filters, rotations, and adding artificial elements, the dataset's diversity and robustness were significantly improved. Post-processing methods were developed to remove artifacts like ribs, ensuring cleaner and more accurate segmentations. The approach showed promising results in accurately segmenting muscle areas, leading to more reliable sarcopenia assessments and potential further improvements.
-
-<img src="/images/SARCO_PROJECT.png?raw=true" />
-
-#### Computer Vision and Deep Learning Intern at GE Healthcare
-**Investigation of automatic search methods for neural network hyperparameters (Neural Architecture Search). Application to Mammographic Data within WHARe team (Women's Health Applied Research)**
-<img src="images/GE.jpg?raw=true"/> 
-
-* In this internship, we focused on improving mammography systems for clinical diagnosis by utilizing deep learning techniques. We specifically explored the efficiency of a gradient-based NAS method called DARTS (Differentiable Architecture Search) for classification tasks on mammographic data. Through experiments, we achieved state-of-the-art results on mammography data classification, outperforming existing models. 
-<img src="images/GE_INTERNSHIP.jpg?raw=true"/> 
-
-[**Unsupervised Spatiotemporal Data Inpainting**](https://github.com/raoufkeskes/Unsupervised-Spatiotemporal-Data-Inpainting)
-* This is a PyTorch implementation of this paper: [**Unsupervised Spatiotemporal Data Inpainting**](https://openreview.net/forum?id=rylqmxBKvH), under review at ICLR 2020.
-* The code was implemented in collaboration with Ilyas Aroui [GitHub](https://github.com/ily-R) and Raouf Keskes [GitHub](https://github.com/raoufkeskes).
-* Inpainting spatio-temporal sequences is an active research topic that relies heavily on supervision with large datasets. In this work, we consider the problem of reconstructing missing information with an unsupervised learning approach. Following the work of Kim et al. We train a generative model on the occluded sequences. We ensure that the models captured both frame-based and sequential based information. Our proposed model is adapted to large-scale images and can be used to different types of sequences and occlusion processes.
-<img src="images/unsupervised.png?raw=true"/> 
-
-<br>
-<br>
-
-## <span style="color:  #267cb9;">Online Courses</span>
-
-* **Coursera:** Deep Learning Specialization
-* **Udemy:**
-   * Python for Data Science and Machine Learning Bootcamp Certificate.
