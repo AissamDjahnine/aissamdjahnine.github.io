@@ -87,6 +87,11 @@
             width: min(1200px, 92vw);
         }
 
+        .mobile-nav-bar,
+        .mobile-nav-panel {
+            display: none;
+        }
+
         #nav-container ul {
             list-style: none;
             display: flex;
@@ -148,6 +153,95 @@
             width: 20px;
             height: 20px;
             fill: currentColor;
+        }
+
+        .mobile-nav-bar {
+            width: min(1200px, 92vw);
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 8px 10px;
+            background: rgba(236, 242, 250, 0.68);
+            border: 1px solid rgba(156, 172, 198, 0.28);
+            border-radius: 16px;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        .mobile-nav-current {
+            min-width: 0;
+            font-weight: 800;
+            color: #2f4f8e;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .mobile-nav-actions {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            flex: 0 0 auto;
+        }
+
+        .mobile-menu-toggle {
+            background: #edf3ff;
+            border: 1px solid #cad8f1;
+            cursor: pointer;
+            padding: 8px 10px;
+            border-radius: 12px;
+            color: #1b3f88;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .mobile-menu-toggle:hover {
+            background-color: #e4edff;
+        }
+
+        .mobile-menu-toggle svg {
+            width: 20px;
+            height: 20px;
+            stroke: currentColor;
+        }
+
+        .mobile-nav-panel {
+            width: min(1200px, 92vw);
+            margin-top: 10px;
+            padding: 8px;
+            background: rgba(236, 242, 250, 0.78);
+            border: 1px solid rgba(156, 172, 198, 0.28);
+            border-radius: 16px;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        .mobile-nav-panel ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .mobile-nav-panel a {
+            display: block;
+            text-decoration: none;
+            color: #2f4f8e;
+            padding: 10px 12px;
+            border-radius: 12px;
+            font-weight: 700;
+            background-color: #f4f8ff;
+            border: 1px solid #d6e0f2;
+        }
+
+        .mobile-nav-panel a[aria-current="page"] {
+            background-color: #2a5fcf;
+            color: #ffffff;
+            border-color: #2355bf;
         }
 
         .back-to-top {
@@ -1432,6 +1526,38 @@
             background-color: rgba(132, 167, 214, 0.4);
         }
 
+        [data-theme="dark"] .mobile-nav-bar,
+        [data-theme="dark"] .mobile-nav-panel {
+            background: rgba(14, 25, 40, 0.78);
+            border-color: rgba(136, 164, 198, 0.24);
+        }
+
+        [data-theme="dark"] .mobile-nav-current {
+            color: #d8e6ff;
+        }
+
+        [data-theme="dark"] .mobile-menu-toggle {
+            background-color: rgba(118, 152, 195, 0.3);
+            border: 1px solid rgba(162, 191, 228, 0.3);
+            color: #d7e6ff;
+        }
+
+        [data-theme="dark"] .mobile-menu-toggle:hover {
+            background-color: rgba(132, 167, 214, 0.4);
+        }
+
+        [data-theme="dark"] .mobile-nav-panel a {
+            color: #c8daff;
+            background-color: rgba(118, 152, 195, 0.2);
+            border-color: rgba(162, 191, 228, 0.24);
+        }
+
+        [data-theme="dark"] .mobile-nav-panel a[aria-current="page"] {
+            background-color: #8fb8ff;
+            color: #0d2648;
+            border-color: #a9caff;
+        }
+
         [data-theme="dark"] .back-to-top {
             background: rgba(20, 33, 51, 0.66);
             border-color: rgba(152, 182, 216, 0.28);
@@ -1750,38 +1876,19 @@
                 top: auto;
                 height: auto;
                 padding: 12px 0;
-                justify-content: flex-start;
+                justify-content: center;
             }
 
-            #nav-container nav {
-                width: 100%;
-                padding: 0 12px;
-            }
-
-            #nav-container ul {
-                gap: 8px;
-                padding: 8px;
-                border-radius: 14px;
-                flex-wrap: nowrap;
-                overflow-x: auto;
-                overflow-y: hidden;
-                -webkit-overflow-scrolling: touch;
-                scrollbar-width: none;
-                justify-content: flex-start;
-            }
-
-            #nav-container ul::-webkit-scrollbar {
+            #nav-container .desktop-nav {
                 display: none;
             }
 
-            #nav-container ul li {
-                flex: 0 0 auto;
+            .mobile-nav-bar {
+                display: flex;
             }
 
-            #nav-container ul li a,
-            .theme-toggle {
-                border-radius: 999px;
-                padding: 8px 12px;
+            #nav-container.mobile-menu-open .mobile-nav-panel {
+                display: block;
             }
 
             .page {
@@ -1812,7 +1919,29 @@
 <body data-page-url="{{ page.url | default: '/' }}">
     <!-- Navigation Bar -->
     <div id="nav-container">
-        <nav aria-label="Primary">
+        <div class="mobile-nav-bar">
+            <div class="mobile-nav-current" id="mobile-nav-current">Menu</div>
+            <div class="mobile-nav-actions">
+                <button class="theme-toggle" data-theme-toggle aria-label="Toggle Dark Mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                        style="display: none;">
+                        <path
+                            d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z" />
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z" />
+                    </svg>
+                </button>
+                <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open navigation menu"
+                    aria-expanded="false" aria-controls="mobile-nav-panel">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M4 7h16M4 12h16M4 17h16" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <nav class="desktop-nav" aria-label="Primary">
             <ul>
                 {% if site.nav %}
                 {% for item in site.nav %}
@@ -1826,20 +1955,33 @@
                 {% endfor %}
                 {% endif %}
                 <li>
-                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
-                        <!-- Sun Icon -->
+                    <button class="theme-toggle" data-theme-toggle aria-label="Toggle Dark Mode">
                         <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                             style="display: none;">
                             <path
                                 d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z" />
                         </svg>
-                        <!-- Moon Icon -->
                         <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <path
                                 d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z" />
                         </svg>
                     </button>
                 </li>
+            </ul>
+        </nav>
+        <nav class="mobile-nav-panel" id="mobile-nav-panel" aria-label="Mobile Primary">
+            <ul>
+                {% if site.nav %}
+                {% for item in site.nav %}
+                {% assign normalized_page_url = page.url | default: '/' | replace: 'index.html', '' %}
+                {% assign normalized_item_url = item.url | replace: 'index.html', '' %}
+                {% assign is_current = normalized_page_url == normalized_item_url %}
+                <li>
+                    <a href="{{ item.url }}"
+                        {% if is_current %}aria-current="page"{% endif %}>{{ item.title }}</a>
+                </li>
+                {% endfor %}
+                {% endif %}
             </ul>
         </nav>
     </div>
@@ -2000,37 +2142,44 @@
 
     <!-- Dark Mode Script -->
     <script>
-        const toggleButton = document.getElementById('theme-toggle');
+        const themeToggleButtons = Array.from(document.querySelectorAll('[data-theme-toggle]'));
         const backToTopButton = document.getElementById('back-to-top');
-        const sunIcon = document.querySelector('.sun-icon');
-        const moonIcon = document.querySelector('.moon-icon');
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileNavPanel = document.getElementById('mobile-nav-panel');
+        const mobileNavCurrent = document.getElementById('mobile-nav-current');
+        const navContainer = document.getElementById('nav-container');
 
         // Check for saved user preference, if any, on load of the website
         const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
 
-        if (currentTheme) {
-            document.documentElement.setAttribute('data-theme', currentTheme);
-
-            if (currentTheme === 'dark') {
-                sunIcon.style.display = 'block';
-                moonIcon.style.display = 'none';
-            }
+        function syncThemeToggleIcons(theme) {
+            themeToggleButtons.forEach((button) => {
+                const sunIcon = button.querySelector('.sun-icon');
+                const moonIcon = button.querySelector('.moon-icon');
+                if (!sunIcon || !moonIcon) return;
+                if (theme === 'dark') {
+                    sunIcon.style.display = 'block';
+                    moonIcon.style.display = 'none';
+                } else {
+                    sunIcon.style.display = 'none';
+                    moonIcon.style.display = 'block';
+                }
+            });
         }
 
-        toggleButton.addEventListener('click', function () {
-            let theme = document.documentElement.getAttribute('data-theme');
+        if (currentTheme) {
+            document.documentElement.setAttribute('data-theme', currentTheme);
+        }
+        syncThemeToggleIcons(currentTheme === 'dark' ? 'dark' : 'light');
 
-            if (theme === 'dark') {
-                document.documentElement.setAttribute('data-theme', 'light');
-                localStorage.setItem('theme', 'light');
-                sunIcon.style.display = 'none';
-                moonIcon.style.display = 'block';
-            } else {
-                document.documentElement.setAttribute('data-theme', 'dark');
-                localStorage.setItem('theme', 'dark');
-                sunIcon.style.display = 'block';
-                moonIcon.style.display = 'none';
-            }
+        themeToggleButtons.forEach((button) => {
+            button.addEventListener('click', function () {
+                let theme = document.documentElement.getAttribute('data-theme');
+                const nextTheme = theme === 'dark' ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', nextTheme);
+                localStorage.setItem('theme', nextTheme);
+                syncThemeToggleIcons(nextTheme);
+            });
         });
 
         const scrollZones = Array.from(document.querySelectorAll('.sidebar, .right-sidebar'));
@@ -2116,9 +2265,57 @@
         let isNavigating = false;
         const githubStarsCache = new Map();
 
-        function setActiveNavLink(activeLink) {
-            navLinks.forEach((link) => link.removeAttribute('aria-current'));
-            if (activeLink) activeLink.setAttribute('aria-current', 'page');
+        function closeMobileMenu() {
+            if (!navContainer || !mobileMenuToggle) return;
+            navContainer.classList.remove('mobile-menu-open');
+            mobileMenuToggle.setAttribute('aria-expanded', 'false');
+        }
+
+        function openMobileMenu() {
+            if (!navContainer || !mobileMenuToggle) return;
+            navContainer.classList.add('mobile-menu-open');
+            mobileMenuToggle.setAttribute('aria-expanded', 'true');
+        }
+
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', () => {
+                if (navContainer.classList.contains('mobile-menu-open')) {
+                    closeMobileMenu();
+                } else {
+                    openMobileMenu();
+                }
+            });
+        }
+
+        document.addEventListener('click', (event) => {
+            if (!window.matchMedia('(max-width: 900px)').matches) return;
+            if (!navContainer || !navContainer.classList.contains('mobile-menu-open')) return;
+            if (!navContainer.contains(event.target)) closeMobileMenu();
+        });
+
+        window.addEventListener('resize', () => {
+            if (!window.matchMedia('(max-width: 900px)').matches) {
+                closeMobileMenu();
+            }
+        });
+
+        function updateMobileNavCurrentLabel(path) {
+            if (!mobileNavCurrent) return;
+            const activeLink = findNavLinkForPath(path);
+            mobileNavCurrent.textContent = activeLink ? activeLink.textContent.trim() : 'Menu';
+        }
+
+        function setActiveNavPath(path) {
+            navLinks.forEach((link) => {
+                const url = new URL(link.getAttribute('href'), window.location.origin);
+                const isMatch = canonicalPath(url.pathname, basePath) === path;
+                if (isMatch) {
+                    link.setAttribute('aria-current', 'page');
+                } else {
+                    link.removeAttribute('aria-current');
+                }
+            });
+            updateMobileNavCurrentLabel(path);
         }
 
         function findNavLinkForPath(path) {
@@ -2134,8 +2331,19 @@
             const activeLink = findNavLinkForPath(path)
                 || navLinks.find((link) => link.getAttribute('aria-current') === 'page')
                 || null;
-            setActiveNavLink(activeLink);
+            const activePath = activeLink
+                ? canonicalPath(new URL(activeLink.getAttribute('href'), window.location.origin).pathname, basePath)
+                : path;
+            setActiveNavPath(activePath);
         }
+
+        navLinks.forEach((link) => {
+            link.addEventListener('click', () => {
+                if (window.matchMedia('(max-width: 900px)').matches) {
+                    closeMobileMenu();
+                }
+            });
+        });
 
         function clearHomeScrollspy() {
             if (homeScrollspyCleanup) {
@@ -2160,13 +2368,12 @@
                 { navTitle: 'Awards', pattern: /(honors?\s*&\s*awards?|awards?)/i }
             ];
 
-            const sectionTargets = sectionDefs
-                .map((def) => {
-                    const navLink = navLinks.find((link) => link.textContent.trim() === def.navTitle);
-                    const heading = headings.find((h) => def.pattern.test(h.textContent || ''));
-                    return navLink && heading ? { navLink, heading } : null;
-                })
-                .filter(Boolean);
+            const sectionTargets = sectionDefs.flatMap((def) => {
+                const matchingNavLinks = navLinks.filter((link) => link.textContent.trim() === def.navTitle);
+                const heading = headings.find((h) => def.pattern.test(h.textContent || ''));
+                if (!heading || !matchingNavLinks.length) return [];
+                return matchingNavLinks.map((navLink) => ({ navLink, heading }));
+            });
 
             const stickyOffset = 96;
             const handlers = [];
@@ -2188,7 +2395,10 @@
                     const top = target.heading.getBoundingClientRect().top + window.scrollY - stickyOffset;
                     if (window.scrollY + 8 >= top) active = target.navLink;
                 }
-                setActiveNavLink(active);
+                const activePath = active
+                    ? canonicalPath(new URL(active.getAttribute('href'), window.location.origin).pathname, basePath)
+                    : '/';
+                setActiveNavPath(activePath);
             }
 
             window.addEventListener('scroll', updateHomeScrollspy, { passive: true });
