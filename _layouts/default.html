@@ -895,6 +895,13 @@
             border-color: rgba(168, 85, 247, 0.35);
         }
 
+        .pub-type.is-citations {
+            background: rgba(59, 130, 246, 0.14);
+            color: #1d4ed8;
+            border-color: rgba(59, 130, 246, 0.34);
+            font-weight: 700;
+        }
+
         .cert-card.is-codingame .date-pill {
             background: rgba(245, 190, 11, 0.16);
             color: #a16207;
@@ -972,6 +979,53 @@
         .pub-venue {
             color: var(--muted-text);
             margin: 6px 0 10px;
+        }
+
+        .featured-pubs .pub-card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .featured-pubs .pub-title {
+            min-height: 6.9rem;
+        }
+
+        .featured-pubs .pub-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 14px;
+            display: block;
+            margin-top: 8px;
+        }
+
+        .project-meta-grid,
+        .thesis-meta-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 10px;
+            margin-bottom: 10px;
+        }
+
+        .project-meta-item,
+        .thesis-meta-item {
+            display: inline-flex;
+            align-items: center;
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: var(--chip-bg);
+            border: 1px solid var(--border-color);
+            color: var(--muted-text);
+            font-size: 0.9rem;
+            line-height: 1.2;
+        }
+
+        .project-meta-item strong,
+        .thesis-meta-item strong {
+            color: var(--text-color);
+            margin-right: 4px;
+            font-weight: 700;
         }
 
         .pub-actions {
@@ -1463,6 +1517,24 @@
         [data-theme="dark"] .about-skills-row img {
             filter: brightness(0) invert(0.86);
             opacity: 0.82;
+        }
+
+        [data-theme="dark"] .pub-type.is-citations {
+            background: rgba(120, 168, 255, 0.16);
+            color: #bcd4ff;
+            border-color: rgba(120, 168, 255, 0.3);
+        }
+
+        [data-theme="dark"] .project-meta-item,
+        [data-theme="dark"] .thesis-meta-item {
+            background: rgba(159, 195, 255, 0.12);
+            border-color: rgba(152, 182, 216, 0.24);
+            color: #d5e2f3;
+        }
+
+        [data-theme="dark"] .project-meta-item strong,
+        [data-theme="dark"] .thesis-meta-item strong {
+            color: #eef4ff;
         }
 
         [data-theme="dark"] .scholar-stats,

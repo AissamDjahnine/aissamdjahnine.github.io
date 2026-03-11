@@ -46,8 +46,9 @@ permalink: /projects/
   <div class="gh-card">
     <img class="gh-media-img" src="/images/SARCO_PROJECT.png?raw=true" alt="Sarcopenia muscle segmentation project preview"/>
     <div>
-      <div class="gh-meta">
-        <span class="gh-tag">Medical Imaging</span>
+      <div class="project-meta-grid">
+        <div class="project-meta-item"><strong>Domain:</strong> Medical Imaging</div>
+        <div class="project-meta-item"><strong>Focus:</strong> Segmentation · CT</div>
       </div>
       <div class="gh-title">Segmentation and Measurement of Skeletal Muscle Areas on CT Scans</div>
       <div class="gh-description">Developed deep learning-based segmentation at L3/L2/L1 levels to improve sarcopenia estimation with stronger data augmentation and post-processing for cleaner masks.</div>
@@ -57,8 +58,9 @@ permalink: /projects/
   <div class="gh-card">
     <img class="gh-media-img" src="/images/cycleGan.jpg?raw=true" alt="CycleGAN cell segmentation project preview"/>
     <div>
-      <div class="gh-meta">
-        <span class="gh-tag">Deep Learning</span>
+      <div class="project-meta-grid">
+        <div class="project-meta-item"><strong>Domain:</strong> Deep Learning</div>
+        <div class="project-meta-item"><strong>Method:</strong> CycleGAN</div>
       </div>
       <div class="gh-title">Cell Image Segmentation with CycleGAN</div>
       <div class="gh-description">Built a cycle-consistent GAN workflow for cell image segmentation with limited labels, enabling synthetic data generation and context-aware training.</div>
@@ -71,8 +73,9 @@ permalink: /projects/
   <div class="gh-card">
     <img class="gh-media-img" src="/images/gans_ex.png?raw=true" alt="Histopathological GAN generation preview"/>
     <div>
-      <div class="gh-meta">
-        <span class="gh-tag">Generative Models</span>
+      <div class="project-meta-grid">
+        <div class="project-meta-item"><strong>Domain:</strong> Generative Models</div>
+        <div class="project-meta-item"><strong>Method:</strong> GANs</div>
       </div>
       <div class="gh-title">Histopathological Image Generation Using GANs</div>
       <div class="gh-description">Implemented GAN-based synthetic histopathology generation to address small datasets and improve downstream detection/segmentation/tracking tasks.</div>
@@ -85,8 +88,9 @@ permalink: /projects/
   <div class="gh-card">
     <img class="gh-media-img" src="/images/colortransfer.jpg?raw=true" alt="Color transfer project preview"/>
     <div>
-      <div class="gh-meta">
-        <span class="gh-tag">Computer Vision</span>
+      <div class="project-meta-grid">
+        <div class="project-meta-item"><strong>Domain:</strong> Computer Vision</div>
+        <div class="project-meta-item"><strong>Method:</strong> Color Transfer</div>
       </div>
       <div class="gh-title">Color Transfer in Correlated RGB Space</div>
       <div class="gh-description">Implemented correlated color transfer to adapt visual tone and style between images, based on the method by Xuezhong Xiao and Lizhuang.</div>
@@ -99,8 +103,9 @@ permalink: /projects/
   <div class="gh-card">
     <img class="gh-media-img" src="/images/searchalgorithms.jpg?raw=true" alt="AI search algorithms project preview"/>
     <div>
-      <div class="gh-meta">
-        <span class="gh-tag">AI Algorithms</span>
+      <div class="project-meta-grid">
+        <div class="project-meta-item"><strong>Domain:</strong> AI Algorithms</div>
+        <div class="project-meta-item"><strong>Methods:</strong> BFS · DFS · A*</div>
       </div>
       <div class="gh-title">Search Algorithms (BFS, DFS, Dijkstra, A*)</div>
       <div class="gh-description">Implemented core search strategies and heuristics (Manhattan/Euclidean) to provide practical foundations for AI pathfinding and problem-solving.</div>
@@ -113,8 +118,9 @@ permalink: /projects/
   <div class="gh-card">
     <img class="gh-media-img" src="/images/noisecancelling.jpg?raw=true" alt="Noise suppression project preview"/>
     <div>
-      <div class="gh-meta">
-        <span class="gh-tag">Signal Processing</span>
+      <div class="project-meta-grid">
+        <div class="project-meta-item"><strong>Domain:</strong> Signal Processing</div>
+        <div class="project-meta-item"><strong>Method:</strong> Spectral Subtraction</div>
       </div>
       <div class="gh-title">Speech Denoising via Spectral Subtraction</div>
       <div class="gh-description">Applied spectral subtraction for acoustic noise suppression in speech signals, improving clarity and intelligibility in noisy environments.</div>
@@ -127,8 +133,9 @@ permalink: /projects/
   <div class="gh-card">
     <img class="gh-media-img" src="/images/markovdecisionprocess.jpg?raw=true" alt="Markov decision process project preview"/>
     <div>
-      <div class="gh-meta">
-        <span class="gh-tag">Reinforcement Learning</span>
+      <div class="project-meta-grid">
+        <div class="project-meta-item"><strong>Domain:</strong> Reinforcement Learning</div>
+        <div class="project-meta-item"><strong>Method:</strong> MDP</div>
       </div>
       <div class="gh-title">Markov Decision Process</div>
       <div class="gh-description">Explored decision-making under uncertainty with MDP modeling and dynamic programming principles for optimization across applied domains.</div>
@@ -141,8 +148,9 @@ permalink: /projects/
   <div class="gh-card">
     <img class="gh-media-img" src="/images/BastilleJussieu.png?raw=true" alt="Metro problem project preview"/>
     <div>
-      <div class="gh-meta">
-        <span class="gh-tag">Optimization</span>
+      <div class="project-meta-grid">
+        <div class="project-meta-item"><strong>Domain:</strong> Optimization</div>
+        <div class="project-meta-item"><strong>Method:</strong> Dijkstra · C++</div>
       </div>
       <div class="gh-title">Metro Problem (Dijkstra in Paris Subway)</div>
       <div class="gh-description">Built a shortest-path tool over subway graph data with user-friendly station matching and efficient path computation in C++.</div>
