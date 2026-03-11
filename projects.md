@@ -9,11 +9,11 @@ permalink: /projects/
 
 <div class="gh-card no-media thesis-card">
   <div>
-    <div class="gh-meta">
-      <span class="gh-tag">Biomedical Imaging</span>
-      <span class="gh-tag">INSA Lyon</span>
-      <span class="gh-tag">CREATIS</span>
-      <span class="gh-tag">Defended Sep 17, 2024</span>
+    <div class="thesis-meta-grid">
+      <div class="thesis-meta-item"><strong>Field:</strong> Biomedical Imaging</div>
+      <div class="thesis-meta-item"><strong>Institution:</strong> INSA Lyon</div>
+      <div class="thesis-meta-item"><strong>Lab:</strong> CREATIS</div>
+      <div class="thesis-meta-item"><strong>Defended:</strong> Sep 17, 2024</div>
     </div>
     <div class="gh-title">Automatic Detection of Pathologies in Conventional Scanner Data</div>
     <div class="gh-description">This thesis investigates AI-based detection and characterization of pulmonary pathologies in conventional CT scans, with a focus on reducing annotation requirements. It explores supervised, weakly supervised, and unsupervised learning strategies to detect anomalies and support radiologists in identifying incidental findings beyond the initial clinical indication.</div>

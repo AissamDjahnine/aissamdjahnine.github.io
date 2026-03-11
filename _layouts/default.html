@@ -1168,6 +1168,23 @@
             margin-top: 8px;
         }
 
+        .thesis-card .thesis-meta-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px 18px;
+            margin-bottom: 12px;
+        }
+
+        .thesis-card .thesis-meta-item {
+            font-size: 0.94rem;
+            color: var(--muted-text);
+        }
+
+        .thesis-card .thesis-meta-item strong {
+            color: var(--text-color);
+            font-weight: 700;
+        }
+
         .thesis-card .thesis-footer {
             display: flex;
             flex-wrap: wrap;
@@ -1214,6 +1231,10 @@
 
         @media (max-width: 900px) {
             .gh-card {
+                grid-template-columns: 1fr;
+            }
+
+            .thesis-card .thesis-meta-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -1694,8 +1715,8 @@
                 </div>
                 <div class="stat-item">
                     <span>Citations</span>
-                    <strong>54</strong>
-                    <strong>54</strong>
+                    <strong>56</strong>
+                    <strong>56</strong>
                 </div>
                 <div class="stat-item">
                     <span>h-index</span>
