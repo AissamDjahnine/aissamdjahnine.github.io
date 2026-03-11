@@ -177,6 +177,38 @@
             text-overflow: ellipsis;
         }
 
+        .mobile-nav-left {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            min-width: 0;
+            flex: 1 1 auto;
+        }
+
+        .mobile-home-button {
+            background: #edf3ff;
+            border: 1px solid #cad8f1;
+            text-decoration: none;
+            padding: 8px 10px;
+            border-radius: 12px;
+            color: #1b3f88;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 auto;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .mobile-home-button:hover {
+            background-color: #e4edff;
+        }
+
+        .mobile-home-button svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
         .mobile-nav-actions {
             display: inline-flex;
             align-items: center;
@@ -501,6 +533,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
+            justify-content: center;
         }
 
         .mobile-home-links a {
@@ -508,7 +541,8 @@
             align-items: center;
             justify-content: center;
             min-height: 34px;
-            padding: 6px 12px;
+            min-width: 140px;
+            padding: 8px 12px;
             border-radius: 999px;
             border: 1px solid var(--border-color);
             background: var(--card-bg);
@@ -1595,6 +1629,16 @@
             color: #d8e6ff;
         }
 
+        [data-theme="dark"] .mobile-home-button {
+            background-color: rgba(118, 152, 195, 0.3);
+            border: 1px solid rgba(162, 191, 228, 0.3);
+            color: #d7e6ff;
+        }
+
+        [data-theme="dark"] .mobile-home-button:hover {
+            background-color: rgba(132, 167, 214, 0.4);
+        }
+
         [data-theme="dark"] .mobile-menu-toggle {
             background-color: rgba(118, 152, 195, 0.3);
             border: 1px solid rgba(162, 191, 228, 0.3);
@@ -1950,6 +1994,10 @@
                 width: calc(100% - 24px);
             }
 
+            .mobile-nav-current {
+                text-align: left;
+            }
+
             #nav-container.mobile-menu-open .mobile-nav-panel {
                 display: block;
             }
@@ -2005,6 +2053,18 @@
             body[data-page-url="/"] .mobile-home-profile {
                 display: grid;
                 gap: 12px;
+            }
+
+            body[data-page-url="/"] .mobile-home-links {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 10px;
+                justify-content: stretch;
+            }
+
+            body[data-page-url="/"] .mobile-home-links a {
+                width: 100%;
+                min-width: 0;
             }
 
             body[data-page-url="/"] .sidebar .section-title,
@@ -2093,7 +2153,14 @@
     <!-- Navigation Bar -->
     <div id="nav-container">
         <div class="mobile-nav-bar">
-            <div class="mobile-nav-current" id="mobile-nav-current">Menu</div>
+            <div class="mobile-nav-left">
+                <a class="mobile-home-button" href="{{ '/' | relative_url }}" aria-label="Go to Home">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 4.25 4.5 10.5v8.25h5.25v-5.25h4.5v5.25h5.25V10.5L12 4.25z" />
+                    </svg>
+                </a>
+                <div class="mobile-nav-current" id="mobile-nav-current">Menu</div>
+            </div>
             <div class="mobile-nav-actions">
                 <button class="theme-toggle" data-theme-toggle aria-label="Toggle Dark Mode">
                     <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
