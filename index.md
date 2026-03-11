@@ -3,6 +3,17 @@
 <div class="intro-card">
   <div class="intro-card-label">Profile</div>
   <p>PhD in Medical Imaging and AI. 4+ years designing and deploying computer vision systems across biomedical engineering and applied AI.</p>
+  <div class="intro-card-subtitle">Skills</div>
+  <div class="about-skills-row">
+    <img src="icons/unsued-icons/python.svg" alt="Python" title="Python" />
+    <img src="icons/unsued-icons/pytorch.svg" alt="PyTorch" title="PyTorch" />
+    <img src="icons/unsued-icons/tensorflow.svg" alt="TensorFlow" title="TensorFlow" />
+    <img src="icons/unsued-icons/docker.svg" alt="Docker" title="Docker" />
+    <img src="icons/unsued-icons/gitlab.svg" alt="GitLab" title="GitLab" />
+    <img src="icons/unsued-icons/mlflow.svg" alt="MLflow" title="MLflow" />
+    <img src="icons/unsued-icons/git.svg" alt="Git" title="Git" />
+    <img src="icons/unsued-icons/github.svg" alt="GitHub" title="GitHub" />
+  </div>
 </div>
 
 ## AI Research Engineer @ DentalMonitoring
