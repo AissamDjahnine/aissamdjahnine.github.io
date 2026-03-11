@@ -691,6 +691,14 @@
             content: "+";
         }
 
+        .mobile-accordion .mobile-accordion-content {
+            margin-top: 10px;
+        }
+
+        .mobile-accordion.is-collapsed .mobile-accordion-content {
+            display: none;
+        }
+
         /* Right sidebar content styling */
         .scholar-stats {
             background: var(--card-bg);
@@ -2159,14 +2167,6 @@
                 margin: 0;
             }
 
-            body[data-page-url="/"] .mobile-accordion .mobile-accordion-content {
-                margin-top: 10px;
-            }
-
-            body[data-page-url="/"] .mobile-accordion.is-collapsed .mobile-accordion-content {
-                display: none;
-            }
-
             body[data-page-url="/"] .sidebar .section-title,
             body[data-page-url="/"] .sidebar .flag-grid,
             body[data-page-url="/"] .sidebar .instagram-media,
@@ -2663,28 +2663,27 @@
             }
         }
 
-        function initMobileHomeAccordions() {
+        function initHomeAccordions() {
             const accordions = Array.from(document.querySelectorAll('.right-sidebar [data-mobile-accordion]'));
             accordions.forEach((accordion, index) => {
                 const button = accordion.querySelector('.mobile-accordion-toggle');
                 const content = accordion.querySelector('.mobile-accordion-content');
                 if (!button || !content) return;
 
-                const isMobileHome = window.matchMedia('(max-width: 900px)').matches
-                    && canonicalPath(document.body.dataset.pageUrl || '/', basePath) === '/';
+                const isHome = canonicalPath(document.body.dataset.pageUrl || '/', basePath) === '/';
 
-                if (!isMobileHome) {
+                if (!isHome) {
                     accordion.classList.remove('is-collapsed');
                     button.setAttribute('aria-expanded', 'true');
+                    accordion.dataset.initialized = '';
                     return;
                 }
 
                 if (!button.dataset.bound) {
                     button.dataset.bound = 'true';
                     button.addEventListener('click', () => {
-                        const isCurrentMobileHome = window.matchMedia('(max-width: 900px)').matches
-                            && canonicalPath(document.body.dataset.pageUrl || '/', basePath) === '/';
-                        if (!isCurrentMobileHome) return;
+                        const isCurrentHome = canonicalPath(document.body.dataset.pageUrl || '/', basePath) === '/';
+                        if (!isCurrentHome) return;
                         const collapsed = accordion.classList.toggle('is-collapsed');
                         button.setAttribute('aria-expanded', String(!collapsed));
                     });
@@ -3221,7 +3220,7 @@
                 hydrateGithubStars();
                 initPublicationActions();
                 initPublicationFilters();
-                initMobileHomeAccordions();
+                initHomeAccordions();
                 initMobileInstagram();
                 window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
                 refreshBackToTopVisibility();
@@ -3252,7 +3251,7 @@
         hydrateGithubStars();
         initPublicationActions();
         initPublicationFilters();
-        initMobileHomeAccordions();
+        initHomeAccordions();
         initMobileInstagram();
     </script>
 
