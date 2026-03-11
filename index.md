@@ -1,6 +1,9 @@
 ## About
 
-> PhD in Medical Imaging and AI. 4+ years designing and deploying computer vision systems across biomedical engineering and applied AI.
+<div class="intro-card">
+  <div class="intro-card-label">Profile</div>
+  <p>PhD in Medical Imaging and AI. 4+ years designing and deploying computer vision systems across biomedical engineering and applied AI.</p>
+</div>
 
 ## AI Research Engineer @ DentalMonitoring
 <div class="date-pill">October 2024 - Present</div>
@@ -25,36 +28,45 @@ Supervisors: *Pr. Serge Muller*, *Dr. Andrei Petrovskii*<br><br>
 
 > During my internship, I collaborated with experts to advance mammography systems for clinical diagnosis, focusing on the application of deep learning techniques to enhance the accuracy of mammographic data classification. Specifically, we explored the potential of a gradient-based Neural Architecture Search (NAS) method, DARTS (Differentiable Architecture Search), to optimize model performance for classification tasks. Through extensive experimentation, we successfully achieved state-of-the-art results, surpassing existing models in mammography classification. This project not only provided valuable hands-on experience with AI-driven research but also inspired my decision to pursue a PhD in medical imaging and deep learning.
 
-## <span style="color:  #267cb9;">Publications</span>
+## <span style="color:  #267cb9;">Featured Publications</span>
 
-*Leveraging Normalizing Flows for Unsupervised Detection of Pathological Pulmonary in CT scans*<br> 
-**A. Djahnine**, E. Jupin-delevaux, O. Nempont, S. A. Si-Mohamed, V. Cottin, A. Popoff, P. Douek, L. Boussel<br>
-*IEEE TRANSACTIONS ON MEDICAL IMAGING - IEEE TMI* [*In Revision*]<br>
+<div class="pub-list">
+  <div class="pub-card">
+    <div class="pub-badges">
+      <span class="date-pill">2024</span>
+      <span class="pub-type is-journal">30 citations</span>
+    </div>
+    <div class="pub-title"><a href="https://doi.org/10.1016/j.diii.2023.09.006" target="_blank" rel="noopener">Detection and severity quantification of pulmonary embolism with 3D CT data using an automated deep learning-based artificial solution</a></div>
+    <div class="pub-venue">Diagnostic and Interventional Imaging</div>
+  </div>
 
-[*eCAPRI: a novel tool combining clinical and imaging data for post-TAVI mortality prediction*](https://link.springer.com/article/10.1007/s00330-025-12184-x)<br> 
-PJ. Lartaud, B. Harbaoui, A. Della Corte, **A. Djahnine**, O. Nempont, JM. Rouet, A. Cecilia Vlachomitrou, B. Riche, M. Rabilloud, S. Si-Mohamed, P. Douek, F. Derimay, G. Rioufol, P. Lantelme, L. Boussel<br>
-*European Radiology*<br>
-<img src="/images/CAPRI_recap.png?raw=true"/><br>
+  <div class="pub-card">
+    <div class="pub-badges">
+      <span class="date-pill">2023</span>
+      <span class="pub-type is-conference">16 citations</span>
+    </div>
+    <div class="pub-title"><a href="https://doi.org/10.1016/j.redii.2023.100027" target="_blank" rel="noopener">BERT-based natural language processing analysis of French CT reports: application to the measurement of the positivity rate for pulmonary embolism</a></div>
+    <div class="pub-venue">Research in Diagnostic and Interventional Imaging</div>
+  </div>
 
-[*Weakly-Supervised learning based Pathology Detection and Localization in 3D Chest Scans*](https://pubmed.ncbi.nlm.nih.gov/39140793/)<br> 
-**A. Djahnine**, E. Jupin-delevaux, O. Nempont, F. Craighero, S. A. Si-Mohamed, V. Cottin, P. Douek, A. Popoff, L. Boussel<br>
-*The International Journal of Medical Physics Research and Practice (Medical Physics)*<br>
-<img src="images/SIMCLR_recap.png?raw=true"/><br>
+  <div class="pub-card">
+    <div class="pub-badges">
+      <span class="date-pill">2024</span>
+      <span class="pub-type is-preprint">7 citations</span>
+    </div>
+    <div class="pub-title"><a href="https://pubmed.ncbi.nlm.nih.gov/39140793/" target="_blank" rel="noopener">Weakly-supervised learning-based pathology detection and localization in 3D chest CT scans</a></div>
+    <div class="pub-venue">Medical Physics</div>
+  </div>
 
-[*Detection and severity quantification of pulmonary embolism with 3D CT data using an automated deep learning-based artificial solution*](https://doi.org/10.1016/j.diii.2023.09.006)<br>
-**A. Djahnine**, C. Lazarus, M. Lederlin, S. Mulé, R. Wiemker, S. Si-Mohamed, E. Jupin-Delevaux, O. Nempont, Y. Skandarani, M. De Craene, S. Goubalan, C. Raynaud, Y. Belkouchi, A. Ben Afia, C. Fabre, G. Ferretti, C. De Margerie, P. Berge, R. Liberge, N. Elbaz, M. Blain, P. Brillet, G. Chassagnon, F. Cadour, C. Caramella, M. El Hajjam, S. Boussouar, J. Hadchiti, X. Fablet, A. Khalil, H. Talbot, A. Luciani, N. Lassau and L. Boussel<br>
-*Diagnostic and Interventional Imaging Journal (DII)*<br>
-<img src="images/JFR_recap.png?raw=true"/><br>
-
-[*BERT-based natural language processing analysis of French CT reports: Application to the measurement of the positivity rate for pulmonary embolism*](https://doi.org/10.1016/j.redii.2023.100027)<br> 
-E. Jupin-Delevaux, **A. Djahnine**, F. Talbot, A. Richard, S. Gouttard, A. Mansuy, P. Douek, S. A. Si-Mohamed, L. Boussel<br>
-*Research in Diagnostic and Interventional Imaging Journal (ReDII)*<br>
-<img src="images/BERT_recap.png?raw=true"/><br>
-
-[*Leveraging 3D Normalizing Flows for Unsupervised Detection of Pathological Pulmonary CT Scans*](https://arxiv.org/abs/2403.18514)<br>
-**Djahnine Aissam**, Popoff Alexandre, Jupin-Delevaux Emilien, Cottin Vincent, Nempont Olivier, Boussel Loic<br>
-*arXiv*<br>
-<img src="images/GLOW_MIDL_recap.png?raw=true"/><br>
+  <div class="pub-card">
+    <div class="pub-badges">
+      <span class="date-pill">2024</span>
+      <span class="pub-type">1 citation</span>
+    </div>
+    <div class="pub-title"><a href="https://arxiv.org/abs/2403.18514" target="_blank" rel="noopener">Leveraging 3D Normalizing Flows for Unsupervised Detection of Pathological Pulmonary CT Scans</a></div>
+    <div class="pub-venue">arXiv</div>
+  </div>
+</div>
 
 
 ## <span style="color:  #267cb9;">Conferences & Summer Schools</span>
