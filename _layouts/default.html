@@ -2626,6 +2626,7 @@
         const navContainer = document.getElementById('nav-container');
         const instagramPermalink = 'https://www.instagram.com/aissam_dhn/';
         const pageLayout = document.querySelector('.page');
+        let desktopPageHeightObserver = null;
 
         // Check for saved user preference, if any, on load of the website
         const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
@@ -2739,6 +2740,19 @@
             pageLayout.style.minHeight = tallest > 0 ? `${tallest}px` : '';
         }
 
+        function startDesktopPageHeightObserver() {
+            if (!pageLayout || typeof ResizeObserver === 'undefined') return;
+            if (desktopPageHeightObserver) {
+                desktopPageHeightObserver.disconnect();
+            }
+
+            const columns = Array.from(pageLayout.children);
+            desktopPageHeightObserver = new ResizeObserver(() => {
+                syncDesktopPageHeight();
+            });
+            columns.forEach((element) => desktopPageHeightObserver.observe(element));
+        }
+
         function initHomeAccordions() {
             const accordions = Array.from(document.querySelectorAll('.right-sidebar [data-mobile-accordion]'));
             accordions.forEach((accordion, index) => {
@@ -2813,6 +2827,7 @@
             sideScrollZones.forEach((zone) => {
                 zone.scrollTop = 0;
             });
+            startDesktopPageHeightObserver();
             syncDesktopPageHeight();
         });
 
@@ -3300,6 +3315,8 @@
                 initPublicationFilters();
                 initHomeAccordions();
                 initMobileInstagram();
+                startDesktopPageHeightObserver();
+                syncDesktopPageHeight();
                 window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
                 refreshBackToTopVisibility();
 
@@ -3331,6 +3348,8 @@
         initPublicationFilters();
         initHomeAccordions();
         initMobileInstagram();
+        startDesktopPageHeightObserver();
+        syncDesktopPageHeight();
     </script>
 
     {% if site.google_analytics %}
