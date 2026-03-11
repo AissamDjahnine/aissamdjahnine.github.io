@@ -2625,6 +2625,7 @@
         const mobileNavCurrent = document.getElementById('mobile-nav-current');
         const navContainer = document.getElementById('nav-container');
         const instagramPermalink = 'https://www.instagram.com/aissam_dhn/';
+        const pageLayout = document.querySelector('.page');
 
         // Check for saved user preference, if any, on load of the website
         const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
@@ -2722,6 +2723,22 @@
             }
         }
 
+        function syncDesktopPageHeight() {
+            if (!pageLayout) return;
+            if (window.matchMedia('(max-width: 900px)').matches) {
+                pageLayout.style.minHeight = '';
+                return;
+            }
+
+            const columns = Array.from(pageLayout.children);
+            const tallest = columns.reduce((maxHeight, element) => {
+                const height = Math.ceil(element.getBoundingClientRect().height || 0);
+                return Math.max(maxHeight, height);
+            }, 0);
+
+            pageLayout.style.minHeight = tallest > 0 ? `${tallest}px` : '';
+        }
+
         function initHomeAccordions() {
             const accordions = Array.from(document.querySelectorAll('.right-sidebar [data-mobile-accordion]'));
             accordions.forEach((accordion, index) => {
@@ -2796,6 +2813,7 @@
             sideScrollZones.forEach((zone) => {
                 zone.scrollTop = 0;
             });
+            syncDesktopPageHeight();
         });
 
         function refreshBackToTopVisibility() {
@@ -2869,6 +2887,7 @@
         });
 
         window.addEventListener('resize', () => {
+            syncDesktopPageHeight();
             if (!window.matchMedia('(max-width: 900px)').matches) {
                 closeMobileMenu();
             }
