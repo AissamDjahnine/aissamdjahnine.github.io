@@ -892,6 +892,36 @@
             color: var(--text-color);
         }
 
+        .site-footer {
+            margin-top: 36px;
+            padding-top: 18px;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            color: var(--muted-text);
+            font-size: 0.9rem;
+        }
+
+        .site-footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .site-footer-links a {
+            color: var(--link-color);
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .site-footer-links a:hover {
+            color: var(--link-hover);
+        }
+
         .content section img {
             border-radius: 16px;
             border: 1px solid var(--border-color);
@@ -2110,6 +2140,18 @@
                 margin: 18px 0 10px;
             }
 
+            .site-footer {
+                margin-top: 28px;
+                padding-top: 16px;
+                flex-direction: column;
+                align-items: flex-start;
+                font-size: 0.84rem;
+            }
+
+            .site-footer-links {
+                gap: 10px;
+            }
+
             body[data-page-url]:not([data-page-url="/"]) .sidebar,
             body[data-page-url]:not([data-page-url="/"]) .right-sidebar {
                 display: none;
@@ -2443,7 +2485,16 @@
             </section>
 
             <!-- Footer -->
-            <footer></footer>
+            <footer class="site-footer">
+                <span>Contact & Profiles</span>
+                <div class="site-footer-links">
+                    <a href="https://github.com/AissamDjahnine" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://www.linkedin.com/in/aissamdjahnine/" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="https://scholar.google.com/citations?user=uRNOC9sAAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a>
+                    <a href="https://orcid.org/0000-0001-8633-4092" target="_blank" rel="noopener">ORCID</a>
+                    <a href="https://www.researchgate.net/profile/Aissam-Djahnine-2" target="_blank" rel="noopener">ResearchGate</a>
+                </div>
+            </footer>
         </main>
 
         <!-- Right Sidebar -->
