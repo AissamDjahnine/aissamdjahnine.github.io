@@ -1746,14 +1746,36 @@
 
         @media (max-width: 900px) {
             #nav-container {
+                position: static;
+                top: auto;
                 height: auto;
                 padding: 12px 0;
+                justify-content: flex-start;
+            }
+
+            #nav-container nav {
+                width: 100%;
+                padding: 0 12px;
             }
 
             #nav-container ul {
                 gap: 8px;
                 padding: 8px;
                 border-radius: 14px;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                overflow-y: hidden;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                justify-content: flex-start;
+            }
+
+            #nav-container ul::-webkit-scrollbar {
+                display: none;
+            }
+
+            #nav-container ul li {
+                flex: 0 0 auto;
             }
 
             #nav-container ul li a,
