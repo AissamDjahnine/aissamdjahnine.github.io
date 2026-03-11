@@ -255,6 +255,33 @@
             display: none;
         }
 
+        .mobile-instagram-placeholder {
+            display: grid;
+            gap: 12px;
+        }
+
+        .mobile-instagram-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 42px;
+            padding: 0 16px;
+            border-radius: 999px;
+            border: 1px solid var(--border-color);
+            background: var(--card-bg);
+            color: var(--link-color);
+            text-decoration: none;
+            font-weight: 700;
+            cursor: pointer;
+            width: fit-content;
+        }
+
+        .mobile-instagram-button:hover {
+            background: var(--accent-soft);
+            color: var(--link-hover);
+            border-color: var(--accent);
+        }
+
         .mobile-nav-panel ul {
             list-style: none;
             display: flex;
@@ -641,6 +668,27 @@
 
         .mobile-home-personal .instagram-media {
             max-width: 420px !important;
+        }
+
+        .mobile-accordion-toggle {
+            all: unset;
+            box-sizing: border-box;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .mobile-accordion-toggle::after {
+            content: "−";
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--muted-text);
+        }
+
+        .mobile-accordion.is-collapsed .mobile-accordion-toggle::after {
+            content: "+";
         }
 
         /* Right sidebar content styling */
@@ -1639,6 +1687,16 @@
             background-color: rgba(132, 167, 214, 0.4);
         }
 
+        [data-theme="dark"] .mobile-instagram-button {
+            background: rgba(159, 195, 255, 0.1);
+            border-color: rgba(120, 168, 255, 0.2);
+            color: #d8e6ff;
+        }
+
+        [data-theme="dark"] .mobile-instagram-button:hover {
+            background: rgba(120, 168, 255, 0.18);
+        }
+
         [data-theme="dark"] .mobile-menu-toggle {
             background-color: rgba(118, 152, 195, 0.3);
             border: 1px solid rgba(162, 191, 228, 0.3);
@@ -1992,10 +2050,20 @@
             .mobile-nav-bar {
                 display: flex;
                 width: calc(100% - 24px);
+                padding: 6px 8px;
+                gap: 10px;
             }
 
             .mobile-nav-current {
                 text-align: left;
+            }
+
+            .mobile-home-button,
+            .theme-toggle,
+            .mobile-menu-toggle {
+                min-width: 40px;
+                min-height: 40px;
+                padding: 8px;
             }
 
             #nav-container.mobile-menu-open .mobile-nav-panel {
@@ -2017,6 +2085,21 @@
                 display: flex;
                 flex-direction: column;
                 gap: 24px;
+            }
+
+            .intro-card,
+            .scholar-stats,
+            .mini-card,
+            .pub-card,
+            .gh-card,
+            .thesis-card,
+            .timeline-content,
+            .cert-card {
+                padding: 14px 16px;
+            }
+
+            .highlight-title {
+                margin: 18px 0 10px;
             }
 
             body[data-page-url]:not([data-page-url="/"]) .sidebar,
@@ -2067,6 +2150,23 @@
                 min-width: 0;
             }
 
+            body[data-page-url="/"] .right-sidebar {
+                display: grid;
+                gap: 14px;
+            }
+
+            body[data-page-url="/"] .right-sidebar > .highlight-title {
+                margin: 0;
+            }
+
+            body[data-page-url="/"] .mobile-accordion .mobile-accordion-content {
+                margin-top: 10px;
+            }
+
+            body[data-page-url="/"] .mobile-accordion.is-collapsed .mobile-accordion-content {
+                display: none;
+            }
+
             body[data-page-url="/"] .sidebar .section-title,
             body[data-page-url="/"] .sidebar .flag-grid,
             body[data-page-url="/"] .sidebar .instagram-media,
@@ -2110,12 +2210,14 @@
 
             .timeline-date {
                 grid-column: 1;
-                display: inline-block;
-                width: fit-content;
+                display: inline-flex;
+                width: max-content;
                 max-width: 100%;
                 margin: 0 0 10px 0;
                 white-space: normal;
-                font-size: 0.76rem;
+                font-size: 0.72rem;
+                padding: 4px 8px;
+                line-height: 1.2;
             }
 
             .timeline-marker {
@@ -2138,9 +2240,20 @@
             .back-to-top {
                 left: 50%;
                 bottom: 14px;
-                min-height: 40px;
-                padding: 0 14px;
-                font-size: 0.88rem;
+                min-height: 36px;
+                min-width: 36px;
+                padding: 0 10px;
+                font-size: 0.8rem;
+                gap: 6px;
+            }
+
+            .back-to-top span {
+                display: none;
+            }
+
+            .back-to-top svg {
+                width: 16px;
+                height: 16px;
             }
         }
     </style>
@@ -2286,7 +2399,6 @@
             <blockquote class="instagram-media" style="background: #FFF; border: O; margin: 0 auto;"
                 data-instgrm-permalink="https://www.instagram.com/aissam_dhn/" data-instgrm-version="14">
             </blockquote>
-            <script async src="https://www.instagram.com/embed.js"></script>
         </aside>
 
         <!-- Main Content Area -->
@@ -2322,9 +2434,9 @@
                     </div>
                     <div class="personal-card-section">
                         <div class="section-title">Social Feeds</div>
-                        <blockquote class="instagram-media" style="background: #FFF; border: O; margin: 0 auto;"
-                            data-instgrm-permalink="https://www.instagram.com/aissam_dhn/" data-instgrm-version="14">
-                        </blockquote>
+                        <div class="mobile-instagram-placeholder" data-mobile-instagram>
+                            <button class="mobile-instagram-button" type="button" data-load-instagram>Load Instagram</button>
+                        </div>
                     </div>
                 </div>
                 {% endif %}
@@ -2336,89 +2448,108 @@
 
         <!-- Right Sidebar -->
         <aside class="right-sidebar">
-            <h2 class="highlight-title">Cited by</h2>
-            <div class="scholar-stats">
-                <div class="scholar-header">
-                    <span>Metric</span>
-                    <span>All</span>
-                    <span>Since '21</span>
-                </div>
-                <div class="stat-item">
-                    <span>Citations</span>
-                    <strong>56</strong>
-                    <strong>56</strong>
-                </div>
-                <div class="stat-item">
-                    <span>h-index</span>
-                    <strong>3</strong>
-                    <strong>3</strong>
-                </div>
-                <div class="stat-item">
-                    <span>i10-index</span>
-                    <strong>2</strong>
-                    <strong>2</strong>
-                </div>
-                <div class="scholar-chart">
-                    <div class="scholar-chart-grid">
-                        <div class="scholar-bar-wrap">
-                            <div class="scholar-bar" style="height: 10px;"></div>
-                            <span class="scholar-year">2023</span>
+            <div class="mobile-accordion" data-mobile-accordion>
+                <h2 class="highlight-title">
+                    <button class="mobile-accordion-toggle" type="button" aria-expanded="true">Cited by</button>
+                </h2>
+                <div class="mobile-accordion-content">
+                    <div class="scholar-stats">
+                        <div class="scholar-header">
+                            <span>Metric</span>
+                            <span>All</span>
+                            <span>Since '21</span>
                         </div>
-                        <div class="scholar-bar-wrap">
-                            <div class="scholar-bar" style="height: 40px;"></div>
-                            <span class="scholar-year">2024</span>
+                        <div class="stat-item">
+                            <span>Citations</span>
+                            <strong>56</strong>
+                            <strong>56</strong>
                         </div>
-                        <div class="scholar-bar-wrap">
-                            <div class="scholar-bar" style="height: 108px;"></div>
-                            <span class="scholar-year">2025</span>
+                        <div class="stat-item">
+                            <span>h-index</span>
+                            <strong>3</strong>
+                            <strong>3</strong>
                         </div>
-                        <div class="scholar-bar-wrap">
-                            <div class="scholar-bar" style="height: 18px;"></div>
-                            <span class="scholar-year">2026</span>
+                        <div class="stat-item">
+                            <span>i10-index</span>
+                            <strong>2</strong>
+                            <strong>2</strong>
                         </div>
-                        <div class="scholar-axis">
-                            <span>36</span>
-                            <span>18</span>
-                            <span>0</span>
+                        <div class="scholar-chart">
+                            <div class="scholar-chart-grid">
+                                <div class="scholar-bar-wrap">
+                                    <div class="scholar-bar" style="height: 10px;"></div>
+                                    <span class="scholar-year">2023</span>
+                                </div>
+                                <div class="scholar-bar-wrap">
+                                    <div class="scholar-bar" style="height: 40px;"></div>
+                                    <span class="scholar-year">2024</span>
+                                </div>
+                                <div class="scholar-bar-wrap">
+                                    <div class="scholar-bar" style="height: 108px;"></div>
+                                    <span class="scholar-year">2025</span>
+                                </div>
+                                <div class="scholar-bar-wrap">
+                                    <div class="scholar-bar" style="height: 18px;"></div>
+                                    <span class="scholar-year">2026</span>
+                                </div>
+                                <div class="scholar-axis">
+                                    <span>36</span>
+                                    <span>18</span>
+                                    <span>0</span>
+                                </div>
+                            </div>
+                            <a class="scholar-link" href="https://scholar.google.com/citations?user=uRNOC9sAAAAJ&hl=en"
+                                target="_blank" rel="noopener">View Google Scholar ↗</a>
                         </div>
                     </div>
-                    <a class="scholar-link" href="https://scholar.google.com/citations?user=uRNOC9sAAAAJ&hl=en"
-                        target="_blank" rel="noopener">View Google Scholar ↗</a>
                 </div>
             </div>
 
-            <h2 class="highlight-title">Featured Projects</h2>
-            <div class="mini-card featured-card">
-                <h3>Segmentation and measurement of skeletal muscle areas on CT scans</h3>
-                <p>This project aims to segment and measure skeletal muscle areas on CT scans,
-                    specifically at the L3, L2, and L1 vertebrae levels, to improve sarcopenia
-                    estimation using deep learning-based methods.</p>
-                <a href="/projects/">View Project →</a>
+            <div class="mobile-accordion" data-mobile-accordion>
+                <h2 class="highlight-title">
+                    <button class="mobile-accordion-toggle" type="button" aria-expanded="false">Featured Projects</button>
+                </h2>
+                <div class="mobile-accordion-content">
+                    <div class="mini-card featured-card">
+                        <h3>Segmentation and measurement of skeletal muscle areas on CT scans</h3>
+                        <p>This project aims to segment and measure skeletal muscle areas on CT scans,
+                            specifically at the L3, L2, and L1 vertebrae levels, to improve sarcopenia
+                            estimation using deep learning-based methods.</p>
+                        <a href="/projects/">View Project →</a>
+                    </div>
+                </div>
             </div>
-            <h2 class="highlight-title">Personal</h2>
-            <div class="mini-card personal-card" style="text-align: center;">
-                <h3>Milano25 Semi Marathon (21 KM)</h3>
-                <p>Proud <strong>21 KM Finisher</strong> at the 2025 edition of FollowYourPassion 🏃‍♂️🏅</p>
-                <a href="https://www.endu.net/en/events/milano21/results/2025/99707/8195" target="_blank">See results →</a>
-                <img src="/images/milano25-semi.png" alt="Results" />
-            </div>
-            <div class="mini-card personal-card" style="text-align: center;">
-                <h3>Odyssea Paris 2025 - 10 KM</h3>
-                <p>Proud <strong>10 KM Finisher</strong> at the 2025 edition of the Odyssea Paris 🏃‍♂️🏅</p>
-                <a href="https://www.sportinnovation.fr/Evenements/Resultats/6812" target="_blank">See results →</a>
-                <img src="/images/10-KM-ODYSSEA-2025.png?raw=true" alt="Results" />
-            </div>
-            <div class="mini-card personal-card" style="text-align: center;">
-                <h3>Run for Planet 2025 - 10 KM</h3>
-                <p>Proud <strong>10 KM Finisher</strong> at the 5th edition of the Run for Planet 2025 🌍🏃‍♂️</p>
-                <a href="https://www.runforplanet.fr" target="_blank">Event Page →</a>
-                <img src="/images/run-for-planet-10kM.png?raw=true" alt="Run for Planet Medal" />
-            </div>
-            <div class="mini-card personal-card" style="text-align: center;">
-                <h3>Parilly 2024 - 10 KM</h3>
-                <p>Proud <strong>10 KM Finisher</strong> at the 2024 edition of the 10 km de Parilly 🏃‍♂️🏅</p>
-                <a href="https://sgchrono.fr/live/10kmparilly24/" target="_blank">See Results →</a>
-                <img src="/images/10KM-PARILLY-LYON.png?raw=true" alt="Results" />
+
+            <div class="mobile-accordion" data-mobile-accordion>
+                <h2 class="highlight-title">
+                    <button class="mobile-accordion-toggle" type="button" aria-expanded="false">Personal</button>
+                </h2>
+                <div class="mobile-accordion-content">
+                    <div class="mini-card personal-card" style="text-align: center;">
+                        <h3>Milano25 Semi Marathon (21 KM)</h3>
+                        <p>Proud <strong>21 KM Finisher</strong> at the 2025 edition of FollowYourPassion 🏃‍♂️🏅</p>
+                        <a href="https://www.endu.net/en/events/milano21/results/2025/99707/8195" target="_blank">See results →</a>
+                        <img src="/images/milano25-semi.png" alt="Results" />
+                    </div>
+                    <div class="mini-card personal-card" style="text-align: center;">
+                        <h3>Odyssea Paris 2025 - 10 KM</h3>
+                        <p>Proud <strong>10 KM Finisher</strong> at the 2025 edition of the Odyssea Paris 🏃‍♂️🏅</p>
+                        <a href="https://www.sportinnovation.fr/Evenements/Resultats/6812" target="_blank">See results →</a>
+                        <img src="/images/10-KM-ODYSSEA-2025.png?raw=true" alt="Results" />
+                    </div>
+                    <div class="mini-card personal-card" style="text-align: center;">
+                        <h3>Run for Planet 2025 - 10 KM</h3>
+                        <p>Proud <strong>10 KM Finisher</strong> at the 5th edition of the Run for Planet 2025 🌍🏃‍♂️</p>
+                        <a href="https://www.runforplanet.fr" target="_blank">Event Page →</a>
+                        <img src="/images/run-for-planet-10kM.png?raw=true" alt="Run for Planet Medal" />
+                    </div>
+                    <div class="mini-card personal-card" style="text-align: center;">
+                        <h3>Parilly 2024 - 10 KM</h3>
+                        <p>Proud <strong>10 KM Finisher</strong> at the 2024 edition of the 10 km de Parilly 🏃‍♂️🏅</p>
+                        <a href="https://sgchrono.fr/live/10kmparilly24/" target="_blank">See Results →</a>
+                        <img src="/images/10KM-PARILLY-LYON.png?raw=true" alt="Results" />
+                    </div>
+                </div>
             </div>
         </aside>
     </div>
@@ -2434,6 +2565,7 @@
         const mobileNavPanel = document.getElementById('mobile-nav-panel');
         const mobileNavCurrent = document.getElementById('mobile-nav-current');
         const navContainer = document.getElementById('nav-container');
+        const instagramPermalink = 'https://www.instagram.com/aissam_dhn/';
 
         // Check for saved user preference, if any, on load of the website
         const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
@@ -2465,8 +2597,107 @@
                 document.documentElement.setAttribute('data-theme', nextTheme);
                 localStorage.setItem('theme', nextTheme);
                 syncThemeToggleIcons(nextTheme);
+                if (window.matchMedia('(max-width: 900px)').matches) {
+                    closeMobileMenu();
+                }
             });
         });
+
+        function ensureInstagramScript() {
+            return new Promise((resolve, reject) => {
+                if (window.instgrm?.Embeds?.process) {
+                    resolve(window.instgrm);
+                    return;
+                }
+
+                const existing = document.querySelector('script[data-instgrm-loader]');
+                if (existing) {
+                    existing.addEventListener('load', () => resolve(window.instgrm), { once: true });
+                    existing.addEventListener('error', reject, { once: true });
+                    return;
+                }
+
+                const script = document.createElement('script');
+                script.async = true;
+                script.src = 'https://www.instagram.com/embed.js';
+                script.dataset.instgrmLoader = 'true';
+                script.addEventListener('load', () => resolve(window.instgrm), { once: true });
+                script.addEventListener('error', reject, { once: true });
+                document.body.appendChild(script);
+            });
+        }
+
+        async function loadMobileInstagram(container) {
+            if (!container || container.dataset.loaded === 'true') return;
+            container.dataset.loaded = 'true';
+            container.innerHTML = `
+                <blockquote class="instagram-media" style="background:#FFF; border:0; margin:0 auto;"
+                    data-instgrm-permalink="${instagramPermalink}" data-instgrm-version="14"></blockquote>
+            `;
+            try {
+                const instgrm = await ensureInstagramScript();
+                instgrm?.Embeds?.process?.();
+            } catch {
+                container.innerHTML = '<p>Instagram preview unavailable right now.</p>';
+            }
+        }
+
+        function initMobileInstagram() {
+            const triggers = Array.from(document.querySelectorAll('[data-load-instagram]'));
+            triggers.forEach((button) => {
+                if (button.dataset.bound === 'true') return;
+                button.dataset.bound = 'true';
+                button.addEventListener('click', () => {
+                    const container = button.closest('[data-mobile-instagram]');
+                    loadMobileInstagram(container);
+                });
+            });
+
+            if (!window.matchMedia('(max-width: 900px)').matches) {
+                const desktopEmbed = document.querySelector('.sidebar .instagram-media');
+                if (desktopEmbed) {
+                    ensureInstagramScript()
+                        .then((instgrm) => instgrm?.Embeds?.process?.())
+                        .catch(() => {});
+                }
+            }
+        }
+
+        function initMobileHomeAccordions() {
+            const accordions = Array.from(document.querySelectorAll('.right-sidebar [data-mobile-accordion]'));
+            accordions.forEach((accordion, index) => {
+                const button = accordion.querySelector('.mobile-accordion-toggle');
+                const content = accordion.querySelector('.mobile-accordion-content');
+                if (!button || !content) return;
+
+                const isMobileHome = window.matchMedia('(max-width: 900px)').matches
+                    && canonicalPath(document.body.dataset.pageUrl || '/', basePath) === '/';
+
+                if (!isMobileHome) {
+                    accordion.classList.remove('is-collapsed');
+                    button.setAttribute('aria-expanded', 'true');
+                    return;
+                }
+
+                if (!button.dataset.bound) {
+                    button.dataset.bound = 'true';
+                    button.addEventListener('click', () => {
+                        const isCurrentMobileHome = window.matchMedia('(max-width: 900px)').matches
+                            && canonicalPath(document.body.dataset.pageUrl || '/', basePath) === '/';
+                        if (!isCurrentMobileHome) return;
+                        const collapsed = accordion.classList.toggle('is-collapsed');
+                        button.setAttribute('aria-expanded', String(!collapsed));
+                    });
+                }
+
+                if (!accordion.dataset.initialized) {
+                    const collapsed = index !== 0;
+                    accordion.classList.toggle('is-collapsed', collapsed);
+                    button.setAttribute('aria-expanded', String(!collapsed));
+                    accordion.dataset.initialized = 'true';
+                }
+            });
+        }
 
         const scrollZones = Array.from(document.querySelectorAll('.sidebar, .right-sidebar'));
         const sideScrollZones = Array.from(document.querySelectorAll('.sidebar, .right-sidebar'));
@@ -2990,6 +3221,8 @@
                 hydrateGithubStars();
                 initPublicationActions();
                 initPublicationFilters();
+                initMobileHomeAccordions();
+                initMobileInstagram();
                 window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
                 refreshBackToTopVisibility();
 
@@ -3019,6 +3252,8 @@
         hydrateGithubStars();
         initPublicationActions();
         initPublicationFilters();
+        initMobileHomeAccordions();
+        initMobileInstagram();
     </script>
 
     {% if site.google_analytics %}
