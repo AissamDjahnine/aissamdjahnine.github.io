@@ -227,8 +227,16 @@
             padding: 0;
         }
 
+        .mobile-nav-panel li {
+            width: 100%;
+        }
+
         .mobile-nav-panel a {
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            min-height: 48px;
             text-decoration: none;
             color: #2f4f8e;
             padding: 10px 12px;
@@ -236,6 +244,7 @@
             font-weight: 700;
             background-color: #f4f8ff;
             border: 1px solid #d6e0f2;
+            text-align: center;
         }
 
         .mobile-nav-panel a[aria-current="page"] {
@@ -1877,6 +1886,8 @@
                 height: auto;
                 padding: 12px 0;
                 justify-content: center;
+                flex-direction: column;
+                align-items: center;
             }
 
             #nav-container .desktop-nav {
@@ -1885,14 +1896,32 @@
 
             .mobile-nav-bar {
                 display: flex;
+                width: calc(100% - 24px);
             }
 
             #nav-container.mobile-menu-open .mobile-nav-panel {
                 display: block;
             }
 
+            .mobile-nav-panel {
+                width: calc(100% - 24px);
+            }
+
             .page {
-                grid-template-columns: 1fr;
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            .content {
+                order: 1;
+                width: 100%;
+                margin-left: 0;
+            }
+
+            body[data-page-url]:not([data-page-url="/"]) .sidebar,
+            body[data-page-url]:not([data-page-url="/"]) .right-sidebar {
+                display: none;
             }
 
             .sidebar,
@@ -1900,6 +1929,50 @@
                 position: static;
                 max-height: none;
                 overflow-y: visible;
+            }
+
+            .sidebar {
+                order: 2;
+            }
+
+            .right-sidebar {
+                order: 3;
+            }
+
+            .timeline::before {
+                left: 10px;
+            }
+
+            .timeline-item {
+                grid-template-columns: 1fr;
+                padding: 0 0 20px 26px;
+            }
+
+            .timeline-date {
+                grid-column: 1;
+                display: inline-block;
+                width: fit-content;
+                max-width: 100%;
+                margin: 0 0 10px 0;
+                white-space: normal;
+                font-size: 0.76rem;
+            }
+
+            .timeline-marker {
+                position: absolute;
+                left: 0;
+                top: 8px;
+                margin-left: 0;
+            }
+
+            .timeline-content {
+                grid-column: 1;
+                width: 100%;
+                min-width: 0;
+            }
+
+            .timeline-title {
+                overflow-wrap: anywhere;
             }
 
             .back-to-top {
@@ -1912,8 +1985,8 @@
         }
     </style>
 
-    <link rel="icon" href="images/fcon.png" type="image/x-icon">
-    <link rel="shortcut icon" href="images/fcon.png" type="image/x-icon">
+    <link rel="icon" href="{{ '/images/fcon.png' | relative_url }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ '/images/fcon.png' | relative_url }}" type="image/x-icon">
 </head>
 
 <body data-page-url="{{ page.url | default: '/' }}">
