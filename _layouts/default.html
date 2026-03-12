@@ -1306,36 +1306,55 @@
             font-weight: 700;
         }
 
-        .pub-actions {
+        .pub-card,
+        .gh-card > div:last-child {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+        }
+
+        .pub-actions,
+        .gh-actions {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
-            margin-top: 10px;
+            align-items: center;
+            margin-top: 12px;
         }
 
         .pub-action-btn,
-        .pub-action-link {
+        .pub-action-link,
+        .gh-link,
+        .gh-stars {
             display: inline-flex;
             align-items: center;
             justify-content: center;
+            min-height: 32px;
             border-radius: 999px;
             border: 1px solid var(--border-color);
             background: var(--chip-bg);
             color: var(--text-color);
-            font-size: 0.76rem;
+            font-size: 0.78rem;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            padding: 6px 10px;
-            cursor: pointer;
+            padding: 0 12px;
             text-decoration: none;
-            transition: border-color 0.2s, color 0.2s, background-color 0.2s;
+            transition: border-color 0.2s, color 0.2s, background-color 0.2s, transform 0.2s ease;
+        }
+
+        .pub-action-btn,
+        .pub-action-link,
+        .gh-link {
+            cursor: pointer;
         }
 
         .pub-action-btn:hover,
-        .pub-action-link:hover {
+        .pub-action-link:hover,
+        .gh-link:hover {
             border-color: var(--accent);
             color: var(--link-hover);
+            transform: translateY(-1px);
         }
 
         .gh-grid {
@@ -1419,9 +1438,11 @@
         .gh-stars {
             display: inline-flex;
             align-items: center;
-            gap: 4px;
-            font-size: 0.85rem;
-            color: var(--muted-text);
+            gap: 6px;
+            font-size: 0.78rem;
+            color: var(--text-color);
+            cursor: default;
+            pointer-events: none;
         }
 
         .gh-stars .gh-star-icon {
@@ -1429,16 +1450,8 @@
         }
 
         .gh-link {
-            display: inline-flex;
-            align-items: center;
             gap: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            color: var(--link-color);
-        }
-
-        .gh-link:hover {
-            color: var(--link-hover);
+            color: var(--text-color);
         }
 
         .gh-description {
@@ -1577,12 +1590,9 @@
             background: linear-gradient(135deg, var(--accent-soft), rgba(14, 116, 144, 0.08));
         }
 
-        .gh-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            align-items: center;
-            margin-top: 8px;
+        .gh-stars {
+            gap: 6px;
+            color: var(--text-color);
         }
 
         .thesis-card .thesis-meta-grid {
