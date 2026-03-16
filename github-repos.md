@@ -53,7 +53,7 @@ permalink: /github-repos/
         <span class="gh-tag-chip">Web App</span>
       </div>
       <div class="gh-actions">
-        <a class="gh-link" href="https://vacation-optimizer.vercel.app" target="_blank" rel="noopener">Live Site ↗</a>
+        <a class="gh-link" href="https://pontsmalins.com/" target="_blank" rel="noopener">Live Site ↗</a>
         <a class="gh-link" href="https://github.com/AissamDjahnine/vacation_optimizer" target="_blank" rel="noopener">GitHub ↗</a>
         <span class="gh-stars"><span class="gh-star-icon">★</span><span data-stars>—</span></span>
       </div>
