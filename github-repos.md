@@ -46,13 +46,14 @@ permalink: /github-repos/
     <img class="gh-media-img" src="/images/github-projects/vacation-optimizer.png" alt="vacation_optimizer preview"/>
     <div>
       <div class="gh-meta"></div>
-      <div class="gh-title">vacation_optimizer</div>
-      <div class="gh-description">An app to optimize vacation days by strategically planning time off around holidays and weekends.</div>
+      <div class="gh-title">Ponts Malins</div>
+      <div class="gh-description">A France-first leave-planning web app that helps users optimize bridge days, public holidays, school-holiday-friendly breaks, and annual leave budgets.</div>
       <div class="gh-langs">
-        <span class="gh-lang">Dart</span>
-        <span class="gh-tag-chip">App</span>
+        <span class="gh-lang">TypeScript</span>
+        <span class="gh-tag-chip">Web App</span>
       </div>
       <div class="gh-actions">
+        <a class="gh-link" href="https://vacation-optimizer.vercel.app" target="_blank" rel="noopener">Live Site ↗</a>
         <a class="gh-link" href="https://github.com/AissamDjahnine/vacation_optimizer" target="_blank" rel="noopener">GitHub ↗</a>
         <span class="gh-stars"><span class="gh-star-icon">★</span><span data-stars>—</span></span>
       </div>
