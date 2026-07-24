@@ -1,9 +1,13 @@
-## About
-
-<div class="intro-card">
-  <div class="intro-card-label">Profile</div>
-  <p>PhD in Medical Imaging and AI. 4+ years designing and deploying computer vision systems across biomedical engineering and applied AI.</p>
-  <div class="intro-card-subtitle">Skills</div>
+<div class="intro-card career-hero" role="region" aria-labelledby="career-hero-title">
+  <div class="intro-card-label">Medical Imaging · Computer Vision · Applied AI</div>
+  <h2 id="career-hero-title">AI Research Engineer</h2>
+  <p>PhD in Computer Science with 5+ years turning computer vision research into reliable clinical systems, from pathology detection in 3D CT scans to remote orthodontic monitoring.</p>
+  <div class="career-hero-actions">
+    <a class="career-hero-action is-primary" href="/projects/">View Selected Work</a>
+    <a class="career-hero-action" href="/docs/aissam_djahnine_v11.pdf" target="_blank" rel="noopener">Download CV</a>
+    <a class="career-hero-action" href="mailto:dreamerissam@gmail.com">Email Me</a>
+  </div>
+  <div class="intro-card-subtitle">Core stack</div>
   <div class="about-skills-row">
     <img src="icons/python.svg" alt="Python" title="Python" />
     <img src="icons/pytorch.svg" alt="PyTorch" title="PyTorch" />

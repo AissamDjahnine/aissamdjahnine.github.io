@@ -496,6 +496,58 @@
             color: var(--text-color);
         }
 
+        .career-hero {
+            margin-top: 0;
+            padding: 24px;
+        }
+
+        .career-hero h2 {
+            margin: 0 0 10px;
+            font-size: 2rem;
+            line-height: 1.15;
+        }
+
+        .career-hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 18px;
+        }
+
+        .career-hero-action {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 42px;
+            padding: 9px 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 999px;
+            background: var(--card-bg);
+            color: var(--link-color);
+            font-size: 0.88rem;
+            font-weight: 700;
+            line-height: 1.2;
+            text-decoration: none;
+        }
+
+        .career-hero-action:hover {
+            border-color: var(--accent);
+            background: var(--accent-soft);
+            color: var(--link-hover);
+        }
+
+        .career-hero-action.is-primary {
+            border-color: #2355bf;
+            background: #2a5fcf;
+            color: #ffffff;
+        }
+
+        .career-hero-action.is-primary:hover {
+            border-color: #17439f;
+            background: #1f4fb5;
+            color: #ffffff;
+        }
+
         .about-skills-row {
             display: flex;
             align-items: center;
@@ -2420,14 +2472,13 @@
 
                 <p>{{ site.description }}</p>
                 <div class="mobile-home-profile" aria-label="Profile links">
-                    <p class="mobile-home-intro">Hi, I am Aissam</p>
+                    <p class="mobile-home-intro">AI Research Engineer · Paris, France</p>
                     <div class="mobile-home-links">
                         <a href="https://github.com/AissamDjahnine" target="_blank" rel="noopener">GitHub</a>
                         <a href="https://www.linkedin.com/in/aissamdjahnine/" target="_blank"
                             rel="noopener">LinkedIn</a>
-                        <a href="https://orcid.org/0000-0001-8633-4092" target="_blank" rel="noopener">ORCID</a>
-                        <a href="https://www.researchgate.net/profile/Aissam-Djahnine-2" target="_blank"
-                            rel="noopener">ResearchGate</a>
+                        <a href="/projects/">Selected Work</a>
+                        <a href="mailto:dreamerissam@gmail.com">Email</a>
                     </div>
                 </div>
                 <a class="cv-link" href="/docs/aissam_djahnine_v11.pdf" target="_blank" rel="noopener">Download CV</a>
