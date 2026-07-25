@@ -2467,10 +2467,16 @@
             <div class="profile">
                 <h1><a href="{{ '/' | absolute_url }}">{{ site.title }}</a></h1>
                 {% if site.logo %}
-                <img src="{{ site.logo | relative_url }}" alt="Logo" />
+                <img src="{{ site.logo | relative_url }}" alt="Portrait of {{ site.title }}" />
                 {% endif %}
 
-                <p>{{ site.description }}</p>
+                <p>
+                    {{ site.description }}<br><br>
+                    <a href="https://github.com/AissamDjahnine" target="_blank" rel="noopener">View My GitHub Profile</a><br>
+                    <a href="https://www.linkedin.com/in/aissamdjahnine/" target="_blank" rel="noopener">View My LinkedIn Profile</a><br>
+                    <a href="https://orcid.org/0000-0001-8633-4092" target="_blank" rel="noopener">View My ORCID</a><br>
+                    <a href="https://www.researchgate.net/profile/Aissam-Djahnine-2" target="_blank" rel="noopener">View My ResearchGate</a>
+                </p>
                 <div class="mobile-home-profile" aria-label="Profile links">
                     <p class="mobile-home-intro">AI Research Engineer · Paris, France</p>
                     <div class="mobile-home-links">
