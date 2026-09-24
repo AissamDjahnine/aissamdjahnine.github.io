@@ -44,6 +44,22 @@ permalink: /projects/
 
 <div class="gh-grid">
   <div class="gh-card">
+    <img class="gh-media-img" src="/images/dat-parkinson-challenge.png" alt="Normal and abnormal DaT SPECT brain scans shown in axial, coronal, and sagittal views"/>
+    <div>
+      <div class="project-meta-grid">
+        <div class="project-meta-item"><strong>Domain:</strong> Medical Imaging</div>
+        <div class="project-meta-item"><strong>Method:</strong> 3D CNN Ensemble</div>
+      </div>
+      <div class="gh-title">DaT SPECT Abnormality Classification</div>
+      <div class="gh-description">Built an end-to-end pipeline to classify DaT SPECT scans as normal or abnormal, combining four CNN families with striatal binding-ratio features. The solution achieved an AUROC of 0.9379 and ranked 59th on the private leaderboard; 1,009 participants joined the competition.</div>
+      <div class="gh-actions">
+        <a class="gh-link" href="https://github.com/AissamDjahnine/dat-parkinson-challenge" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="gh-link" href="https://github.com/AissamDjahnine/dat-parkinson-challenge/releases/tag/v1.0.0" target="_blank" rel="noopener">Release v1.0 ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="gh-card">
     <img class="gh-media-img" src="/images/SARCO_PROJECT.png?raw=true" alt="Sarcopenia muscle segmentation project preview"/>
     <div>
       <div class="project-meta-grid">
