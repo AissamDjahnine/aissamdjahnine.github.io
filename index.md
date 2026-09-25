@@ -65,7 +65,7 @@ Supervisors: *Pr. Serge Muller*, *Dr. Andrei Petrovskii*<br><br>
     <div class="pub-badges">
       <span class="date-pill">2024</span>
       <span class="pub-type is-journal">Journal</span>
-      <span class="pub-type is-citations">31 citations</span>
+      <span class="pub-type is-citations">32 citations</span>
     </div>
     <div class="pub-title"><a href="https://doi.org/10.1016/j.diii.2023.09.006" target="_blank" rel="noopener">Detection and severity quantification of pulmonary embolism with 3D CT data using an automated deep learning-based artificial solution</a></div>
     <div><strong>A. Djahnine</strong>, C. Lazarus, M. Lederlin, S. Mulé, R. Wiemker, S. Si-Mohamed, E. Jupin-Delevaux, O. Nempont, Y. Skandarani, M. De Craene, S. Goubalan, C. Raynaud, Y. Belkouchi, A. Ben Afia, C. Fabre, G. Ferretti, C. De Margerie, P. Berge, R. Liberge, N. Elbaz, M. Blain, P. Brillet, G. Chassagnon, F. Cadour, C. Caramella, M. El Hajjam, S. Boussouar, J. Hadchiti, X. Fablet, A. Khalil, H. Talbot, A. Luciani, N. Lassau and L. Boussel</div>
