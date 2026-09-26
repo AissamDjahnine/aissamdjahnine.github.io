@@ -38,7 +38,7 @@ I design and deploy the computer vision systems that power remote orthodontic mo
 
 - Improved an attachment-loss detection model processing around 50,000 photo sets per day, covering data collection, cleaning, training, threshold selection, and production testing.
 - Cut manual validation workload by 90%, while sending positive detections directly to doctors and reducing production costs.
-- Refactored the production pipeline codebase supporting more than 40 models, improved automated testing, and fixed bugs in the 2D pipeline.
+- Refactored the production pipeline codebase supporting 60+ models, improved automated testing, and fixed bugs in the 2D pipeline.
 - Centralized the configurations of all production neural networks, making their settings easier to review and maintain.
 </blockquote>
 
