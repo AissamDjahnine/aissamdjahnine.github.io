@@ -33,6 +33,7 @@ permalink: /projects/
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a1 1 0 0 1 1 1v8.59l2.3-2.29a1 1 0 1 1 1.4 1.41l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.41L11 12.59V4a1 1 0 0 1 1-1zm-7 14a1 1 0 0 1 1 1v1h12v-1a1 1 0 1 1 2 0v2a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1z"/></svg>
           {{ site.data.thesis_stats.downloads }}
         </span>
+        <small>As of <time datetime="{{ site.data.thesis_stats.updated_at }}">{{ site.data.thesis_stats.updated_at | date: "%b %-d, %Y" }}</time></small>
       </div>
     </div>
   </div>
