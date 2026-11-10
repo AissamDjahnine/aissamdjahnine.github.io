@@ -54,7 +54,7 @@ permalink: /projects/
       <div class="gh-title">CT-3DFlow: Unsupervised Pulmonary CT Analysis</div>
       <div class="gh-description">Learning normal lung appearance from healthy 3D CT patches to identify abnormalities with reduced annotation requirements.</div>
       <div class="gh-actions">
-        <a class="gh-link" href="{{ '/projects/ct-3dflow/' | relative_url }}">Project overview</a>
+        <a class="gh-link is-primary" href="{{ '/projects/ct-3dflow/' | relative_url }}">Project overview</a>
         <a class="gh-link" href="https://arxiv.org/abs/2403.18514" target="_blank" rel="noopener">arXiv ↗</a>
       </div>
     </div>

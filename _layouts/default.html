@@ -29,6 +29,9 @@
             --nav-shadow: rgba(31, 31, 31, 0.08);
             --border-color: #e6e0d6;
             --chip-bg: #f2ede3;
+            --card-meta-bg: #f2f2f2;
+            --card-meta-text: #555555;
+            --card-action-border: #b9b9b9;
             --accent: #0b4bc1;
             --accent-soft: rgba(11, 75, 193, 0.08);
             --sidebar-width: 300px;
@@ -47,6 +50,9 @@
             --nav-shadow: rgba(6, 12, 20, 0.22);
             --border-color: #2b3d52;
             --chip-bg: rgba(159, 195, 255, 0.14);
+            --card-meta-bg: #2b3644;
+            --card-meta-text: #c7ced8;
+            --card-action-border: #8994a2;
             --accent: #78a8ff;
             --accent-soft: rgba(120, 168, 255, 0.18);
         }
@@ -1343,10 +1349,10 @@
             display: inline-flex;
             align-items: center;
             padding: 6px 12px;
-            border-radius: 999px;
-            background: var(--chip-bg);
-            border: 1px solid var(--border-color);
-            color: var(--muted-text);
+            border-radius: 8px;
+            background: var(--card-meta-bg);
+            border: 1px solid transparent;
+            color: var(--card-meta-text);
             font-size: 0.9rem;
             line-height: 1.2;
         }
@@ -1399,6 +1405,33 @@
         .pub-action-link,
         .gh-link {
             cursor: pointer;
+            min-height: 44px;
+            padding: 10px 18px;
+            background: transparent;
+            border-color: var(--card-action-border);
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-transform: none;
+            letter-spacing: 0;
+        }
+
+        .gh-link.is-primary {
+            background: #282828;
+            border-color: var(--card-action-border);
+            color: #ffffff;
+        }
+
+        .gh-link.is-primary:hover {
+            background: #444444;
+            border-color: #444444;
+            color: #ffffff;
+        }
+
+        .gh-link:focus-visible,
+        .pub-action-btn:focus-visible,
+        .pub-action-link:focus-visible {
+            outline: 3px solid var(--accent);
+            outline-offset: 4px;
         }
 
         .pub-action-btn:hover,
@@ -1919,9 +1952,9 @@
 
         [data-theme="dark"] .project-meta-item,
         [data-theme="dark"] .thesis-meta-item {
-            background: rgba(159, 195, 255, 0.12);
-            border-color: rgba(152, 182, 216, 0.24);
-            color: #d5e2f3;
+            background: var(--card-meta-bg);
+            border-color: transparent;
+            color: var(--card-meta-text);
         }
 
         [data-theme="dark"] .project-meta-item strong,
@@ -2032,9 +2065,21 @@
 
         [data-theme="dark"] .pub-action-btn,
         [data-theme="dark"] .pub-action-link {
-            background: rgba(120, 168, 255, 0.1);
-            border-color: rgba(152, 182, 216, 0.35);
-            color: #d6e6ff;
+            background: transparent;
+            border-color: var(--card-action-border);
+            color: var(--text-color);
+        }
+
+        .pub-card .pub-badges .date-pill,
+        .pub-card .pub-badges .pub-type,
+        .gh-card .gh-lang,
+        .gh-card .gh-tag-chip {
+            background: var(--card-meta-bg);
+            border-color: transparent;
+            color: var(--card-meta-text);
+            border-radius: 8px;
+            text-transform: none;
+            letter-spacing: 0;
         }
 
         [data-theme="dark"] .pub-filter-btn,
