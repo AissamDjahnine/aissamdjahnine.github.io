@@ -1,0 +1,95 @@
+---
+layout: research
+title: "Detection and severity quantification of pulmonary embolism with 3D CT data using an automated deep learning-based artificial solution"
+description: "This work investigates automated pulmonary embolism detection and severity assessment from three-dimensional CT pulmonary angiography examinations with limited annotations."
+permalink: /projects/pulmonary-embolism/
+image: /images/JFR_recap.png
+---
+<header class="research-hero">
+  <h1>Pulmonary Embolism Detection &amp; Severity Quantification</h1>
+  <p class="research-subtitle">Deep Learning on 3D CT Angiography</p>
+  <p class="research-authors"><strong>A. Djahnine</strong>, C. Lazarus, M. Lederlin, S. Mulé, R. Wiemker, S. Si-Mohamed, E. Jupin-Delevaux, O. Nempont, Y. Skandarani, M. De Craene, S. Goubalan, C. Raynaud, Y. Belkouchi, A. Ben Afia, C. Fabre, G. Ferretti, C. De Margerie, P. Berge, R. Liberge, N. Elbaz, M. Blain, P. Brillet, G. Chassagnon, F. Cadour, C. Caramella, M. El Hajjam, S. Boussouar, J. Hadchiti, X. Fablet, A. Khalil, H. Talbot, A. Luciani, N. Lassau and L. Boussel</p>
+  <p class="research-status">Diagnostic and Interventional Imaging (DII) · 2024</p>
+  <div class="research-actions" aria-label="Research resources">
+    <a href="https://doi.org/10.1016/j.diii.2023.09.006">Paper</a>
+    <a href="{{ "/publications/" | relative_url }}">All publications</a>
+    <a href="{{ "/projects/" | relative_url }}">All research</a>
+  </div>
+</header>
+
+<figure class="research-figure">
+  <a href="{{ "/images/JFR_recap.png" | relative_url }}" aria-label="Open the research figure at full resolution">
+    <img src="{{ "/images/JFR_recap.png" | relative_url }}" width="5520" height="1689" alt="Pulmonary embolism CT examples, severity measurements, detection results, and network architecture">
+  </a>
+  <figcaption>Research overview. Select the figure to view it at full resolution.</figcaption>
+</figure>
+
+<div class="research-copy">
+  <section aria-labelledby="overview">
+    <h2 id="overview">Overview</h2>
+    <p>This work investigates automated pulmonary embolism detection and severity assessment from three-dimensional CT pulmonary angiography examinations with limited annotations.</p>
+  </section>
+  <section aria-labelledby="method">
+    <h2 id="method">Method</h2>
+    <p>The approach combines embolism detection with severity quantification using the Qanadli score and the right-to-left ventricle diameter ratio.</p>
+    <p>The pipeline has four outputs: clot detection, examination-level PE classification, Qanadli-score estimation, and RV/LV diameter-ratio prediction.</p>
+  </section>
+  <section aria-labelledby="experiments">
+    <h2 id="experiments">Experiments</h2>
+    <div class="research-table-scroll" role="region" aria-label="Data and supervision" tabindex="0">
+      <table>
+        <caption>Data and supervision</caption>
+        <thead><tr><th scope="col">Dataset</th><th scope="col">Patients</th><th scope="col">Annotation level</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Main CTPA database</th><td>1,268</td><td>Image level</td></tr>
+          <tr><th scope="row">CAD-PE</th><td>91</td><td>Pixel level</td></tr>
+          <tr><th scope="row">FUME-PE</th><td>35</td><td>Pixel level</td></tr>
+          <tr><th scope="row">Evaluation test set</th><td>378</td><td>Held-out assessment</td></tr>
+        </tbody>
+      </table>
+    </div>    <p>The test-set size is reported separately; it is not an additional training dataset. Detection is assessed with AUC, and severity estimates with the coefficient of determination (R²).</p>
+  </section>
+  <section aria-labelledby="results">
+    <h2 id="results">Results</h2>
+    <div class="research-table-scroll" role="region" aria-label="Reported classification results" tabindex="0">
+      <table>
+        <caption>Reported classification results</caption>
+        <thead><tr><th scope="col">Split</th><th scope="col">AUC</th><th scope="col">95% confidence interval</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Training</th><td>0.870</td><td>0.850–0.900</td></tr>
+          <tr><th scope="row">Test</th><td>0.852</td><td>0.810–0.890</td></tr>
+        </tbody>
+      </table>
+    </div>    <div class="research-table-scroll" role="region" aria-label="Severity quantification on the test set" tabindex="0">
+      <table>
+        <caption>Severity quantification on the test set</caption>
+        <thead><tr><th scope="col">Target</th><th scope="col">R²</th><th scope="col">95% confidence interval</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Qanadli score</th><td>0.717</td><td>0.668–0.760</td></tr>
+          <tr><th scope="row">RV/LV diameter ratio</th><td>0.723</td><td>0.668–0.766</td></tr>
+        </tbody>
+      </table>
+    </div>    <ul>
+      <li><strong>Detection:</strong> test performance measures how well positive and negative examinations are separated.</li>
+      <li><strong>Severity:</strong> the two regression targets evaluate complementary aspects of embolic burden and cardiac impact.</li>
+    </ul>
+  </section>
+  <section aria-labelledby="conclusions">
+    <h2 id="conclusions">Conclusions &amp; limitations</h2>
+    <p>The study demonstrates feasibility of automated clot detection and severity estimation using blood-clot and cardiac segmentations. Further studies are needed to establish effectiveness in clinical practice.</p>
+  </section>
+  <section aria-labelledby="sources">
+    <h2 id="sources">Paper &amp; supporting material</h2>
+    <p><a href="https://doi.org/10.1016/j.diii.2023.09.006">Full paper</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/38261553/">Indexed abstract and quantitative results</a>.</p>
+  </section>
+  <section aria-labelledby="citation">
+    <h2 id="citation">BibTeX</h2>
+    <pre class="research-citation"><code>@article{djahnine2024pulmonaryembolism,
+  title = {Detection and severity quantification of pulmonary embolism with 3D CT data using an automated deep learning-based artificial solution},
+  author = {A. Djahnine and C. Lazarus and M. Lederlin and S. Mulé and R. Wiemker and S. Si-Mohamed and E. Jupin-Delevaux and O. Nempont and Y. Skandarani and M. De Craene and S. Goubalan and C. Raynaud and Y. Belkouchi and A. Ben Afia and C. Fabre and G. Ferretti and C. De Margerie and P. Berge and R. Liberge and N. Elbaz and M. Blain and P. Brillet and G. Chassagnon and F. Cadour and C. Caramella and M. El Hajjam and S. Boussouar and J. Hadchiti and X. Fablet and A. Khalil and H. Talbot and A. Luciani and N. Lassau and L. Boussel},
+  journal = {Diagnostic and Interventional Imaging (DII)},
+  year = {2024},
+  doi = {10.1016/j.diii.2023.09.006}
+}</code></pre>
+  </section>
+</div>

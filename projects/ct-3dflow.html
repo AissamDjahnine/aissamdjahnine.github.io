@@ -1,0 +1,91 @@
+---
+layout: research
+title: "CT-3DFlow — Unsupervised Pulmonary CT Analysis"
+description: "Learning the normal appearance of 3D pulmonary CT scans with normalizing flows to detect abnormalities."
+permalink: /projects/ct-3dflow/
+image: /images/GLOW_MIDL_recap.png
+---
+<header class="research-hero">
+  <h1>Unsupervised Pulmonary CT Analysis</h1>
+  <p class="research-subtitle">3D Normalizing Flows</p>
+  <p class="research-authors"><strong>Aissam Djahnine</strong>, Alexandre Popoff, Emilien Jupin-Delevaux, Vincent Cottin, Olivier Nempont, Loic Boussel</p>
+  <p class="research-status">CT-3DFlow · arXiv preprint · 2024</p>
+  <div class="research-actions" aria-label="Research resources">
+    <a href="https://arxiv.org/pdf/2403.18514">Paper</a>
+    <a href="https://arxiv.org/abs/2403.18514">arXiv</a>
+    <a href="{{ '/projects/' | relative_url }}">All research</a>
+  </div>
+</header>
+
+<figure class="research-figure">
+  <a href="{{ '/images/GLOW_MIDL_recap.png' | relative_url }}" aria-label="Open the CT-3DFlow research figure at full resolution">
+    <img src="{{ '/images/GLOW_MIDL_recap.png' | relative_url }}" width="5520" height="1556" alt="CT-3DFlow: training on normal lung patches, aggregating patch likelihoods into a CT anomaly map, and producing a normal or abnormal prediction; alongside an architecture diagram and comparison results.">
+  </a>
+  <figcaption>CT-3DFlow research overview. Select the figure to view it at full resolution.</figcaption>
+</figure>
+
+<div class="research-copy">
+  <section aria-labelledby="overview">
+    <h2 id="overview">Overview</h2>
+    <p>Can a model identify pulmonary abnormalities by learning what healthy CT scans look like? CT-3DFlow learns normal appearance from healthy 3D lung patches, then uses deviations from that distribution to classify a scan as normal or abnormal.</p>
+    <p>This work explores pathology detection with reduced annotation requirements, preserving the spatial context of volumetric CT data.</p>
+  </section>
+
+  <section aria-labelledby="method">
+    <h2 id="method">Method</h2>
+    <p>A 3D adaptation of GLOW models the distribution of normal 48 × 48 × 48 CT patches. During inference, overlapping patches receive log-likelihood scores. Aggregation and smoothing produce a scan-level map; post-processing yields a patient-level prediction.</p>
+    <p>Training uses healthy patches. A separate validation set determines the decision threshold.</p>
+    <p>A 3D GLOW architecture uses invertible transformations to estimate patch likelihoods. The final normal/abnormal decision depends on spatial aggregation and a validation-selected threshold, not the patch score alone.</p>
+  </section>
+
+  <section aria-labelledby="experiments">
+    <h2 id="experiments">Experiments</h2>
+    <p>The model learns from 500,000 normal 3D patches. Patient-level evaluation compares reconstruction, adversarial, flow-based, and diffusion-based approaches. The table below follows Table 1 of arXiv version 1.</p>
+  </section>
+  <section aria-labelledby="results">
+    <h2 id="results">Results</h2>
+    <p class="research-table-hint">Scroll tables horizontally to see all columns.</p>
+    <div class="research-table-scroll" role="region" aria-label="Patient-level classification — arXiv:2403.18514v1, Table 1" tabindex="0">
+      <table>
+        <caption>Patient-level classification — arXiv:2403.18514v1, Table 1</caption>
+        <thead><tr><th scope="col">Method</th><th scope="col">AUROC</th><th scope="col">F1</th><th scope="col">Accuracy</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">AE</th><td>0.608</td><td>0.538</td><td>0.556</td></tr>
+          <tr><th scope="row">VAE</th><td>0.647</td><td>0.607</td><td>0.598</td></tr>
+          <tr><th scope="row">f-AnoGAN</th><td>0.821</td><td>0.783</td><td>0.765</td></tr>
+          <tr><th scope="row">GANomaly</th><td>0.772</td><td>0.740</td><td>0.694</td></tr>
+          <tr><th scope="row">DifferNet</th><td>0.901</td><td>0.861</td><td>0.843</td></tr>
+          <tr><th scope="row">FastFlow</th><td>0.942</td><td>0.912</td><td>0.903</td></tr>
+          <tr><th scope="row">CFLOW-AD</th><td>0.732</td><td>0.739</td><td>0.706</td></tr>
+          <tr><th scope="row">AnoDDPM</th><td>0.924</td><td>0.891</td><td>0.873</td></tr>
+          <tr><th scope="row">CT-3DFlow</th><td><strong>0.952</strong></td><td><strong>0.940</strong></td><td><strong>0.924</strong></td></tr>
+        </tbody>
+      </table>
+    </div>    <p>The overview figure contains a different result snapshot (F1 0.945; accuracy 0.920). Those figure values are preserved; the table above explicitly identifies the preprint version it reproduces.</p>    <ul>
+      <li><strong>3D modeling:</strong> the reported model leads the compared methods on all three metrics.</li>
+      <li><strong>Patch processing:</strong> volumetric patches avoid requiring a flow over an entire CT volume at once.</li>
+    </ul>
+  </section>
+  <section aria-labelledby="conclusions">
+    <h2 id="conclusions">Conclusions &amp; limitations</h2>
+    <p>The results support learning normal pulmonary appearance for anomaly detection. The paper notes that aggregation needs further validation, especially when comparing 2D and 3D approaches. Extension to other organs and modalities remains future work.</p>
+  </section>
+  <section aria-labelledby="sources">
+    <h2 id="sources">Paper &amp; supporting material</h2>
+    <p><a href="https://arxiv.org/html/2403.18514v1#S3">Versioned results table and discussion</a> · <a href="https://arxiv.org/abs/2403.18514">Preprint record</a>.</p>
+  </section>
+
+  <section aria-labelledby="citation">
+    <h2 id="citation">BibTeX</h2>
+    <pre class="research-citation"><code>@article{djahnine2024ct3dflow,
+  title = {CT-3DFlow: Leveraging 3D Normalizing Flows for
+           Unsupervised Detection of Pathological Pulmonary CT scans},
+  author = {Djahnine, Aissam and Popoff, Alexandre and
+            Jupin-Delevaux, Emilien and Cottin, Vincent and
+            Nempont, Olivier and Boussel, Loic},
+  journal = {arXiv preprint arXiv:2403.18514},
+  year = {2024},
+  doi = {10.48550/arXiv.2403.18514}
+}</code></pre>
+  </section>
+</div>

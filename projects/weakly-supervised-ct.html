@@ -1,0 +1,105 @@
+---
+layout: research
+title: "Weakly-Supervised learning based Pathology Detection and Localization in 3D Chest Scans"
+description: "This study identifies multiple chest abnormalities and highlights their locations in 3D CT scans, combining patch-level predictions into a patient-level assessment."
+permalink: /projects/weakly-supervised-ct/
+image: /images/SIMCLR_recap.png
+---
+<header class="research-hero">
+  <h1>Pathology Detection &amp; Localization in 3D Chest CT</h1>
+  <p class="research-subtitle">Weakly-Supervised Learning</p>
+  <p class="research-authors"><strong>A. Djahnine</strong>, E. Jupin-delevaux, O. Nempont, F. Craighero, S. A. Si-Mohamed, V. Cottin, P. Douek, A. Popoff, L. Boussel</p>
+  <p class="research-status">Medical Physics · 2024</p>
+  <div class="research-actions" aria-label="Research resources">
+    <a href="https://pubmed.ncbi.nlm.nih.gov/39140793/">Paper</a>
+    <a href="{{ "/publications/" | relative_url }}">All publications</a>
+    <a href="{{ "/projects/" | relative_url }}">All research</a>
+  </div>
+</header>
+
+<figure class="research-figure">
+  <a href="{{ "/images/SIMCLR_recap.png" | relative_url }}" aria-label="Open the research figure at full resolution">
+    <img src="{{ "/images/SIMCLR_recap.png" | relative_url }}" width="5520" height="1556" alt="Chest CT abnormality probability maps, 3D lung visualizations, and classification and localization evaluations">
+  </a>
+  <figcaption>Research overview. Select the figure to view it at full resolution.</figcaption>
+</figure>
+
+<div class="research-copy">
+  <section aria-labelledby="overview">
+    <h2 id="overview">Overview</h2>
+    <p>This study identifies multiple chest abnormalities and highlights their locations in 3D CT scans, combining patch-level predictions into a patient-level assessment.</p>
+  </section>
+  <section aria-labelledby="method">
+    <h2 id="method">Method</h2>
+    <p>A ResNet-based patch classifier is pretrained with SimCLR on unannotated CT patches and fine-tuned with labeled examples. Abnormality probability maps across the volume are aggregated for multi-label classification.</p>
+    <p>The classifier distinguishes normal tissue from four abnormality categories. Sweeping it across a volume produces separate abnormality maps rather than a single scan label.</p>
+  </section>
+  <section aria-labelledby="experiments">
+    <h2 id="experiments">Experiments</h2>
+    <div class="research-table-scroll" role="region" aria-label="Evaluation setup" tabindex="0">
+      <table>
+        <caption>Evaluation setup</caption>
+        <thead><tr><th scope="col">Stage</th><th scope="col">Scans</th><th scope="col">Purpose</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Validation</th><td>111</td><td>Hyperparameter selection</td></tr>
+          <tr><th scope="row">Test</th><td>251</td><td>Multi-abnormality assessment</td></tr>
+        </tbody>
+      </table>
+    </div>    <p>Evaluation covers multi-label classification, normal-versus-abnormal classification, and qualitative localization.</p>
+  </section>
+  <section aria-labelledby="results">
+    <h2 id="results">Results</h2>
+    <div class="research-table-scroll" role="region" aria-label="Patient-level classification" tabindex="0">
+      <table>
+        <caption>Patient-level classification</caption>
+        <thead><tr><th scope="col">Task</th><th scope="col">AUROC</th><th scope="col">95% confidence interval</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Multi-label</th><td>0.931</td><td>0.9034–0.9557</td></tr>
+          <tr><th scope="row">Normal versus abnormal</th><td>0.963</td><td>0.952–0.976</td></tr>
+        </tbody>
+      </table>
+    </div>    <div class="research-table-scroll" role="region" aria-label="Results by abnormality" tabindex="0">
+      <table>
+        <caption>Results by abnormality</caption>
+        <thead><tr><th scope="col">Abnormality</th><th scope="col">AUROC</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Interstitial pattern (IP)</th><td>0.974</td></tr>
+          <tr><th scope="row">Low lung density area (LLDA)</th><td>0.952</td></tr>
+          <tr><th scope="row">Nodules (NOD)</th><td>0.853</td></tr>
+          <tr><th scope="row">Consolidation (CONS)</th><td>0.791</td></tr>
+        </tbody>
+      </table>
+    </div>    <div class="research-table-scroll" role="region" aria-label="Training-strategy comparison" tabindex="0">
+      <table>
+        <caption>Training-strategy comparison</caption>
+        <thead><tr><th scope="col">Initialization</th><th scope="col">Reported F1</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Random</th><td>0.677</td></tr>
+          <tr><th scope="row">ImageNet</th><td>0.792</td></tr>
+          <tr><th scope="row">Contrastive pretraining</th><td><strong>0.943</strong></td></tr>
+        </tbody>
+      </table>
+    </div>    <ul>
+      <li><strong>Transfer learning:</strong> CT-specific contrastive pretraining improves the reported F1 over the alternative initializations.</li>
+      <li><strong>Uneven difficulty:</strong> strong overall discrimination does not imply equal performance for every abnormality.</li>
+    </ul>
+  </section>
+  <section aria-labelledby="conclusions">
+    <h2 id="conclusions">Conclusions &amp; limitations</h2>
+    <p>Patch predictions provide both patient-level decisions and spatial information. The variation across abnormalities motivates class-specific evaluation; localization findings should also be interpreted alongside the paper’s qualitative assessment.</p>
+  </section>
+  <section aria-labelledby="sources">
+    <h2 id="sources">Paper &amp; supporting material</h2>
+    <p><a href="https://aapm.onlinelibrary.wiley.com/doi/10.1002/mp.17302">Publication and detailed results</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/39140793/">PubMed</a>.</p>
+  </section>
+  <section aria-labelledby="citation">
+    <h2 id="citation">BibTeX</h2>
+    <pre class="research-citation"><code>@article{djahnine2024weaklysupervisedct,
+  title = {Weakly-Supervised learning based Pathology Detection and Localization in 3D Chest Scans},
+  author = {A. Djahnine and E. Jupin-delevaux and O. Nempont and F. Craighero and S. A. Si-Mohamed and V. Cottin and P. Douek and A. Popoff and L. Boussel},
+  journal = {Medical Physics},
+  year = {2024},
+  doi = {10.1002/mp.17302}
+}</code></pre>
+  </section>
+</div>

@@ -1,0 +1,96 @@
+---
+layout: research
+title: "BERT-based natural language processing analysis of French CT reports: Application to the measurement of the positivity rate for pulmonary embolism"
+description: "This study uses natural language processing to analyze French CT reports and measure the diagnostic yield of examinations requested for suspected pulmonary embolism."
+permalink: /projects/bert-ct-reports/
+image: /images/BERT_recap.png
+---
+<header class="research-hero">
+  <h1>Understanding French CT Reports with BERT</h1>
+  <p class="research-subtitle">Measuring Pulmonary Embolism Positivity</p>
+  <p class="research-authors">E. Jupin-Delevaux, <strong>A. Djahnine</strong>, F. Talbot, A. Richard, S. Gouttard, A. Mansuy, P. Douek, S. A. Si-Mohamed, L. Boussel</p>
+  <p class="research-status">Research in Diagnostic and Interventional Imaging (ReDII) · 2023</p>
+  <div class="research-actions" aria-label="Research resources">
+    <a href="https://doi.org/10.1016/j.redii.2023.100027">Paper</a>
+    <a href="{{ "/publications/" | relative_url }}">All publications</a>
+    <a href="{{ "/projects/" | relative_url }}">All research</a>
+  </div>
+</header>
+
+<figure class="research-figure">
+  <a href="{{ "/images/BERT_recap.png" | relative_url }}" aria-label="Open the research figure at full resolution">
+    <img src="{{ "/images/BERT_recap.png" | relative_url }}" width="5520" height="1594" alt="French CT report sentence categories, BERT classification results, and pulmonary embolism illustrations">
+  </a>
+  <figcaption>Research overview. Select the figure to view it at full resolution.</figcaption>
+</figure>
+
+<div class="research-copy">
+  <section aria-labelledby="overview">
+    <h2 id="overview">Overview</h2>
+    <p>This study uses natural language processing to analyze French CT reports and measure the diagnostic yield of examinations requested for suspected pulmonary embolism.</p>
+  </section>
+  <section aria-labelledby="method">
+    <h2 id="method">Method</h2>
+    <p>A BERT-based sentence classifier distinguishes report content using three-category and eleven-category classification tasks. Report analysis identifies examinations with pulmonary embolism.</p>
+    <p>The three-category task separates non-thoracic, healthy thoracic, and pathological thoracic content. The finer classification task distinguishes thoracic findings; report-level analysis then identifies PE-positive examinations.</p>
+  </section>
+  <section aria-labelledby="experiments">
+    <h2 id="experiments">Experiments</h2>
+    <div class="research-table-scroll" role="region" aria-label="Report cohorts" tabindex="0">
+      <table>
+        <caption>Report cohorts</caption>
+        <thead><tr><th scope="col">Year</th><th scope="col">Reports</th><th scope="col">Use</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">2019</th><td>99,510</td><td>Training and validation</td></tr>
+          <tr><th scope="row">2018</th><td>94,559</td><td>Testing</td></tr>
+        </tbody>
+      </table>
+    </div>    <p>Reports were anonymized. Sentence classification and report-level pulmonary embolism identification are evaluated separately.</p>
+  </section>
+  <section aria-labelledby="results">
+    <h2 id="results">Results</h2>
+    <p class="research-table-hint">Scroll tables horizontally to see all columns.</p>
+    <div class="research-table-scroll" role="region" aria-label="Sentence classification results from the research figure" tabindex="0">
+      <table>
+        <caption>Sentence classification results from the research figure</caption>
+        <thead><tr><th scope="col">Classifier</th><th scope="col">Accuracy</th><th scope="col">Precision</th><th scope="col">Recall</th><th scope="col">F1</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">3-category</th><td>0.988</td><td>0.979</td><td>0.989</td><td>0.984</td></tr>
+          <tr><th scope="row">11-category</th><td>0.984</td><td>0.986</td><td>0.985</td><td>0.985</td></tr>
+        </tbody>
+      </table>
+    </div>    <div class="research-table-scroll" role="region" aria-label="Pulmonary embolism identification in reports" tabindex="0">
+      <table>
+        <caption>Pulmonary embolism identification in reports</caption>
+        <thead><tr><th scope="col">Metric</th><th scope="col">Value</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Sensitivity</th><td>98.2%</td></tr>
+          <tr><th scope="row">Specificity</th><td>99.3%</td></tr>
+          <tr><th scope="row">Accuracy</th><td>99.1%</td></tr>
+          <tr><th scope="row">Positive examinations among those requested for suspected PE</th><td>641 / 4,042 (15.8%)</td></tr>
+        </tbody>
+      </table>
+    </div>    <ul>
+      <li><strong>Text classification:</strong> both sentence-category tasks reach F1 above 0.98.</li>
+      <li><strong>Diagnostic yield:</strong> the positivity rate describes examinations requested for suspected PE, not all CT reports.</li>
+    </ul>
+  </section>
+  <section aria-labelledby="conclusions">
+    <h2 id="conclusions">Conclusions &amp; limitations</h2>
+    <p>The classifier supports large-scale analysis of radiological reports and diagnostic yield. These results concern interpretation of report text, rather than direct detection of emboli in CT images.</p>
+  </section>
+  <section aria-labelledby="sources">
+    <h2 id="sources">Paper &amp; supporting material</h2>
+    <p><a href="https://doi.org/10.1016/j.redii.2023.100027">Full article</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/39077547/">Study abstract and evaluation details</a>.</p>
+  </section>
+  <section aria-labelledby="citation">
+    <h2 id="citation">BibTeX</h2>
+    <pre class="research-citation"><code>@article{djahnine2023bertctreports,
+  title = {BERT-based natural language processing analysis of French CT reports: Application to the measurement of the positivity rate for pulmonary embolism},
+  author = {E. Jupin-Delevaux and A. Djahnine and F. Talbot and A. Richard and S. Gouttard and A. Mansuy and P. Douek and S. A. Si-Mohamed and L. Boussel},
+  journal = {Research in Diagnostic and Interventional Imaging (ReDII)},
+  year = {2023},
+  doi = {10.1016/j.redii.2023.100027}
+}</code></pre>
+  </section>
+</div>

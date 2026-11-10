@@ -45,6 +45,22 @@ permalink: /projects/
 
 <div class="gh-grid">
   <div class="gh-card">
+    <img class="gh-media-img" src="/images/GLOW_MIDL_recap.png" alt="CT-3DFlow framework for unsupervised pulmonary CT analysis"/>
+    <div>
+      <div class="project-meta-grid">
+        <div class="project-meta-item"><strong>Domain:</strong> Medical Imaging</div>
+        <div class="project-meta-item"><strong>Method:</strong> 3D Normalizing Flows</div>
+      </div>
+      <div class="gh-title">CT-3DFlow: Unsupervised Pulmonary CT Analysis</div>
+      <div class="gh-description">Learning normal lung appearance from healthy 3D CT patches to identify abnormalities with reduced annotation requirements.</div>
+      <div class="gh-actions">
+        <a class="gh-link" href="{{ '/projects/ct-3dflow/' | relative_url }}">Project overview</a>
+        <a class="gh-link" href="https://arxiv.org/abs/2403.18514" target="_blank" rel="noopener">arXiv ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="gh-card">
     <img class="gh-media-img" src="/images/dat-parkinson-challenge.png" alt="Normal and abnormal DaT SPECT brain scans shown in axial, coronal, and sagittal views"/>
     <div>
       <div class="project-meta-grid">

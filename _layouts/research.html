@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en-US' }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  <link rel="stylesheet" href="{{ '/assets/css/research.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="{{ '/' | relative_url }}">Aissam Djahnine</a>
+    <span aria-hidden="true">/</span>
+    <a href="{{ '/projects/' | relative_url }}">Research</a>
+  </nav>
+  <main id="main">
+    {{ content }}
+  </main>
+  <footer class="research-footer">
+    <a href="{{ '/projects/' | relative_url }}">All research</a>
+    <a href="{{ '/publications/' | relative_url }}">Publications</a>
+    <a href="{{ '/' | relative_url }}">Aissam Djahnine</a>
+  </footer>
+</body>
+</html>
