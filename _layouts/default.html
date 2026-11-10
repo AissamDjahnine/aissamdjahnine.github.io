@@ -2070,18 +2070,6 @@
             color: var(--text-color);
         }
 
-        .pub-card .pub-badges .date-pill,
-        .pub-card .pub-badges .pub-type,
-        .gh-card .gh-lang,
-        .gh-card .gh-tag-chip {
-            background: var(--card-meta-bg);
-            border-color: transparent;
-            color: var(--card-meta-text);
-            border-radius: 8px;
-            text-transform: none;
-            letter-spacing: 0;
-        }
-
         [data-theme="dark"] .pub-filter-btn,
         [data-theme="dark"] .pub-collapse-btn,
         [data-theme="dark"] .pub-year-filter select {
@@ -2118,6 +2106,20 @@
             background: rgba(120, 168, 255, 0.2);
             color: #cfe4ff;
             border-color: rgba(181, 207, 239, 0.4);
+        }
+
+        .pub-card .pub-badges .date-pill,
+        .pub-card .pub-badges .pub-type,
+        .gh-card .gh-lang,
+        .gh-card .gh-tag-chip,
+        .gh-card .gh-meta .gh-tag,
+        .gh-card .gh-stars {
+            background: var(--card-meta-bg);
+            border-color: transparent;
+            color: var(--card-meta-text);
+            border-radius: 8px;
+            text-transform: none;
+            letter-spacing: 0;
         }
 
         [data-theme="dark"] .location-pill {
