@@ -84,7 +84,12 @@ image: /images/Photo_identite_3-modified.png
           </div>
           <div class="job-logo"><img src="/images/PHD2.webp" alt="Logos of Philips, CREATIS, Hospices Civils de Lyon and INSA Lyon"></div>
           <div class="people">Supervisors: <a href="https://www.spectralphotoncountingct.com/fr/team/members/2/show">Pr. Loic Boussel</a>, <a href="https://www.linkedin.com/in/nicolas-villain-9422122/">Dr. Nicolas Villain</a></div>
-          <p>I completed a CIFRE PhD in collaboration with Philips Health Technology Innovation, INSA Lyon, and Hospices Civils de Lyon (HCL), under the supervision of Prof. Loïc Boussel, Dr. Nicolas Villain, Dr. Olivier Nempont, and Dr. Alexandre Popoff. My research explored the development of AI-driven pathology detection systems for conventional CT scans, combining computer vision, medical imaging, and deep learning. Working closely with teams in healthcare and research, I contributed to the design of automated tools that could potentially improve the precision and efficiency of clinical workflows. This research led to several publications, and I gained valuable experience in Python and deep learning frameworks throughout the process.</p>
+          <ul>
+            <li>Researched 3D pathology detection in CT on a 40k-scan multi-hospital database: contrastive self-supervised pretraining (SimCLR) raised 4-pathology F1 from 0.79 (ImageNet init) to 0.94, with 3D localization of findings.</li>
+            <li>Developed CT-3DFlow, an unsupervised, position-conditioned 3D normalizing flow trained on healthy scans only that produces 3D anomaly maps and outperformed 8 anomaly-detection methods.</li>
+            <li>Published 5 peer-reviewed papers (3 first-author), including in Medical Physics and Diagn. Interv. Imaging.</li>
+            <li>Won 1st place twice at the French Society of Radiology AI challenge with the Philips–HCL team (JFR 2022 pulmonary embolism, JFR 2023 pancreatic mass), with 40+ teams across both editions, including GE HealthCare and Guerbet.</li>
+          </ul>
         </div>
         <div class="job">
           <div class="job-top">
@@ -94,7 +99,9 @@ image: /images/Photo_identite_3-modified.png
           <div class="job-logo tall"><img src="/images/ge-healthcare-logo.webp" alt="GE Healthcare logo"></div>
           <div class="people">Supervisors: Pr. Serge Muller, Dr. Andrei Petrovskii</div>
           <p class="job-topic"><strong>Investigation of automatic search methods for neural network hyperparameters (Neural Architecture Search).</strong> <strong>Application to Mammographic Data within WHARe team (Women's Health Applied Research)</strong></p>
-          <p>During my internship, I collaborated with experts to advance mammography systems for clinical diagnosis, focusing on the application of deep learning techniques to enhance the accuracy of mammographic data classification. Specifically, we explored the potential of a gradient-based Neural Architecture Search (NAS) method, DARTS (Differentiable Architecture Search), to optimize model performance for classification tasks. Through extensive experimentation, we successfully achieved state-of-the-art results, surpassing existing models in mammography classification. This project not only provided valuable hands-on experience with AI-driven research but also inspired my decision to pursue a PhD in medical imaging and deep learning.</p>
+          <ul>
+            <li>Extended neural architecture search (PC-DARTS) with a cell-initialization constraint and applied it to 5-class mammography classification (DDSM), beating the research team's hand-designed model (78.1% vs 75.0% accuracy).</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -117,22 +124,13 @@ image: /images/Photo_identite_3-modified.png
           </div>
         </div>
         <div class="edu">
-          <div class="edu-logo"><img src="/images/Sorbonne.webp" alt="Sorbonne Université logo" loading="lazy"></div>
+          <div class="edu-logo" style="gap:18px"><img style="max-width:44%" src="/images/Sorbonne.webp" alt="Sorbonne Université logo" loading="lazy"><img style="max-width:44%" src="/images/telecom_paristech_logo.webp" alt="Télécom Paris logo" loading="lazy"></div>
           <div class="edu-body">
-            <span class="chip">September 2018 – August 2020</span>
-            <h3>Pierre and Marie Curie University (Sorbonne Université)</h3>
-            <div class="edu-school">Master’s Degree, Computer Science · Paris, France · Grade: 14.66/20</div>
+            <span class="chip">2018 – 2020</span>
+            <h3>Sorbonne University &amp; Télécom Paris</h3>
+            <div class="edu-school">Master’s Degree in Computer Science, IMA track (Images, Computer Vision &amp; Graphics) · Paris, France · Grade: 14.66/20</div>
             <p><strong>Master 2:</strong> Image Processing &amp; Computer Vision (IMA). Pattern Recognition for Image Analysis and Interpretation, Advanced Image Processing, Advanced Computer Vision Techniques, Seminars and practice IMAGES, Advanced Machine Learning and Deep Learning.</p>
             <p><strong>Master 1:</strong> Engineering of Robotics and Intelligent Systems (ISI). Random Signal Processing, Statistics, Embedded Systems &amp; Sensors, Artificial Intelligence, Computer Vision, Robotics, Image Processing.</p>
-          </div>
-        </div>
-        <div class="edu">
-          <div class="edu-logo"><img src="/images/telecom_paristech_logo.webp" alt="Télécom Paris logo" loading="lazy"></div>
-          <div class="edu-body">
-            <span class="chip">September 2019 – August 2020</span>
-            <h3>Télécom Paris</h3>
-            <div class="edu-school">Master’s Degree, Computer Science · Paris, France · Grade: 14.66/20</div>
-            <p>Part of the IMA program at Sorbonne University.</p>
           </div>
         </div>
         <div class="edu">
@@ -242,7 +240,7 @@ image: /images/Photo_identite_3-modified.png
         <div class="feature-body">
           <div class="eyebrow">Featured project</div>
           <h3 class="serif">Segmentation and Measurement of Skeletal Muscle Areas on CT Scans</h3>
-          <p>Developed deep learning-based segmentation at L3/L2/L1 levels to improve sarcopenia estimation with stronger data augmentation and post-processing for cleaner masks.</p>
+          <p>Developed a U-Net that segments and quantifies skeletal muscle in CT at the L1, L2 and L3 vertebral levels for sarcopenia assessment, now used as a clinical assistance tool at HCL.</p>
           <div class="meta"><span class="chip">Medical imaging</span><span class="chip">Segmentation · CT</span></div>
           <span class="feature-link">View project →</span>
         </div>
@@ -492,7 +490,9 @@ image: /images/Photo_identite_3-modified.png
             <div class="job-logo tall"><img src="/images/ge-healthcare-logo.webp" alt="GE Healthcare logo" loading="lazy"></div>
             <div class="people">Supervisors: Pr. Serge Muller, Dr. Andrei Petrovskii</div>
             <p class="job-topic"><strong>Investigation of automatic search methods for neural network hyperparameters (Neural Architecture Search).</strong> <strong>Application to Mammographic Data within WHARe team (Women's Health Applied Research)</strong></p>
-            <p>During my internship, I collaborated with experts to advance mammography systems for clinical diagnosis, focusing on the application of deep learning techniques to enhance the accuracy of mammographic data classification. Specifically, we explored the potential of a gradient-based Neural Architecture Search (NAS) method, DARTS (Differentiable Architecture Search), to optimize model performance for classification tasks. Through extensive experimentation, we successfully achieved state-of-the-art results, surpassing existing models in mammography classification. This project not only provided valuable hands-on experience with AI-driven research but also inspired my decision to pursue a PhD in medical imaging and deep learning.</p>
+            <ul>
+            <li>Extended neural architecture search (PC-DARTS) with a cell-initialization constraint and applied it to 5-class mammography classification (DDSM), beating the research team's hand-designed model (78.1% vs 75.0% accuracy).</li>
+          </ul>
           </div>
         </article>
         <article class="entry intern">
