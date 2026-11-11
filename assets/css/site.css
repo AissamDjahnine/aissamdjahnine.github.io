@@ -108,6 +108,11 @@ svg.i { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-widt
 .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 56px; align-items: center; }
 .hero h1 { font-size: clamp(38px, 5vw, 58px); line-height: 1.05; margin: 14px 0 18px; }
 .h1-at { color: var(--muted); font-weight: 500; white-space: nowrap; }
+/* DentalMonitoring brand: gray + teal (#00AAB6, from the official logo) */
+.dm-dental { color: #8a8580; }
+.dm-monitoring { color: #00AAB6; }
+:root[data-theme="dark"] .dm-dental { color: #a9b3c1; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .dm-dental { color: #a9b3c1; } }
 .hero p.lead { font-size: 19px; color: var(--muted); max-width: 58ch; margin: 0 0 28px; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; }
 .award-badge {
