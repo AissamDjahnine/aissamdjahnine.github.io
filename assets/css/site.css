@@ -328,6 +328,8 @@ section.block { padding: 64px 0; border-top: 1px solid var(--border); }
 .card p { font-size: 15px; color: var(--muted); margin: 0; }
 .card .meta { margin-top: auto; padding-top: 4px; }
 a.thumb { display: block; }
+.card .thumb-ph { display: flex; align-items: center; justify-content: center; background: var(--accent-soft); text-decoration: none; }
+.card .thumb-ph span { font-family: "Fraunces", Georgia, serif; font-size: 34px; font-weight: 600; color: var(--accent); }
 .card-title-link { text-decoration: none; }
 .card-title-link:hover { color: var(--accent); }
 .card-links { display: flex; flex-wrap: wrap; gap: 6px 14px; padding-top: 6px; border-top: 1px solid var(--border); margin-top: 4px; }
