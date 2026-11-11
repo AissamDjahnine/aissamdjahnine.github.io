@@ -1,0 +1,120 @@
+---
+layout: null
+title: "Handwritten text recognition"
+description: "Transcribing scanned handwritten museum labels with OpenCV line and character detection, a YOLO detector and a Keras character classifier."
+permalink: /projects/handwritten-recognition/
+image: /images/projects/handwritten-recognition/line-detection.jpg
+sitemap: true
+---
+<!doctype html>
+<html lang="en">
+<head>
+<script>try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Handwritten text recognition — Aissam Djahnine</title>
+<meta name="description" content="Transcribing scanned handwritten museum labels with OpenCV line and character detection, a YOLO detector and a Keras character classifier.">
+<meta property="og:title" content="Handwritten Text Recognition System">
+<meta property="og:description" content="Transcribing scanned handwritten museum labels with OpenCV line and character detection, a YOLO detector and a Keras character classifier.">
+<meta property="og:image" content="https://aissamdjahnine.github.io/images/projects/handwritten-recognition/line-detection.jpg">
+<link rel="icon" type="image/png" href="/images/favicon.webp">
+<link rel="canonical" href="https://aissamdjahnine.github.io/projects/handwritten-recognition/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400&family=STIX+Two+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/project.css?v={{ site.time | date: '%s' }}">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a class="brand" href="/">Aissam Djahnine</a>
+      <span class="sep mid" aria-hidden="true">/</span>
+      <a class="mid" href="/#research">Research</a>
+      <span class="sep" aria-hidden="true">/</span>
+      <span class="here">Handwritten text recognition</span>
+    </nav>
+    <nav class="toc" aria-label="On this page"><a href="#abstract">Abstract</a><a href="#method">Method</a><a href="#results">Results</a></nav>
+    <button class="icon-btn" id="theme-btn" aria-label="Toggle dark mode"><svg class="i" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></svg></button>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <header class="paper-head">
+      <span class="venue">Computer vision project · 2021</span>
+      <h1 class="serif">Handwritten Text Recognition System</h1>
+      <p class="subtitle">Canny edge detection, a YOLO detector and a CNN character classifier</p>
+      <p class="authors"><span class="me">Aissam Djahnine</span></p>
+      
+      <div class="actions">
+      </div>
+    </header>
+
+    <div class="tldr" aria-label="Key numbers">
+      <div><div class="num">97%</div><div class="lbl">character accuracy on the test set</div></div>
+      <div><div class="num">36</div><div class="lbl">classes: digits 0–9 and letters A–Z</div></div>
+      <div><div class="num">2</div><div class="lbl">detectors: Canny edges and YOLO</div></div>
+      <div><div class="num">800²</div><div class="lbl">pixels, normalized input size</div></div>
+    </div>
+
+    <figure class="teaser">
+      <a href="/images/projects/handwritten-recognition/line-detection.webp" aria-label="Open the research figure at full resolution">
+        <img src="/images/projects/handwritten-recognition/line-detection.webp" alt="Two scanned museum labels with blue boxes around each detected line of handwritten and printed text">
+      </a>
+      <figcaption>Line detection on scanned labels: each blue box is a text line passed to character segmentation and recognition.</figcaption>
+    </figure>
+
+    <div class="prose">
+      <section class="s" id="abstract">
+        <h2 class="serif">Abstract</h2>
+        <div class="abstract"><p>The goal was to transcribe a folder of scanned images, handwritten documents describing objects in a museum collection, into one text file per image. The system chains classical computer vision for line and character detection with a deep learning classifier for recognition, and comes with scripts to process a whole folder or a single image.</p><p>Lines are found from edges and contours, characters are separated, binarized and resized to 32×32, then classified by a TensorFlow/Keras network trained on MNIST digits and NIST Special Database 19 letters, reaching 97% accuracy on its test set. A YOLO character detector trained on a small hand-labeled set was explored as an alternative to Canny edge detection.</p><p class="kw"><strong>Keywords:</strong> handwriting recognition · OCR · OpenCV · Canny edge detection · YOLO · TensorFlow · Keras</p></div>
+      </section>
+
+      <section class="s" id="method">
+        <h2 class="serif">Method</h2>
+        <h3 class="sub"><span class="num">1</span>Preprocessing</h3><p>The scans had white regions above and below each label. Images are cropped to the label and resized to a regular 800 × 800 size, which suited the rest of the pipeline.</p><figure class="pfig"><a class="frame" href="/images/projects/handwritten-recognition/preprocessing.webp"><img src="/images/projects/handwritten-recognition/preprocessing.webp" alt="A scanned label before and after cropping and resizing" loading="lazy"></a><figcaption><b>Figure 1:</b> Cropping and resizing: (a) before, (b) after.</figcaption></figure><h3 class="sub"><span class="num">2</span>Line detection</h3><p>Lines are detected from edges and contours. Thresholding is the crucial step: it decides how well lines are separated, and remains sensitive to noise and irregular text.</p><h3 class="sub"><span class="num">3</span>Character detection with Canny edges</h3><p>Canny edge detection finds character edges and contours, which are saved as bounding boxes and classified. The method needs well-chosen thresholds that are hard to automate, so an interactive version lets the user tune them from the visual result.</p><figure class="pfig"><a class="frame" href="/images/projects/handwritten-recognition/canny-thresholds.webp"><img src="/images/projects/handwritten-recognition/canny-thresholds.webp" alt="Two windows with threshold sliders: an edge map full of noise and a clean binarized label" loading="lazy"></a><figcaption><b>Figure 2:</b> Selecting the Canny thresholds by hand: too low (left) keeps the paper texture, a good setting (right) isolates the writing.</figcaption></figure><h3 class="sub"><span class="num">4</span>Character detection with YOLO (optional)</h3><p>As an alternative, a YOLO model was trained to draw bounding boxes around characters from a small set of hand-labeled images. The boxes are cropped, thresholded to binarize them, and passed to the recognition model.</p><figure class="pfig"><a class="frame" href="/images/projects/handwritten-recognition/yolo-detection.webp"><img src="/images/projects/handwritten-recognition/yolo-detection.webp" alt="Two labels covered with small blue character boxes predicted by YOLO" loading="lazy"></a><figcaption><b>Figure 3:</b> Character boxes predicted by the YOLO detector.</figcaption></figure><h3 class="sub"><span class="num">5</span>Recognition</h3><p>Each detected character is binarized, separated from noise and resized to 32 × 32, the input size of the classifier. The TensorFlow/Keras network recognizes digits (0–9) and capital letters (A–Z); special characters such as dashes and ticks are not recognized. It was trained on MNIST digits and NIST Special Database 19 letters and reached 97% accuracy on the test set.</p><figure class="pfig"><a class="frame" href="/images/projects/handwritten-recognition/datasets.webp"><img src="/images/projects/handwritten-recognition/datasets.webp" alt="Sample grids of MNIST handwritten digits and A–Z handwritten letters" loading="lazy"></a><figcaption><b>Figure 4:</b> Training data: MNIST digits (0–9) and handwritten letters A–Z.</figcaption></figure><div class="facts"><span class="chip">Python</span><span class="chip">OpenCV</span><span class="chip">TensorFlow</span><span class="chip">Keras</span><span class="chip">YOLO</span></div>
+      </section>
+
+      <section class="s" id="results">
+        <h2 class="serif">Results &amp; challenges</h2>
+        <ul class="findings"><li><span><strong>Clean data does not transfer:</strong> MNIST and NIST are pre-processed and clean, while real labels are not, so accuracy on the museum scans is far below the 97% test score.</span></li><li><span><strong>Lines work, words are hard:</strong> line detection works well, but word boundaries are hard to find, so the output separates characters rather than words.</span></li><li><span><strong>YOLO needs more labels:</strong> with only a few annotated images, the YOLO detector does not work well on these scans.</span></li></ul><p>Handwriting is much harder than printed OCR: styles vary almost without limit, cursive writers join letters so that the model reads several characters as one, and the labels mix printed and handwritten text. Labeling for detection is slow, about 8–9 minutes per image, and labeling errors lead directly to detection errors.</p><figure class="pfig"><a class="frame" href="/images/projects/handwritten-recognition/labeling.webp"><img src="/images/projects/handwritten-recognition/labeling.webp" alt="Annotation tool with a label image and bounding boxes being drawn around characters" loading="lazy"></a><figcaption><b>Figure 5:</b> Labeling characters for the YOLO detector.</figcaption></figure>
+      </section>
+
+      <section class="s" id="conclusions">
+        <h2 class="serif">Conclusion &amp; next steps</h2>
+        <p>The system is not yet accurate enough for real-world use. The most promising next step is to label more good-quality data (more than 200 images) and train the models on handwriting from these documents directly, so they learn the real character styles and how to separate joined letters.</p>
+      </section>
+
+    </div>
+
+    <section class="more" aria-labelledby="more-title">
+      <h2 class="serif" id="more-title">More research</h2>
+      <div class="more-grid">
+        <a class="mcard" href="/projects/cyclegan/">
+          <div class="thumb"><img src="/images/github-projects/gan-project.webp" alt="" loading="lazy"></div>
+          <div class="body"><h3>Cell image segmentation with CycleGAN</h3><div class="meta">Master's project · 2020</div></div>
+        </a>
+        <a class="mcard" href="/projects/video-inpainting/">
+          <div class="thumb"><img src="/images/projects/video-inpainting/architecture.webp" alt="" loading="lazy"></div>
+          <div class="body"><h3>Unsupervised Spatiotemporal Data Inpainting</h3><div class="meta">Course project · 2020</div></div>
+        </a>
+        <a class="mcard" href="/projects/nas-darts/">
+          <div class="thumb"><img src="/images/projects/nas-darts/learned-cells.webp" alt="" loading="lazy"></div>
+          <div class="body"><h3>Neural Architecture Search for mammography (DARTS)</h3><div class="meta">GE Healthcare · 2020</div></div>
+        </a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><a href="/">Aissam Djahnine</a> · AI Research Engineer</span>
+    <span><a href="/#research">All research</a> · <a href="/#publications">Publications</a></span>
+  </div>
+</footer>
+<script src="/assets/js/project.js?v={{ site.time | date: '%s' }}"></script>
+</body>
+</html>
