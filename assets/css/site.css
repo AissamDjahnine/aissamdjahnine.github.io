@@ -206,6 +206,8 @@ section.block { padding: 64px 0; border-top: 1px solid var(--border); }
 .land { fill: var(--map-land); stroke: var(--map-border); stroke-width: 0.6; vector-effect: non-scaling-stroke; transition: fill .15s; }
 .land.visited { fill: var(--accent); fill-opacity: 0.75; cursor: pointer; }
 .land.visited:hover, .land.visited.hl { fill-opacity: 1; stroke: var(--text); stroke-width: 1.4; }
+.land.home { fill: #e0a52b; fill-opacity: 0.9; cursor: default; }
+.land.home:hover { fill-opacity: 1; stroke: var(--text); stroke-width: 1.4; }
 .pin { fill: var(--accent); stroke: var(--card); stroke-width: 1.5; vector-effect: non-scaling-stroke; cursor: pointer; }
 .pin.hl, .pin:hover { stroke: var(--text); }
 .map-tip {
@@ -221,6 +223,7 @@ section.block { padding: 64px 0; border-top: 1px solid var(--border); }
 .map-legend .dot { width: 12px; height: 12px; border-radius: 3px; background: var(--map-land); border: 1px solid var(--map-border); margin-left: 6px; }
 .map-legend .dot:first-child { margin-left: 0; }
 .map-legend .dot.visited { background: var(--accent); border-color: var(--accent); }
+.map-legend .dot.home { background: #e0a52b; border-color: #e0a52b; }
 .map-hint { margin-left: auto; color: var(--faint); }
 .flag-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
 .flag-chip {

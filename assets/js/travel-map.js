@@ -10,6 +10,7 @@
     '208': 'Denmark', '380': 'Italy', '756': 'Switzerland', '458': 'Malaysia', '056': 'Belgium', '724': 'Spain',
     '792': 'Turkey', '764': 'Thailand', '818': 'Egypt', '788': 'Tunisia', '250': 'France', '434': 'Libya',
     '276': 'Germany', '616': 'Poland', '008': 'Albania' };
+  var HOME = { '012': 'Algeria' };
   var PINS = { 'Monaco': [7.42, 43.74], 'Canary Islands': [-15.6, 28.3] };
 
   var wrap = document.getElementById('travel-map');
@@ -38,7 +39,7 @@
     var shapes = {};
     g.selectAll('path').data(features).join('path')
       .attr('d', path)
-      .attr('class', function (f) { return nameOf(f) ? 'land visited' : 'land'; })
+      .attr('class', function (f) { return HOME[f.id] ? 'land home' : (nameOf(f) ? 'land visited' : 'land'); })
       .each(function (f) { var n = nameOf(f); if (n) shapes[n] = this; });
 
     Object.keys(PINS).forEach(function (n) {
@@ -63,6 +64,16 @@
       if (shapes[name]) shapes[name].classList.toggle('hl', on);
       chips.forEach(function (c) { c.classList.toggle('hl', on && c.dataset.country === name); });
     }
+
+    g.selectAll('.home')
+      .on('pointermove', function (evt, d) {
+        var r = wrap.getBoundingClientRect();
+        tip.textContent = HOME[d.id] + ' · Home';
+        tip.style.left = (evt.clientX - r.left) + 'px';
+        tip.style.top = (evt.clientY - r.top) + 'px';
+        tip.hidden = false;
+      })
+      .on('pointerleave', function () { tip.hidden = true; });
 
     g.selectAll('.visited, .pin')
       .on('pointermove', function (evt, d) { var n = d.pin || nameOf(d); highlight(n, true); showTip(n, evt); })
