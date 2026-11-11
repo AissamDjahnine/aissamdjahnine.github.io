@@ -1,0 +1,157 @@
+---
+layout: null
+title: "PhD thesis"
+description: "Overview of the PhD thesis: detecting pulmonary anomalies in chest CT with supervised, weakly supervised and unsupervised deep learning."
+permalink: /projects/phd-thesis/
+image: /images/projects/phd-thesis/ct3dflow-pipeline.png
+sitemap: true
+---
+<!doctype html>
+<html lang="en">
+<head>
+<script>try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PhD thesis — Aissam Djahnine</title>
+<meta name="description" content="Overview of the PhD thesis: detecting pulmonary anomalies in chest CT with supervised, weakly supervised and unsupervised deep learning.">
+<meta property="og:title" content="Automatic Detection of Pathologies in Conventional Scanner Data">
+<meta property="og:description" content="Overview of the PhD thesis: detecting pulmonary anomalies in chest CT with supervised, weakly supervised and unsupervised deep learning.">
+<meta property="og:image" content="https://aissamdjahnine.github.io/images/projects/phd-thesis/ct3dflow-pipeline.png">
+<link rel="icon" type="image/png" href="/images/favicon.webp">
+<link rel="canonical" href="https://aissamdjahnine.github.io/projects/phd-thesis/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400&family=STIX+Two+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/project.css?v={{ site.time | date: '%s' }}">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a class="brand" href="/">Aissam Djahnine</a>
+      <span class="sep mid" aria-hidden="true">/</span>
+      <a class="mid" href="/#research">Research</a>
+      <span class="sep" aria-hidden="true">/</span>
+      <span class="here">PhD thesis</span>
+    </nav>
+    <nav class="toc" aria-label="On this page"><a href="#abstract">Abstract</a><a href="#supervised">Supervised</a><a href="#weakly">Weakly supervised</a><a href="#unsupervised">Unsupervised</a><a href="#citation">BibTeX</a></nav>
+    <button class="icon-btn" id="theme-btn" aria-label="Toggle dark mode"><svg class="i" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></svg></button>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <header class="paper-head">
+      <span class="venue">PhD thesis · INSA Lyon · Defended September 17, 2024</span>
+      <h1 class="serif">Automatic Detection of Pathologies in Conventional Scanner Data</h1>
+      <p class="subtitle">Détection automatique d’anomalies sur examens tomodensitométriques standards</p>
+      <p class="authors"><span class="me">Aissam Djahnine</span></p>
+      <p class="affil">Philips Research France · CREATIS (INSA Lyon, Université Claude Bernard Lyon 1) · Hospices Civils de Lyon</p>
+      <div class="actions">
+        <a class="btn primary" href="https://theses.hal.science/tel-05263492/"><svg class="i" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>Manuscript</a>
+        <a class="btn" href="https://hal.science/tel-05263492/"><svg class="i" viewBox="0 0 24 24"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>HAL</a>
+        <a class="btn" href="https://theses.fr/2024LYO10167"><svg class="i" viewBox="0 0 24 24"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>theses.fr</a>
+        <a class="btn" href="#citation"><svg class="i" viewBox="0 0 24 24"><path d="M7 7h4v4H7zM13 7h4v4h-4zM7 11c0 4-2 6-2 6M13 11c0 4-2 6-2 6"/></svg>Cite</a>
+      </div>
+    </header>
+
+    <div class="tldr" aria-label="Key numbers">
+      <div><div class="num">3</div><div class="lbl">levels of supervision, from segmentation to none</div></div>
+      <div><div class="num">1st</div><div class="lbl">place, JFR 2022 data challenge (PE)</div></div>
+      <div><div class="num">0.952</div><div class="lbl">AUROC, unsupervised 3D flow</div></div>
+      <div><div class="num">88.8%</div><div class="lbl">recall of weakly supervised localization</div></div>
+    </div>
+
+    <figure class="teaser">
+      <a href="/images/projects/phd-thesis/ct3dflow-pipeline.webp" aria-label="Open the research figure at full resolution">
+        <img src="/images/projects/phd-thesis/ct3dflow-pipeline.webp" alt="CT-3DFlow pipeline: a 3D normalizing flow trained on normal patches scores overlapping patches of a CT scan into a log-likelihood map that is aggregated and thresholded into a normal or abnormal prediction">
+      </a>
+      <figcaption>The final contribution of the thesis: a 3D normalizing flow trained only on normal lung patches flags any deviation from normal anatomy, without annotation.</figcaption>
+    </figure>
+
+    <div class="prose">
+      <section class="s" id="abstract">
+        <h2 class="serif">Abstract</h2>
+        <div class="abstract"><p>Computed tomography (CT) is a common medical imaging examination used to diagnose or monitor many conditions, particularly in the thoracic region. These CT scans produce large amounts of high-quality volumetric data. However, the increasing number of scans and images produced by acquisitions result in a significant workload for radiologists. Radiologists primarily focus on suspected anomalies based on the initial clinical indication, which may lead to underdiagnosis of other atypical or unrelated anomalies. This underscores the importance of developing automatic alert systems based on AI to assist in identifying and locating incidental pathologies. Our thesis work focused on developing this type of system, applied to the detection and characterization of pulmonary pathologies in CT scans, using machine learning methods that require minimal annotations and are independent of clinical indications.</p><p>In this thesis, we explore different supervision methods to gradually reduce the dependency on the number of annotated data needed to train anomaly detection algorithms in CT scans. Through supervised learning, we proposed a method for detecting pulmonary embolisms in scans based on the segmentation of blood clots responsible for the embolism. We compared this segmentation-based supervised approach to a classification approach supervised only by the indication of the presence of a pulmonary embolism, illustrating the impact of the type of supervision on performance. We also proposed methods for automatically estimating clinical biomarkers such as the Qanadli score and the VD/VG ratio.</p><p>Although this supervised approach works very well and is often preferred for developing clinical decision support systems specific to a pathology, an anomaly detection system must support all pathologies and anatomical conditions encountered, and we do not currently have a representative annotated database. Therefore, we opted for a semiological approach that identifies specific patterns and morphologies present in most pulmonary pathologies (emphysema, cysts, nodules, consolidation, and interstitial patterns) and proposed a weakly supervised approach based on contrastive self-supervised pre-training. This approach allows detecting and locating a wide range of anomalies without requiring exhaustive and detailed data annotation.</p><p>Finally, we proposed an unsupervised approach using a generative method. Generative methods allow learning and representing complex distributions ; we learned the distribution of "normal" patients to then identify anomalies by deviation from this distribution. Training this model only requires a set of examinations from patients without anomalies, thus overcoming the difficulties in creating a representative database of all observed pathologies.</p><p class="kw"><strong>Keywords:</strong> Anomaly detection · Computed Tomography · Supervised learning · Weakly supervised learning · Unsupervised learning</p></div>
+      </section>
+
+      <section class="s" id="objectives">
+        <h2 class="serif">Objectives</h2>
+        <p>The thesis focuses on chest CT: a widely used modality with many examinations and highly reproducible volumetric data. The goal is a reading assistant that detects and localizes thoracic anomalies on any 3D CT scan with little annotation, by progressively reducing the level of supervision, from supervised to unsupervised methods.</p><div class="ptable-wrap"><p class="ptable-caption"><b>Table 1:</b> Three levels of supervision explored in the thesis, from most to least annotation.</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th scope="col">Part</th><th scope="col">Supervision</th><th scope="col">Target anomalies</th><th scope="col">Annotation</th></tr></thead><tbody><tr><th scope="row">I</th><td>Supervised</td><td>Pulmonary embolism</td><td>Pixel level (lesion segmentation)</td></tr><tr><th scope="row">II</th><td>Self- and weakly supervised</td><td>5 common semiological signs: emphysema and cysts, nodules, consolidation, interstitial pattern, normal</td><td>Patch level (image regions)</td></tr><tr><th scope="row">III</th><td>Unsupervised</td><td>Any deviation from normal lung anatomy</td><td>None (normal scans only)</td></tr></tbody></table></div></div>
+      </section>
+
+      <section class="s" id="supervised">
+        <h2 class="serif">I. Supervised: pulmonary embolism</h2>
+        <p>Pulmonary embolism (PE) is a frequent and serious condition in which a clot blocks the pulmonary arteries. Diagnosis relies on CT angiography, the RV/LV diameter ratio and the Qanadli obstruction score. We compared two levels of supervision: a 3D segmentation network trained on fine clot segmentations from 54 PE-positive patients, and a 2D CNN + RNN classifier trained on image-level labels from more than 7,000 patients.</p><ul class="findings"><li><span><strong>Segmentation beats labels:</strong> learning from a few precise clot segmentations outperformed classification trained on thousands of image-level labels.</span></li><li><span><strong>Severity, not just presence:</strong> the same pipeline estimates the Qanadli score and the RV/LV ratio automatically.</span></li><li><span><strong>First place</strong> at the 2022 JFR data challenge (Journées Francophones de Radiologie) organized by the French Society of Radiology.</span></li></ul><p>Full write-up: <a class="text-link" href="/projects/pulmonary-embolism/">Detection and severity quantification of pulmonary embolism</a>.</p><p>Supervised learning works very well for a specific pathology, but an anomaly detection system must cover every pathology and anatomical condition, and no representative annotated database exists. The next two parts reduce the need for annotation.</p>
+      </section>
+
+      <section class="s" id="weakly">
+        <h2 class="serif">II. Self- and weakly supervised: semiological signs</h2>
+        <p>Instead of one detector per disease, a semiological approach targets the patterns shared by most lung diseases: emphysema and cysts, nodules, consolidation and interstitial patterns. A 3D patch classifier is pre-trained with SimCLR contrastive learning on unlabeled patches from 1,337 patients, then fine-tuned on 4,000 visually selected patches from 1,330 patients. At inference, overlapping patches produce per-sign probability maps that are aggregated into a patient-level prediction.</p><figure class="pfig"><a class="frame" href="/images/projects/phd-thesis/ssl-pipeline.webp"><img src="/images/projects/phd-thesis/ssl-pipeline.webp" alt="Two-stage method: SimCLR pre-training of a patch classifier on unlabeled patches, supervised fine-tuning on labeled patches, then per-label probability maps aggregated into a patient prediction" loading="lazy"></a><figcaption><b>Figure 1:</b> Detection method. Stage 1: self-supervised SimCLR pre-training, then supervised fine-tuning of the patch classifier. Stage 2: per-label probability maps on overlapping 50³ patches, aggregated at patient level.</figcaption></figure><figure class="pfig"><a class="frame" href="/images/projects/phd-thesis/latent-space.webp"><img src="/images/projects/phd-thesis/latent-space.webp" alt="Latent space projections colored by sign (normal, emphysema, consolidation, nodules, interstitial) for random initialization, ImageNet initialization and SimCLR pre-training with fine-tuning" loading="lazy"></a><figcaption><b>Figure 2:</b> Structure of the latent space for random initialization (left), ImageNet weights (right) and SimCLR pre-training with fine-tuning (bottom). Pre-training separates the five classes much more clearly.</figcaption></figure><figure class="pfig"><a class="frame" href="/images/projects/phd-thesis/semiological-maps.webp"><img src="/images/projects/phd-thesis/semiological-maps.webp" alt="Axial CT slices with probability maps for emphysema, consolidation, nodules and interstitial pattern, and a 3D view, for four patients" loading="lazy"></a><figcaption><b>Figure 3:</b> Localization. CT slices with the prediction maps of the patch classifier for each sign (EMPH, COND, NOD, INTER) and a 3D view; warmer colors mean higher probability.</figcaption></figure><ul class="findings"><li><span><strong>Self-supervision helps:</strong> SimCLR pre-training gave a clear boost in patient-level classification over random and ImageNet initialization, on a 251-patient test set.</span></li><li><span><strong>Simultaneous localization:</strong> the maps localize several abnormal regions at once, consistent with the ground-truth annotations.</span></li><li><span><strong>88.8% recall and 88.3% precision</strong> of localization in a qualitative analysis by an expert radiologist.</span></li></ul><p>Full write-ups: <a class="text-link" href="/projects/weakly-supervised-ct/">Weakly-supervised pathology detection and localization</a> and <a class="text-link" href="/projects/contrastive-pretraining/">Tailored 3D CT contrastive pretraining</a>.</p>
+      </section>
+
+      <section class="s" id="unsupervised">
+        <h2 class="serif">III. Unsupervised: normalizing flows</h2>
+        <p>Normalizing flows are generative networks that learn the exact probability distribution of the data by transforming it into a simpler one. Trained on masked lung images from normal patients only, the model assigns low likelihood to anything that departs from normal anatomy. Thresholds and filters are selected on a validation set, and slice- or patch-level scores are aggregated into a patient-level decision.</p><figure class="pfig"><a class="frame" href="/images/projects/phd-thesis/multiplane-flows.webp"><img src="/images/projects/phd-thesis/multiplane-flows.webp" alt="Three variants: a 2D flow on axial slices, a 2.5D flow with adjacent slices, and a multi-plane flow combining axial, coronal and sagittal flows into a 3D binary map" loading="lazy"></a><figcaption><b>Figure 4:</b> 2D, 2.5D and multi-plane methods. The 2.5D variant adds spatial context from adjacent slices; the multi-plane variant runs one flow per plane and aggregates them at patient level.</figcaption></figure><figure class="pfig"><a class="frame" href="/images/projects/phd-thesis/generated-ct.webp"><img src="/images/projects/phd-thesis/generated-ct.webp" alt="Grid of real and generated lung CT images in axial, coronal, sagittal and 2.5D views" loading="lazy"></a><figcaption><b>Figure 5:</b> Real (left three columns) and generated (right three columns) CT images in (a) axial, (b) coronal and (c) sagittal planes, and (d) the 2.5D axial representation. The flow preserves vessels, bronchi and lung contours.</figcaption></figure><figure class="pfig"><a class="frame" href="/images/projects/phd-thesis/conditional-generation.webp"><img src="/images/projects/phd-thesis/conditional-generation.webp" alt="Images generated by the flow in axial, coronal and sagittal planes, conditioned on slice position from 0.09 to 0.99" loading="lazy"></a><figcaption><b>Figure 6:</b> Conditioned generation. The flow is conditioned on the slice position in the volume (0 at the top of the patient, 1 at the bottom), or on the X, Y, Z coordinates of a 3D patch.</figcaption></figure><p>The 3D variant, CT-3DFlow, works on 3D patches to catch pathologies that are hard to see in 2D or 2.5D and to localize them in 3D.</p><div class="ptable-wrap"><p class="ptable-caption"><b>Table 2:</b> Patient-level performance on a test set of 251 patients with various combinations of anomalies (defense slides). Best in bold; best unsupervised F1 and accuracy underlined.</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th scope="col">Method</th><th scope="col">Family</th><th scope="col">AUROC</th><th scope="col">F1</th><th scope="col">Accuracy</th></tr></thead><tbody><tr><th scope="row">AE</th><td>Reconstruction</td><td>0.608</td><td>0.538</td><td>0.556</td></tr><tr><th scope="row">VAE</th><td>Reconstruction</td><td>0.647</td><td>0.607</td><td>0.598</td></tr><tr><th scope="row">One-Class SVM</th><td>One-class</td><td>0.872</td><td>0.853</td><td>0.867</td></tr><tr><th scope="row">DRAEM</th><td>Reconstruction</td><td>0.651</td><td>0.621</td><td>0.628</td></tr><tr><th scope="row">f-AnoGAN</th><td>GAN</td><td>0.821</td><td>0.783</td><td>0.765</td></tr><tr><th scope="row">GANomaly</th><td>GAN</td><td>0.772</td><td>0.74</td><td>0.694</td></tr><tr><th scope="row">FastFlow</th><td>Normalizing flow</td><td>0.942</td><td>0.912</td><td>0.903</td></tr><tr><th scope="row">CFLOW-AD</th><td>Normalizing flow</td><td>0.732</td><td>0.739</td><td>0.706</td></tr><tr><th scope="row">DifferNet</th><td>Normalizing flow</td><td>0.901</td><td>0.861</td><td>0.843</td></tr><tr><th scope="row">AnoDDPM</th><td>Diffusion</td><td>0.924</td><td>0.891</td><td>0.873</td></tr><tr class="mid"><th scope="row">SimCLR + fine-tuning (Part II)</th><td>Self-supervised</td><td>0.963</td><td class="best">0.974</td><td class="best">0.952</td></tr><tr class="ours mid"><th scope="row">NF 2D</th><td>Unsupervised (ours)</td><td>0.933</td><td>0.909</td><td>0.891</td></tr><tr class="ours"><th scope="row">NF 2D, conditioned</th><td>Unsupervised (ours)</td><td class="best">0.971</td><td>0.931</td><td>0.909</td></tr><tr class="ours"><th scope="row">NF 2.5D</th><td>Unsupervised (ours)</td><td>0.956</td><td>0.903</td><td>0.916</td></tr><tr class="ours"><th scope="row">NF multi-plane</th><td>Unsupervised (ours)</td><td>0.918</td><td>0.9</td><td>0.895</td></tr><tr class="ours"><th scope="row">NF 3D (CT-3DFlow)</th><td>Unsupervised (ours)</td><td>0.952</td><td class="second">0.939</td><td class="second">0.924</td></tr><tr class="ours"><th scope="row">NF 3D, conditioned</th><td>Unsupervised (ours)</td><td>0.927</td><td>0.902</td><td>0.9</td></tr></tbody></table></div></div><figure class="pfig"><a class="frame" href="/images/projects/phd-thesis/unsupervised-maps.webp"><img src="/images/projects/phd-thesis/unsupervised-maps.webp" alt="Axial CT slices next to anomaly probability maps for interstitial pattern, emphysema with mass, mass, and consolidation" loading="lazy"></a><figcaption><b>Figure 7:</b> Unsupervised localization: (a) interstitial pattern, (b) emphysema and mass, (c) mass, (d) consolidation. Warmer colors mean higher anomaly probability.</figcaption></figure><ul class="findings"><li><span><strong>Beats other unsupervised families:</strong> our flows outperform one-class SVM, autoencoders, GANs, diffusion models and other normalizing flows.</span></li><li><span><strong>3D over 2D:</strong> 3D models perform better than the 2D versions.</span></li><li><span><strong>Close to self-supervision:</strong> without any annotation, the flows are competitive with the SimCLR model of Part II.</span></li><li><span><strong>Localization without supervision:</strong> the likelihood maps highlight the abnormal regions.</span></li></ul><p>Full write-up: <a class="text-link" href="/projects/ct-3dflow/">CT-3DFlow</a>.</p>
+      </section>
+
+      <section class="s" id="conclusions">
+        <h2 class="serif">Conclusion &amp; perspectives</h2>
+        <ul class="findings"><li><span><strong>Less annotation:</strong> exploring several levels of supervision reduced the dependence on annotations while keeping good performance.</span></li><li><span><strong>Self-supervision and semiology:</strong> a promising route to generic reading-assistance systems.</span></li><li><span><strong>Unsupervised methods:</strong> an interesting alternative for anomaly detection, outperforming existing state-of-the-art methods.</span></li><li><span><strong>Current limits:</strong> performance does not yet allow routine clinical use, but opens promising perspectives.</span></li></ul><p>Next steps include multimodal methods that combine imaging modalities (MRI, ultrasound, PET), text reports and biomarkers, and spectral CT, which adds information on tissue composition by separating materials by their absorption at different energies.</p>
+      </section>
+
+      <section class="s" id="jury">
+        <h2 class="serif">Jury</h2>
+        <ul><li>Pr. Isabelle Bloch, Sorbonne Université · Reviewer</li><li>Pr. Alexis Jacquier, Aix-Marseille Université · Reviewer</li><li>Pr. Adrian Basarab, Université Claude Bernard Lyon 1 · Examiner</li><li>Dr. Constance de Margerie-Mellon, Université Paris Cité · Examiner</li><li>Dr. Olivier Nempont, Philips Research France · Co-supervisor</li><li>Dr. Alexandre Popoff, Philips Research France · Co-supervisor</li><li>Pr. Loïc Boussel, UCBL, Hospices Civils de Lyon · Thesis director</li></ul>
+      </section>
+
+      <section class="s" id="sources">
+        <h2 class="serif">Publications from the thesis</h2>
+        <ol class="refs"><li><a href="/projects/pulmonary-embolism/">Detection and severity quantification of pulmonary embolism with 3D CT data using an automated deep learning-based artificial solution</a>, Diagnostic and Interventional Imaging, 2024.</li><li><a href="/projects/weakly-supervised-ct/">Weakly-supervised learning-based pathology detection and localization in 3D chest CT scans</a>, Medical Physics, 2024.</li><li><a href="/projects/bert-ct-reports/">BERT-based natural language processing analysis of French CT reports: application to the measurement of the positivity rate for pulmonary embolism</a>, Research in Diagnostic and Interventional Imaging, 2023.</li><li><a href="/projects/ecapri/">eCAPRI: automated TAVI risk assessment with imaging biomarkers</a>, European Radiology, 2025.</li><li><a href="/projects/ct-3dflow/">CT-3DFlow: Leveraging 3D Normalizing Flows for Unsupervised Detection of Pathological Pulmonary CT scans</a>, arXiv, 2024.</li><li><a href="/projects/contrastive-pretraining/">Tailored 3D CT contrastive pretraining to improve pulmonary pathology classification</a>, IEEE ICSP, 2022.</li></ol>
+      </section>
+
+      <section class="s" id="citation">
+        <h2 class="serif">BibTeX</h2>
+        <div class="bib"><button class="btn copy" type="button">Copy</button><pre><code>@phdthesis{djahnine2024thesis,
+  title  = {D{\'e}tection automatique d'anomalies sur examens
+            tomodensitom{\'e}triques standards},
+  author = {Djahnine, Aissam},
+  school = {INSA Lyon},
+  year   = {2024},
+  number = {2024LYO10167},
+  url    = {https://theses.hal.science/tel-05263492}
+}</code></pre></div>
+      </section>
+
+    </div>
+
+    <section class="more" aria-labelledby="more-title">
+      <h2 class="serif" id="more-title">More research</h2>
+      <div class="more-grid">
+        <a class="mcard" href="/projects/pulmonary-embolism/">
+          <div class="thumb"><img src="/images/JFR_recap.webp" alt="" loading="lazy"></div>
+          <div class="body"><h3>Pulmonary embolism detection and severity quantification with 3D CT</h3><div class="meta">Diagnostic and Interventional Imaging · 2024</div></div>
+        </a>
+        <a class="mcard" href="/projects/weakly-supervised-ct/">
+          <div class="thumb"><img src="/images/SIMCLR_recap.webp" alt="" loading="lazy"></div>
+          <div class="body"><h3>Weakly-Supervised Pathology Detection and Localization in 3D Chest Scans</h3><div class="meta">Medical Physics · 2024</div></div>
+        </a>
+        <a class="mcard" href="/projects/ct-3dflow/">
+          <div class="thumb"><img src="/images/GLOW_MIDL_recap.webp" alt="" loading="lazy"></div>
+          <div class="body"><h3>CT-3DFlow: Unsupervised Pulmonary CT Analysis</h3><div class="meta">arXiv · 2024</div></div>
+        </a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><a href="/">Aissam Djahnine</a> · AI Research Engineer</span>
+    <span><a href="/#research">All research</a> · <a href="/#publications">Publications</a></span>
+  </div>
+</footer>
+<script src="/assets/js/project.js?v={{ site.time | date: '%s' }}"></script>
+</body>
+</html>
