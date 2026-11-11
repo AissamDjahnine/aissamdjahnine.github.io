@@ -1,0 +1,126 @@
+---
+layout: null
+title: "NAS for mammography"
+description: "Gradient-based neural architecture search (DARTS, PC-DARTS) for mammogram classification at GE Healthcare."
+permalink: /projects/nas-darts/
+image: /images/projects/nas-darts/learned-cells.png
+sitemap: true
+---
+<!doctype html>
+<html lang="en">
+<head>
+<script>try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NAS for mammography — Aissam Djahnine</title>
+<meta name="description" content="Gradient-based neural architecture search (DARTS, PC-DARTS) for mammogram classification at GE Healthcare.">
+<meta property="og:title" content="Investigation of automatic search methods for neural network hyperparameters (Neural Architecture Search)">
+<meta property="og:description" content="Gradient-based neural architecture search (DARTS, PC-DARTS) for mammogram classification at GE Healthcare.">
+<meta property="og:image" content="https://aissamdjahnine.github.io/images/projects/nas-darts/learned-cells.png">
+<link rel="icon" type="image/png" href="/images/favicon.webp">
+<link rel="canonical" href="https://aissamdjahnine.github.io/projects/nas-darts/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400&family=STIX+Two+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/project.css?v={{ site.time | date: '%s' }}">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a class="brand" href="/">Aissam Djahnine</a>
+      <span class="sep mid" aria-hidden="true">/</span>
+      <a class="mid" href="/#research">Research</a>
+      <span class="sep" aria-hidden="true">/</span>
+      <span class="here">NAS for mammography</span>
+    </nav>
+    <nav class="toc" aria-label="On this page"><a href="#abstract">Abstract</a><a href="#method">Method</a><a href="#experiments">Experiments</a><a href="#results">Results</a></nav>
+    <button class="icon-btn" id="theme-btn" aria-label="Toggle dark mode"><svg class="i" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></svg></button>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <header class="paper-head">
+      <span class="venue">Master's thesis · GE Healthcare · 2020</span>
+      <h1 class="serif">Neural Architecture Search for Mammography</h1>
+      <p class="subtitle">Investigation of automatic search methods for neural network hyperparameters (Neural Architecture Search). Application to Mammographic Data</p>
+      <p class="authors"><span class="me">Aissam Djahnine</span> · supervised by Isabelle Bloch and Andrei Petrovskii</p>
+      <p class="affil">GE Healthcare, WHARe team (Women's Health Applied Research) · Sorbonne Université (IMA)</p>
+      <div class="actions">
+        <a class="btn primary" href="/#internships"><svg class="i" viewBox="0 0 24 24"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>Internship details</a>
+      </div>
+    </header>
+
+    <div class="tldr" aria-label="Key numbers">
+      <div><div class="num">78.05%</div><div class="lbl">validation accuracy on DDSM-Patches</div></div>
+      <div><div class="num">+3.0 pts</div><div class="lbl">over the existing model (75.03%)</div></div>
+      <div><div class="num">0.9243</div><div class="lbl">ROC-AUC on the CSE dataset</div></div>
+      <div><div class="num">~9 h</div><div class="lbl">search on a single GPU</div></div>
+    </div>
+
+    <figure class="teaser">
+      <a href="/images/projects/nas-darts/learned-cells.webp" aria-label="Open the research figure at full resolution">
+        <img src="/images/projects/nas-darts/learned-cells.webp" alt="Normal and reduction cells discovered by PC-DARTS on DDSM-Patches">
+      </a>
+      <figcaption>Normal and reduction cells learned by the architecture search on DDSM-Patches.</figcaption>
+    </figure>
+
+    <div class="prose">
+      <section class="s" id="abstract">
+        <h2 class="serif">Abstract</h2>
+        <div class="abstract"><p>Searching for good neural network architectures and hyperparameters by hand is slow. Neural architecture search (NAS) automates it, but most methods rely on costly evolution or reinforcement learning. We evaluate a gradient-based method, DARTS, and its memory-efficient variant PC-DARTS, for mammogram classification at GE Healthcare.</p><p>Cells are searched directly on mammography (DDSM-Patches) and, to test architecture transfer, on a larger context-similar dataset of retinal images; the discovered architectures are then trained from scratch and evaluated, including on a private clinical dataset (CSE).</p><p>The searched architecture outperforms the existing model, with 78.05% vs 75.03% validation accuracy on DDSM-Patches and ROC-AUC 0.9243 vs 0.9234 on CSE. A cell searched on 88k retinal images transfers well, reaching ROC-AUC 0.91 on CSE.</p><p class="kw"><strong>Keywords:</strong> neural architecture search · AutoML · DARTS · PC-DARTS · mammography · transfer learning</p></div>
+      </section>
+
+      <section class="s" id="method">
+        <h2 class="serif">Method</h2>
+        <ol class="steps"><li><span><strong>Search.</strong> PC-DARTS (partial channel connections) searches for a normal and a reduction cell on the target data, with an added initialization constraint.</span></li><li><span><strong>Build.</strong> The network stacks 8 cells: 6 normal and 2 reduction cells.</span></li><li><span><strong>Evaluate.</strong> The discovered architecture is trained from scratch and results are reported on the validation set.</span></li><li><span><strong>Transfer.</strong> Cells searched on a larger, context-similar dataset (diabetic retinopathy) are evaluated on mammography.</span></li></ol><p>The search trains for 50 epochs with 16 initial channels and a 75:25 split, sampling channels with K = 2 and freezing architecture weights for the first 15 epochs. The whole search takes around 9 hours on a single NVIDIA Quadro RTX 6000 GPU.</p><div class="facts"><span class="chip">DARTS</span><span class="chip">PC-DARTS</span><span class="chip">AutoML</span><span class="chip">Mammography</span></div><div class="ptable-wrap"><p class="ptable-caption"><b>Table 1:</b> Search hyperparameters on DDSM-Patches.</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th scope="col">Hyperparameter</th><th scope="col">Value</th></tr></thead><tbody><tr><th scope="row">Cells</th><td>8 (6 normal, 2 reduction)</td></tr><tr><th scope="row">Initial channels</th><td>16</td></tr><tr><th scope="row">Search epochs</th><td>50</td></tr><tr><th scope="row">Train / valid split</th><td>75 : 25</td></tr><tr><th scope="row">Channel proportion K</th><td>2</td></tr><tr><th scope="row">Begin epoch (architecture frozen)</th><td>15</td></tr><tr><th scope="row">Weights optimizer</th><td>SGD, lr 0.1, cosine, momentum 0.9, wd 10⁻⁴</td></tr><tr><th scope="row">Architecture optimizer</th><td>Adam, lr 6 × 10⁻⁴, β (0.5, 0.999), wd 10⁻³</td></tr><tr><th scope="row">Search time</th><td>≈ 9 h on one NVIDIA Quadro RTX 6000</td></tr></tbody></table></div></div>
+      </section>
+
+      <section class="s" id="experiments">
+        <h2 class="serif">Datasets</h2>
+        <div class="ptable-wrap"><p class="ptable-caption"><b>Table 2:</b> Datasets used</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th scope="col">Dataset</th><th scope="col">Size</th><th scope="col">Role</th></tr></thead><tbody><tr><th scope="row">DDSM-Patches</th><td>5k patches, 500 × 500</td><td>Search and evaluation (public)</td></tr><tr><th scope="row">CSE</th><td>1.3k images</td><td>Fine-tuning and evaluation (private)</td></tr><tr><th scope="row">Diabetic retinopathy (Kaggle)</th><td>~88k images</td><td>Search for architecture transfer</td></tr><tr><th scope="row">NIH ChestX-ray</th><td>112,120 images</td><td>Transfer exploration</td></tr></tbody></table></div></div>
+      </section>
+
+      <section class="s" id="results">
+        <h2 class="serif">Results</h2>
+        <div class="ptable-wrap"><p class="ptable-caption"><b>Table 3:</b> Searched architecture vs the existing model</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th scope="col">Dataset</th><th scope="col">Metric</th><th scope="col">Searched architecture</th><th scope="col">Existing model</th></tr></thead><tbody><tr><th scope="row">DDSM-Patches</th><td>Validation accuracy</td><td>78.05%</td><td>75.03%</td></tr><tr><th scope="row">CSE</th><td>ROC-AUC</td><td>0.9243</td><td>0.9234</td></tr></tbody></table></div></div><div class="ptable-wrap"><p class="ptable-caption"><b>Table 4:</b> Evaluation on DDSM-Patches by input resolution</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th scope="col">Model</th><th scope="col">Validation accuracy</th></tr></thead><tbody><tr><th scope="row">3-ds model (65 × 65 inputs to cells)</th><td>76.74%</td></tr><tr class="ours"><th scope="row">2-ds model (125 × 125 inputs to cells)</th><td class="best">78.05%</td></tr></tbody></table></div></div><div class="ptable-wrap"><p class="ptable-caption"><b>Table 5:</b> Architecture transfer: cell searched on diabetic retinopathy</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th scope="col">Evaluated on</th><th scope="col">Result</th></tr></thead><tbody><tr><th scope="row">DDSM-Patches</th><td>76% validation accuracy</td></tr><tr><th scope="row">CSE</th><td>ROC-AUC 0.91, 85% validation accuracy</td></tr></tbody></table></div></div><h4 style="font-size:17px;margin:20px 0 6px">Key findings</h4><ul class="findings"><li><span><strong>Search beats the existing model:</strong> 78.05% vs 75.03% validation accuracy on DDSM-Patches, and ROC-AUC 0.9243 vs 0.9234 on CSE.</span></li><li><span><strong>More input information helps:</strong> feeding 125 × 125 inputs to the cells gave the highest accuracy of all experiments.</span></li><li><span><strong>Architectures transfer:</strong> a cell searched on 88k retinal images reached ROC-AUC 0.91 on CSE, in the same range as cells searched directly on mammography.</span></li></ul>
+      </section>
+
+      <section class="s" id="conclusions">
+        <h2 class="serif">Conclusions &amp; limitations</h2>
+        <p>DARTS produces satisfying results on natural images, but generalizing it to medical datasets is still a challenge. DARTS is not hyperparameter-free: it introduces new hyperparameters while eliminating others, the models that generate architectures still need to be hand designed, and learning rate, regularization and optimizer stay outside the search. Architecture transfer, inspired by transfer learning, is a promising approach with larger, context-similar medical datasets.</p>
+      </section>
+
+    </div>
+
+    <section class="more" aria-labelledby="more-title">
+      <h2 class="serif" id="more-title">More research</h2>
+      <div class="more-grid">
+        <a class="mcard" href="/projects/cyclegan/">
+          <div class="thumb"><img src="/images/github-projects/gan-project.webp" alt="" loading="lazy"></div>
+          <div class="body"><h3>Cell image segmentation with CycleGAN</h3><div class="meta">Master's project · 2020</div></div>
+        </a>
+        <a class="mcard" href="/projects/dat-spect/">
+          <div class="thumb"><img src="/images/dat-parkinson-challenge.webp" alt="" loading="lazy"></div>
+          <div class="body"><h3>DaT SPECT Abnormality Classification</h3><div class="meta">DaT Parkinson's Challenge · 2026</div></div>
+        </a>
+        <a class="mcard" href="/projects/contrastive-pretraining/">
+          <div class="thumb"><img src="/images/ieee-contrastive.webp" alt="" loading="lazy"></div>
+          <div class="body"><h3>Tailored 3D CT contrastive pretraining</h3><div class="meta">IEEE ICSP · 2022</div></div>
+        </a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><a href="/">Aissam Djahnine</a> · AI Research Engineer</span>
+    <span><a href="/#research">All research</a> · <a href="/#publications">Publications</a></span>
+  </div>
+</footer>
+<script src="/assets/js/project.js?v={{ site.time | date: '%s' }}"></script>
+</body>
+</html>

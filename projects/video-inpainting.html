@@ -1,0 +1,128 @@
+---
+layout: null
+title: "Video inpainting"
+description: "Reimplementation of unsupervised spatiotemporal inpainting with frame and sequence GAN discriminators, on geophysical data and natural videos."
+permalink: /projects/video-inpainting/
+image: /images/projects/video-inpainting/architecture.jpg
+sitemap: true
+---
+<!doctype html>
+<html lang="en">
+<head>
+<script>try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Video inpainting — Aissam Djahnine</title>
+<meta name="description" content="Reimplementation of unsupervised spatiotemporal inpainting with frame and sequence GAN discriminators, on geophysical data and natural videos.">
+<meta property="og:title" content="Unsupervised Spatiotemporal Data Inpainting">
+<meta property="og:description" content="Reimplementation of unsupervised spatiotemporal inpainting with frame and sequence GAN discriminators, on geophysical data and natural videos.">
+<meta property="og:image" content="https://aissamdjahnine.github.io/images/projects/video-inpainting/architecture.jpg">
+<link rel="icon" type="image/png" href="/images/favicon.webp">
+<link rel="canonical" href="https://aissamdjahnine.github.io/projects/video-inpainting/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400&family=STIX+Two+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/project.css?v={{ site.time | date: '%s' }}">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a class="brand" href="/">Aissam Djahnine</a>
+      <span class="sep mid" aria-hidden="true">/</span>
+      <a class="mid" href="/#research">Research</a>
+      <span class="sep" aria-hidden="true">/</span>
+      <span class="here">Video inpainting</span>
+    </nav>
+    <nav class="toc" aria-label="On this page"><a href="#abstract">Abstract</a><a href="#method">Method</a><a href="#experiments">Experiments</a><a href="#results">Results</a></nav>
+    <button class="icon-btn" id="theme-btn" aria-label="Toggle dark mode"><svg class="i" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></svg></button>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <header class="paper-head">
+      <span class="venue">Master's course project (AMAL) · Sorbonne Université · 2020</span>
+      <h1 class="serif">Unsupervised Spatiotemporal Data Inpainting</h1>
+      <p class="subtitle">Reconstructing missing regions in video sequences without supervision</p>
+      <p class="authors">Ilyas Aroui · Abdelraouf Keskes · <span class="me">Aissam Djahnine</span></p>
+      <p class="affil">Implementation of Yin, Pajot, de Bézenac &amp; Gallinari, “Unsupervised Spatiotemporal Data Inpainting”</p>
+      <div class="actions">
+        <a class="btn primary" href="https://github.com/raoufkeskes/Unsupervised-Spatiotemporal-Data-Inpainting"><svg class="i" viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg>GitHub</a>
+        <a class="btn" href="/docs/reports/video-inpainting-poster.pdf"><svg class="i" viewBox="0 0 24 24"><path d="M3 4h18v12H3zM12 16v4M8 20h8"/></svg>Poster</a>
+        <a class="btn" href="https://openreview.net/forum?id=rylqmxBKvH"><svg class="i" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>Original paper</a>
+      </div>
+    </header>
+
+    <div class="tldr" aria-label="Key numbers">
+      <div><div class="num">4</div><div class="lbl">datasets: SST, FaceForensics++, KTH, BAIR</div></div>
+      <div><div class="num">2</div><div class="lbl">discriminators: per frame and per sequence</div></div>
+      <div><div class="num">4</div><div class="lbl">occlusion types: clouds, raindrops, moving bar, removed pixels</div></div>
+      <div><div class="num">FID · FVD</div><div class="lbl">plus MAE for evaluation</div></div>
+    </div>
+
+    <figure class="teaser">
+      <a href="/images/projects/video-inpainting/architecture.webp" aria-label="Open the research figure at full resolution">
+        <img src="/images/projects/video-inpainting/architecture.webp" alt="Model architecture: generator G maps the observed sequence y to a completed sequence x-hat, which is re-masked by F; a frame discriminator and a sequence discriminator compare real and fake frames and sequences">
+      </a>
+      <figcaption>Model architecture. The generator completes the sequence; frame and sequence discriminators judge the re-masked result.</figcaption>
+    </figure>
+
+    <div class="prose">
+      <section class="s" id="abstract">
+        <h2 class="serif">Abstract</h2>
+        <div class="abstract"><p>Inpainting spatio-temporal sequences is an active research topic that usually relies on supervision with large datasets. We reimplement an unsupervised approach that reconstructs missing regions in video sequences by training a generative model directly on occluded sequences.</p><p>A ResNet-type generator of 3D residual blocks with spatial self-attention completes each sequence, and only fills missing values while keeping observed pixels intact. Adversarial training with PatchGAN discriminators on individual frames and on whole sequences captures both per-frame detail and temporal coherence.</p><p>We train on geophysical data (sea surface temperature with cloud occlusions) and natural videos (FaceForensics++, KTH, BAIR) with raindrop, moving-bar and removed-pixel occlusions, evaluating with FID, FVD and mean absolute error.</p><p class="kw"><strong>Keywords:</strong> video inpainting · unsupervised learning · GAN · self-attention · PatchGAN · spatio-temporal data</p></div>
+      </section>
+
+      <section class="s" id="method">
+        <h2 class="serif">Method</h2>
+        <p>Let <em>x</em> and <em>y</em> be the true unknown and the occluded sequences. The goal is the most likely sequence given the observation, which splits into a prior on <em>x</em> and the likelihood of <em>y</em> given <em>x</em>.</p><ol class="steps"><li><span><strong>Prior.</strong> A generator G maps occluded sequences to completed ones; a random occlusion F with mask m̂ ~ p<sub>M</sub> re-masks the output, and adversarial training makes it indistinguishable from real occluded data.</span></li><li><span><strong>Likelihood.</strong> The generator only fills missing values and leaves observed pixels intact: G(y) = G<sub>old</sub>(y) ⊙ m̄ + y ⊙ m.</span></li><li><span><strong>Generator.</strong> A ResNet-type network of 3D ResNet blocks followed by a spatial self-attention layer, encoding the masked sequence and decoding the reconstruction.</span></li><li><span><strong>Discriminators.</strong> PatchGAN discriminators run on individual frames (D<sub>f</sub>) and on whole sequences (D<sub>s</sub>), classifying each N × N patch as real or fake.</span></li></ol><p>Two supervised variants serve as references: a paired variant with corrupted–uncorrupted pairs (y, x), and an unpaired variant built from separate samples of each.</p><div class="facts"><span class="chip">GAN</span><span class="chip">3D ResNet</span><span class="chip">Self-attention</span><span class="chip">PatchGAN</span><span class="chip">PyTorch</span></div>
+      </section>
+
+      <section class="s" id="experiments">
+        <h2 class="serif">Data</h2>
+        <div class="ptable-wrap"><p class="ptable-caption"><b>Table 1:</b> Datasets and occlusions</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th scope="col">Dataset</th><th scope="col">Type</th><th scope="col">Content</th><th scope="col">Occlusions</th></tr></thead><tbody><tr><th scope="row">SST</th><td>Geophysical</td><td>Sea surface temperature</td><td>Clouds</td></tr><tr><th scope="row">FaceForensics++</th><td>Natural video</td><td>1,000 videos of faces on a static background</td><td>Raindrops, moving bar, removed pixels</td></tr><tr><th scope="row">KTH</th><td>Natural video</td><td>2,391 clips of 6 human actions</td><td>Raindrops, moving bar, removed pixels</td></tr><tr><th scope="row">BAIR Robot Pushing</th><td>Natural video</td><td>44,374 videos from a one-armed robot</td><td>Raindrops, moving bar, removed pixels</td></tr></tbody></table></div></div>
+      </section>
+
+      <section class="s" id="results">
+        <h2 class="serif">Results</h2>
+        <figure class="pfig"><a class="frame" href="/images/projects/video-inpainting/samples.webp"><img src="/images/projects/video-inpainting/samples.webp" alt="Test samples on SST, FaceForensics++, KTH and BAIR: observed occluded sequences above recovered sequences" loading="lazy"></a><figcaption><b>Figure 1:</b> Samples from the test sets. SST is masked with clouds; the natural video datasets with removed pixels and raindrops. In each sample, the top row is the observed sequence and the bottom row the recovered one.</figcaption></figure><p>Frames are evaluated with the Fréchet Inception Distance (FID, Inception features trained on ImageNet), sequences with the Fréchet Video Distance (FVD, I3D features trained on Kinetics-400), and reconstruction error with the mean absolute error.</p><h3>Key findings</h3><ul class="findings"><li><span><strong>Hard problem:</strong> inpainting videos in a fully unsupervised context is a hard task and an active research area.</span></li><li><span><strong>Training cost:</strong> training is very sensitive, not stable, and GPU- and time-consuming.</span></li><li><span><strong>Frames and sequences:</strong> separate frame and sequence discriminators let the model capture both per-frame detail and temporal coherence.</span></li></ul>
+      </section>
+
+      <section class="s" id="sources">
+        <h2 class="serif">Code &amp; references</h2>
+        <p><a href="https://github.com/raoufkeskes/Unsupervised-Spatiotemporal-Data-Inpainting">Code on GitHub</a> (training and FID/FVD scripts) · <a href="/docs/reports/video-inpainting-poster.pdf">Project poster (PDF)</a> · <a href="https://openreview.net/forum?id=rylqmxBKvH">Original paper on OpenReview</a>.</p>
+      </section>
+
+    </div>
+
+    <section class="more" aria-labelledby="more-title">
+      <h2 class="serif" id="more-title">More research</h2>
+      <div class="more-grid">
+        <a class="mcard" href="/projects/cyclegan/">
+          <div class="thumb"><img src="/images/github-projects/gan-project.webp" alt="" loading="lazy"></div>
+          <div class="body"><h3>Cell image segmentation with CycleGAN</h3><div class="meta">Master's project · 2020</div></div>
+        </a>
+        <a class="mcard" href="/projects/nas-darts/">
+          <div class="thumb"><img src="/images/projects/nas-darts/learned-cells.webp" alt="" loading="lazy"></div>
+          <div class="body"><h3>Neural Architecture Search for mammography (DARTS)</h3><div class="meta">GE Healthcare · 2020</div></div>
+        </a>
+        <a class="mcard" href="/projects/dat-spect/">
+          <div class="thumb"><img src="/images/dat-parkinson-challenge.webp" alt="" loading="lazy"></div>
+          <div class="body"><h3>DaT SPECT Abnormality Classification</h3><div class="meta">DaT Parkinson's Challenge · 2026</div></div>
+        </a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><a href="/">Aissam Djahnine</a> · AI Research Engineer</span>
+    <span><a href="/#research">All research</a> · <a href="/#publications">Publications</a></span>
+  </div>
+</footer>
+<script src="/assets/js/project.js?v={{ site.time | date: '%s' }}"></script>
+</body>
+</html>

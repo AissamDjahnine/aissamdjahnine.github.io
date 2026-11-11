@@ -1,83 +1,109 @@
 ---
-layout: research
-title: "CT-3DFlow — Unsupervised Pulmonary CT Analysis"
-description: "Learning the normal appearance of 3D pulmonary CT scans with normalizing flows to detect abnormalities."
+layout: null
+title: "CT-3DFlow"
+description: "CT-3DFlow: a 3D normalizing flow trained on healthy lung CT patches for unsupervised, patient-level pulmonary pathology detection."
 permalink: /projects/ct-3dflow/
-image: /images/GLOW_MIDL_recap.png
+image: /images/projects/ct-3dflow/framework.jpg
+sitemap: true
 ---
-<header class="research-hero">
-  <h1>Unsupervised Pulmonary CT Analysis</h1>
-  <p class="research-subtitle">3D Normalizing Flows</p>
-  <p class="research-authors"><strong>Aissam Djahnine</strong>, Alexandre Popoff, Emilien Jupin-Delevaux, Vincent Cottin, Olivier Nempont, Loic Boussel</p>
-  <p class="research-status">CT-3DFlow · arXiv preprint · 2024</p>
-  <div class="research-actions" aria-label="Research resources">
-    <a href="https://arxiv.org/pdf/2403.18514">Paper</a>
-    <a href="https://arxiv.org/abs/2403.18514">arXiv</a>
-    <a href="{{ '/projects/' | relative_url }}">All research</a>
+<!doctype html>
+<html lang="en">
+<head>
+<script>try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CT-3DFlow — Aissam Djahnine</title>
+<meta name="description" content="CT-3DFlow: a 3D normalizing flow trained on healthy lung CT patches for unsupervised, patient-level pulmonary pathology detection.">
+<meta property="og:title" content="CT-3DFlow: Leveraging 3D Normalizing Flows for Unsupervised Detection of Pathological Pulmonary CT Scans">
+<meta property="og:description" content="CT-3DFlow: a 3D normalizing flow trained on healthy lung CT patches for unsupervised, patient-level pulmonary pathology detection.">
+<meta property="og:image" content="https://aissamdjahnine.github.io/images/projects/ct-3dflow/framework.jpg">
+<link rel="icon" type="image/png" href="/images/favicon.webp">
+<link rel="canonical" href="https://aissamdjahnine.github.io/projects/ct-3dflow/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400&family=STIX+Two+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/project.css?v={{ site.time | date: '%s' }}">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a class="brand" href="/">Aissam Djahnine</a>
+      <span class="sep mid" aria-hidden="true">/</span>
+      <a class="mid" href="/#research">Research</a>
+      <span class="sep" aria-hidden="true">/</span>
+      <span class="here">CT-3DFlow</span>
+    </nav>
+    <nav class="toc" aria-label="On this page"><a href="#abstract">Abstract</a><a href="#method">Method</a><a href="#experiments">Experiments</a><a href="#citation">BibTeX</a></nav>
+    <button class="icon-btn" id="theme-btn" aria-label="Toggle dark mode"><svg class="i" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></svg></button>
   </div>
 </header>
 
-<figure class="research-figure">
-  <a href="{{ '/images/GLOW_MIDL_recap.png' | relative_url }}" aria-label="Open the CT-3DFlow research figure at full resolution">
-    <img src="{{ '/images/GLOW_MIDL_recap.png' | relative_url }}" width="5520" height="1556" alt="CT-3DFlow: training on normal lung patches, aggregating patch likelihoods into a CT anomaly map, and producing a normal or abnormal prediction; alongside an architecture diagram and comparison results.">
-  </a>
-  <figcaption>CT-3DFlow research overview. Select the figure to view it at full resolution.</figcaption>
-</figure>
+<main id="main">
+  <div class="wrap">
+    <header class="paper-head">
+      <span class="venue">arXiv preprint · 2024</span>
+      <h1 class="serif">CT-3DFlow: Leveraging 3D Normalizing Flows for Unsupervised Detection of Pathological Pulmonary CT Scans</h1>
+      
+      <p class="authors"><span class="me">Aissam Djahnine</span><sup>1,2</sup> · Alexandre Popoff<sup>2</sup> · Emilien Jupin-Delevaux<sup>3</sup> · Vincent Cottin<sup>1,4</sup> · Olivier Nempont<sup>2</sup> · Loic Boussel<sup>1,3</sup></p>
+      <p class="affil"><sup>1</sup> Claude Bernard University Lyon 1 · <sup>2</sup> Philips Health Technology Innovation, Paris · <sup>3</sup> Department of Radiology, Hospices Civils de Lyon · <sup>4</sup> National Reference Center for Rare Pulmonary Diseases, Louis Pradel Hospital, Lyon</p>
+      <div class="actions">
+        <a class="btn primary" href="https://arxiv.org/pdf/2403.18514"><svg class="i" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>Paper</a>
+        <a class="btn" href="https://arxiv.org/abs/2403.18514"><svg class="i" viewBox="0 0 24 24"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>arXiv</a>
+        <a class="btn" href="https://arxiv.org/html/2403.18514v1"><svg class="i" viewBox="0 0 24 24"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>HTML version</a>
+        <a class="btn" href="#citation"><svg class="i" viewBox="0 0 24 24"><path d="M7 7h4v4H7zM13 7h4v4h-4zM7 11c0 4-2 6-2 6M13 11c0 4-2 6-2 6"/></svg>Cite</a>
+      </div>
+    </header>
 
-<div class="research-copy">
-  <section aria-labelledby="overview">
-    <h2 id="overview">Overview</h2>
-    <p>Can a model identify pulmonary abnormalities by learning what healthy CT scans look like? CT-3DFlow learns normal appearance from healthy 3D lung patches, then uses deviations from that distribution to classify a scan as normal or abnormal.</p>
-    <p>This work explores pathology detection with reduced annotation requirements, preserving the spatial context of volumetric CT data.</p>
-  </section>
+    <div class="tldr" aria-label="Key numbers">
+      <div><div class="num">0.952</div><div class="lbl">AUROC, best of 9 methods</div></div>
+      <div><div class="num">0.940</div><div class="lbl">F1 score</div></div>
+      <div><div class="num">822</div><div class="lbl">patients, 3D chest CT</div></div>
+      <div><div class="num">500k</div><div class="lbl">healthy 48³ patches for training</div></div>
+    </div>
 
-  <section aria-labelledby="method">
-    <h2 id="method">Method</h2>
-    <p>A 3D adaptation of GLOW models the distribution of normal 48 × 48 × 48 CT patches. During inference, overlapping patches receive log-likelihood scores. Aggregation and smoothing produce a scan-level map; post-processing yields a patient-level prediction.</p>
-    <p>Training uses healthy patches. A separate validation set determines the decision threshold.</p>
-    <p>A 3D GLOW architecture uses invertible transformations to estimate patch likelihoods. The final normal/abnormal decision depends on spatial aggregation and a validation-selected threshold, not the patch score alone.</p>
-  </section>
+    <figure class="teaser">
+      <a href="/images/projects/ct-3dflow/framework.webp" aria-label="Open the research figure at full resolution">
+        <img src="/images/projects/ct-3dflow/framework.webp" alt="CT-3DFlow framework: training on normal patches; inference on overlapping patches producing a log-likelihood map that is aggregated, binarized, filtered and thresholded into a normal or abnormal prediction">
+      </a>
+      <figcaption>Overview of the CT-3DFlow anomaly detection framework. The model, shown in the middle, is trained on normal 48×48×48 sub-volumes; at inference, overlapping patches are scored and aggregated into a full-CT Log P map, then binarized, filtered and thresholded for classification.</figcaption>
+    </figure>
 
-  <section aria-labelledby="experiments">
-    <h2 id="experiments">Experiments</h2>
-    <p>The model learns from 500,000 normal 3D patches. Patient-level evaluation compares reconstruction, adversarial, flow-based, and diffusion-based approaches. The table below follows Table 1 of arXiv version 1.</p>
-  </section>
-  <section aria-labelledby="results">
-    <h2 id="results">Results</h2>
-    <p class="research-table-hint">Scroll tables horizontally to see all columns.</p>
-    <div class="research-table-scroll" role="region" aria-label="Patient-level classification — arXiv:2403.18514v1, Table 1" tabindex="0">
-      <table>
-        <caption>Patient-level classification — arXiv:2403.18514v1, Table 1</caption>
-        <thead><tr><th scope="col">Method</th><th scope="col">AUROC</th><th scope="col">F1</th><th scope="col">Accuracy</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">AE</th><td>0.608</td><td>0.538</td><td>0.556</td></tr>
-          <tr><th scope="row">VAE</th><td>0.647</td><td>0.607</td><td>0.598</td></tr>
-          <tr><th scope="row">f-AnoGAN</th><td>0.821</td><td>0.783</td><td>0.765</td></tr>
-          <tr><th scope="row">GANomaly</th><td>0.772</td><td>0.740</td><td>0.694</td></tr>
-          <tr><th scope="row">DifferNet</th><td>0.901</td><td>0.861</td><td>0.843</td></tr>
-          <tr><th scope="row">FastFlow</th><td>0.942</td><td>0.912</td><td>0.903</td></tr>
-          <tr><th scope="row">CFLOW-AD</th><td>0.732</td><td>0.739</td><td>0.706</td></tr>
-          <tr><th scope="row">AnoDDPM</th><td>0.924</td><td>0.891</td><td>0.873</td></tr>
-          <tr><th scope="row">CT-3DFlow</th><td><strong>0.952</strong></td><td><strong>0.940</strong></td><td><strong>0.924</strong></td></tr>
-        </tbody>
-      </table>
-    </div>    <p>The overview figure contains a different result snapshot (F1 0.945; accuracy 0.920). Those figure values are preserved; the table above explicitly identifies the preprint version it reproduces.</p>    <ul>
-      <li><strong>3D modeling:</strong> the reported model leads the compared methods on all three metrics.</li>
-      <li><strong>Patch processing:</strong> volumetric patches avoid requiring a flow over an entire CT volume at once.</li>
-    </ul>
-  </section>
-  <section aria-labelledby="conclusions">
-    <h2 id="conclusions">Conclusions &amp; limitations</h2>
-    <p>The results support learning normal pulmonary appearance for anomaly detection. The paper notes that aggregation needs further validation, especially when comparing 2D and 3D approaches. Extension to other organs and modalities remains future work.</p>
-  </section>
-  <section aria-labelledby="sources">
-    <h2 id="sources">Paper &amp; supporting material</h2>
-    <p><a href="https://arxiv.org/html/2403.18514v1#S3">Versioned results table and discussion</a> · <a href="https://arxiv.org/abs/2403.18514">Preprint record</a>.</p>
-  </section>
+    <div class="prose">
+      <section class="s" id="abstract">
+        <h2 class="serif">Abstract</h2>
+        <div class="abstract"><p>Unsupervised pathology detection can be implemented by training a model on healthy data only and measuring the deviation from the training set upon inference, for example with CNN-based feature extraction and one-class classifiers, or reconstruction-score-based methods such as AEs, GANs and Diffusion models. Normalizing Flows (NF) have the ability to directly learn the probability distribution of training examples through an invertible architecture. We leverage this property in a novel 3D NF-based model named CT-3DFlow, specifically tailored for patient-level pulmonary pathology detection in chest CT data. Our model is trained unsupervised on healthy 3D pulmonary CT patches, and detects deviations from its log-likelihood distribution as anomalies. We aggregate patches-level likelihood values from a patient's CT scan to provide a patient-level 'normal'/'abnormal' prediction. Out-of-distribution detection performance is evaluated using expert annotations on a separate chest CT test dataset, outperforming other state-of-the-art methods.</p><p class="kw"><strong>Keywords:</strong> Unsupervised Anomaly Detection · Normalizing Flow · GLOW · Pulmonary CT</p></div>
+      </section>
 
-  <section aria-labelledby="citation">
-    <h2 id="citation">BibTeX</h2>
-    <pre class="research-citation"><code>@article{djahnine2024ct3dflow,
+      <section class="s" id="introduction">
+        <h2 class="serif">Introduction</h2>
+        <p>Normalizing flows such as NICE, RealNVP and GLOW learn a data distribution by mapping it to a tractable one through invertible, differentiable transformations, which gives exact log-likelihoods at inference. Flow-based anomaly detectors — DifferNet, CFLOW-AD and FastFlow — perform well on industrial images, but they work on 2D images or CNN features and ignore the 3D context of volumetric data.</p><p>Applying flows directly to 3D scans is hard: a model trained on whole volumes would need far more memory than 2D approaches. The few 3D anomaly detectors, such as PET-3DFlow, work at feature level and score anomalies with a mix of likelihood and reconstruction error. CT-3DFlow instead applies a 3D extension of GLOW to patches, keeping volumetric context while staying tractable.</p>
+      </section>
+
+      <section class="s" id="method">
+        <h2 class="serif">Method</h2>
+        <h3 class="sub"><span class="num">2.1</span>Patch-based 3D normalizing flow</h3><p>The model is a GLOW architecture adapted to 3D, with L = 4 blocks of K = 64 flow steps. Each step chains an activation normalization, an invertible 1×1×1 convolution and an affine coupling layer; squeeze and split operations between blocks factor out latent variables z<sub>i</sub>. Trained by maximum likelihood on healthy patches only, the flow learns the distribution of normal lung tissue.</p><h3 class="sub"><span class="num">2.2</span>From patch likelihoods to a patient prediction</h3><ol class="steps"><li><span><strong>Score patches.</strong> The model is applied to 48³ patches covering the whole volume, with a 10-voxel overlap; each patch receives a log-likelihood (Log P) that serves as an anomaly score.</span></li><li><span><strong>Aggregate.</strong> Patch Log P values are combined with Gaussian smoothing into a full-CT Log P map.</span></li><li><span><strong>Post-process.</strong> The map is binarized and filtered.</span></li><li><span><strong>Decide.</strong> A threshold T on the abnormal volume, between 0.5 and 20 cm³, is chosen on the validation ROC curve and gives the normal/abnormal prediction.</span></li></ol><h3 class="sub"><span class="num">2.3</span>Implementation</h3><div class="ptable-wrap"><p class="ptable-caption"><b>Table 1:</b> Implementation details.</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th scope="col">Setting</th><th scope="col">Value</th></tr></thead><tbody><tr><th scope="row">Architecture</th><td>GLOW adapted to 3D: L = 4 blocks, K = 64 flows per block</td></tr><tr><th scope="row">Flow step</th><td>Activation normalization, invertible 1×1×1 convolution, affine coupling</td></tr><tr><th scope="row">Input</th><td>1 × 48 × 48 × 48 patches, 2 mm resolution</td></tr><tr><th scope="row">Intensities</th><td>Clipped to [−1020, +200] HU, normalized to [−0.5, +0.5]</td></tr><tr><th scope="row">Objective</th><td>Maximum likelihood</td></tr><tr><th scope="row">Optimizer</th><td>Adam, learning rate 10⁻⁴, weight decay 10⁻⁵</td></tr><tr><th scope="row">Batch size / iterations</th><td>10 / 50,000</td></tr><tr><th scope="row">Hardware</th><td>2 × NVIDIA A100 SXM4</td></tr><tr><th scope="row">Inference</th><td>48³ patches with 10-voxel overlap; threshold T ∈ [0.5, 20] cm³</td></tr></tbody></table></div></div>
+      </section>
+
+      <section class="s" id="experiments">
+        <h2 class="serif">Experiments</h2>
+        <h3 class="sub"><span class="num">3.1</span>Data</h3><div class="ptable-wrap"><p class="ptable-caption"><b>Table 2:</b> Dataset: 822 patients with 3D chest CT from a single institution (Hospices Civils de Lyon), 570 normal and 252 abnormal scans.</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th scope="col">Split</th><th scope="col">Scans</th><th scope="col">Composition</th><th scope="col">Use</th></tr></thead><tbody><tr><th scope="row">Training</th><td>470</td><td>Normal scans</td><td>500,000 normal 48³ patches</td></tr><tr><th scope="row">Validation</th><td>111</td><td>50 normal · 61 abnormal</td><td>Threshold T selection (ROC curve)</td></tr><tr><th scope="row">Test</th><td>291</td><td>Normal and abnormal, expert-annotated</td><td>Patient-level evaluation</td></tr></tbody></table></div></div><p>Scans are resampled to 2 mm, the lungs are segmented automatically in 3D to guide patch selection, voxel values are clipped to [−1020, +200] HU and normalized to [−0.5, +0.5]. The abnormal scans contain four distinct chest abnormalities, selected by an expert radiologist based on the prevalence of the most common pulmonary pathologies.</p><h3 class="sub"><span class="num">3.2</span>Baselines and metrics</h3><p>CT-3DFlow is compared on the test set with reconstruction-based models (autoencoder, variational autoencoder), GAN-based models (f-AnoGAN, GANomaly), normalizing-flow models (DifferNet, FastFlow, CFLOW-AD) and a diffusion model (AnoDDPM). Patient-level classification is measured with AUROC, F1 score and accuracy.</p><h3 class="sub"><span class="num">3.3</span>Results</h3><div class="ptable-wrap"><p class="ptable-caption"><b>Table 3:</b> Comparison of patient-level classification performance with several anomaly detection methods (paper Table 1). Best in bold, second best underlined.</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th scope="col">Method</th><th scope="col">Family</th><th scope="col">AUROC</th><th scope="col">F1</th><th scope="col">Accuracy</th></tr></thead><tbody><tr><th scope="row">AE</th><td>Reconstruction</td><td>0.608</td><td>0.538</td><td>0.556</td></tr><tr><th scope="row">VAE</th><td>Reconstruction</td><td>0.647</td><td>0.607</td><td>0.598</td></tr><tr class="mid"><th scope="row">f-AnoGAN</th><td>GAN</td><td>0.821</td><td>0.783</td><td>0.765</td></tr><tr><th scope="row">GANomaly</th><td>GAN</td><td>0.772</td><td>0.74</td><td>0.694</td></tr><tr class="mid"><th scope="row">DifferNet</th><td>Normalizing flow (2D)</td><td>0.901</td><td>0.861</td><td>0.843</td></tr><tr><th scope="row">FastFlow</th><td>Normalizing flow (2D)</td><td class="second">0.942</td><td class="second">0.912</td><td class="second">0.903</td></tr><tr><th scope="row">CFLOW-AD</th><td>Normalizing flow (2D)</td><td>0.732</td><td>0.739</td><td>0.706</td></tr><tr class="mid"><th scope="row">AnoDDPM</th><td>Diffusion</td><td>0.924</td><td>0.891</td><td>0.873</td></tr><tr class="ours mid"><th scope="row">CT-3DFlow (ours)</th><td>Normalizing flow (3D)</td><td class="best">0.952</td><td class="best">0.94</td><td class="best">0.924</td></tr></tbody></table></div></div><h4 style="font-size:17px;margin:20px 0 6px">Key findings</h4><ul class="findings"><li><span><strong>Best on every metric:</strong> CT-3DFlow reaches AUROC 0.952, F1 0.94 and accuracy 0.924, ahead of the strongest baseline, FastFlow (0.942, 0.912, 0.903).</span></li><li><span><strong>3D beats 2D flows:</strong> the 3D patch-based flow outperforms the 2D flow models while avoiding the memory cost of full-volume flows.</span></li><li><span><strong>Reconstruction is weakest:</strong> autoencoder-based methods stay below 0.65 AUROC, consistent with reconstruction being a sub-optimal anomaly score.</span></li></ul>
+      </section>
+
+      <section class="s" id="conclusions">
+        <h2 class="serif">Conclusion &amp; perspectives</h2>
+        <p>CT-3DFlow outperforms state-of-the-art anomaly detection methods by a noticeable margin in AUROC, F1 and accuracy, showing the benefit of a 3D flow-based model over 2D methods while mitigating the problems of full-volume normalizing flows. The aggregation methods need further validation given the inherent differences between 2D and 3D approaches, and extending the approach to other modalities and organs is planned.</p>
+      </section>
+
+      <section class="s" id="sources">
+        <h2 class="serif">Related links</h2>
+        <ol class="refs"><li><a href="https://arxiv.org/abs/2403.18514">CT-3DFlow: Leveraging 3D Normalizing Flows for Unsupervised Detection of Pathological Pulmonary CT scans</a>, arXiv:2403.18514, 2024.</li><li><a href="https://theses.hal.science/tel-05263492/">Automatic Detection of Pathologies in Conventional Scanner Data</a>, PhD thesis, INSA Lyon, 2024.</li><li>D. P. Kingma and P. Dhariwal, Glow: Generative Flow with Invertible 1×1 Convolutions, NeurIPS 2018.</li><li>M. Rudolph et al., Same Same but DifferNet: Semi-supervised defect detection with normalizing flows, WACV 2021.</li><li>J. Yu et al., FastFlow: Unsupervised anomaly detection and localization via 2D normalizing flows, 2021.</li><li>D. Gudovskiy et al., CFLOW-AD: Real-time unsupervised anomaly detection with localization via conditional normalizing flows, WACV 2022.</li></ol>
+      </section>
+
+      <section class="s" id="citation">
+        <h2 class="serif">BibTeX</h2>
+        <div class="bib"><button class="btn copy" type="button">Copy</button><pre><code>@article{djahnine2024ct3dflow,
   title = {CT-3DFlow: Leveraging 3D Normalizing Flows for
            Unsupervised Detection of Pathological Pulmonary CT scans},
   author = {Djahnine, Aissam and Popoff, Alexandre and
@@ -86,6 +112,37 @@ image: /images/GLOW_MIDL_recap.png
   journal = {arXiv preprint arXiv:2403.18514},
   year = {2024},
   doi = {10.48550/arXiv.2403.18514}
-}</code></pre>
-  </section>
-</div>
+}</code></pre></div>
+      </section>
+
+    </div>
+
+    <section class="more" aria-labelledby="more-title">
+      <h2 class="serif" id="more-title">More research</h2>
+      <div class="more-grid">
+        <a class="mcard" href="/projects/weakly-supervised-ct/">
+          <div class="thumb"><img src="/images/SIMCLR_recap.webp" alt="" loading="lazy"></div>
+          <div class="body"><h3>Weakly-Supervised Pathology Detection and Localization in 3D Chest Scans</h3><div class="meta">Medical Physics · 2024</div></div>
+        </a>
+        <a class="mcard" href="/projects/contrastive-pretraining/">
+          <div class="thumb"><img src="/images/ieee-contrastive.webp" alt="" loading="lazy"></div>
+          <div class="body"><h3>Tailored 3D CT contrastive pretraining</h3><div class="meta">IEEE ICSP · 2022</div></div>
+        </a>
+        <a class="mcard" href="/projects/pulmonary-embolism/">
+          <div class="thumb"><img src="/images/JFR_recap.webp" alt="" loading="lazy"></div>
+          <div class="body"><h3>Pulmonary embolism detection and severity quantification with 3D CT</h3><div class="meta">Diagnostic and Interventional Imaging · 2024</div></div>
+        </a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><a href="/">Aissam Djahnine</a> · AI Research Engineer</span>
+    <span><a href="/#research">All research</a> · <a href="/#publications">Publications</a></span>
+  </div>
+</footer>
+<script src="/assets/js/project.js?v={{ site.time | date: '%s' }}"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+---
+layout: null
+title: "CycleGAN cell segmentation"
+description: "Automated segmentation of retinal pigment epithelium cell images with cycle-consistent GANs, trained without paired image-mask data."
+permalink: /projects/cyclegan/
+image: /images/github-projects/gan-project.png
+sitemap: true
+---
+<!doctype html>
+<html lang="en">
+<head>
+<script>try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CycleGAN cell segmentation — Aissam Djahnine</title>
+<meta name="description" content="Automated segmentation of retinal pigment epithelium cell images with cycle-consistent GANs, trained without paired image-mask data.">
+<meta property="og:title" content="Automated Segmentation of Cell Images Using Cycle-Consistent Generative Adversarial Networks">
+<meta property="og:description" content="Automated segmentation of retinal pigment epithelium cell images with cycle-consistent GANs, trained without paired image-mask data.">
+<meta property="og:image" content="https://aissamdjahnine.github.io/images/github-projects/gan-project.png">
+<link rel="icon" type="image/png" href="/images/favicon.webp">
+<link rel="canonical" href="https://aissamdjahnine.github.io/projects/cyclegan/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400&family=STIX+Two+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/project.css?v={{ site.time | date: '%s' }}">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a class="brand" href="/">Aissam Djahnine</a>
+      <span class="sep mid" aria-hidden="true">/</span>
+      <a class="mid" href="/#research">Research</a>
+      <span class="sep" aria-hidden="true">/</span>
+      <span class="here">CycleGAN cell segmentation</span>
+    </nav>
+    <nav class="toc" aria-label="On this page"><a href="#abstract">Abstract</a><a href="#method">Method</a><a href="#results">Results</a></nav>
+    <button class="icon-btn" id="theme-btn" aria-label="Toggle dark mode"><svg class="i" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></svg></button>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <header class="paper-head">
+      <span class="venue">Master's project · IMA, Sorbonne Université &amp; Télécom Paris</span>
+      <h1 class="serif">Automated Segmentation of Cell Images with CycleGAN</h1>
+      <p class="subtitle">Cycle-Consistent Generative Adversarial Networks applied on Retinal Pigment Epithelium</p>
+      <p class="authors"><span class="me">Aissam Djahnine</span></p>
+      <p class="affil">Sorbonne Université · Télécom Paris · Institut Pasteur</p>
+      <div class="actions">
+        <a class="btn primary" href="/docs/reports/cyclegan-cell-segmentation-report.pdf"><svg class="i" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>Report</a>
+        <a class="btn" href="/docs/reports/cyclegan-cell-segmentation-slides.pdf"><svg class="i" viewBox="0 0 24 24"><path d="M3 4h18v12H3zM12 16v4M8 20h8"/></svg>Slides</a>
+        <a class="btn" href="https://github.com/AissamDjahnine/CycleGAN"><svg class="i" viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg>GitHub</a>
+      </div>
+    </header>
+
+    <div class="tldr" aria-label="Key numbers">
+      <div><div class="num">0.79–0.87</div><div class="lbl">Dice on test examples</div></div>
+      <div><div class="num">1,032</div><div class="lbl">microscopy images, 256 × 256</div></div>
+      <div><div class="num">Unpaired</div><div class="lbl">no matched image–mask pairs needed</div></div>
+      <div><div class="num">3</div><div class="lbl">metrics: Dice, Hausdorff, perceptual</div></div>
+    </div>
+
+    <figure class="teaser">
+      <a href="/images/projects/cyclegan/results-metrics.webp" aria-label="Open the research figure at full resolution">
+        <img src="/images/projects/cyclegan/results-metrics.webp" alt="Input cell images, ground-truth masks and CycleGAN segmentations with Dice, Hausdorff and perceptual similarity scores">
+      </a>
+      <figcaption>Input, ground truth and CycleGAN segmentation for two test images, with their scores.</figcaption>
+    </figure>
+
+    <div class="prose">
+      <section class="s" id="abstract">
+        <h2 class="serif">Abstract</h2>
+        <div class="abstract"><p>Segmenting cells in microscopy images normally requires many hand-prepared image–mask pairs. This project explores generative adversarial networks to reduce that need, with two objectives: generating synthetic cell images for data augmentation, and segmenting cells with a cycle-consistent GAN that can be trained without paired images and masks.</p><p>A DCGAN generates new retinal pigment epithelium (RPE) images, and a CycleGAN learns to translate between cell images and segmentation masks using adversarial, cycle-consistency and identity losses. Experiments use two public datasets: 1,032 RPE images from NIST and U2OS cells from the Broad Bioimage Benchmark Collection.</p><p>On held-out RPE images, the unpaired CycleGAN reaches Dice similarity coefficients between 0.79 and 0.87, with Hausdorff distances around 9.4–9.7.</p><p class="kw"><strong>Keywords:</strong> GAN · CycleGAN · DCGAN · unpaired image-to-image translation · cell segmentation · microscopy</p></div>
+      </section>
+
+      <section class="s" id="method">
+        <h2 class="serif">Method</h2>
+        <p>A GAN pairs a generator, which produces new samples, with a discriminator, which tells real samples from generated ones. CycleGAN learns a mapping between two image domains (cell images and segmentation masks) without paired examples.</p><ol class="steps"><li><span><strong>Adversarial losses</strong> push each generator to produce images its discriminator cannot tell from real ones.</span></li><li><span><strong>Cycle-consistency loss</strong> requires that translating an image to a mask and back recovers the original image.</span></li><li><span><strong>Identity loss</strong> keeps an image unchanged when it already belongs to the target domain.</span></li></ol><div class="facts"><span class="chip">CycleGAN</span><span class="chip">DCGAN</span><span class="chip">Unpaired training</span><span class="chip">Python</span></div><h3 class="sub"><span class="num">2.1</span>Generating cell images (DCGAN)</h3><p>Following the DCGAN guidelines, the generator uses strided transposed convolutions, batch normalization, ReLU activations and a Tanh output; the discriminator uses strided convolutions and LeakyReLU (slope 0.2). Implemented in PyTorch and trained for 300 epochs with Adam (learning rate 0.0002, β₁ = 0.5), mini-batches of 128 and weights initialized from N(0, 0.02).</p><h3 class="sub"><span class="num">2.2</span>Segmentation with CycleGAN</h3><p>Each generator has an encoder of convolutions, a transformer of residual blocks and a decoder of transposed convolutions; the discriminators are PatchGANs. Two generators G: X → Y and F: Y → X are trained with adversarial losses plus a cycle-consistency loss, ‖F(G(x)) − x‖₁ + ‖G(F(y)) − y‖₁, weighted by λ.</p>
+      </section>
+
+      <section class="s" id="data">
+        <h2 class="serif">Data</h2>
+        <div class="ptable-wrap"><p class="ptable-caption"><b>Table 1:</b> Datasets.</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th scope="col">Dataset</th><th scope="col">Images</th><th scope="col">Notes</th></tr></thead><tbody><tr><th scope="row">Human RPE cells (NIST)</th><td>1,032 absorbance microscopy images, 256 × 256</td><td>Used for generation and segmentation</td></tr><tr><th scope="row">Human U2OS cells (BBBC)</th><td>55k+ images, 768 image–mask pairs</td><td>In- and out-of-focus high-content screening images</td></tr></tbody></table></div></div>
+      </section>
+
+      <section class="s" id="training">
+        <h2 class="serif">Training</h2>
+        <figure class="pfig"><a class="frame" href="/images/projects/cyclegan/training-epochs.webp"><img src="/images/projects/cyclegan/training-epochs.webp" alt="CycleGAN translations after 10 and 90 epochs" loading="lazy"></a><figcaption><b>Figure 1:</b> Image-to-mask and mask-to-image translations after 10 and 90 epochs.</figcaption></figure>
+      </section>
+
+      <section class="s" id="results">
+        <h2 class="serif">Results</h2>
+        <div class="ptable-wrap"><p class="ptable-caption"><b>Table 2:</b> Segmentation quality on three test images</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th scope="col">Test image</th><th scope="col">Dice similarity coefficient</th><th scope="col">Hausdorff distance</th><th scope="col">Perceptual similarity</th></tr></thead><tbody><tr><th scope="row">Image 1</th><td>0.85066</td><td>9.5082</td><td>0.398</td></tr><tr><th scope="row">Image 2</th><td>0.86987</td><td>9.4055</td><td>0.324</td></tr><tr><th scope="row">Image 3</th><td>0.7897</td><td>9.7022</td><td>0.453</td></tr></tbody></table></div></div><figure class="pfig"><a class="frame" href="/images/projects/cyclegan/results-metrics-2.webp"><img src="/images/projects/cyclegan/results-metrics-2.webp" alt="Third test image with its CycleGAN segmentation and scores" loading="lazy"></a><figcaption><b>Figure 2:</b> Third test image: ground truth and CycleGAN segmentation.</figcaption></figure><h4 style="font-size:17px;margin:20px 0 6px">Key findings</h4><ul class="findings"><li><span><strong>Unpaired data works:</strong> real-world problems where paired data is not available can be treated with CycleGANs.</span></li><li><span><strong>Training is hard:</strong> training a GAN is not easy, and the equilibrium point is rarely reached.</span></li><li><span><strong>Better losses:</strong> other loss functions, such as an identity loss, can be used to build better models.</span></li></ul>
+      </section>
+
+      <section class="s" id="sources">
+        <h2 class="serif">Report &amp; slides</h2>
+        <p><a href="/docs/reports/cyclegan-cell-segmentation-report.pdf">Project report (PDF, 4 MB)</a> · <a href="/docs/reports/cyclegan-cell-segmentation-slides.pdf">Presentation slides (PDF, 2 MB)</a> · <a href="https://github.com/AissamDjahnine/CycleGAN">Code on GitHub</a>.</p>
+      </section>
+
+    </div>
+
+    <section class="more" aria-labelledby="more-title">
+      <h2 class="serif" id="more-title">More research</h2>
+      <div class="more-grid">
+        <a class="mcard" href="/projects/muscle-segmentation/">
+          <div class="thumb"><img src="/images/SARCO_PROJECT.webp" alt="" loading="lazy"></div>
+          <div class="body"><h3>Segmentation and Measurement of Skeletal Muscle Areas on CT Scans</h3><div class="meta">Medical imaging · CT</div></div>
+        </a>
+        <a class="mcard" href="/projects/dat-spect/">
+          <div class="thumb"><img src="/images/dat-parkinson-challenge.webp" alt="" loading="lazy"></div>
+          <div class="body"><h3>DaT SPECT Abnormality Classification</h3><div class="meta">DaT Parkinson's Challenge · 2026</div></div>
+        </a>
+        <a class="mcard" href="/projects/nas-darts/">
+          <div class="thumb"><img src="/images/projects/nas-darts/learned-cells.webp" alt="" loading="lazy"></div>
+          <div class="body"><h3>Neural Architecture Search for mammography (DARTS)</h3><div class="meta">GE Healthcare · 2020</div></div>
+        </a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><a href="/">Aissam Djahnine</a> · AI Research Engineer</span>
+    <span><a href="/#research">All research</a> · <a href="/#publications">Publications</a></span>
+  </div>
+</footer>
+<script src="/assets/js/project.js?v={{ site.time | date: '%s' }}"></script>
+</body>
+</html>

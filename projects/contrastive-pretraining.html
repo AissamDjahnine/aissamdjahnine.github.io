@@ -1,49 +1,96 @@
 ---
-layout: research
-title: "Tailored 3D CT contrastive pretraining to improve pulmonary pathology classification"
+layout: null
+title: "Contrastive pretraining"
 description: "This work explores contrastive pretraining for pulmonary pathology classification using three-dimensional chest CT patches."
 permalink: /projects/contrastive-pretraining/
 image: /images/ieee-contrastive.png
+sitemap: true
 ---
-<header class="research-hero">
-  <h1>Contrastive Pretraining for Pulmonary Pathology Classification</h1>
-  <p class="research-subtitle">Learning Representations from 3D CT Patches</p>
-  <p class="research-authors"><strong>A. Djahnine</strong>, Popoff Alexandre, E. Jupin-Delevaux, Cottin Vincent, Nempont Olivier, Boussel Loic</p>
-  <p class="research-status">16th IEEE International Conference on Signal Processing (ICSP) · 2022</p>
-  <div class="research-actions" aria-label="Research resources">
-    <a href="https://ieeexplore.ieee.org/document/9965218">Paper</a>
-    <a href="{{ "/publications/" | relative_url }}">All publications</a>
-    <a href="{{ "/projects/" | relative_url }}">All research</a>
+<!doctype html>
+<html lang="en">
+<head>
+<script>try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contrastive pretraining — Aissam Djahnine</title>
+<meta name="description" content="This work explores contrastive pretraining for pulmonary pathology classification using three-dimensional chest CT patches.">
+<meta property="og:title" content="Tailored 3D CT contrastive pretraining to improve pulmonary pathology classification">
+<meta property="og:description" content="This work explores contrastive pretraining for pulmonary pathology classification using three-dimensional chest CT patches.">
+<meta property="og:image" content="https://aissamdjahnine.github.io/images/ieee-contrastive.png">
+<link rel="icon" type="image/png" href="/images/favicon.webp">
+<link rel="canonical" href="https://aissamdjahnine.github.io/projects/contrastive-pretraining/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400&family=STIX+Two+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/project.css?v={{ site.time | date: '%s' }}">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a class="brand" href="/">Aissam Djahnine</a>
+      <span class="sep mid" aria-hidden="true">/</span>
+      <a class="mid" href="/#research">Research</a>
+      <span class="sep" aria-hidden="true">/</span>
+      <span class="here">Contrastive pretraining</span>
+    </nav>
+    <nav class="toc" aria-label="On this page"><a href="#abstract">Abstract</a><a href="#method">Method</a><a href="#experiments">Experiments</a><a href="#results">Results</a></nav>
+    <button class="icon-btn" id="theme-btn" aria-label="Toggle dark mode"><svg class="i" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></svg></button>
   </div>
 </header>
 
-<figure class="research-figure">
-  <a href="{{ "/images/ieee-contrastive.png" | relative_url }}" aria-label="Open the research figure at full resolution">
-    <img src="{{ "/images/ieee-contrastive.png" | relative_url }}" width="5520" height="1556" alt="CT patch encoder, SimCLR pretraining architecture, transformation comparisons, and embedding visualizations">
-  </a>
-  <figcaption>Research overview. Select the figure to view it at full resolution.</figcaption>
-</figure>
+<main id="main">
+  <div class="wrap">
+    <header class="paper-head">
+      <span class="venue">16th IEEE International Conference on Signal Processing (ICSP) · 2022</span>
+      <h1 class="serif">Contrastive Pretraining for Pulmonary Pathology Classification</h1>
+      <p class="subtitle">Learning Representations from 3D CT Patches</p>
+      <p class="authors"><span class="me">A. Djahnine</span>, Popoff Alexandre, E. Jupin-Delevaux, Cottin Vincent, Nempont Olivier, Boussel Loic</p>
+      <p class="affil">INSA Lyon (CREATIS) · Hospices Civils de Lyon · Philips</p>
+      <div class="actions">
+        <a class="btn primary" href="https://ieeexplore.ieee.org/document/9965218"><svg class="i" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>Paper</a>
+        <a class="btn" href="https://theses.hal.science/tel-05263492/"><svg class="i" viewBox="0 0 24 24"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>Thesis, chapter 3</a>
+        <a class="btn" href="#citation"><svg class="i" viewBox="0 0 24 24"><path d="M7 7h4v4H7zM13 7h4v4h-4zM7 11c0 4-2 6-2 6M13 11c0 4-2 6-2 6"/></svg>Cite</a>
+      </div>
+    </header>
 
-<div class="research-copy">
-  <section aria-labelledby="overview">
-    <h2 id="overview">Overview</h2>
-    <p>This work explores contrastive pretraining for pulmonary pathology classification using three-dimensional chest CT patches.</p>
-  </section>
-  <section aria-labelledby="method">
-    <h2 id="method">Method</h2>
-    <p>The research overview pairs a CT patch encoder with a SimCLR projection head for pretraining and a classification head for downstream evaluation. It compares transformations and weight-initialization strategies.</p>
-    <p>Two transformed views of a CT patch are used during contrastive pretraining. The projection head serves representation learning, while a separate classification head evaluates the learned features. The overview also visualizes the resulting patch embeddings.</p>
-  </section>
-  <section aria-labelledby="experiments">
-    <h2 id="experiments">Experiments</h2>
-    <p>The research figure compares weight initialization, augmentation, and whether pretrained encoder weights remain frozen. Maximum and average weighted accuracy are reported separately.</p>
-  </section>
-  <section aria-labelledby="results">
-    <h2 id="results">Results</h2>
-    <p class="research-table-hint">Scroll tables horizontally to see all columns.</p>
-    <div class="research-table-scroll" role="region" aria-label="Classification comparison reproduced from the research overview" tabindex="0">
-      <table>
-        <caption>Classification comparison reproduced from the research overview</caption>
+    <div class="tldr" aria-label="Key numbers">
+      <div><div class="num">90.33%</div><div class="lbl">max weighted accuracy, SimCLR fine-tuned</div></div>
+      <div><div class="num">77.75%</div><div class="lbl">best ImageNet initialization</div></div>
+      <div><div class="num">65.87%</div><div class="lbl">best random initialization</div></div>
+      <div><div class="num">3D</div><div class="lbl">chest CT patches</div></div>
+    </div>
+
+    <figure class="teaser">
+      <a href="/images/ieee-contrastive.webp" aria-label="Open the research figure at full resolution">
+        <img src="/images/ieee-contrastive.webp" width="5520" height="1556" alt="CT patch encoder, SimCLR pretraining architecture, transformation comparisons, and embedding visualizations">
+      </a>
+      <figcaption>Research overview. Select the figure to view it at full resolution.</figcaption>
+    </figure>
+
+    <div class="prose">
+      <section class="s" id="abstract">
+        <h2 class="serif">Abstract</h2>
+        <div class="abstract"><p>Learning useful representations is a key task for supervised, unsupervised, and self-supervised algorithms. These latter methods have shown great promise for learning meaningful visual representations from unlabeled data, which can then be readily used for downstream tasks (e.g., classification). Recently proposed contrastive self-supervised learning methods have shown high performance on natural images. In this work, we show the usefulness of such approaches in the medical domain when used for 3D chest CT patch pathology classification. We observe that pretraining on unlabeled domain-specific medical images using contrastive self-supervised learning with specific data transformation significantly improves the accuracy of our 3D patch-based pathology classifiers. Specifically, we show that contrastive pretraining outperforms end-to-end supervised training by a large margin (weighted accuracy: 90.33 % vs 77.75 %, respectively).</p><p class="kw"><strong>Keywords:</strong> Training; Pathology; Visualization; Three-dimensional displays; Computed tomography; Signal processing algorithms; Self-supervised learning</p></div>
+      </section>
+
+      <section class="s" id="method">
+        <h2 class="serif">Method</h2>
+        <p>The research overview pairs a CT patch encoder with a SimCLR projection head for pretraining and a classification head for downstream evaluation. It compares transformations and weight-initialization strategies.</p>
+    <p>Two transformed views of a CT patch are used during contrastive pretraining. The projection head serves representation learning, while a separate classification head evaluates the learned features. The overview also visualizes the resulting patch embeddings.</p><h3 class="sub"><span class="num">2.1</span>SimCLR pretraining</h3><ol class="steps"><li><span><strong>Patch sampling.</strong> Random 50 × 50 × 50 patches containing at least 80% lung.</span></li><li><span><strong>Two correlated views.</strong> A transformation module randomly alters each patch twice.</span></li><li><span><strong>Encoder.</strong> CT-Net, a 2.5D alternative to 3D ResNets built on a 2D ResNet-50, producing a 2048-d representation and allowing ImageNet initialization for comparison.</span></li><li><span><strong>Contrastive loss.</strong> A 2-layer projection head maps representations to 1024-d; the NT-Xent loss pulls the two views together and pushes other patches apart. The head is discarded after pretraining.</span></li></ol><figure class="pfig"><a class="frame" href="/images/projects/weakly-supervised-ct/simclr.webp"><img src="/images/projects/weakly-supervised-ct/simclr.webp" alt="SimCLR diagram with two augmented views, an encoder and a projection head" loading="lazy"></a><figcaption><b>Figure 1:</b> SimCLR contrastive learning: two random transformations produce correlated views; the encoder f and projection head g are trained to maximize their agreement.</figcaption></figure><h3 class="sub"><span class="num">2.2</span>Tailoring the transformations to CT</h3><p>Eight transformations common in medical imaging were evaluated in pairs (56 configurations), each with a frozen pretrained encoder over 10 runs: mirror, 90° rotation, zoom, colour distortion, Gaussian blur, Laplacian, lung masking and a random lung mask from another patient.</p><figure class="pfig"><a class="frame" href="/images/projects/weakly-supervised-ct/pathologies.webp"><img src="/images/projects/weakly-supervised-ct/pathologies.webp" alt="Four CT slices showing the four studied thoracic signs" loading="lazy"></a><figcaption><b>Figure 2:</b> The thoracic signs to classify: (a) low lung density (emphysema, cysts), (b) consolidation, (c) nodules, (d) interstitial pattern.</figcaption></figure>
+      </section>
+
+      <section class="s" id="experiments">
+        <h2 class="serif">Experiments</h2>
+        <p>The research figure compares weight initialization, augmentation, and whether pretrained encoder weights remain frozen. Maximum and average weighted accuracy are reported separately.</p>
+      </section>
+
+      <section class="s" id="results">
+        <h2 class="serif">Results</h2>
+        
+    <div class="ptable-wrap"><p class="ptable-caption"><b>Table 1:</b> Classification comparison reproduced from the research overview</p><div class="ptable-scroll"><table class="ptable ">
+        
         <thead><tr><th scope="col">Initialization</th><th scope="col">Frozen encoder</th><th scope="col">Augmentation</th><th scope="col">Maximum weighted accuracy (%)</th><th scope="col">Average weighted accuracy (%)</th></tr></thead>
         <tbody>
           <tr><th scope="row">Random</th><td>No</td><td>No</td><td>64.89</td><td>62.9 ± 1.36</td></tr>
@@ -51,31 +98,64 @@ image: /images/ieee-contrastive.png
           <tr><th scope="row">ImageNet</th><td>No</td><td>No</td><td>76.83</td><td>73.45 ± 0.93</td></tr>
           <tr><th scope="row">ImageNet</th><td>No</td><td>Yes</td><td>77.75</td><td>76.6 ± 0.80</td></tr>
           <tr><th scope="row">SimCLR</th><td>Yes</td><td>Yes</td><td>89.89</td><td>88.5 ± 1.03</td></tr>
-          <tr><th scope="row">SimCLR, fine-tuned</th><td>No</td><td>Yes</td><td><strong>90.33</strong></td><td><strong>89.3 ± 0.56</strong></td></tr>
+          <tr><th scope="row">SimCLR, fine-tuned</th><td>No</td><td>Yes</td><td class="best">90.33</td><td class="best">89.3 ± 0.56</td></tr>
         </tbody>
-      </table>
-    </div>    <p>The ± values follow the notation in the supplied research figure.</p>    <ul>
-      <li><strong>Pretraining:</strong> both SimCLR configurations exceed the ImageNet and random-initialization configurations shown.</li>
-      <li><strong>Fine-tuning:</strong> updating the pretrained encoder yields the highest reported average weighted accuracy.</li>
-      <li><strong>Augmentation:</strong> the figure also compares CT transformations, showing that the pretraining setup includes choices beyond encoder architecture.</li>
-    </ul>
-  </section>
-  <section aria-labelledby="conclusions">
-    <h2 id="conclusions">Conclusions &amp; limitations</h2>
-    <p>Domain-specific representation learning is the central contribution. The comparison concerns 3D patch classification; it should not be read as a patient-level diagnostic accuracy result.</p>
-  </section>
-  <section aria-labelledby="sources">
-    <h2 id="sources">Paper &amp; supporting material</h2>
-    <p><a href="https://ieeexplore.ieee.org/document/9965218">Conference paper</a> · <a href="{{ "/images/ieee-contrastive.png" | relative_url }}">Original research overview and comparison table</a>.</p>
-  </section>
-  <section aria-labelledby="citation">
-    <h2 id="citation">BibTeX</h2>
-    <pre class="research-citation"><code>@inproceedings{djahnine2022contrastivepretraining,
+      </table></div></div>    <p>The ± values follow the notation in the supplied research figure.</p>    <h4 style="font-size:17px;margin:20px 0 6px">Key findings</h4><ul class="findings">
+      <li><span><strong>Pretraining:</strong> both SimCLR configurations exceed the ImageNet and random-initialization configurations shown.</span></li>
+      <li><span><strong>Fine-tuning:</strong> updating the pretrained encoder yields the highest reported average weighted accuracy.</span></li>
+      <li><span><strong>Augmentation:</strong> the figure also compares CT transformations, showing that the pretraining setup includes choices beyond encoder architecture.</span></li>
+    </ul><h4 style="font-size:17px;margin:20px 0 6px">Transformation study</h4><ul class="findings"><li><span><strong>Zoom matters most:</strong> the best transformation pairs all include zoom (mirror then zoom: 82.0% weighted accuracy with a frozen encoder).</span></li><li><span><strong>Avoid intensity changes:</strong> Gaussian blur, Laplacian and colour distortion degrade accuracy, since Hounsfield values carry the diagnostic signal. The final recipe is random mask, mirror, 90° rotation and zoom.</span></li></ul><div class="fig-grid" style="margin-top:20px"><figure><a class="frame" href="/images/projects/weakly-supervised-ct/tsne-random.webp" style="display:block;background:#fff;border:1px solid var(--border);border-radius:10px;padding:6px"><img src="/images/projects/weakly-supervised-ct/tsne-random.webp" alt="t-SNE projection, Random initialization" loading="lazy"></a><div class="sub-cap">(a) Random initialization</div></figure><figure><a class="frame" href="/images/projects/weakly-supervised-ct/tsne-imagenet.webp" style="display:block;background:#fff;border:1px solid var(--border);border-radius:10px;padding:6px"><img src="/images/projects/weakly-supervised-ct/tsne-imagenet.webp" alt="t-SNE projection, ImageNet initialization" loading="lazy"></a><div class="sub-cap">(b) ImageNet initialization</div></figure><figure><a class="frame" href="/images/projects/weakly-supervised-ct/tsne-simclr-frozen.webp" style="display:block;background:#fff;border:1px solid var(--border);border-radius:10px;padding:6px"><img src="/images/projects/weakly-supervised-ct/tsne-simclr-frozen.webp" alt="t-SNE projection, SimCLR, frozen" loading="lazy"></a><div class="sub-cap">(c) SimCLR, frozen</div></figure><figure><a class="frame" href="/images/projects/weakly-supervised-ct/tsne-simclr-finetuned.webp" style="display:block;background:#fff;border:1px solid var(--border);border-radius:10px;padding:6px"><img src="/images/projects/weakly-supervised-ct/tsne-simclr-finetuned.webp" alt="t-SNE projection, SimCLR, fine-tuned" loading="lazy"></a><div class="sub-cap">(d) SimCLR, fine-tuned</div></figure></div><p class="ptable-caption" style="margin-top:8px"><b>Figure 3:</b> t-SNE projections of test-patch representations. Green NORMAL, blue NOD, orange EMPH, red COND, black INTER. Signs form distinct clusters only with SimCLR pretraining.</p><figure class="pfig"><a class="frame" href="/images/projects/weakly-supervised-ct/label-efficiency.webp"><img src="/images/projects/weakly-supervised-ct/label-efficiency.webp" alt="F1 score versus percentage of labelled data for four initialization strategies" loading="lazy"></a><figcaption><b>Figure 4:</b> Patch-classifier F1 score versus the fraction of labelled data used for fine-tuning. SimCLR fine-tuning leads at every level of supervision.</figcaption></figure>
+      </section>
+
+      <section class="s" id="conclusions">
+        <h2 class="serif">Conclusions &amp; limitations</h2>
+        <p>Domain-specific representation learning is the central contribution. The comparison concerns 3D patch classification; it should not be read as a patient-level diagnostic accuracy result.</p>
+      </section>
+
+      <section class="s" id="sources">
+        <h2 class="serif">Related links</h2>
+        <p><a href="https://ieeexplore.ieee.org/document/9965218">Conference paper</a> · <a href="/images/ieee-contrastive.webp">Original research overview and comparison table</a>.</p>
+      </section>
+
+      <section class="s" id="citation">
+        <h2 class="serif">BibTeX</h2>
+        <div class="bib"><button class="btn copy" type="button">Copy</button><pre><code>@inproceedings{djahnine2022contrastivepretraining,
   title = {Tailored 3D CT contrastive pretraining to improve pulmonary pathology classification},
   author = {A. Djahnine and Popoff Alexandre and E. Jupin-Delevaux and Cottin Vincent and Nempont Olivier and Boussel Loic},
   booktitle = {16th IEEE International Conference on Signal Processing (ICSP)},
   year = {2022},
   doi = {10.1109/ICSP56322.2022.9965218}
-}</code></pre>
-  </section>
-</div>
+}</code></pre></div>
+      </section>
+
+    </div>
+
+    <section class="more" aria-labelledby="more-title">
+      <h2 class="serif" id="more-title">More research</h2>
+      <div class="more-grid">
+        <a class="mcard" href="/projects/weakly-supervised-ct/">
+          <div class="thumb"><img src="/images/SIMCLR_recap.webp" alt="" loading="lazy"></div>
+          <div class="body"><h3>Weakly-Supervised Pathology Detection and Localization in 3D Chest Scans</h3><div class="meta">Medical Physics · 2024</div></div>
+        </a>
+        <a class="mcard" href="/projects/ct-3dflow/">
+          <div class="thumb"><img src="/images/GLOW_MIDL_recap.webp" alt="" loading="lazy"></div>
+          <div class="body"><h3>CT-3DFlow: Unsupervised Pulmonary CT Analysis</h3><div class="meta">arXiv · 2024</div></div>
+        </a>
+        <a class="mcard" href="/projects/pulmonary-embolism/">
+          <div class="thumb"><img src="/images/JFR_recap.webp" alt="" loading="lazy"></div>
+          <div class="body"><h3>Pulmonary embolism detection and severity quantification with 3D CT</h3><div class="meta">Diagnostic and Interventional Imaging · 2024</div></div>
+        </a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><a href="/">Aissam Djahnine</a> · AI Research Engineer</span>
+    <span><a href="/#research">All research</a> · <a href="/#publications">Publications</a></span>
+  </div>
+</footer>
+<script src="/assets/js/project.js?v={{ site.time | date: '%s' }}"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+---
+layout: null
+title: "DaT SPECT challenge"
+description: "Classifying DaT SPECT brain scans as normal or abnormal for the DrivenData DaT Parkinson's Challenge."
+permalink: /projects/dat-spect/
+image: /images/dat-parkinson-challenge.png
+sitemap: true
+---
+<!doctype html>
+<html lang="en">
+<head>
+<script>try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DaT SPECT challenge — Aissam Djahnine</title>
+<meta name="description" content="Classifying DaT SPECT brain scans as normal or abnormal for the DrivenData DaT Parkinson&#x27;s Challenge.">
+<meta property="og:title" content="DaT SPECT Abnormality Classification">
+<meta property="og:description" content="Classifying DaT SPECT brain scans as normal or abnormal for the DrivenData DaT Parkinson&#x27;s Challenge.">
+<meta property="og:image" content="https://aissamdjahnine.github.io/images/dat-parkinson-challenge.png">
+<link rel="icon" type="image/png" href="/images/favicon.webp">
+<link rel="canonical" href="https://aissamdjahnine.github.io/projects/dat-spect/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400&family=STIX+Two+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/project.css?v={{ site.time | date: '%s' }}">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a class="brand" href="/">Aissam Djahnine</a>
+      <span class="sep mid" aria-hidden="true">/</span>
+      <a class="mid" href="/#research">Research</a>
+      <span class="sep" aria-hidden="true">/</span>
+      <span class="here">DaT SPECT challenge</span>
+    </nav>
+    <nav class="toc" aria-label="On this page"><a href="#abstract">Abstract</a><a href="#method">Method</a><a href="#experiments">Experiments</a><a href="#results">Results</a></nav>
+    <button class="icon-btn" id="theme-btn" aria-label="Toggle dark mode"><svg class="i" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></svg></button>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <header class="paper-head">
+      <span class="venue">DrivenData · DaT Parkinson's Challenge · 2026</span>
+      <h1 class="serif">DaT SPECT Abnormality Classification</h1>
+      <p class="subtitle">A 3D CNN ensemble with striatal binding-ratio features</p>
+      <p class="authors"><span class="me">Aissam Djahnine</span> · team Mobarmij</p>
+      
+      <div class="actions">
+        <a class="btn primary" href="https://github.com/AissamDjahnine/dat-parkinson-challenge"><svg class="i" viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg>GitHub</a>
+        <a class="btn" href="https://github.com/AissamDjahnine/dat-parkinson-challenge/releases/tag/v1.0.0"><svg class="i" viewBox="0 0 24 24"><path d="M20 12l-8 8-9-9V3h8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg>Release v1.0</a>
+      </div>
+    </header>
+
+    <div class="tldr" aria-label="Key numbers">
+      <div><div class="num">0.9379</div><div class="lbl">AUROC on the private leaderboard</div></div>
+      <div><div class="num">59th</div><div class="lbl">of 1,009 participants</div></div>
+      <div><div class="num">0.3054</div><div class="lbl">private log loss</div></div>
+      <div><div class="num">5</div><div class="lbl">model families fused</div></div>
+    </div>
+
+    <figure class="teaser">
+      <a href="/images/dat-parkinson-challenge.webp" aria-label="Open the research figure at full resolution">
+        <img src="/images/dat-parkinson-challenge.webp" alt="Normal and abnormal DaT SPECT brain scans shown in axial, coronal, and sagittal views">
+      </a>
+      <figcaption>One normal and one abnormal DaT SPECT scan. Select the figure to view it at full resolution.</figcaption>
+    </figure>
+
+    <div class="prose">
+      <section class="s" id="abstract">
+        <h2 class="serif">Abstract</h2>
+        <div class="abstract"><p>Dopamine-transporter (DaT) SPECT imaging supports the diagnosis of parkinsonian syndromes, and the task is to classify each scan as normal or abnormal from the image alone. We built an end-to-end pipeline for the DrivenData DaT Parkinson's Challenge, which scores predictions by log loss on scans from several hospitals and scanner types.</p><p>Each scan is preprocessed on its own: masked, centred on the striatum and normalized by its own non-specific reference level, since intensities are not comparable across sites. Four CNN families (DatNet, a Siamese hemisphere model, SliceNet and a MedicalNet ResNet-10) are averaged and fused in logit space with a LightGBM model on 20 striatal binding-ratio features. All model selection uses site-grouped cross-validation.</p><p>The final submission reached an AUROC of 0.9379 and a private log loss of 0.3054, ranking 59th of 1,009 participants.</p><p class="kw"><strong>Keywords:</strong> DaT SPECT · Parkinson's disease · 3D CNN ensemble · striatal binding ratio · domain shift</p></div>
+      </section>
+
+      <section class="s" id="method">
+        <h2 class="serif">Method</h2>
+        <ol class="steps"><li><span><strong>Preprocess each scan on its own.</strong> Decode, mask and centre on the striatum, then divide by the scan’s own non-specific reference level, since intensity is not comparable across sites.</span></li><li><span><strong>Two grids.</strong> Resample to 96³ for the CNNs and 64³ for the binding-ratio head.</span></li><li><span><strong>Four CNN families.</strong> DatNet (3D CNN), a Siamese hemisphere comparison, SliceNet (2.5D) and a MedicalNet-initialised ResNet-10.</span></li><li><span><strong>Fuse.</strong> Average the CNNs and combine them with a LightGBM model on 20 striatal-binding-ratio features, weighted 0.8 to 0.2 in logit space.</span></li></ol><div class="ptable-wrap"><p class="ptable-caption"><b>Table 1:</b> Out-of-fold log loss per model family (lower is better)</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th scope="col">Family</th><th scope="col">Architecture</th><th scope="col">Checkpoints</th><th scope="col">OOF log loss</th></tr></thead><tbody><tr class="ours"><th scope="row">DatNet</th><td class="best">3D CNN with stride-3 stem</td><td class="best">15</td><td class="best">0.2694</td></tr><tr><th scope="row">Siamese</th><td>Shared-weight hemisphere comparison</td><td>15</td><td>0.2740</td></tr><tr><th scope="row">MedicalNet</th><td>ResNet-10, MedicalNet initialisation</td><td>15</td><td>0.2833</td></tr><tr><th scope="row">SliceNet</th><td>2.5D slice encoder</td><td>15</td><td>0.2917</td></tr><tr><th scope="row">SBR head</th><td>LightGBM on 20 striatal-binding-ratio features</td><td>15</td><td>0.4404</td></tr></tbody></table></div></div><div class="callout">Scanner metadata alone reaches AUROC 0.726 under random folds but only 0.533 under site-grouped folds, so every number here uses site-grouped cross-validation.</div>
+      </section>
+
+      <section class="s" id="experiments">
+        <h2 class="serif">Data</h2>
+        <div class="ptable-wrap"><p class="ptable-caption"><b>Table 2:</b> Challenge data.</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th scope="col">Item</th><th scope="col">Value</th></tr></thead><tbody><tr><th scope="row">Training scans</th><td>1,362 (747 abnormal, 615 normal)</td></tr><tr><th scope="row">Sources</th><td>Several hospitals and scanner types</td></tr><tr><th scope="row">Public leaderboard split</th><td>about 145 scans</td></tr><tr><th scope="row">Metric</th><td>Log loss</td></tr><tr><th scope="row">Participants</th><td>1,009</td></tr></tbody></table></div></div><p>Scanner metadata alone gives an AUROC of 0.726 under random folds but 0.533 under site-grouped folds: random folds leak site information, so all reported numbers use grouped cross-validation.</p>
+      </section>
+
+      <section class="s" id="results">
+        <h2 class="serif">Results</h2>
+        <div class="ptable-wrap"><p class="ptable-caption"><b>Table 3:</b> Log loss by submission (lower is better)</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th scope="col">Submission</th><th scope="col">Grouped CV</th><th scope="col">Public</th><th scope="col">Private</th></tr></thead><tbody><tr class="ours"><th scope="row">008a (base)</th><td class="best">0.2472</td><td class="best">0.2653</td><td class="best">0.3054</td></tr><tr><th scope="row">011 (+ count-noise augmentation)</th><td>0.2448</td><td>0.2665</td><td>—</td></tr><tr><th scope="row">012 (+ 50-feature SBR head)</th><td>0.2426</td><td>0.2702</td><td>—</td></tr></tbody></table></div></div><h4 style="font-size:17px;margin:20px 0 6px">Key findings</h4><ul class="findings"><li><span><strong>Final standing:</strong> the 008a submission ranked 59th on the private leaderboard with AUROC 0.9379.</span></li><li><span><strong>CV vs leaderboard:</strong> each later model improved cross-validation but scored worse on the public leaderboard.</span></li><li><span><strong>Every member counts:</strong> removing the weakest member, the binding-ratio head, costs 0.0055 log loss.</span></li><li><span><strong>No calibration:</strong> cross-fitted temperature scaling measured worse, so none is applied.</span></li></ul>
+      </section>
+
+      <section class="s" id="code">
+        <h2 class="serif">Code</h2>
+        <p>The full pipeline, training recipes and figures are on <a href="https://github.com/AissamDjahnine/dat-parkinson-challenge">GitHub</a>, with the final submission tagged as <a href="https://github.com/AissamDjahnine/dat-parkinson-challenge/releases/tag/v1.0.0">release v1.0</a>.</p>
+      </section>
+
+    </div>
+
+    <section class="more" aria-labelledby="more-title">
+      <h2 class="serif" id="more-title">More research</h2>
+      <div class="more-grid">
+        <a class="mcard" href="/projects/cyclegan/">
+          <div class="thumb"><img src="/images/github-projects/gan-project.webp" alt="" loading="lazy"></div>
+          <div class="body"><h3>Cell image segmentation with CycleGAN</h3><div class="meta">Master's project · 2020</div></div>
+        </a>
+        <a class="mcard" href="/projects/ct-3dflow/">
+          <div class="thumb"><img src="/images/GLOW_MIDL_recap.webp" alt="" loading="lazy"></div>
+          <div class="body"><h3>CT-3DFlow: Unsupervised Pulmonary CT Analysis</h3><div class="meta">arXiv · 2024</div></div>
+        </a>
+        <a class="mcard" href="/projects/muscle-segmentation/">
+          <div class="thumb"><img src="/images/SARCO_PROJECT.webp" alt="" loading="lazy"></div>
+          <div class="body"><h3>Segmentation and Measurement of Skeletal Muscle Areas on CT Scans</h3><div class="meta">Medical imaging · CT</div></div>
+        </a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><a href="/">Aissam Djahnine</a> · AI Research Engineer</span>
+    <span><a href="/#research">All research</a> · <a href="/#publications">Publications</a></span>
+  </div>
+</footer>
+<script src="/assets/js/project.js?v={{ site.time | date: '%s' }}"></script>
+</body>
+</html>

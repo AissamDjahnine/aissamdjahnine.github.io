@@ -1,0 +1,127 @@
+---
+layout: null
+title: "Muscle segmentation"
+description: "Deep learning segmentation of skeletal muscle on CT at the L3, L2 and L1 vertebrae levels to improve sarcopenia estimation."
+permalink: /projects/muscle-segmentation/
+image: /images/SARCO_PROJECT.png
+sitemap: true
+---
+<!doctype html>
+<html lang="en">
+<head>
+<script>try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muscle segmentation — Aissam Djahnine</title>
+<meta name="description" content="Deep learning segmentation of skeletal muscle on CT at the L3, L2 and L1 vertebrae levels to improve sarcopenia estimation.">
+<meta property="og:title" content="Segmentation and Measurement of Skeletal Muscle Areas on CT Scans">
+<meta property="og:description" content="Deep learning segmentation of skeletal muscle on CT at the L3, L2 and L1 vertebrae levels to improve sarcopenia estimation.">
+<meta property="og:image" content="https://aissamdjahnine.github.io/images/SARCO_PROJECT.png">
+<link rel="icon" type="image/png" href="/images/favicon.webp">
+<link rel="canonical" href="https://aissamdjahnine.github.io/projects/muscle-segmentation/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400&family=STIX+Two+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/project.css?v={{ site.time | date: '%s' }}">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a class="brand" href="/">Aissam Djahnine</a>
+      <span class="sep mid" aria-hidden="true">/</span>
+      <a class="mid" href="/#research">Research</a>
+      <span class="sep" aria-hidden="true">/</span>
+      <span class="here">Muscle segmentation</span>
+    </nav>
+    <nav class="toc" aria-label="On this page"><a href="#abstract">Abstract</a><a href="#method">Method</a><a href="#experiments">Experiments</a><a href="#results">Results</a></nav>
+    <button class="icon-btn" id="theme-btn" aria-label="Toggle dark mode"><svg class="i" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></svg></button>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <header class="paper-head">
+      <span class="venue">Medical imaging · CT segmentation</span>
+      <h1 class="serif">Segmentation and Measurement of Skeletal Muscle Areas on CT Scans</h1>
+      <p class="subtitle">Estimation of sarcopenia on different lumbar vertebrae levels (L3-L2-L1)</p>
+      <p class="authors"><span class="me">Aissam Djahnine</span></p>
+      
+      <div class="actions">
+        <a class="btn primary" href="/docs/reports/muscle-segmentation-report.pdf"><svg class="i" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>Report (PDF)</a>
+        <a class="btn" href="/#research"><svg class="i" viewBox="0 0 24 24"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>All research</a>
+      </div>
+    </header>
+
+    <div class="tldr" aria-label="Key numbers">
+      <div><div class="num">3</div><div class="lbl">vertebra levels: L3, L2, L1</div></div>
+      <div><div class="num">8,155</div><div class="lbl">axial slices, 512 × 512</div></div>
+      <div><div class="num">4,472</div><div class="lbl">image–mask pairs in the final training set</div></div>
+      <div><div class="num">~0.99</div><div class="lbl">median validation Dice</div></div>
+    </div>
+
+    <figure class="teaser">
+      <a href="/images/SARCO_PROJECT.webp" aria-label="Open the research figure at full resolution">
+        <img src="/images/SARCO_PROJECT.webp" alt="Skeletal muscle segmentation examples on CT slices">
+      </a>
+      <figcaption>Skeletal muscle segmentations on CT slices. Select the figure to view it at full resolution.</figcaption>
+    </figure>
+
+    <div class="prose">
+      <section class="s" id="abstract">
+        <h2 class="serif">Abstract</h2>
+        <div class="abstract"><p>Skeletal muscle area measured on CT is used to estimate sarcopenia, usually at the third lumbar vertebra (L3). Extending automatic measurement to L2 and L1 requires masks that did not exist at those levels.</p><p>We train a U-Net to segment skeletal muscle on 512 × 512 axial slices and grow the dataset step by step: models trained on L3 generate masks for L2 and L1, accepted masks are added back, and training repeats. A Laplacian "hard filter", rotations, artificial hands and corrected error masks improve robustness, and a ribs-removal post-processing step cleans the L2 and L1 masks.</p><p>The final training set holds 4,472 image–mask pairs across the three levels, and the final models reach a median validation Dice around 0.99 on both the L3-only and the L3-L2-L1 datasets.</p><p class="kw"><strong>Keywords:</strong> skeletal muscle · sarcopenia · CT segmentation · U-Net · data augmentation · continual adding</p></div>
+      </section>
+
+      <section class="s" id="method">
+        <h2 class="serif">Method</h2>
+        <p>The network is a classic U-Net on 512 × 512 inputs, with a 6-stage encoder (16 to 512 feature maps) and a matching decoder. It trains for 30 epochs with RMSProp on a 90:10 split, in 3 to 5 hours on a single NVIDIA TITAN RTX GPU. Images are clipped to [0, 2000] HU and normalized to [-1, 1].</p><ol class="steps"><li><span><strong>Hard filter.</strong> A Laplacian filter is applied to low-noise images so the model learns both soft and hard reconstruction textures.</span></li><li><span><strong>Rotation.</strong> Random rotations in [−30°, 30°] cover patients who lie slightly rotated.</span></li><li><span><strong>Artificial hands.</strong> Hands and objects extracted from the dataset are added to training images, so the model stops segmenting them.</span></li><li><span><strong>Ribs removal.</strong> A post-processing step removes regions inside the ribs, needed at L2 and L1.</span></li><li><span><strong>Continual adding.</strong> Models trained on L3 generate L2 and L1 masks; accepted masks join the training set and the cycle repeats.</span></li></ol><div class="facts"><span class="chip">U-Net</span><span class="chip">Data augmentation</span><span class="chip">Post-processing</span><span class="chip">CT</span></div>
+      </section>
+
+      <section class="s" id="experiments">
+        <h2 class="serif">Dataset</h2>
+        <div class="ptable-wrap"><p class="ptable-caption"><b>Table 1:</b> Dataset after all augmentations</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th scope="col">Level</th><th scope="col">Final training</th><th scope="col">Error remaining</th><th scope="col">Augmentation</th><th scope="col">Total</th></tr></thead><tbody><tr><th scope="row">L3</th><td>1,786</td><td>417</td><td>88</td><td>2,291</td></tr><tr><th scope="row">L2</th><td>1,559</td><td>1,039</td><td>0</td><td>2,598</td></tr><tr><th scope="row">L1</th><td>1,039</td><td>2,227</td><td>0</td><td>3,266</td></tr><tr><th scope="row">Total</th><td>4,472</td><td>3,683</td><td>88</td><td>8,155</td></tr></tbody></table></div></div><figure class="pfig"><a class="frame" href="/images/projects/muscle-segmentation/dataset-evolution.webp"><img src="/images/projects/muscle-segmentation/dataset-evolution.webp" alt="Diagram of how the L3, L2 and L1 training sets grew across four steps" loading="lazy"></a><figcaption><b>Figure 1:</b> Dataset evolution for L3, L2 and L1 through data augmentation and continual adding.</figcaption></figure>
+      </section>
+
+      <section class="s" id="results">
+        <h2 class="serif">Results</h2>
+        <div class="ptable-wrap"><p class="ptable-caption"><b>Table 2:</b> Experiments, in chronological order.</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th scope="col">Models</th><th scope="col">Levels</th><th scope="col">Description</th></tr></thead><tbody><tr><th scope="row">M1, M11</th><td>L3</td><td>Hard filter only</td></tr><tr><th scope="row">M2, M22</th><td>L3</td><td>Hard filter + rotation</td></tr><tr><th scope="row">M3, M33</th><td>L3</td><td>Hard filter + hand masks (88)</td></tr><tr><th scope="row">M4, M44</th><td>L3</td><td>Hard filter + hand masks (88) + error added (59)</td></tr><tr><th scope="row">M5, M55</th><td>L3</td><td>Hard filter + rotation + error added (59)</td></tr><tr><th scope="row">M6, M66</th><td>L3</td><td>Hard filter + rotation + hand masks (88) + error added (102)</td></tr><tr><th scope="row">M7, M77</th><td>L3</td><td>Same as M6 + GN 3</td></tr><tr><th scope="row">M8, M88</th><td>L3-L2</td><td>Same as M7 + L2 added (1,093)</td></tr><tr><th scope="row">M9, M99</th><td>L3-L2</td><td>Same as M7 + L2 added (1,559)</td></tr><tr><th scope="row">M10, M100</th><td>L3-L2-L1</td><td>Same as M7 + L2 added (1,559) + L1 added (1,039)</td></tr></tbody></table></div></div><p>Experiments M1 to M77 train on L3 only, adding the hard filter, rotation, artificial hands and corrected error masks step by step. M8 to M100 add L2 and then L1 samples. Results between experiments are not directly comparable, since the validation set grows each time new image–mask pairs are added.</p><figure class="pfig"><a class="frame" href="/images/projects/muscle-segmentation/dice-l3.webp"><img src="/images/projects/muscle-segmentation/dice-l3.webp" alt="Boxplots of validation Dice for the L3-only experiments" loading="lazy"></a><figcaption><b>Figure 2:</b> Validation Dice for the L3-only experiments (M1 to M77).</figcaption></figure><figure class="pfig"><a class="frame" href="/images/projects/muscle-segmentation/dice-l3-l2-l1.webp"><img src="/images/projects/muscle-segmentation/dice-l3-l2-l1.webp" alt="Boxplots of validation Dice for the L3-L2-L1 experiments" loading="lazy"></a><figcaption><b>Figure 3:</b> Validation Dice for the L3, L2 and L1 experiments (M8 to M100).</figcaption></figure><h4 style="font-size:17px;margin:20px 0 6px">Key findings</h4><ul class="findings"><li><span><strong>Final models:</strong> M7/M77 on L3 only and M10/M100 on L3-L2-L1 perform well, with median validation Dice around 0.99.</span></li><li><span><strong>Three levels from one:</strong> segmentation now works at L3, L2 and L1, starting from L3 masks only.</span></li><li><span><strong>Open challenges:</strong> noisy samples and images with unusual texture remain difficult.</span></li></ul>
+      </section>
+
+      <section class="s" id="conclusions">
+        <h2 class="serif">Conclusions &amp; limitations</h2>
+        <p>The results obtained are both satisfying and promising: segmentation succeeds on the different lumbar vertebrae levels (L3, L2 and L1), but some challenges remain, such as noisy samples and texture variability. The next step is full fine-tuning of the models’ hyperparameters to improve segmentations.</p>
+      </section>
+
+    </div>
+
+    <section class="more" aria-labelledby="more-title">
+      <h2 class="serif" id="more-title">More research</h2>
+      <div class="more-grid">
+        <a class="mcard" href="/projects/ecapri/">
+          <div class="thumb"><img src="/images/CAPRI_recap.webp" alt="" loading="lazy"></div>
+          <div class="body"><h3>eCAPRI: post-TAVI mortality prediction</h3><div class="meta">European Radiology · 2025</div></div>
+        </a>
+        <a class="mcard" href="/projects/cyclegan/">
+          <div class="thumb"><img src="/images/github-projects/gan-project.webp" alt="" loading="lazy"></div>
+          <div class="body"><h3>Cell image segmentation with CycleGAN</h3><div class="meta">Master's project · 2020</div></div>
+        </a>
+        <a class="mcard" href="/projects/weakly-supervised-ct/">
+          <div class="thumb"><img src="/images/SIMCLR_recap.webp" alt="" loading="lazy"></div>
+          <div class="body"><h3>Weakly-Supervised Pathology Detection and Localization in 3D Chest Scans</h3><div class="meta">Medical Physics · 2024</div></div>
+        </a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><a href="/">Aissam Djahnine</a> · AI Research Engineer</span>
+    <span><a href="/#research">All research</a> · <a href="/#publications">Publications</a></span>
+  </div>
+</footer>
+<script src="/assets/js/project.js?v={{ site.time | date: '%s' }}"></script>
+</body>
+</html>

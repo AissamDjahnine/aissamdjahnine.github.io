@@ -1,95 +1,139 @@
 ---
-layout: research
-title: "Detection and severity quantification of pulmonary embolism with 3D CT data using an automated deep learning-based artificial solution"
-description: "This work investigates automated pulmonary embolism detection and severity assessment from three-dimensional CT pulmonary angiography examinations with limited annotations."
+layout: null
+title: "Pulmonary embolism"
+description: "Automated pulmonary embolism detection and severity quantification on 3D CT pulmonary angiography, first place at the JFR 2022 data challenge."
 permalink: /projects/pulmonary-embolism/
 image: /images/JFR_recap.png
+sitemap: true
 ---
-<header class="research-hero">
-  <h1>Pulmonary Embolism Detection &amp; Severity Quantification</h1>
-  <p class="research-subtitle">Deep Learning on 3D CT Angiography</p>
-  <p class="research-authors"><strong>A. Djahnine</strong>, C. Lazarus, M. Lederlin, S. Mulé, R. Wiemker, S. Si-Mohamed, E. Jupin-Delevaux, O. Nempont, Y. Skandarani, M. De Craene, S. Goubalan, C. Raynaud, Y. Belkouchi, A. Ben Afia, C. Fabre, G. Ferretti, C. De Margerie, P. Berge, R. Liberge, N. Elbaz, M. Blain, P. Brillet, G. Chassagnon, F. Cadour, C. Caramella, M. El Hajjam, S. Boussouar, J. Hadchiti, X. Fablet, A. Khalil, H. Talbot, A. Luciani, N. Lassau and L. Boussel</p>
-  <p class="research-status">Diagnostic and Interventional Imaging (DII) · 2024</p>
-  <div class="research-actions" aria-label="Research resources">
-    <a href="https://doi.org/10.1016/j.diii.2023.09.006">Paper</a>
-    <a href="{{ "/publications/" | relative_url }}">All publications</a>
-    <a href="{{ "/projects/" | relative_url }}">All research</a>
+<!doctype html>
+<html lang="en">
+<head>
+<script>try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pulmonary embolism — Aissam Djahnine</title>
+<meta name="description" content="Automated pulmonary embolism detection and severity quantification on 3D CT pulmonary angiography, first place at the JFR 2022 data challenge.">
+<meta property="og:title" content="Detection and severity quantification of pulmonary embolism with 3D CT data using an automated deep learning-based artificial solution">
+<meta property="og:description" content="Automated pulmonary embolism detection and severity quantification on 3D CT pulmonary angiography, first place at the JFR 2022 data challenge.">
+<meta property="og:image" content="https://aissamdjahnine.github.io/images/JFR_recap.png">
+<link rel="icon" type="image/png" href="/images/favicon.webp">
+<link rel="canonical" href="https://aissamdjahnine.github.io/projects/pulmonary-embolism/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400&family=STIX+Two+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/project.css?v={{ site.time | date: '%s' }}">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a class="brand" href="/">Aissam Djahnine</a>
+      <span class="sep mid" aria-hidden="true">/</span>
+      <a class="mid" href="/#research">Research</a>
+      <span class="sep" aria-hidden="true">/</span>
+      <span class="here">Pulmonary embolism</span>
+    </nav>
+    <nav class="toc" aria-label="On this page"><a href="#abstract">Abstract</a><a href="#method">Method</a><a href="#experiments">Experiments</a><a href="#citation">BibTeX</a></nav>
+    <button class="icon-btn" id="theme-btn" aria-label="Toggle dark mode"><svg class="i" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></svg></button>
   </div>
 </header>
 
-<figure class="research-figure">
-  <a href="{{ "/images/JFR_recap.png" | relative_url }}" aria-label="Open the research figure at full resolution">
-    <img src="{{ "/images/JFR_recap.png" | relative_url }}" width="5520" height="1689" alt="Pulmonary embolism CT examples, severity measurements, detection results, and network architecture">
-  </a>
-  <figcaption>Research overview. Select the figure to view it at full resolution.</figcaption>
-</figure>
+<main id="main">
+  <div class="wrap">
+    <header class="paper-head">
+      <span class="venue">Diagnostic and Interventional Imaging (DII) · 2024</span>
+      <h1 class="serif">Pulmonary Embolism Detection &amp; Severity Quantification</h1>
+      <p class="subtitle">Deep Learning on 3D CT Angiography</p>
+      <p class="authors"><span class="me">A. Djahnine</span>, C. Lazarus, M. Lederlin, S. Mulé, R. Wiemker, S. Si-Mohamed, E. Jupin-Delevaux, O. Nempont, Y. Skandarani, M. De Craene, S. Goubalan, C. Raynaud, Y. Belkouchi, A. Ben Afia, C. Fabre, G. Ferretti, C. De Margerie, P. Berge, R. Liberge, N. Elbaz, M. Blain, P. Brillet, G. Chassagnon, F. Cadour, C. Caramella, M. El Hajjam, S. Boussouar, J. Hadchiti, X. Fablet, A. Khalil, H. Talbot, A. Luciani, N. Lassau and L. Boussel</p>
+      
+      <div class="actions">
+        <a class="btn primary" href="https://doi.org/10.1016/j.diii.2023.09.006"><svg class="i" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>Paper</a>
+        <a class="btn" href="https://theses.hal.science/tel-05263492/"><svg class="i" viewBox="0 0 24 24"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>Thesis, chapter 2</a>
+        <a class="btn" href="#citation"><svg class="i" viewBox="0 0 24 24"><path d="M7 7h4v4H7zM13 7h4v4h-4zM7 11c0 4-2 6-2 6M13 11c0 4-2 6-2 6"/></svg>Cite</a>
+      </div>
+    </header>
 
-<div class="research-copy">
-  <section aria-labelledby="overview">
-    <h2 id="overview">Overview</h2>
-    <p>This work investigates automated pulmonary embolism detection and severity assessment from three-dimensional CT pulmonary angiography examinations with limited annotations.</p>
-  </section>
-  <section aria-labelledby="method">
-    <h2 id="method">Method</h2>
-    <p>The approach combines embolism detection with severity quantification using the Qanadli score and the right-to-left ventricle diameter ratio.</p>
-    <p>The pipeline has four outputs: clot detection, examination-level PE classification, Qanadli-score estimation, and RV/LV diameter-ratio prediction.</p>
-  </section>
-  <section aria-labelledby="experiments">
-    <h2 id="experiments">Experiments</h2>
-    <div class="research-table-scroll" role="region" aria-label="Data and supervision" tabindex="0">
-      <table>
-        <caption>Data and supervision</caption>
-        <thead><tr><th scope="col">Dataset</th><th scope="col">Patients</th><th scope="col">Annotation level</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">Main CTPA database</th><td>1,268</td><td>Image level</td></tr>
-          <tr><th scope="row">CAD-PE</th><td>91</td><td>Pixel level</td></tr>
-          <tr><th scope="row">FUME-PE</th><td>35</td><td>Pixel level</td></tr>
-          <tr><th scope="row">Evaluation test set</th><td>378</td><td>Held-out assessment</td></tr>
-        </tbody>
-      </table>
-    </div>    <p>The test-set size is reported separately; it is not an additional training dataset. Detection is assessed with AUC, and severity estimates with the coefficient of determination (R²).</p>
-  </section>
-  <section aria-labelledby="results">
-    <h2 id="results">Results</h2>
-    <div class="research-table-scroll" role="region" aria-label="Reported classification results" tabindex="0">
-      <table>
-        <caption>Reported classification results</caption>
-        <thead><tr><th scope="col">Split</th><th scope="col">AUC</th><th scope="col">95% confidence interval</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">Training</th><td>0.870</td><td>0.850–0.900</td></tr>
-          <tr><th scope="row">Test</th><td>0.852</td><td>0.810–0.890</td></tr>
-        </tbody>
-      </table>
-    </div>    <div class="research-table-scroll" role="region" aria-label="Severity quantification on the test set" tabindex="0">
-      <table>
-        <caption>Severity quantification on the test set</caption>
-        <thead><tr><th scope="col">Target</th><th scope="col">R²</th><th scope="col">95% confidence interval</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">Qanadli score</th><td>0.717</td><td>0.668–0.760</td></tr>
-          <tr><th scope="row">RV/LV diameter ratio</th><td>0.723</td><td>0.668–0.766</td></tr>
-        </tbody>
-      </table>
-    </div>    <ul>
-      <li><strong>Detection:</strong> test performance measures how well positive and negative examinations are separated.</li>
-      <li><strong>Severity:</strong> the two regression targets evaluate complementary aspects of embolic burden and cardiac impact.</li>
-    </ul>
-  </section>
-  <section aria-labelledby="conclusions">
-    <h2 id="conclusions">Conclusions &amp; limitations</h2>
-    <p>The study demonstrates feasibility of automated clot detection and severity estimation using blood-clot and cardiac segmentations. Further studies are needed to establish effectiveness in clinical practice.</p>
-  </section>
-  <section aria-labelledby="sources">
-    <h2 id="sources">Paper &amp; supporting material</h2>
-    <p><a href="https://doi.org/10.1016/j.diii.2023.09.006">Full paper</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/38261553/">Indexed abstract and quantitative results</a>.</p>
-  </section>
-  <section aria-labelledby="citation">
-    <h2 id="citation">BibTeX</h2>
-    <pre class="research-citation"><code>@article{djahnine2024pulmonaryembolism,
+    <div class="tldr" aria-label="Key numbers">
+      <div><div class="num">1st</div><div class="lbl">place, JFR 2022 data challenge</div></div>
+      <div><div class="num">0.852</div><div class="lbl">test AUC for PE detection</div></div>
+      <div><div class="num">0.717 / 0.723</div><div class="lbl">R² for Qanadli score / RV/LV ratio</div></div>
+      <div><div class="num">0.784</div><div class="lbl">Dice for clot segmentation</div></div>
+    </div>
+
+    <figure class="teaser">
+      <a href="/images/JFR_recap.webp" aria-label="Open the research figure at full resolution">
+        <img src="/images/JFR_recap.webp" alt="Overview of the pulmonary embolism detection and severity quantification pipeline">
+      </a>
+      <figcaption>Research overview. Select the figure to view it at full resolution.</figcaption>
+    </figure>
+
+    <div class="prose">
+      <section class="s" id="abstract">
+        <h2 class="serif">Abstract</h2>
+        <div class="abstract"><p><b>Purpose:</b> The purpose of this study was to propose a deep learning-based approach to detect pulmonary embolism and quantify its severity using the Qanadli score and the right-to-left ventricle diameter (RV/LV) ratio on three-dimensional (3D) computed tomography pulmonary angiography (CTPA) examinations with limited annotations.</p><p><b>Materials and methods:</b> Using a database of 3D CTPA examinations of 1268 patients with image-level annotations, and two other public datasets of CTPA examinations from 91 (CAD-PE) and 35 (FUME-PE) patients with pixel-level annotations, a pipeline consisting of: (i), detecting blood clots; (ii), performing PE-positive versus negative classification; (iii), estimating the Qanadli score; and (iv), predicting RV/LV diameter ratio was followed. The method was evaluated on a test set including 378 patients. The performance of PE classification and severity quantification was quantitatively assessed using an area under the curve (AUC) analysis for PE classification and a coefficient of determination (R²) for the Qanadli score and the RV/LV diameter ratio.</p><p><b>Results:</b> Quantitative evaluation led to an overall AUC of 0.870 (95% confidence interval [CI]: 0.850–0.900) for PE classification task on the training set and an AUC of 0.852 (95% CI: 0.810–0.890) on the test set. Regression analysis yielded R² value of 0.717 (95% CI: 0.668–0.760) and of 0.723 (95% CI: 0.668–0.766) for the Qanadli score and the RV/LV diameter ratio estimation, respectively on the test set.</p><p><b>Conclusion:</b> This study shows the feasibility of utilizing AI-based assistance tools in detecting blood clots and estimating PE severity scores with 3D CTPA examinations. This is achieved by leveraging blood clots and cardiac segmentations. Further studies are needed to assess the effectiveness of these tools in clinical practice.</p><p class="kw"><strong>Keywords:</strong> Artificial intelligence; Pulmonary embolism; Qanadli score; Retina U-net</p></div>
+      </section>
+
+      <section class="s" id="method">
+        <h2 class="serif">Method</h2>
+        <p>The pipeline segments blood clots in the 3D exam, uses the segmentations to classify PE and estimate the Qanadli score, and segments the heart to estimate the RV/LV diameter ratio.</p><h3 class="sub"><span class="num">2.1</span>Blood clot segmentation</h3><p>Instance segmentation detects and segments each clot individually, giving their number and volume. A 3D approach is used because it outperforms 2D and 2.5D approaches by exploiting volumetric context. The <b>3D Retina U-Net</b> combines RetinaNet for object detection with U-Net for precise segmentation: a feature pyramid captures fine detail and global context, and an auxiliary network classifies objects and regresses their bounding boxes. It is trained on CAD-PE and FUM-PE with <b>nnDetection</b>, a self-configuring framework for medical object detection in the spirit of nnU-Net.</p><h3 class="sub"><span class="num">2.2</span>PE classification</h3><p>Two approaches are compared. <b>Image-level annotation</b>: inspired by the winning solution of the RSNA-STR Kaggle challenge, a 2D EfficientNet reads each slice with its two neighbours (2.5D), and a recurrent network processes the sequence of slice representations to output the probability of PE. <b>Segmentation-based annotation</b>: the clot segmentation is applied to each exam and the normalized total clot volume V<sub>PE</sub> serves as the predictor, with a threshold optimized on the training set.</p><h3 class="sub"><span class="num">2.3</span>Qanadli score</h3><p>The Qanadli score requires detecting and counting the branches containing a clot and locating them in the pulmonary arterial tree. Observing a strong correlation between the score and the total clot volume, several approximations were tested (power law, logarithmic); the best in R² is logarithmic:</p><p style="text-align:center;font-family:'STIX Two Text',serif;font-size:19px">Score<sub>Qanadli</sub> = a · log(b + V<sub>PE</sub>) + c</p><p>with a = 0.606, b = 1000 and c = −37.813 fitted by least squares on the EP-Detect training set.</p><figure class="pfig"><a class="frame" href="/images/projects/pulmonary-embolism/qanadli-regression.webp"><img src="/images/projects/pulmonary-embolism/qanadli-regression.webp" alt="Scatter plot of Qanadli scores against the logarithmic clot-volume model with a fitted line" loading="lazy"></a><figcaption><b>Figure 1:</b> Qanadli score against total clot volume on the EP-Detect training set, with the fitted logarithmic regression (R² = 0.55).</figcaption></figure><h3 class="sub"><span class="num">2.4</span>RV/LV diameter ratio</h3><p>The RV/LV ratio, a key indicator of cardiac function, compares the maximal inner diameters of the right and left ventricles on the axial slice closest to the four-chamber view. The cardiac structures are segmented, distance maps are computed in each ventricle to obtain the diameters, and a linear regression calibrates the estimated ratios against the reference values.</p><figure class="pfig"><a class="frame" href="/images/projects/pulmonary-embolism/cardiac-segmentation.webp"><img src="/images/projects/pulmonary-embolism/cardiac-segmentation.webp" alt="Axial CTPA slice with cardiac chambers segmented in colour" loading="lazy"></a><figcaption><b>Figure 2:</b> Cardiac segmentation on a CTPA exam, used to measure the ventricles (left ventricle in blue, right ventricle in yellow).</figcaption></figure>
+      </section>
+
+      <section class="s" id="experiments">
+        <h2 class="serif">Experiments</h2>
+        <h3 class="sub"><span class="num">3.1</span>Data</h3><div class="ptable-wrap"><p class="ptable-caption"><b>Table 1:</b> Datasets used in this work.</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th scope="col">Dataset</th><th scope="col">Exams</th><th scope="col">Annotation</th><th scope="col">Use</th></tr></thead><tbody><tr><th scope="row">EP-Detect (JFR 2022 challenge)</th><td>1,268 CTPA from 25 French institutions</td><td>PE label, RV/LV ratio, Qanadli score (0–40)</td><td>890 training (423 PE-positive) · 378 test</td></tr><tr><th scope="row">CAD-PE (ISBI challenge)</th><td>91 PE-positive</td><td>Expert clot segmentation masks</td><td>Clot segmentation training / validation</td></tr><tr><th scope="row">FUM-PE</th><td>35 PE-positive</td><td>Expert clot segmentation masks</td><td>Clot segmentation training / validation</td></tr><tr><th scope="row">RSNA-STR (Kaggle)</th><td>7,279 studies</td><td>Slice- and study-level labels</td><td>Image-level classification approach</td></tr></tbody></table></div></div><p>Segmentation is validated on 25 held-out exams from CAD-PE and FUM-PE (7 and 18 exams, 20% of the data) with the Dice coefficient; classification is validated on a held-out part of EP-Detect with the AUC.</p><figure class="pfig"><a class="frame" href="/images/projects/pulmonary-embolism/pe-samples.webp"><img src="/images/projects/pulmonary-embolism/pe-samples.webp" alt="Two axial CTPA slices showing blood clots, one with arrows and one with a green ground-truth overlay" loading="lazy"></a><figcaption><b>Figure 3:</b> PE-positive samples. (A) EP-Detect training exam, arrows on the clots. (B) CAD-PE exam with the ground-truth clot mask in green.</figcaption></figure><h3 class="sub"><span class="num">3.2</span>Blood clot segmentation</h3><p>Clot segmentation reaches a Dice coefficient of <b>0.784</b> on the validation set of CAD-PE and FUM-PE.</p><figure class="pfig"><a class="frame" href="/images/projects/pulmonary-embolism/clot-segmentation.webp"><img src="/images/projects/pulmonary-embolism/clot-segmentation.webp" alt="Six CTPA slices showing predicted clots in red and ground truth in blue" loading="lazy"></a><figcaption><b>Figure 4:</b> Clot segmentation examples, prediction in red and ground truth in blue. (A, D) Successful segmentation on an EP-Detect exam, without and with overlay. (B, E) A failure case, the error marked by a white arrow. (C, F) CAD-PE sample with predicted and ground-truth clots.</figcaption></figure><h3 class="sub"><span class="num">3.3</span>PE classification</h3><div class="ptable-wrap"><p class="ptable-caption"><b>Table 2:</b> PE classification: image-level versus segmentation-based annotation (AUC).</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th scope="col">Classification approach</th><th scope="col">Validation</th><th scope="col">Test</th></tr></thead><tbody><tr><th scope="row">Image-level annotation (EfficientNet 2.5D + RNN)</th><td>0.792</td><td>–</td></tr><tr class="ours"><th scope="row">Segmentation-based annotation (clot volume)</th><td class="best">0.866</td><td class="best">0.852</td></tr></tbody></table></div></div><figure class="pfig"><a class="frame" href="/images/projects/pulmonary-embolism/roc.webp"><img src="/images/projects/pulmonary-embolism/roc.webp" alt="ROC curve with AUC 0.87" loading="lazy"></a><figcaption><b>Figure 5:</b> ROC curve of segmentation-based PE classification on the EP-Detect training set; the optimal threshold is set on the normalized total clot volume. AUC 0.87 (95% CI 0.85–0.90).</figcaption></figure><h4 style="font-size:17px;margin:20px 0 6px">Key findings</h4><ul class="findings"><li><span><strong>Fine labels win:</strong> the segmentation-based approach, built from the 126 pixel-annotated exams of CAD-PE and FUM-PE, beats the classifier trained on thousands of image-level labels (0.866 vs 0.792 validation AUC).</span></li><li><span><strong>Generalization:</strong> it holds on the test set with an AUC of 0.852.</span></li></ul><h3 class="sub"><span class="num">3.4</span>Severity: Qanadli score and RV/LV ratio</h3><p>The logarithmic model of the Qanadli score reaches R² = <b>0.717</b> on the EP-Detect test set, and the RV/LV regression R² = <b>0.723</b>, showing good agreement with the reference measurements.</p><h3 class="sub"><span class="num">3.5</span>JFR 2022 data challenge</h3><div class="ptable-wrap"><p class="ptable-caption"><b>Table 3:</b> JFR 2022 data challenge on the EP-Detect test set. R² is computed on PE-positive patients only; the total score is the mean of the three metrics.</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th scope="col">Team</th><th scope="col">PE classification (AUC)</th><th scope="col">RV/LV ratio (R²)</th><th scope="col">Qanadli score (R²)</th><th scope="col">Total score</th></tr></thead><tbody><tr><th scope="row">Second place</th><td class="best">0.862</td><td>0.644</td><td>0.511</td><td>0.673</td></tr><tr class="ours"><th scope="row">Ours (first place)</th><td>0.852</td><td class="best">0.723</td><td class="best">0.717</td><td class="best">0.764</td></tr></tbody></table></div></div><div class="ptable-wrap"><p class="ptable-caption"><b>Table 4:</b> Summary of results with 95% confidence intervals, as reported in the paper.</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th scope="col">Task</th><th scope="col">Metric</th><th scope="col">Value</th><th scope="col">95% CI</th></tr></thead><tbody><tr><th scope="row">Clot segmentation</th><td>Dice coefficient (validation)</td><td>0.784</td><td>–</td></tr><tr><th scope="row">PE classification (training)</th><td>AUC</td><td>0.870</td><td>0.850–0.900</td></tr><tr><th scope="row">PE classification (test)</th><td>AUC</td><td>0.852</td><td>0.810–0.890</td></tr><tr><th scope="row">Qanadli score (test)</th><td>R²</td><td>0.717</td><td>0.668–0.760</td></tr><tr><th scope="row">RV/LV diameter ratio (test)</th><td>R²</td><td>0.723</td><td>0.668–0.766</td></tr></tbody></table></div></div><h4 style="font-size:17px;margin:20px 0 6px">Key findings</h4><ul class="findings"><li><span><strong>First place overall</strong> with a total score of 0.764, ahead of 0.673 for the second team.</span></li><li><span><strong>Severity makes the difference:</strong> the second team had a slightly higher AUC (0.862), but our severity estimates were much better (R² 0.723 vs 0.644 and 0.717 vs 0.511).</span></li></ul>
+      </section>
+
+      <section class="s" id="conclusions">
+        <h2 class="serif">Conclusion &amp; limitations</h2>
+        <p>This automated method assists PE diagnosis on CTPA by detecting clots and quantifying severity with the Qanadli score and the RV/LV ratio. Developed for the JFR 2022 data challenge organized by the Société Française de Radiologie, it took first place. The Qanadli approximation greatly simplifies the original score, but the strong correlation with clot volume makes it effective.</p><p>Fine segmentation labels, even in small quantity, outperformed a classifier trained on large amounts of coarse labels. Building large finely-annotated databases is costly and time-consuming, which suits pathology-specific decision support but not the broad coverage needed for general anomaly detection — motivating the weakly-supervised and unsupervised approaches that followed.</p>
+      </section>
+
+      <section class="s" id="sources">
+        <h2 class="serif">Related links</h2>
+        <ol class="refs"><li><a href="https://doi.org/10.1016/j.diii.2023.09.006">Detection and severity quantification of pulmonary embolism with 3D CT data using an automated deep learning-based artificial solution</a>, Diagnostic and Interventional Imaging, 2024.</li><li><a href="https://theses.hal.science/tel-05263492/">Automatic Detection of Pathologies in Conventional Scanner Data</a>, PhD thesis, INSA Lyon, 2024 — chapter 2 (source of the tables and figures on this page).</li><li><a href="https://www.sciencedirect.com/science/article/abs/pii/S2211568423001183">JFR 2022 data challenge paper</a>, Diagnostic and Interventional Imaging.</li><li>P. F. Jaeger et al., Retina U-Net: Embarrassingly simple exploitation of segmentation supervision for medical object detection, 2020.</li><li>M. Baumgartner et al., nnDetection: A self-configuring method for medical object detection, MICCAI 2021.</li></ol>
+      </section>
+
+      <section class="s" id="citation">
+        <h2 class="serif">BibTeX</h2>
+        <div class="bib"><button class="btn copy" type="button">Copy</button><pre><code>@article{djahnine2024pulmonaryembolism,
   title = {Detection and severity quantification of pulmonary embolism with 3D CT data using an automated deep learning-based artificial solution},
   author = {A. Djahnine and C. Lazarus and M. Lederlin and S. Mulé and R. Wiemker and S. Si-Mohamed and E. Jupin-Delevaux and O. Nempont and Y. Skandarani and M. De Craene and S. Goubalan and C. Raynaud and Y. Belkouchi and A. Ben Afia and C. Fabre and G. Ferretti and C. De Margerie and P. Berge and R. Liberge and N. Elbaz and M. Blain and P. Brillet and G. Chassagnon and F. Cadour and C. Caramella and M. El Hajjam and S. Boussouar and J. Hadchiti and X. Fablet and A. Khalil and H. Talbot and A. Luciani and N. Lassau and L. Boussel},
   journal = {Diagnostic and Interventional Imaging (DII)},
   year = {2024},
   doi = {10.1016/j.diii.2023.09.006}
-}</code></pre>
-  </section>
-</div>
+}</code></pre></div>
+      </section>
+
+    </div>
+
+    <section class="more" aria-labelledby="more-title">
+      <h2 class="serif" id="more-title">More research</h2>
+      <div class="more-grid">
+        <a class="mcard" href="/projects/weakly-supervised-ct/">
+          <div class="thumb"><img src="/images/SIMCLR_recap.webp" alt="" loading="lazy"></div>
+          <div class="body"><h3>Weakly-Supervised Pathology Detection and Localization in 3D Chest Scans</h3><div class="meta">Medical Physics · 2024</div></div>
+        </a>
+        <a class="mcard" href="/projects/bert-ct-reports/">
+          <div class="thumb"><img src="/images/BERT_recap.webp" alt="" loading="lazy"></div>
+          <div class="body"><h3>BERT analysis of French CT reports</h3><div class="meta">ReDII · 2023</div></div>
+        </a>
+        <a class="mcard" href="/projects/ecapri/">
+          <div class="thumb"><img src="/images/CAPRI_recap.webp" alt="" loading="lazy"></div>
+          <div class="body"><h3>eCAPRI: post-TAVI mortality prediction</h3><div class="meta">European Radiology · 2025</div></div>
+        </a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><a href="/">Aissam Djahnine</a> · AI Research Engineer</span>
+    <span><a href="/#research">All research</a> · <a href="/#publications">Publications</a></span>
+  </div>
+</footer>
+<script src="/assets/js/project.js?v={{ site.time | date: '%s' }}"></script>
+</body>
+</html>

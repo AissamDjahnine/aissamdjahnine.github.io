@@ -1,93 +1,144 @@
 ---
-layout: research
-title: "eCAPRI: a novel tool combining clinical and imaging data for post-TAVI mortality prediction"
-description: "eCAPRI combines clinical information with automatically extracted CT biomarkers to estimate one-year mortality after transcatheter aortic valve implantation (TAVI)."
+layout: null
+title: "eCAPRI"
+description: "eCAPRI combines automated thoracic aortic calcium measurement and CT imaging biomarkers with clinical data to predict one-year mortality after TAVI."
 permalink: /projects/ecapri/
-image: /images/CAPRI_recap.png
+image: /images/projects/ecapri/roc-calibration.jpg
+sitemap: true
 ---
-<header class="research-hero">
-  <h1>eCAPRI</h1>
-  <p class="research-subtitle">Clinical &amp; Imaging Data for Post-TAVI Mortality Prediction</p>
-  <p class="research-authors">PJ. Lartaud, B. Harbaoui, A. Della Corte, <strong>A. Djahnine</strong>, O. Nempont, JM. Rouet, A. Cecilia Vlachomitrou, B. Riche, M. Rabilloud, S. Si-Mohamed, P. Douek, F. Derimay, G. Rioufol, P. Lantelme, L. Boussel</p>
-  <p class="research-status">European Radiology · Published online 2025 · Volume 36 (2026)</p>
-  <div class="research-actions" aria-label="Research resources">
-    <a href="https://link.springer.com/article/10.1007/s00330-025-12184-x">Paper</a>
-    <a href="{{ "/publications/" | relative_url }}">All publications</a>
-    <a href="{{ "/projects/" | relative_url }}">All research</a>
+<!doctype html>
+<html lang="en">
+<head>
+<script>try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>eCAPRI — Aissam Djahnine</title>
+<meta name="description" content="eCAPRI combines automated thoracic aortic calcium measurement and CT imaging biomarkers with clinical data to predict one-year mortality after TAVI.">
+<meta property="og:title" content="eCAPRI: a novel tool combining clinical and imaging data for post-TAVI mortality prediction">
+<meta property="og:description" content="eCAPRI combines automated thoracic aortic calcium measurement and CT imaging biomarkers with clinical data to predict one-year mortality after TAVI.">
+<meta property="og:image" content="https://aissamdjahnine.github.io/images/projects/ecapri/roc-calibration.jpg">
+<link rel="icon" type="image/png" href="/images/favicon.webp">
+<link rel="canonical" href="https://aissamdjahnine.github.io/projects/ecapri/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400&family=STIX+Two+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/project.css?v={{ site.time | date: '%s' }}">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a class="brand" href="/">Aissam Djahnine</a>
+      <span class="sep mid" aria-hidden="true">/</span>
+      <a class="mid" href="/#research">Research</a>
+      <span class="sep" aria-hidden="true">/</span>
+      <span class="here">eCAPRI</span>
+    </nav>
+    <nav class="toc" aria-label="On this page"><a href="#abstract">Abstract</a><a href="#method">Method</a><a href="#experiments">Experiments</a><a href="#citation">BibTeX</a></nav>
+    <button class="icon-btn" id="theme-btn" aria-label="Toggle dark mode"><svg class="i" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></svg></button>
   </div>
 </header>
 
-<figure class="research-figure">
-  <a href="{{ "/images/CAPRI_recap.png" | relative_url }}" aria-label="Open the research figure at full resolution">
-    <img src="{{ "/images/CAPRI_recap.png" | relative_url }}" width="5520" height="1574" alt="CT segmentations, biomarker correlations, calcium segmentation examples, and eCAPRI evaluation charts">
-  </a>
-  <figcaption>Research overview. Select the figure to view it at full resolution.</figcaption>
-</figure>
+<main id="main">
+  <div class="wrap">
+    <header class="paper-head">
+      <span class="venue">European Radiology · Published online 2025 · Volume 36 (2026) · Open access</span>
+      <h1 class="serif">eCAPRI: a novel tool combining clinical and imaging data for post-TAVI mortality prediction</h1>
+      
+      <p class="authors">Pierre-Jean Lartaud<sup>1</sup> · Brahim Harbaoui<sup>1</sup> · Angelo Della Corte<sup>1</sup> · <span class="me">Aïssam Djahnine</span><sup>2,3</sup> · Olivier Nempont<sup>2</sup> · Jean-Michel Rouet<sup>2</sup> · Anna Cecilia Vlachomitrou<sup>2</sup> · Benjamin Riche<sup>1</sup> · Muriel Rabilloud<sup>1</sup> · Salim Si-Mohamed<sup>1,3</sup> · Philippe Douek<sup>1,3</sup> · François Derimay<sup>1</sup> · Gilles Rioufol<sup>1</sup> · Pierre Lantelme<sup>1,3</sup> · Loïc Boussel<sup>1,3</sup></p>
+      <p class="affil"><sup>1</sup> Hospices Civils de Lyon · <sup>2</sup> Philips Research France, Suresnes · <sup>3</sup> CREATIS UMR5220, INSERM U1044, INSA, Université de Lyon</p>
+      <div class="actions">
+        <a class="btn primary" href="https://link.springer.com/article/10.1007/s00330-025-12184-x"><svg class="i" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>Paper</a>
+        <a class="btn" href="https://doi.org/10.1007/s00330-025-12184-x"><svg class="i" viewBox="0 0 24 24"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>DOI</a>
+        <a class="btn" href="#citation"><svg class="i" viewBox="0 0 24 24"><path d="M7 7h4v4H7zM13 7h4v4h-4zM7 11c0 4-2 6-2 6M13 11c0 4-2 6-2 6"/></svg>Cite</a>
+      </div>
+    </header>
 
-<div class="research-copy">
-  <section aria-labelledby="overview">
-    <h2 id="overview">Overview</h2>
-    <p>eCAPRI combines clinical information with automatically extracted CT biomarkers to estimate one-year mortality after transcatheter aortic valve implantation (TAVI).</p>
-  </section>
-  <section aria-labelledby="method">
-    <h2 id="method">Method</h2>
-    <p>A deep learning model automates thoracic aortic calcium measurement. Additional imaging biomarkers are combined with the original CAPRI clinical variables. The score was developed on 765 patients and evaluated on 192 patients.</p>
-    <p>The added biomarkers include body-surface-area-indexed right-ventricle volume and pulmonary-artery maximum diameter, plus abdominal muscle area at L3. Biomarker selection removes redundant variables before evaluating candidate combinations.</p>
-  </section>
-  <section aria-labelledby="experiments">
-    <h2 id="experiments">Experiments</h2>
-    <div class="research-table-scroll" role="region" aria-label="Study cohorts" tabindex="0">
-      <table>
-        <caption>Study cohorts</caption>
-        <thead><tr><th scope="col">Experiment</th><th scope="col">Development</th><th scope="col">Evaluation</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">Calcium segmentation</th><td>66 patients</td><td>1,111 CT scans</td></tr>
-          <tr><th scope="row">One-year mortality prediction</th><td>765 patients</td><td>192 patients</td></tr>
-        </tbody>
-      </table>
-    </div>    <p>The experiments separately assess calcium segmentation and downstream mortality prediction.</p>
-  </section>
-  <section aria-labelledby="results">
-    <h2 id="results">Results</h2>
-    <div class="research-table-scroll" role="region" aria-label="One-year mortality prediction on the evaluation cohort" tabindex="0">
-      <table>
-        <caption>One-year mortality prediction on the evaluation cohort</caption>
-        <thead><tr><th scope="col">Score</th><th scope="col">AUC</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">EuroSCORE Logistic</th><td>0.588</td></tr>
-          <tr><th scope="row">CAPRI</th><td>0.669</td></tr>
-          <tr><th scope="row">eCAPRI</th><td><strong>0.731</strong></td></tr>
-        </tbody>
-      </table>
-    </div>    <div class="research-table-scroll" role="region" aria-label="Automated calcium segmentation" tabindex="0">
-      <table>
-        <caption>Automated calcium segmentation</caption>
-        <thead><tr><th scope="col">Metric</th><th scope="col">Reported value</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">Dice coefficient, mean ± SD</th><td>0.777 ± 0.108</td></tr>
-        </tbody>
-      </table>
-    </div>    <ul>
-      <li><strong>Prediction:</strong> eCAPRI improves discrimination over both comparators; the reported comparison with CAPRI has p = 0.034.</li>
-      <li><strong>Calibration:</strong> the study also assesses agreement between predicted risk and observed outcomes.</li>
-    </ul>
-  </section>
-  <section aria-labelledby="conclusions">
-    <h2 id="conclusions">Conclusions &amp; limitations</h2>
-    <p>Automated calcium measurement and additional CT biomarkers improve risk estimation in the evaluated cohort. Calcium segmentation can be affected by nearby calcifications and imaging artefacts. Broader population validation remains important.</p>
-  </section>
-  <section aria-labelledby="sources">
-    <h2 id="sources">Paper &amp; supporting material</h2>
-    <p><a href="https://link.springer.com/article/10.1007/s00330-025-12184-x">Full article, methods, figures, and evaluation tables</a> · European Radiology.</p>
-  </section>
-  <section aria-labelledby="citation">
-    <h2 id="citation">BibTeX</h2>
-    <pre class="research-citation"><code>@article{djahnine2025ecapri,
+    <div class="tldr" aria-label="Key numbers">
+      <div><div class="num">0.731</div><div class="lbl">AUC for one-year mortality</div></div>
+      <div><div class="num">0.669 / 0.588</div><div class="lbl">AUC of CAPRI / EuroSCORE Logistic</div></div>
+      <div><div class="num">0.777</div><div class="lbl">mean Dice, automated calcium segmentation</div></div>
+      <div><div class="num">957</div><div class="lbl">TAVI patients (765 train / 192 eval)</div></div>
+    </div>
+
+    <figure class="teaser">
+      <a href="/images/CAPRI_recap.webp" aria-label="Open the research figure at full resolution">
+        <img src="/images/CAPRI_recap.webp" alt="CT segmentations, biomarker correlations, calcium segmentation examples, and eCAPRI evaluation charts">
+      </a>
+      <figcaption>Research overview. Select the figure to view it at full resolution.</figcaption>
+    </figure>
+
+    <div class="prose">
+      <section class="s" id="abstract">
+        <h2 class="serif">Abstract</h2>
+        <div class="abstract"><p><b>Objectives:</b> Transcatheter aortic valve implantation (TAVI) is crucial for treating calcified aortic stenosis (CAS), yet post-procedural outcomes remain variable. The CAPRI score previously showed promising results in predicting 1-year all-cause mortality, by combining manually measured thoracic aortic calcium (TAC) volume with clinical risk factors. This study introduces an enhanced CAPRI score (eCAPRI), which automates TAC volume measurement and incorporates additional automatically extracted biomarkers from pre-operative CT scans.</p><p><b>Materials and methods:</b> TAC volume extraction was automated using a deep learning model trained on 66 patients and evaluated on 1111 CT scans. Additional automatically extracted imaging biomarkers were incorporated into the eCAPRI score, following the original methodology for biomarker selection. The eCAPRI score was trained on 765 pre-TAVI CT scans for one-year mortality prediction and then compared to CAPRI and EuroSCORE Logistic using AUC, bootstrap tests, and calibration curves on 192 CT scans.</p><p><b>Results:</b> Automated TAC segmentation achieved a mean Dice score of 0.777 ± 0.108. The eCAPRI score included body surface area (BSA)-indexed right ventricle volume, BSA-indexed pulmonary arteries max diameter, and abdominal muscles surface at L3 level in addition to automatically computed TAC volume and clinical biomarkers previously identified in the CAPRI score. On the evaluation dataset, eCAPRI showed an AUC of 0.731, outperforming CAPRI (AUC = 0.669) and EuroSCORE Logistic (AUC = 0.588) significantly (p = 0.034), with better calibration.</p><p><b>Conclusion:</b> The eCAPRI score, combining fully automated TAC volume extraction and additional imaging biomarkers, improved one-year mortality prediction over CAPRI and EuroSCORE Logistic. It may support standardized risk stratification in TAVI patients.</p><p class="kw"><strong>Keywords:</strong> TAVI; Risk assessment; Imaging biomarkers; Automated extraction; Aortic stenosis</p></div>
+      </section>
+
+      <section class="s" id="introduction">
+        <h2 class="serif">Introduction</h2>
+        <p>TAVI has become a validated alternative to surgical valve replacement for severe aortic stenosis, yet up to a quarter of high-risk patients still have poor outcomes at one year, largely because of comorbidities. The CAPRI score of Lantelme et al. predicts one-year mortality after TAVI by adding thoracic aortic calcium (TAC) volume measured on CT to clinical, biological and demographic factors (AUC 0.68). Its main barrier to adoption is the manual annotation of calcium, which is slow.</p><p>Imaging biomarkers measured automatically on routine CT have also shown value for long-term outcome prediction. eCAPRI automates TAC measurement with deep learning and adds further CT biomarkers to improve the CAPRI score.</p>
+      </section>
+
+      <section class="s" id="method">
+        <h2 class="serif">Method</h2>
+        <h3 class="sub"><span class="num">2.1</span>The CAPRI score</h3><p>Variables are selected with univariate Cox regressions and a likelihood ratio test, then checked for mutual correlation. The score of a patient sums, over the selected variables, the Cox coefficient β<sub>i</sub> times the deviation of the variable from its training-set mean.</p><div class="ptable-wrap"><p class="ptable-caption"><b>Table 1:</b> CAPRI score variables (paper Table 1). PAPs, pulmonary artery pressure; TIA, transient ischemic attack; NYHA, New York Heart Association; TAC, thoracic aortic calcium.</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th scope="col">Variable</th><th scope="col">Type</th><th scope="col">Definition</th></tr></thead><tbody><tr><th scope="row">Male</th><td>Discrete</td><td>Patient sex</td></tr><tr><th scope="row">PAPs available</th><td>Discrete</td><td>Whether pulmonary artery pressure was measured</td></tr><tr><th scope="row">Peripheral arterial disease</th><td>Discrete</td><td>Diagnosis (yes/no)</td></tr><tr><th scope="row">Respiratory failure</th><td>Discrete</td><td>Diagnosis (yes/no)</td></tr><tr><th scope="row">TIA, stroke</th><td>Discrete</td><td>Diagnosis (yes/no)</td></tr><tr><th scope="row">Coronary disease</th><td>Discrete</td><td>Diagnosis (yes/no)</td></tr><tr><th scope="row">NYHA</th><td>Discrete</td><td>Heart failure class, I to IV</td></tr><tr><th scope="row">Mitral regurgitation</th><td>Discrete</td><td>Grade I to V</td></tr><tr><th scope="row">Clearance</th><td>Continuous</td><td>Kidney function grade, I (normal) to V (terminal failure)</td></tr><tr><th scope="row">Age (years)</th><td>Continuous</td><td>Age at admission</td></tr><tr><th scope="row">PAPs (×10 mmHg)</th><td>Continuous</td><td>Pulmonary artery pressure / 10, zero if unavailable</td></tr><tr><th scope="row">Aortic gradient (mmHg)</th><td>Continuous</td><td>LV pressure gradient</td></tr><tr><th scope="row">Ejection fraction (%)</th><td>Continuous</td><td>LV ejection fraction</td></tr><tr><th scope="row">TAC volume (mL)</th><td>Continuous</td><td>Thoracic aortic calcium above L1, here from the automated segmentation</td></tr></tbody></table></div></div><h3 class="sub"><span class="num">2.2</span>Automated aortic calcium segmentation</h3><p>A 3D U-Net (TensorFlow 2.10) is trained with a <b>masked binary cross-entropy</b>: heart, great-vessel and spine segmentations provide exclusion masks for the spine and the aortic and mitral valves and a dilated aorta mask, so the network only learns what calcium looks like, not where it is. This allows a small network at full image resolution. Images are cropped around the aorta, windowed to [−200, 1000] HU and normalized to [−1, 1]; training uses batches of 5 random 100³ patches, Adam with a learning rate starting at 10⁻³ and decayed by 0.88 per epoch.</p><figure class="pfig"><a class="frame" href="/images/projects/ecapri/calcium-examples.webp"><img src="/images/projects/ecapri/calcium-examples.webp" alt="CT slices showing network calcium predictions, ground truths and exclusion masks" loading="lazy"></a><figcaption><b>Figure 1:</b> Automated calcium segmentations (cyan) compared with ground truths (green), with the valve (dark red) and spine (yellow) exclusion masks and the dilated aorta (red). Window [−200, 1000] HU. <span class="muted">Figure from Lartaud et al., European Radiology (2026), CC BY 4.0.</span></figcaption></figure><h3 class="sub"><span class="num">2.3</span>Imaging biomarkers</h3><p>Pre-trained, locked models segment the heart chambers, great vessels, lungs, spine and abdominal muscles at L3. From them are derived the cardiac chamber and myocardium volumes, the maximal aorta and pulmonary-artery diameters (topological thinning), emphysema and healthy lung volumes and their ratio (voxels below −950 HU), and the abdominal muscle surface at L3, a marker of sarcopenia. Every biomarker except the emphysema ratio is also indexed to body surface area (BSAi). Fat and density measures were excluded because contrast agent biases them.</p><figure class="pfig"><div class="frame"><img src="/images/projects/ecapri/segmentations-a.webp" alt="Axial, coronal and sagittal CT views with heart, vessel, lung, spine and abdominal muscle segmentations" loading="lazy"><img src="/images/projects/ecapri/segmentations-b.webp" alt="Lung, emphysema and 3D renderings of the segmentations" loading="lazy" style="margin-top:8px"></div><figcaption><b>Figure 2:</b> Segmentations used to extract the imaging biomarkers: heart chambers, great vessels, lungs, spine and abdominal muscles at L3, with emphysema obtained by thresholding the lungs at −950 HU, and a 3D rendering. <span class="muted">Figure from Lartaud et al., European Radiology (2026), CC BY 4.0.</span></figcaption></figure><h3 class="sub"><span class="num">2.4</span>Biomarker selection and eCAPRI</h3><ol class="steps"><li><span><strong>Univariate filter.</strong> Keep biomarkers whose likelihood-ratio p-value is below 0.2, a loose threshold that allows for confounding interactions.</span></li><li><span><strong>Redundancy.</strong> Drop a biomarker correlated above 0.85 with a CAPRI variable or with a biomarker that has a better p-value.</span></li><li><span><strong>Combination search.</strong> Evaluate every combination of the remaining biomarkers added to the CAPRI variables with 4-fold cross-validation; the best mean AUC defines eCAPRI, which is then refit on the whole training set.</span></li></ol><p>eCAPRI is compared with CAPRI (reweighted on the training set) and the EuroSCORE Logistic with ROC curves, a 10⁴-sample permutation test between CAPRI and eCAPRI, and calibration curves with Brier scores.</p>
+      </section>
+
+      <section class="s" id="experiments">
+        <h2 class="serif">Experiments</h2>
+        <h3 class="sub"><span class="num">3.1</span>Data</h3><div class="ptable-wrap"><p class="ptable-caption"><b>Table 2:</b> Datasets. The three datasets share no patients.</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th scope="col">Dataset</th><th scope="col">Patients</th><th scope="col">Content</th><th scope="col">Use</th></tr></thead><tbody><tr><th scope="row">CalciumTrain</th><td>66</td><td>Chest-abdomen-pelvis CT: 43 unenhanced, 23 arterial phase; semi-automatic calcium annotations</td><td>Train the calcium segmentation network</td></tr><tr><th scope="row">CalciumEval</th><td>1,111</td><td>Pre-TAVI contrast CT; calcium annotated slice by slice by senior radiologists</td><td>Evaluate calcium segmentation</td></tr><tr><th scope="row">TAVI-Lyon</th><td>957</td><td>TAVI 2013–2021, 4 hospitals, GE / Siemens / Philips scanners; 1-year follow-up, 81 deaths (9.3%)</td><td>Develop (765) and evaluate (192) eCAPRI</td></tr></tbody></table></div></div><p>The TAVI-Lyon cohort (479 men, 478 women, mean age 82.35 ± 7.53) was split 80/20 with an equal proportion of deaths. Comorbidities were frequent: renal impairment of stage III or worse in over half of patients, NYHA class III/IV heart failure in 49% and atrial fibrillation in 31%.</p><h3 class="sub"><span class="num">3.2</span>Calcium segmentation</h3><div class="ptable-wrap"><p class="ptable-caption"><b>Table 3:</b> Automated TAC segmentation on CalciumEval (1,111 scans): distribution of Dice coefficients.</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th scope="col">Statistic</th><th scope="col">Dice</th></tr></thead><tbody><tr><th scope="row">Mean ± SD</th><td>0.777 ± 0.108</td></tr><tr><th scope="row">Median</th><td>0.796</td></tr><tr><th scope="row">First / third quartile</th><td>0.733 / 0.849</td></tr><tr><th scope="row">5th / 95th percentile</th><td>0.584 / 0.905</td></tr><tr><th scope="row">Range</th><td>0.059 – 0.954</td></tr></tbody></table></div></div><figure class="pfig"><a class="frame" href="/images/projects/ecapri/dice.webp"><img src="/images/projects/ecapri/dice.webp" alt="Box plot of Dice coefficients for aortic calcium segmentation" loading="lazy"></a><figcaption><b>Figure 3:</b> Distribution of Dice coefficients between predicted and ground-truth calcium. Box from first to third quartile, whiskers from the 5th to the 95th percentile. <span class="muted">Figure from Lartaud et al., European Radiology (2026), CC BY 4.0.</span></figcaption></figure><figure class="pfig"><a class="frame" href="/images/projects/ecapri/volume-agreement.webp"><img src="/images/projects/ecapri/volume-agreement.webp" alt="Scatter plot and Bland-Altman plot of predicted versus ground-truth calcium volumes" loading="lazy"></a><figcaption><b>Figure 4:</b> (a) Predicted versus ground-truth calcium volume (y = 1.200x + 0.368, R² = 0.950). (b) Bland–Altman plot, mean difference 1.009 mL. <span class="muted">Figure from Lartaud et al., European Radiology (2026), CC BY 4.0.</span></figcaption></figure><h4 style="font-size:17px;margin:20px 0 6px">Key findings</h4><ul class="findings"><li><span><strong>Accurate on a large cohort:</strong> a mean Dice of 0.777 on 1,111 contrast scans, from only 66 training patients.</span></li><li><span><strong>Low Dice comes from tiny volumes:</strong> 60 scans fall below 0.6; the 29 below 0.5 have a mean calcium volume of 0.4 mL, versus 4.2 mL overall.</span></li><li><span><strong>Slight overestimation:</strong> predicted volumes run a little above the ground truth; heavily injected vena cava, artefacts and tracheal calcifications cause most errors.</span></li></ul><h3 class="sub"><span class="num">3.3</span>Biomarker selection</h3><div class="ptable-wrap"><p class="ptable-caption"><b>Table 4:</b> Univariate Cox regressions of the candidate biomarkers for 1-year all-cause mortality (paper Table 3). † passed the univariate selection (p &lt; 0.2); highlighted rows are the three biomarkers retained in eCAPRI. BSAi, body-surface-area-indexed; LA/LV/RA/RV, left/right atrium/ventricle; Myo, myocardium; Ao, aorta; PA, pulmonary arteries.</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th scope="col">Biomarker</th><th scope="col">β</th><th scope="col">HR</th><th scope="col">AUC</th><th scope="col"><i>p</i>-value</th></tr></thead><tbody><tr><th scope="row">Lungs volume (mL)</th><td>0.000</td><td>1.000</td><td>0.464</td><td>0.214</td></tr><tr><th scope="row">Emphysema volume (mL)</th><td>-0.004</td><td>0.996</td><td>0.475</td><td>0.384</td></tr><tr><th scope="row">LA volume (mL)</th><td>0.001</td><td>1.001</td><td>0.533</td><td>0.535</td></tr><tr><th scope="row">LV volume (mL)</th><td>0.002</td><td>1.002</td><td>0.541</td><td>0.374</td></tr><tr><th scope="row">Myo volume (mL)</th><td>0.000</td><td>1.000</td><td>0.504</td><td>0.906</td></tr><tr><th scope="row">RA volume (mL) †</th><td>0.002</td><td>1.002</td><td>0.569</td><td>0.165</td></tr><tr><th scope="row">RV volume (mL) †</th><td>0.004</td><td>1.004</td><td>0.588</td><td>0.043</td></tr><tr><th scope="row">Ao max radius (cm) †</th><td>-0.141</td><td>0.868</td><td>0.441</td><td>0.068</td></tr><tr><th scope="row">PA max radius (cm) †</th><td>0.167</td><td>1.182</td><td>0.532</td><td>0.132</td></tr><tr class="ours"><th scope="row" class="best">L3 level muscles surface (cm²) †</th><td>-0.010</td><td>0.990</td><td>0.434</td><td>0.024</td></tr><tr><th scope="row">BSAi lungs volume (mL/m²)</th><td>0.000</td><td>1.000</td><td>0.487</td><td>0.572</td></tr><tr><th scope="row">BSAi emphysema volume (mL/m²)</th><td>-0.005</td><td>0.995</td><td>0.478</td><td>0.495</td></tr><tr><th scope="row">BSAi LA volume (mL/m²)</th><td>0.004</td><td>1.004</td><td>0.558</td><td>0.296</td></tr><tr><th scope="row">BSAi LV volume (mL/m²) †</th><td>0.006</td><td>1.006</td><td>0.560</td><td>0.155</td></tr><tr><th scope="row">BSAi Myo volume (mL/m²)</th><td>0.004</td><td>1.004</td><td>0.527</td><td>0.386</td></tr><tr><th scope="row">BSAi RA volume (mL/m²) †</th><td>0.006</td><td>1.006</td><td>0.584</td><td>0.060</td></tr><tr class="ours"><th scope="row" class="best">BSAi RV volume (mL/m²) †</th><td>0.010</td><td>1.010</td><td>0.608</td><td>0.005</td></tr><tr><th scope="row">BSAi Ao max radius (cm/m²) †</th><td>-0.193</td><td>0.824</td><td>0.454</td><td>0.167</td></tr><tr class="ours"><th scope="row" class="best">BSAi PA max radius (cm/m²) †</th><td>0.356</td><td>1.427</td><td>0.538</td><td>0.048</td></tr><tr><th scope="row">BSAi L3 level muscles surface (cm²/m²) †</th><td>-0.019</td><td>0.981</td><td>0.461</td><td>0.064</td></tr><tr><th scope="row">Emphysema ratio (%)</th><td>-0.082</td><td>0.921</td><td>0.481</td><td>0.413</td></tr></tbody></table></div></div><figure class="pfig"><a class="frame" href="/images/projects/ecapri/correlations.webp"><img src="/images/projects/ecapri/correlations.webp" alt="Correlation matrix between retained biomarkers and CAPRI variables" loading="lazy"></a><figcaption><b>Figure 5:</b> Correlation between the biomarkers retained after univariate regression and the CAPRI score variables. <span class="muted">Figure from Lartaud et al., European Radiology (2026), CC BY 4.0.</span></figcaption></figure><h4 style="font-size:17px;margin:20px 0 6px">Key findings</h4><ul class="findings"><li><span><strong>Lungs carry little signal:</strong> pulmonary biomarkers were largely uncorrelated with one-year death.</span></li><li><span><strong>Three biomarkers retained:</strong> BSA-indexed right-ventricle volume, BSA-indexed pulmonary-artery maximal diameter and L3 muscle surface — clinically recognized markers of right heart dysfunction, pulmonary hypertension and frailty.</span></li></ul><h3 class="sub"><span class="num">3.4</span>Mortality prediction</h3><div class="ptable-wrap"><p class="ptable-caption"><b>Table 5:</b> One-year all-cause mortality prediction on the evaluation set (192 patients). Lower Brier score is better.</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th scope="col">Score</th><th scope="col">AUC</th><th scope="col">Brier score</th></tr></thead><tbody><tr><th scope="row">EuroSCORE Logistic</th><td>0.588</td><td>0.090</td></tr><tr><th scope="row">CAPRI (reweighted on our training set)</th><td class="second">0.669</td><td class="second">0.082</td></tr><tr class="ours"><th scope="row">eCAPRI</th><td class="best">0.731</td><td class="best">0.079</td></tr></tbody></table></div></div><figure class="pfig"><a class="frame" href="/images/projects/ecapri/roc-calibration.webp"><img src="/images/projects/ecapri/roc-calibration.webp" alt="ROC curves and calibration plots for EuroSCORE, CAPRI and eCAPRI" loading="lazy"></a><figcaption><b>Figure 6:</b> (a) ROC curves with 95% confidence bands; permutation test between CAPRI and eCAPRI p = 0.034. (b) Calibration plots with Brier scores. <span class="muted">Figure from Lartaud et al., European Radiology (2026), CC BY 4.0.</span></figcaption></figure><div class="ptable-wrap"><p class="ptable-caption"><b>Table 6:</b> Final Cox coefficients β of CAPRI and eCAPRI fitted on the whole training set, and training-set mean X̄ of each variable (paper Table 4).</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th scope="col">Variable</th><th scope="col">CAPRI β</th><th scope="col">eCAPRI β</th><th scope="col">X̄</th></tr></thead><tbody><tr><th scope="row">Age (years)</th><td>0.0115</td><td>−0.0017</td><td>82.19</td></tr><tr><th scope="row">PAPs (×10 mmHg)</th><td>0.1620</td><td>0.1496</td><td>3.10</td></tr><tr><th scope="row">Aortic gradient (mmHg)</th><td>−0.0032</td><td>−0.0033</td><td>48.62</td></tr><tr><th scope="row">LV ejection fraction (%)</th><td>0.0027</td><td>0.0088</td><td>56.70</td></tr><tr><th scope="row">Male</th><td>0.1806</td><td>0.9495</td><td>0.51</td></tr><tr><th scope="row">Clearance</th><td>0.4433</td><td>0.3635</td><td>1.67</td></tr><tr><th scope="row">PAPs available</th><td>−0.3357</td><td>−0.3648</td><td>0.74</td></tr><tr><th scope="row">Peripheral arterial disease</th><td>0.0262</td><td>0.1262</td><td>0.12</td></tr><tr><th scope="row">Respiratory failure</th><td>0.1801</td><td>0.1569</td><td>0.20</td></tr><tr><th scope="row">TIA, stroke</th><td>0.3529</td><td>0.4121</td><td>0.11</td></tr><tr><th scope="row">Coronary disease</th><td>−0.4413</td><td>−0.4802</td><td>0.32</td></tr><tr><th scope="row">NYHA</th><td>0.1998</td><td>0.2177</td><td>1.41</td></tr><tr><th scope="row">Mitral regurgitation</th><td>0.0382</td><td>−0.0584</td><td>0.83</td></tr><tr><th scope="row">Aortic calcium volume (mL)</th><td>−0.0394</td><td>−0.0432</td><td>3.79</td></tr><tr class="mid ours"><th scope="row">L3 level muscles surface (cm²)</th><td>–</td><td>−0.0221</td><td>120.32</td></tr><tr class="ours"><th scope="row">BSAi RV volume (mL/m²)</th><td>–</td><td>0.0068</td><td>74.02</td></tr><tr class="ours"><th scope="row">BSAi PA max radius (cm/m²)</th><td>–</td><td>0.3040</td><td>0.95</td></tr></tbody></table></div></div><h4 style="font-size:17px;margin:20px 0 6px">Key findings</h4><ul class="findings"><li><span><strong>Better discrimination:</strong> eCAPRI reaches AUC 0.731, significantly above CAPRI (0.669) and the EuroSCORE Logistic (0.588).</span></li><li><span><strong>Better calibration:</strong> the lowest Brier score (0.079) and the calibration curve closest to ideal; the EuroSCORE underestimates risk in the highest deciles.</span></li><li><span><strong>Automation preserves CAPRI:</strong> with automated calcium, CAPRI reaches AUC 0.669, close to the original publication (0.68).</span></li></ul>
+      </section>
+
+      <section class="s" id="conclusions">
+        <h2 class="serif">Discussion &amp; limitations</h2>
+        <p>Because every TAVI candidate already has a pre-procedural contrast CT, all eCAPRI inputs are available in routine care. With automated segmentation and biomarker extraction, it could run in the background on radiology workstations or PACS and give clinicians a standardized risk estimate without extra workload. The segmentation still struggles with hardening artefacts near the aorta and tracheal calcifications, and slightly overestimates calcium volume. The −950 HU emphysema threshold may not suit contrast scans, which could explain why emphysema was not retained. Further validation on broader populations remains important.</p>
+      </section>
+
+      <section class="s" id="sources">
+        <h2 class="serif">Related links</h2>
+        <ol class="refs"><li><a href="https://link.springer.com/article/10.1007/s00330-025-12184-x">eCAPRI: a novel tool combining clinical and imaging data for post-TAVI mortality prediction</a>, European Radiology 36:3542–3555 (2026). Open access under a <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> licence; the figures on this page are reproduced from the article, and the tables are adapted from it.</li><li>P. Lantelme et al., the original CAPRI score for one-year mortality after TAVI.</li></ol>
+      </section>
+
+      <section class="s" id="citation">
+        <h2 class="serif">BibTeX</h2>
+        <div class="bib"><button class="btn copy" type="button">Copy</button><pre><code>@article{djahnine2025ecapri,
   title = {eCAPRI: a novel tool combining clinical and imaging data for post-TAVI mortality prediction},
   author = {PJ. Lartaud and B. Harbaoui and A. Della Corte and A. Djahnine and O. Nempont and JM. Rouet and A. Cecilia Vlachomitrou and B. Riche and M. Rabilloud and S. Si-Mohamed and P. Douek and F. Derimay and G. Rioufol and P. Lantelme and L. Boussel},
   journal = {European Radiology},
   year = {2026},
   doi = {10.1007/s00330-025-12184-x}
-}</code></pre>
-  </section>
-</div>
+}</code></pre></div>
+      </section>
+
+    </div>
+
+    <section class="more" aria-labelledby="more-title">
+      <h2 class="serif" id="more-title">More research</h2>
+      <div class="more-grid">
+        <a class="mcard" href="/projects/weakly-supervised-ct/">
+          <div class="thumb"><img src="/images/SIMCLR_recap.webp" alt="" loading="lazy"></div>
+          <div class="body"><h3>Weakly-Supervised Pathology Detection and Localization in 3D Chest Scans</h3><div class="meta">Medical Physics · 2024</div></div>
+        </a>
+        <a class="mcard" href="/projects/pulmonary-embolism/">
+          <div class="thumb"><img src="/images/JFR_recap.webp" alt="" loading="lazy"></div>
+          <div class="body"><h3>Pulmonary embolism detection and severity quantification with 3D CT</h3><div class="meta">Diagnostic and Interventional Imaging · 2024</div></div>
+        </a>
+        <a class="mcard" href="/projects/muscle-segmentation/">
+          <div class="thumb"><img src="/images/SARCO_PROJECT.webp" alt="" loading="lazy"></div>
+          <div class="body"><h3>Segmentation and Measurement of Skeletal Muscle Areas on CT Scans</h3><div class="meta">Medical imaging · CT</div></div>
+        </a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><a href="/">Aissam Djahnine</a> · AI Research Engineer</span>
+    <span><a href="/#research">All research</a> · <a href="/#publications">Publications</a></span>
+  </div>
+</footer>
+<script src="/assets/js/project.js?v={{ site.time | date: '%s' }}"></script>
+</body>
+</html>

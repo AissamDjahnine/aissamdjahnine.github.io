@@ -1,105 +1,184 @@
 ---
-layout: research
-title: "Weakly-Supervised learning based Pathology Detection and Localization in 3D Chest Scans"
-description: "This study identifies multiple chest abnormalities and highlights their locations in 3D CT scans, combining patch-level predictions into a patient-level assessment."
+layout: null
+title: "Weakly-supervised CT"
+description: "Detecting and localizing multiple pathologies in 3D chest CT with SimCLR-pretrained patch classification and few labelled patches."
 permalink: /projects/weakly-supervised-ct/
 image: /images/SIMCLR_recap.png
+sitemap: true
 ---
-<header class="research-hero">
-  <h1>Pathology Detection &amp; Localization in 3D Chest CT</h1>
-  <p class="research-subtitle">Weakly-Supervised Learning</p>
-  <p class="research-authors"><strong>A. Djahnine</strong>, E. Jupin-delevaux, O. Nempont, F. Craighero, S. A. Si-Mohamed, V. Cottin, P. Douek, A. Popoff, L. Boussel</p>
-  <p class="research-status">Medical Physics · 2024</p>
-  <div class="research-actions" aria-label="Research resources">
-    <a href="https://pubmed.ncbi.nlm.nih.gov/39140793/">Paper</a>
-    <a href="{{ "/publications/" | relative_url }}">All publications</a>
-    <a href="{{ "/projects/" | relative_url }}">All research</a>
+<!doctype html>
+<html lang="en">
+<head>
+<script>try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weakly-supervised CT — Aissam Djahnine</title>
+<meta name="description" content="Detecting and localizing multiple pathologies in 3D chest CT with SimCLR-pretrained patch classification and few labelled patches.">
+<meta property="og:title" content="Weakly-Supervised learning based Pathology Detection and Localization in 3D Chest Scans">
+<meta property="og:image" content="https://aissamdjahnine.github.io/images/SIMCLR_recap.png">
+<link rel="icon" type="image/png" href="/images/favicon.webp">
+<link rel="canonical" href="https://aissamdjahnine.github.io/projects/weakly-supervised-ct/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400&family=STIX+Two+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/project.css?v={{ site.time | date: '%s' }}">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a class="brand" href="/">Aissam Djahnine</a>
+      <span class="sep mid" aria-hidden="true">/</span>
+      <a class="mid" href="/#research">Research</a>
+      <span class="sep" aria-hidden="true">/</span>
+      <span class="here">Weakly-supervised CT</span>
+    </nav>
+    <nav class="toc" aria-label="On this page"><a href="#abstract">Abstract</a><a href="#method">Method</a><a href="#experiments">Experiments</a><a href="#citation">BibTeX</a></nav>
+    <button class="icon-btn" id="theme-btn" aria-label="Toggle dark mode"><svg class="i" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></svg></button>
   </div>
 </header>
 
-<figure class="research-figure">
-  <a href="{{ "/images/SIMCLR_recap.png" | relative_url }}" aria-label="Open the research figure at full resolution">
-    <img src="{{ "/images/SIMCLR_recap.png" | relative_url }}" width="5520" height="1556" alt="Chest CT abnormality probability maps, 3D lung visualizations, and classification and localization evaluations">
-  </a>
-  <figcaption>Research overview. Select the figure to view it at full resolution.</figcaption>
-</figure>
+<main id="main">
+  <div class="wrap">
+    <header class="paper-head">
+      <span class="venue">Medical Physics · 2024</span>
+      <h1 class="serif">Weakly-Supervised Pathology Detection and Localization in 3D Chest CT</h1>
+      <p class="subtitle">Self-supervised contrastive pretraining for semiological signs in chest CT, from few annotated patches</p>
+      <p class="authors"><span class="me">A. Djahnine</span>, E. Jupin-Delevaux, O. Nempont, F. Craighero, S. A. Si-Mohamed, V. Cottin, P. Douek, A. Popoff, L. Boussel</p>
+      <p class="affil">INSA Lyon (CREATIS) · Hospices Civils de Lyon · Philips</p>
+      <div class="actions">
+        <a class="btn primary" href="https://pubmed.ncbi.nlm.nih.gov/39140793/"><svg class="i" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>Paper</a>
+        <a class="btn" href="https://theses.hal.science/tel-05263492/"><svg class="i" viewBox="0 0 24 24"><path d="M4 19V5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2zM8 7h6"/></svg>Thesis, chapter 3</a>
+        <a class="btn" href="#citation"><svg class="i" viewBox="0 0 24 24"><path d="M7 7h4v4H7zM13 7h4v4h-4zM7 11c0 4-2 6-2 6M13 11c0 4-2 6-2 6"/></svg>Cite</a>
+      </div>
+    </header>
 
-<div class="research-copy">
-  <section aria-labelledby="overview">
-    <h2 id="overview">Overview</h2>
-    <p>This study identifies multiple chest abnormalities and highlights their locations in 3D CT scans, combining patch-level predictions into a patient-level assessment.</p>
-  </section>
-  <section aria-labelledby="method">
-    <h2 id="method">Method</h2>
-    <p>A ResNet-based patch classifier is pretrained with SimCLR on unannotated CT patches and fine-tuned with labeled examples. Abnormality probability maps across the volume are aggregated for multi-label classification.</p>
-    <p>The classifier distinguishes normal tissue from four abnormality categories. Sweeping it across a volume produces separate abnormality maps rather than a single scan label.</p>
-  </section>
-  <section aria-labelledby="experiments">
-    <h2 id="experiments">Experiments</h2>
-    <div class="research-table-scroll" role="region" aria-label="Evaluation setup" tabindex="0">
-      <table>
-        <caption>Evaluation setup</caption>
-        <thead><tr><th scope="col">Stage</th><th scope="col">Scans</th><th scope="col">Purpose</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">Validation</th><td>111</td><td>Hyperparameter selection</td></tr>
-          <tr><th scope="row">Test</th><td>251</td><td>Multi-abnormality assessment</td></tr>
-        </tbody>
-      </table>
-    </div>    <p>Evaluation covers multi-label classification, normal-versus-abnormal classification, and qualitative localization.</p>
-  </section>
-  <section aria-labelledby="results">
-    <h2 id="results">Results</h2>
-    <div class="research-table-scroll" role="region" aria-label="Patient-level classification" tabindex="0">
-      <table>
-        <caption>Patient-level classification</caption>
-        <thead><tr><th scope="col">Task</th><th scope="col">AUROC</th><th scope="col">95% confidence interval</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">Multi-label</th><td>0.931</td><td>0.9034–0.9557</td></tr>
-          <tr><th scope="row">Normal versus abnormal</th><td>0.963</td><td>0.952–0.976</td></tr>
-        </tbody>
-      </table>
-    </div>    <div class="research-table-scroll" role="region" aria-label="Results by abnormality" tabindex="0">
-      <table>
-        <caption>Results by abnormality</caption>
-        <thead><tr><th scope="col">Abnormality</th><th scope="col">AUROC</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">Interstitial pattern (IP)</th><td>0.974</td></tr>
-          <tr><th scope="row">Low lung density area (LLDA)</th><td>0.952</td></tr>
-          <tr><th scope="row">Nodules (NOD)</th><td>0.853</td></tr>
-          <tr><th scope="row">Consolidation (CONS)</th><td>0.791</td></tr>
-        </tbody>
-      </table>
-    </div>    <div class="research-table-scroll" role="region" aria-label="Training-strategy comparison" tabindex="0">
-      <table>
-        <caption>Training-strategy comparison</caption>
-        <thead><tr><th scope="col">Initialization</th><th scope="col">Reported F1</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">Random</th><td>0.677</td></tr>
-          <tr><th scope="row">ImageNet</th><td>0.792</td></tr>
-          <tr><th scope="row">Contrastive pretraining</th><td><strong>0.943</strong></td></tr>
-        </tbody>
-      </table>
-    </div>    <ul>
-      <li><strong>Transfer learning:</strong> CT-specific contrastive pretraining improves the reported F1 over the alternative initializations.</li>
-      <li><strong>Uneven difficulty:</strong> strong overall discrimination does not imply equal performance for every abnormality.</li>
-    </ul>
-  </section>
-  <section aria-labelledby="conclusions">
-    <h2 id="conclusions">Conclusions &amp; limitations</h2>
-    <p>Patch predictions provide both patient-level decisions and spatial information. The variation across abnormalities motivates class-specific evaluation; localization findings should also be interpreted alongside the paper’s qualitative assessment.</p>
-  </section>
-  <section aria-labelledby="sources">
-    <h2 id="sources">Paper &amp; supporting material</h2>
-    <p><a href="https://aapm.onlinelibrary.wiley.com/doi/10.1002/mp.17302">Publication and detailed results</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/39140793/">PubMed</a>.</p>
-  </section>
-  <section aria-labelledby="citation">
-    <h2 id="citation">BibTeX</h2>
-    <pre class="research-citation"><code>@article{djahnine2024weaklysupervisedct,
+    <div class="tldr" aria-label="Key numbers">
+      <div><div class="num">0.963</div><div class="lbl">AUROC, normal vs abnormal</div></div>
+      <div><div class="num">0.931</div><div class="lbl">AUROC, multi-label (5 signs)</div></div>
+      <div><div class="num">+0.28</div><div class="lbl">AUROC over random initialization</div></div>
+      <div><div class="num">88.8%</div><div class="lbl">findings with useful localization</div></div>
+    </div>
+
+    <figure class="teaser"><a href="/images/projects/weakly-supervised-ct/method-overview.webp"><img src="/images/projects/weakly-supervised-ct/method-overview.webp" alt="Method overview: stage 1 pretrains a patch classifier with SimCLR on unlabelled patches and fine-tunes it on labelled patches; stage 2 slides the classifier over the CT scan, builds per-label probability maps and aggregates them into a patient-level prediction"></a>
+      <figcaption>Overview. Stage 1: SimCLR pretraining on unlabelled patches, then supervised fine-tuning on labelled patches. Stage 2: per-label probability maps over the whole scan, aggregated into a patient-level prediction.</figcaption></figure>
+
+    <div class="prose">
+      <section class="s" id="abstract">
+        <h2 class="serif">Abstract</h2>
+        <div class="abstract">
+          <p><b>Background:</b> Recent advancements in anomaly detection have paved the way for novel radiological reading assistance tools that support the identification of findings, aimed at saving time. The clinical adoption of such applications requires a low rate of false positives while maintaining high sensitivity.</p>
+          <p><b>Purpose:</b> In light of recent interest and development in multi pathology identification, we present a novel method, based on a recent contrastive self-supervised approach, for multiple chest-related abnormality identification including low lung density area ("LLDA"), consolidation ("CONS"), nodules ("NOD") and interstitial pattern ("IP"). Our approach alerts radiologists about abnormal regions within a computed tomography (CT) scan by providing 3D localization.</p>
+          <p><b>Methods:</b> We introduce a new method for the classification and localization of multiple chest pathologies in 3D Chest CT scans. Our goal is to distinguish four common chest-related abnormalities: "LLDA", "CONS", "NOD", "IP" and "NORMAL". This method is based on a 3D patch-based classifier with a Resnet backbone encoder pretrained leveraging recent contrastive self supervised approach and a fine-tuned classification head. We leverage the SimCLR contrastive framework for pretraining on an unannotated dataset of randomly selected patches and we then fine-tune it on a labeled dataset. During inference, this classifier generates probability maps for each abnormality across the CT volume, which are aggregated to produce a multi-label patient-level prediction. We compare different training strategies, including random initialization, ImageNet weight initialization, frozen SimCLR pretrained weights and fine-tuned SimCLR pretrained weights. Each training strategy is evaluated on a validation set for hyperparameter selection and tested on a test set. Additionally, we explore the fine-tuned SimCLR pretrained classifier for 3D pathology localization and conduct qualitative evaluation.</p>
+          <p><b>Results:</b> Validated on 111 chest scans for hyperparameter selection and subsequently tested on 251 chest scans with multi-abnormalities, our method achieves an AUROC of 0.931 (95% confidence interval [CI]: [0.9034, 0.9557], <i>p</i>-value &lt; 0.001) and 0.963 (95% CI: [0.952, 0.976], <i>p</i>-value &lt; 0.001) in the multi-label and binary (i.e., normal versus abnormal) settings, respectively. Notably, our method surpasses the area under the receiver operating characteristic (AUROC) threshold of 0.9 for two abnormalities: IP (0.974) and LLDA (0.952), while achieving values of 0.853 and 0.791 for NOD and CONS, respectively. Furthermore, our results highlight the superiority of incorporating contrastive pretraining within the patch classifier, outperforming Imagenet pretraining weights and non-pretrained counterparts with uninitialized weights (F1 score = 0.943, 0.792, and 0.677 respectively). Qualitatively, the method achieved a satisfactory 88.8% completeness rate in localization and maintained an 88.3% accuracy rate against false positives.</p>
+          <p><b>Conclusions:</b> The proposed method integrates self-supervised learning algorithms for pretraining, utilizes a patch-based approach for 3D pathology localization and develops an aggregation method for multi-label prediction at patient-level. It shows promise in efficiently detecting and localizing multiple anomalies within a single scan.</p>
+          <p class="kw"><strong>Keywords:</strong> 3D pathology localization; computed tomography; multi‐abnormality detection; self‐supervised learning; weakly‐supervised learning.</p>
+        </div>
+      </section>
+
+      <section class="s" id="method">
+        <h2 class="serif">Method</h2>
+        <p>The goal is to distinguish four semiological signs present in most pulmonary pathologies, plus normal lung tissue: <b>LLDA</b> (low lung density area, covering emphysema and cysts), <b>CONS</b> (consolidation, where air is replaced by fluid or tissue), <b>NOD</b> (nodules and masses) and <b>IP</b> (interstitial pattern, including honeycombing, ground glass and reticulation).</p>
+<figure class="pfig"><a class="frame" href="/images/projects/weakly-supervised-ct/pathologies.webp"><img src="/images/projects/weakly-supervised-ct/pathologies.webp" alt="Four axial CT slices with arrows pointing to emphysema, consolidation, nodules and interstitial pattern" loading="lazy"></a><figcaption><b>Figure 1:</b> The studied thoracic signs: (a) LLDA, emphysema and cysts; (b) CONS, consolidation; (c) NOD, nodules; (d) IP, interstitial pattern.</figcaption></figure>
+        <p>A patch-based approach is used for three reasons: <b>lower annotation cost with localized supervision</b>, <b>lower memory use</b> than full volumes, and a built-in <b>proxy for localization</b>. It also suits contrastive pretraining, which needs a large number of samples: patches multiply the samples available from each scan.</p>
+
+        <h3 class="sub"><span class="num">2.1</span>Contrastive pretraining (SimCLR)</h3>
+        <ol class="steps">
+          <li><span><strong>Patch sampling.</strong> Random 50 × 50 × 50 patches containing at least 80% lung, using an automatic lung segmentation.</span></li>
+          <li><span><strong>Two correlated views.</strong> A transformation module T randomly alters each patch twice, x<sub>i</sub> = T(x) and x<sub>j</sub> = T(x), using domain-specific transformations.</span></li>
+          <li><span><strong>Encoder.</strong> CT-Net, a 2.5D alternative to 3D ResNets that allows ImageNet initialization: the patch is read as stacks of three-channel images by a 2D ResNet-50, combined, reduced by 3D convolutions and projected to a 2048-d representation h.</span></li>
+          <li><span><strong>Contrastive loss.</strong> A 2-layer MLP head g maps h to a 1024-d vector z, and the NT-Xent loss pulls the two views of the same patch together while pushing apart the other 2(N − 1) samples in the batch. The head is discarded after pretraining.</span></li>
+        </ol>
+<figure class="pfig"><a class="frame" href="/images/projects/weakly-supervised-ct/simclr.webp"><img src="/images/projects/weakly-supervised-ct/simclr.webp" alt="SimCLR diagram: two augmented views of a sample pass through an encoder and a projection head trained with a contrastive loss" loading="lazy"></a><figcaption><b>Figure 2:</b> SimCLR contrastive learning. Two random transformations t and t′ produce correlated views; the encoder f and projection head g are trained to maximize their agreement.</figcaption></figure>
+        <p>Pretraining runs on 256,000 random patches with Adam (learning rate 10⁻³), 1,000 epochs, batch size 256, L2 regularization 10⁻⁶ and cosine decay without restarts.</p>
+
+        <h3 class="sub"><span class="num">2.2</span>Choosing the data transformations</h3>
+        <p>Eight transformations common in medical imaging were studied: mirror, 90° rotation, zoom (random crop and resize), colour distortion, Gaussian blur, Laplacian, masking with the lung mask, and a random lung mask from another patient. Following Chen et al., each of the 56 ordered pairs was evaluated with a frozen pretrained encoder over 10 runs.</p>
+<div class="ptable-wrap"><p class="ptable-caption"><b>Table 3:</b> Weighted mean accuracy (%, mean ± SD over 10 runs) of the frozen SimCLR patch classifier for each pair of data transformations. Rows: transformation 2; columns: transformation 1. Best pair in bold.</p><div class="ptable-scroll"><table class="ptable heat"><thead><tr><th>T2 \ T1</th><th scope="col">Mirror</th><th scope="col">Rotation 90°</th><th scope="col">Zoom</th><th scope="col">Colour distortion</th><th scope="col">Gaussian blur</th><th scope="col">Laplacian</th><th scope="col">Masking</th><th scope="col">Random mask</th></tr></thead><tbody><tr><th scope="row">Random mask</th><td style="background:rgb(32,73,160);color:#fff !important">79.1 ± 0.9</td><td style="background:rgb(44,83,166);color:#fff !important">77.6 ± 1.2</td><td style="background:rgb(24,66,156);color:#fff !important">80.2 ± 1.0</td><td style="background:rgb(56,93,172);color:#fff !important">76.0 ± 0.6</td><td style="background:rgb(53,91,171);color:#fff !important">76.3 ± 1.1</td><td style="background:rgb(30,71,159);color:#fff !important">79.4 ± 0.8</td><td style="background:rgb(34,74,161);color:#fff !important">78.9 ± 1.3</td><td class="diag">–</td></tr><tr><th scope="row">Masking</th><td style="background:rgb(33,74,161);color:#fff !important">79.0 ± 1.2</td><td style="background:rgb(65,101,177);color:#fff !important">74.7 ± 0.9</td><td style="background:rgb(77,112,182);color:#fff !important">73.1 ± 1.1</td><td style="background:rgb(86,119,187);color:#fff !important">71.9 ± 1.2</td><td style="background:rgb(68,103,178);color:#fff !important">74.4 ± 1.3</td><td style="background:rgb(83,116,185);color:#fff !important">72.4 ± 1.1</td><td class="diag">–</td><td style="background:rgb(35,75,161);color:#fff !important">78.8 ± 0.5</td></tr><tr><th scope="row">Laplacian</th><td style="background:rgb(98,129,192);color:#fff !important">70.4 ± 5.1</td><td style="background:rgb(81,115,184);color:#fff !important">72.6 ± 0.6</td><td style="background:rgb(74,108,181);color:#fff !important">73.6 ± 0.9</td><td style="background:rgb(92,124,190);color:#fff !important">71.2 ± 0.8</td><td style="background:rgb(99,130,193);color:#fff !important">70.2 ± 1.2</td><td class="diag">–</td><td style="background:rgb(51,89,170);color:#fff !important">76.6 ± 0.8</td><td style="background:rgb(41,80,164);color:#fff !important">78.0 ± 1.0</td></tr><tr><th scope="row">Gaussian blur</th><td style="background:rgb(80,113,184);color:#fff !important">72.8 ± 1.4</td><td style="background:rgb(75,110,181);color:#fff !important">73.4 ± 0.9</td><td style="background:rgb(72,107,180);color:#fff !important">73.8 ± 1.2</td><td style="background:rgb(127,154,207);color:#0b1f45 !important">66.5 ± 1.1</td><td class="diag">–</td><td style="background:rgb(207,222,246);color:#0b1f45 !important">55.9 ± 8.9</td><td style="background:rgb(50,88,169);color:#fff !important">76.7 ± 0.8</td><td style="background:rgb(53,91,171);color:#fff !important">76.3 ± 0.8</td></tr><tr><th scope="row">Colour distortion</th><td style="background:rgb(65,101,177);color:#fff !important">74.7 ± 1.2</td><td style="background:rgb(102,133,195);color:#0b1f45 !important">69.8 ± 1.1</td><td style="background:rgb(46,85,167);color:#fff !important">77.3 ± 1.1</td><td class="diag">–</td><td style="background:rgb(96,128,192);color:#fff !important">70.6 ± 1.4</td><td style="background:rgb(117,145,202);color:#0b1f45 !important">67.9 ± 6.9</td><td style="background:rgb(56,94,172);color:#fff !important">75.9 ± 1.1</td><td style="background:rgb(59,96,173);color:#fff !important">75.6 ± 0.9</td></tr><tr><th scope="row">Zoom</th><td style="background:rgb(26,68,157);color:#fff !important">79.9 ± 0.8</td><td style="background:rgb(32,72,160);color:#fff !important">79.2 ± 0.4</td><td class="diag">–</td><td style="background:rgb(53,91,171);color:#fff !important">76.3 ± 0.7</td><td style="background:rgb(26,67,157);color:#fff !important">80.0 ± 1.3</td><td style="background:rgb(29,71,159);color:#fff !important">79.5 ± 0.9</td><td style="background:rgb(88,120,188);color:#fff !important">71.7 ± 1.2</td><td style="background:rgb(33,74,161);color:#fff !important">79.0 ± 1.1</td></tr><tr><th scope="row">Rotation 90°</th><td style="background:rgb(82,115,185);color:#fff !important">72.5 ± 1.2</td><td class="diag">–</td><td style="background:rgb(25,67,157);color:#fff !important">80.1 ± 0.7</td><td style="background:rgb(90,122,189);color:#fff !important">71.4 ± 0.9</td><td style="background:rgb(82,115,185);color:#fff !important">72.5 ± 1.3</td><td style="background:rgb(74,109,181);color:#fff !important">73.5 ± 0.9</td><td style="background:rgb(56,94,172);color:#fff !important">75.9 ± 0.8</td><td style="background:rgb(44,83,166);color:#fff !important">77.5 ± 0.9</td></tr><tr><th scope="row">Mirror</th><td class="diag">–</td><td style="background:rgb(93,125,190);color:#fff !important">71.0 ± 1.5</td><td class="best" style="background:rgb(11,55,150);color:#fff !important">82.0 ± 0.9</td><td style="background:rgb(83,116,185);color:#fff !important">72.4 ± 1.1</td><td style="background:rgb(56,93,172);color:#fff !important">76.0 ± 1.1</td><td style="background:rgb(101,132,194);color:#fff !important">69.9 ± 1.4</td><td style="background:rgb(38,78,163);color:#fff !important">78.3 ± 0.7</td><td style="background:rgb(32,73,160);color:#fff !important">79.1 ± 1.0</td></tr></tbody></table></div></div><h4 style="font-size:17px;margin:20px 0 6px">Key findings</h4><ul class="findings"><li><span><strong>Zoom is key:</strong> the best pairs all include zoom — mirror then zoom reaches 82.0%, zoom then random mask 80.2%, rotation then zoom 80.1%.</span></li><li><span><strong>Intensity changes hurt:</strong> Gaussian blur with Laplacian drops to 55.9%, and colour distortion consistently degrades accuracy (down to 66.5%), since Hounsfield values are essential to tell the signs apart.</span></li><li><span><strong>Final choice:</strong> random mask, mirror, 90° rotation and zoom, applied sequentially; the same set is used as data augmentation for the random and ImageNet baselines.</span></li></ul>
+
+        <h3 class="sub"><span class="num">2.3</span>Patch classifier</h3>
+        <p>A 5-output classification head is added to the pretrained encoder and fine-tuned on 3,281 labelled patches (1,295 NORMAL, 550 LLDA, 377 CONS, 784 NOD, 275 IP) with categorical cross-entropy and dropout, SGD (learning rate 10⁻⁴), 500 epochs, batch size 256 and cosine decay. Six configurations are compared: random or ImageNet initialization trained end to end (with or without augmentation), and SimCLR pretraining with frozen weights or end-to-end fine-tuning.</p>
+
+        <h3 class="sub"><span class="num">2.4</span>Patient-level classification and 3D localization</h3>
+        <p>The patch classifier is swept over the whole scan with 50³ patches overlapping by 10 voxels, producing a likelihood map for each of the 5 labels, smoothed by a per-class Gaussian convolution. Because training patches cover at least 80% lung, border patches create a domain shift at inference; <b>normal-lung filling</b> fills the regions outside the lung mask with healthy lung texture matched to the scan's dose, contrast and slice thickness. The maps are then binarized and filtered, and a threshold T on the volume of pathological regions decides whether the exam is abnormal. T is chosen on the validation ROC curve: T = 7.5 cm³.</p>
+<figure class="pfig"><a class="frame" href="/images/projects/weakly-supervised-ct/roc-threshold.webp"><img src="/images/projects/weakly-supervised-ct/roc-threshold.webp" alt="ROC curve of sensitivity versus 1 minus specificity for thresholds T between 0.5 and 20 cubic centimetres" loading="lazy"></a><figcaption><b>Figure 3:</b> ROC curve of normal-case triage on the validation set for T ∈ [0, 20] cm³, used to pick the operating point.</figcaption></figure>
+      </section>
+
+      <section class="s" id="experiments">
+        <h2 class="serif">Experiments</h2>
+
+        <h3 class="sub"><span class="num">3.1</span>Data</h3>
+        <p>An internal dataset of 3,029 chest CT scans of unique patients from Hospices Civils de Lyon (2019), acquired on Philips, Siemens, Toshiba and GE scanners and selected by an expert radiologist for relevant abnormalities, image quality and diversity of semiological signs. Lungs are segmented automatically; voxels are windowed to [−1000, +200] HU and normalized to [−1, +1].</p>
+<div class="ptable-wrap"><p class="ptable-caption"><b>Table 2:</b> Dataset statistics (mean ± SD, with range).</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th>Patients</th><th>Sex</th><th>Labels</th><th>Age (years)</th><th>Slice thickness (mm)</th><th>Pixel spacing (mm)</th><th>kVp</th></tr></thead><tbody><tr><td>3,029</td><td>1,734 M · 1,295 F</td><td>1,482 normal · 1,547 abnormal</td><td>58.19 ± 17.07 (18–98)</td><td>2.21 ± 0.82 (0.625–3.00)</td><td>0.75 ± 0.12 (0.312–1.4)</td><td>116.4 ± 10.42 (80–140)</td></tr></tbody></table></div></div><div class="ptable-wrap"><p class="ptable-caption"><b>Table 1:</b> Partition of the CT dataset (3,029 scans from Hospices Civils de Lyon, 2019).</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th>Partition</th><th>Use</th><th>Scans</th><th>Details</th></tr></thead><tbody><tr><td>(i)</td><td>SimCLR pretraining</td><td>1,337</td><td class="wrap">256,000 randomly selected patches</td></tr><tr><td>(ii)</td><td>Patch-classifier fine-tuning</td><td>1,330</td><td class="wrap">1,850 NORMAL · 786 LLDA · 539 CONS · 1,120 NOD · 393 IP patches</td></tr><tr><td>(iii)</td><td>Patient-level classification</td><td>362</td><td class="wrap">Validation: 111 scans · Test: 251 scans</td></tr></tbody></table></div></div>
+        <p>Metrics: precision, recall, F1, AUROC and DeLong p-values, at patch and patient level, in multi-label and binary settings. Localization is assessed qualitatively by an experienced radiologist on 100 random test cases, scoring completeness and false positives from 1 to 4.</p>
+
+        <h3 class="sub"><span class="num">3.2</span>Representation learning</h3>
+<figure class="pfig"><div class="fig-grid"><figure><a class="frame" href="/images/projects/weakly-supervised-ct/tsne-random.webp" style="display:block;background:#fff;border:1px solid var(--border);border-radius:10px;padding:6px"><img src="/images/projects/weakly-supervised-ct/tsne-random.webp" alt="t-SNE projection, Random initialization" loading="lazy"></a><div class="sub-cap">(a) Random initialization</div></figure><figure><a class="frame" href="/images/projects/weakly-supervised-ct/tsne-imagenet.webp" style="display:block;background:#fff;border:1px solid var(--border);border-radius:10px;padding:6px"><img src="/images/projects/weakly-supervised-ct/tsne-imagenet.webp" alt="t-SNE projection, ImageNet initialization" loading="lazy"></a><div class="sub-cap">(b) ImageNet initialization</div></figure><figure><a class="frame" href="/images/projects/weakly-supervised-ct/tsne-simclr-frozen.webp" style="display:block;background:#fff;border:1px solid var(--border);border-radius:10px;padding:6px"><img src="/images/projects/weakly-supervised-ct/tsne-simclr-frozen.webp" alt="t-SNE projection, SimCLR, frozen weights" loading="lazy"></a><div class="sub-cap">(c) SimCLR, frozen weights</div></figure><figure><a class="frame" href="/images/projects/weakly-supervised-ct/tsne-simclr-finetuned.webp" style="display:block;background:#fff;border:1px solid var(--border);border-radius:10px;padding:6px"><img src="/images/projects/weakly-supervised-ct/tsne-simclr-finetuned.webp" alt="t-SNE projection, SimCLR, fine-tuned" loading="lazy"></a><div class="sub-cap">(d) SimCLR, fine-tuned</div></figure></div><figcaption><b>Figure 4:</b> t-SNE projections of 3D test-patch representations from the patch-classifier encoder. Colours: green NORMAL, blue NOD, orange LLDA, red CONS, black IP. Clear clusters per sign appear only with SimCLR fine-tuning.</figcaption></figure><h4 style="font-size:17px;margin:20px 0 6px">Key findings</h4><ul class="findings"><li><span><strong>Structured latent space:</strong> clusters matching each semiological sign appear clearly only after SimCLR pretraining and fine-tuning; random and ImageNet encoders mix the classes.</span></li></ul>
+
+        <h3 class="sub"><span class="num">3.3</span>Patch-level classification</h3>
+        <p>The patch test set contains 236 LLDA, 162 CONS, 336 NOD, 118 IP and 555 NORMAL patches. SimCLR pretraining with fine-tuning reaches an F1 score of 0.943, against 0.677 for random weights, 0.792 for ImageNet and 0.902 for frozen SimCLR weights.</p>
+<figure class="pfig"><a class="frame" href="/images/projects/weakly-supervised-ct/confusion-matrix.webp"><img src="/images/projects/weakly-supervised-ct/confusion-matrix.webp" alt="Confusion matrix of the patch classifier over LLDA, CONS, NOD, IP and NORMAL" loading="lazy"></a><figcaption><b>Figure 5:</b> Confusion matrix of the best patch classifier (SimCLR + fine-tuning) on the patch test set. Per-class F1: 0.975 LLDA, 0.971 NORMAL, 0.951 IP, 0.934 NOD, 0.842 CONS.</figcaption></figure><figure class="pfig"><a class="frame" href="/images/projects/weakly-supervised-ct/label-efficiency.webp"><img src="/images/projects/weakly-supervised-ct/label-efficiency.webp" alt="F1 score versus percentage of labelled data for SimCLR fine-tuned, SimCLR frozen, ImageNet and random initializations" loading="lazy"></a><figcaption><b>Figure 6:</b> Patch-classifier F1 score versus the fraction of labelled training data used for fine-tuning (0.5% to 100%).</figcaption></figure><h4 style="font-size:17px;margin:20px 0 6px">Key findings</h4><ul class="findings"><li><span><strong>Label efficiency:</strong> SimCLR with fine-tuning outperforms every other strategy at every level of supervision, and is already strong from 30% of the labels.</span></li><li><span><strong>No plateau:</strong> all strategies keep improving with more labels, and the gap in favour of SimCLR fine-tuning holds.</span></li></ul>
+
+        <h3 class="sub"><span class="num">3.4</span>Patient-level classification</h3>
+<div class="ptable-wrap"><p class="ptable-caption"><b>Table 4:</b> Patient-level multi-label classification for each training configuration. Weight initialization refers to the ResNet50 backbone; normal-lung filling is applied at inference. Best in bold, second best underlined.</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th>Initialization</th><th>Frozen</th><th>Lung filling</th><th>AUROC (95% CI)</th><th>Jaccard</th><th>F1</th><th>DeLong <i>p</i></th></tr></thead><tbody><tr><td>Random</td><td>–</td><td>–</td><td>0.651 (0.6228, 0.6749)</td><td>0.404</td><td>0.568</td><td>&lt; 1.103 × 10⁻⁸</td></tr><tr><td>Random</td><td>–</td><td>✓</td><td>0.679 (0.6499, 0.7086)</td><td>0.428</td><td>0.594</td><td>&lt; 4.875 × 10⁻⁷</td></tr><tr class="mid"><td>ImageNet</td><td>–</td><td>–</td><td>0.701 (0.6663, 0.7348)</td><td>0.459</td><td>0.623</td><td>&lt; 1.259 × 10⁻⁶</td></tr><tr><td>ImageNet</td><td>–</td><td>✓</td><td>0.767 (0.7364, 0.8067)</td><td>0.540</td><td>0.693</td><td>&lt; 2.001 × 10⁻⁴</td></tr><tr class="mid"><td>SimCLR</td><td>✓</td><td>–</td><td>0.841 (0.8115, 0.8617)</td><td>0.642</td><td>0.770</td><td>&lt; 3.945 × 10⁻⁵</td></tr><tr><td>SimCLR</td><td>✓</td><td>✓</td><td>0.874 (0.8343, 0.9109)</td><td>0.711</td><td>0.819</td><td>&lt; 1.789 × 10⁻⁷</td></tr><tr class="mid"><td>SimCLR (fine-tuned)</td><td>–</td><td>–</td><td class="second">0.902 (0.8795, 0.9303)</td><td class="second">0.755</td><td class="second">0.856</td><td>&lt; 9.412 × 10⁻⁹</td></tr><tr class="ours"><td>SimCLR (fine-tuned)</td><td>–</td><td>✓</td><td class="best">0.931 (0.9034, 0.9557)</td><td class="best">0.819</td><td class="best">0.897</td><td>&lt; 5.673 × 10⁻⁴</td></tr></tbody></table></div></div><div class="ptable-wrap"><p class="ptable-caption"><b>Table 5:</b> Per-abnormality performance of the best configuration (SimCLR pretraining + fine-tuning) on the test set.</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th>Abnormality</th><th>Positive cases</th><th>AUROC</th><th>Precision</th><th>Recall</th><th>F1</th></tr></thead><tbody><tr><td>LLDA (low lung density)</td><td>81</td><td>0.952</td><td>0.894</td><td class="best">1</td><td>0.944</td></tr><tr><td>CONS (consolidation)</td><td>66</td><td>0.791</td><td>0.809</td><td>0.739</td><td>0.772</td></tr><tr><td>NOD (nodules)</td><td>51</td><td>0.853</td><td>0.732</td><td>0.976</td><td>0.837</td></tr><tr><td>IP (interstitial pattern)</td><td>66</td><td class="best">0.974</td><td class="best">1</td><td>0.909</td><td class="best">0.952</td></tr><tr><td>NORMAL</td><td>60</td><td>0.948</td><td>0.964</td><td>0.916</td><td>0.939</td></tr></tbody></table></div></div><div class="ptable-wrap"><p class="ptable-caption"><b>Table 6:</b> Normal versus abnormal classification; all pathologies are merged into one “abnormal” label.</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th>Initialization</th><th>Frozen</th><th>AUROC (95% CI)</th><th>F1</th><th>DeLong <i>p</i></th></tr></thead><tbody><tr><td>Random</td><td>–</td><td>0.789 (0.765, 0.820)</td><td>0.864</td><td>&lt; 8.413 × 10⁻⁹</td></tr><tr><td>ImageNet</td><td>–</td><td>0.796 (0.776, 0.823)</td><td>0.878</td><td>&lt; 2.152 × 10⁻⁸</td></tr><tr><td>SimCLR</td><td>✓</td><td class="second">0.947 (0.917, 0.951)</td><td class="second">0.9467</td><td>&lt; 1.489 × 10⁻⁴</td></tr><tr class="ours"><td>SimCLR (fine-tuned)</td><td>–</td><td class="best">0.963 (0.952, 0.976)</td><td class="best">0.974</td><td>&lt; 7.231 × 10⁻⁶</td></tr></tbody></table></div></div><h4 style="font-size:17px;margin:20px 0 6px">Key findings</h4><ul class="findings"><li><span><strong>Pretraining matters:</strong> SimCLR fine-tuning with normal-lung filling reaches AUROC 0.931 on multi-label classification, against 0.651 from random initialization and 0.767 from ImageNet.</span></li><li><span><strong>Normal-lung filling helps every configuration</strong>, notably for nodules and interstitial pattern.</span></li><li><span><strong>Diffuse vs focal:</strong> diffuse signs are detected best (IP 0.974, LLDA 0.952) and focal ones are harder (NOD 0.853, CONS 0.791), in line with previous studies.</span></li><li><span><strong>Triage:</strong> normal versus abnormal reaches AUROC 0.963 with F1 0.974.</span></li></ul>
+
+        <h3 class="sub"><span class="num">3.5</span>Qualitative results: 3D localization</h3>
+<figure class="pfig"><a class="frame" href="/images/projects/weakly-supervised-ct/prediction-maps.webp"><img src="/images/projects/weakly-supervised-ct/prediction-maps.webp" alt="Four rows of CT slices with per-label probability maps for LLDA, CONS, NOD and IP, and a 3D view" loading="lazy"></a><figcaption><b>Figure 7:</b> CT slices with their per-label probability maps (magma colour map, warmer is more likely) for LLDA, CONS, NOD and IP. Right: 3D view of regions above 0.9 — LLDA cyan, CONS green, NOD purple, IP yellow. The NORMAL map is omitted for clarity.</figcaption></figure><div class="ptable-wrap"><p class="ptable-caption"><b>Table 7:</b> Radiologist review of localization on 119 findings from 100 randomly selected test patients (% of findings per score).</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th>Criterion</th><th>4</th><th>3</th><th>2</th><th>1</th></tr></thead><tbody><tr><td>Completeness</td><td>62.6 <span class="muted">complete</span></td><td>16.2 <span class="muted">clinically relevant</span></td><td>10.1 <span class="muted">partial</span></td><td>11.1 <span class="muted">insufficient</span></td></tr><tr><td>False positives</td><td>47.1 <span class="muted">none</span></td><td>26.1 <span class="muted">few</span></td><td>15.1 <span class="muted">significant</span></td><td>11.7 <span class="muted">unusable</span></td></tr></tbody></table></div></div><h4 style="font-size:17px;margin:20px 0 6px">Key findings</h4><ul class="findings"><li><span><strong>Completeness:</strong> a useful alert in 88.8% of findings — 62.6% complete, 16.2% clinically relevant and 10.1% partial; only 11.1% insufficient.</span></li><li><span><strong>False positives:</strong> 88.3% of findings usable — 47.1% with no false positives, 26.1% with few and 15.1% with significant ones; 11.7% unusable.</span></li></ul>
+
+        <h3 class="sub"><span class="num">3.6</span>Comparison with prior work</h3>
+<div class="ptable-wrap"><p class="ptable-caption"><b>Table 8:</b> Indicative comparison with prior work (AUROC). Datasets and label definitions differ, so values are not directly comparable. Atelectasis is compared with our CONS label.</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th>Method</th><th>Nodules</th><th>Atelectasis / CONS</th><th>Emphysema / LLDA</th></tr></thead><tbody><tr><td>Tushar et al.</td><td>0.65</td><td>0.77</td><td>0.89</td></tr><tr><td>Saha et al.</td><td>–</td><td>0.808</td><td>0.922</td></tr><tr><td>Draelos et al. (CT-Net)</td><td>0.718</td><td>0.765</td><td>–</td></tr><tr class="ours"><td>Ours</td><td class="best">0.853</td><td class="best">0.791</td><td class="best">0.952</td></tr></tbody></table></div></div>
+      </section>
+
+      <section class="s" id="conclusions">
+        <h2 class="serif">Conclusion &amp; limitations</h2>
+        <p>Combining self-supervised pretraining with fine-tuning on a small set of labelled patches exploits large amounts of unlabelled data while keeping the precision of targeted supervision. Aggregating detected signs at patient level, together with simultaneous 3D localization, identifies and visualizes the affected regions, supporting the detection of incidental findings. Patch-level labels are easier and less ambiguous to annotate than whole exams, and tie each label directly to the relevant image features.</p>
+        <p>The patient-level aggregation remains simple. Evaluating on larger and more diverse datasets, other imaging settings and real clinical workflows is needed to confirm robustness and generalizability.</p>
+      </section>
+
+      <section class="s" id="sources">
+        <h2 class="serif">Related links</h2>
+        <ol class="refs">
+          <li><a href="https://pubmed.ncbi.nlm.nih.gov/39140793/">Weakly-Supervised learning based Pathology Detection and Localization in 3D Chest Scans</a>, Medical Physics, 2024.</li>
+          <li><a href="https://theses.hal.science/tel-05263492/">Automatic Detection of Pathologies in Conventional Scanner Data</a>, PhD thesis, INSA Lyon, 2024 — chapter 3 (source of the tables and figures on this page).</li>
+          <li><a href="/projects/contrastive-pretraining/">Tailored 3D CT contrastive pretraining to improve pulmonary pathology classification</a>, IEEE ICSP, 2022 — the earlier contrastive pretraining study.</li>
+          <li>T. Chen et al., A Simple Framework for Contrastive Learning of Visual Representations (SimCLR), ICML 2020.</li>
+          <li>R. L. Draelos et al., Machine-learning-based multiple abnormality prediction with large-scale chest CT volumes (CT-Net), Medical Image Analysis, 2021.</li>
+        </ol>
+      </section>
+
+      <section class="s" id="citation">
+        <h2 class="serif">BibTeX</h2>
+        <div class="bib"><button class="btn copy" type="button">Copy</button><pre><code>@article{djahnine2024weakly,
   title = {Weakly-Supervised learning based Pathology Detection and Localization in 3D Chest Scans},
-  author = {A. Djahnine and E. Jupin-delevaux and O. Nempont and F. Craighero and S. A. Si-Mohamed and V. Cottin and P. Douek and A. Popoff and L. Boussel},
+  author = {Djahnine, A. and Jupin-Delevaux, E. and Nempont, O. and Craighero, F. and
+            Si-Mohamed, S. A. and Cottin, V. and Douek, P. and Popoff, A. and Boussel, L.},
   journal = {Medical Physics},
-  year = {2024},
-  doi = {10.1002/mp.17302}
-}</code></pre>
-  </section>
-</div>
+  volume = {51},
+  number = {11},
+  pages = {8272--8282},
+  year = {2024}
+}</code></pre></div>
+      </section>
+    </div>
+
+    <section class="more" aria-labelledby="more-title">
+      <h2 class="serif" id="more-title">More research</h2>
+      <div class="more-grid">
+        <a class="mcard" href="/projects/ct-3dflow/"><div class="thumb"><img src="/images/GLOW_MIDL_recap.webp" alt="" loading="lazy"></div><div class="body"><h3>CT-3DFlow: Unsupervised Pulmonary CT Analysis</h3><div class="meta">arXiv · 2024</div></div></a>
+        <a class="mcard" href="/projects/contrastive-pretraining/"><div class="thumb"><img src="/images/ieee-contrastive.webp" alt="" loading="lazy"></div><div class="body"><h3>Tailored 3D CT contrastive pretraining</h3><div class="meta">IEEE ICSP · 2022</div></div></a>
+        <a class="mcard" href="/projects/pulmonary-embolism/"><div class="thumb"><img src="/images/JFR_recap.webp" alt="" loading="lazy"></div><div class="body"><h3>Pulmonary embolism detection and severity quantification with 3D CT</h3><div class="meta">Diagnostic and Interventional Imaging · 2024</div></div></a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><a href="/">Aissam Djahnine</a> · AI Research Engineer</span>
+    <span><a href="/#research">All research</a> · <a href="/#publications">Publications</a></span>
+  </div>
+</footer>
+<script src="/assets/js/project.js?v={{ site.time | date: '%s' }}"></script>
+</body>
+</html>

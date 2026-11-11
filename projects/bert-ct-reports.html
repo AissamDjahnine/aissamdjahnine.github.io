@@ -1,96 +1,143 @@
 ---
-layout: research
-title: "BERT-based natural language processing analysis of French CT reports: Application to the measurement of the positivity rate for pulmonary embolism"
-description: "This study uses natural language processing to analyze French CT reports and measure the diagnostic yield of examinations requested for suspected pulmonary embolism."
+layout: null
+title: "BERT CT reports"
+description: "A BERT-based NLP pipeline for French CT reports that measures the positivity rate of CT exams requested for suspected pulmonary embolism."
 permalink: /projects/bert-ct-reports/
 image: /images/BERT_recap.png
+sitemap: true
 ---
-<header class="research-hero">
-  <h1>Understanding French CT Reports with BERT</h1>
-  <p class="research-subtitle">Measuring Pulmonary Embolism Positivity</p>
-  <p class="research-authors">E. Jupin-Delevaux, <strong>A. Djahnine</strong>, F. Talbot, A. Richard, S. Gouttard, A. Mansuy, P. Douek, S. A. Si-Mohamed, L. Boussel</p>
-  <p class="research-status">Research in Diagnostic and Interventional Imaging (ReDII) · 2023</p>
-  <div class="research-actions" aria-label="Research resources">
-    <a href="https://doi.org/10.1016/j.redii.2023.100027">Paper</a>
-    <a href="{{ "/publications/" | relative_url }}">All publications</a>
-    <a href="{{ "/projects/" | relative_url }}">All research</a>
+<!doctype html>
+<html lang="en">
+<head>
+<script>try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BERT CT reports — Aissam Djahnine</title>
+<meta name="description" content="A BERT-based NLP pipeline for French CT reports that measures the positivity rate of CT exams requested for suspected pulmonary embolism.">
+<meta property="og:title" content="BERT-based natural language processing analysis of French CT reports: Application to the measurement of the positivity rate for pulmonary embolism">
+<meta property="og:description" content="A BERT-based NLP pipeline for French CT reports that measures the positivity rate of CT exams requested for suspected pulmonary embolism.">
+<meta property="og:image" content="https://aissamdjahnine.github.io/images/BERT_recap.png">
+<link rel="icon" type="image/png" href="/images/favicon.webp">
+<link rel="canonical" href="https://aissamdjahnine.github.io/projects/bert-ct-reports/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600&family=JetBrains+Mono:wght@400&family=STIX+Two+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/project.css?v={{ site.time | date: '%s' }}">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a class="brand" href="/">Aissam Djahnine</a>
+      <span class="sep mid" aria-hidden="true">/</span>
+      <a class="mid" href="/#research">Research</a>
+      <span class="sep" aria-hidden="true">/</span>
+      <span class="here">BERT CT reports</span>
+    </nav>
+    <nav class="toc" aria-label="On this page"><a href="#abstract">Abstract</a><a href="#method">Method</a><a href="#experiments">Experiments</a><a href="#citation">BibTeX</a></nav>
+    <button class="icon-btn" id="theme-btn" aria-label="Toggle dark mode"><svg class="i" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></svg></button>
   </div>
 </header>
 
-<figure class="research-figure">
-  <a href="{{ "/images/BERT_recap.png" | relative_url }}" aria-label="Open the research figure at full resolution">
-    <img src="{{ "/images/BERT_recap.png" | relative_url }}" width="5520" height="1594" alt="French CT report sentence categories, BERT classification results, and pulmonary embolism illustrations">
-  </a>
-  <figcaption>Research overview. Select the figure to view it at full resolution.</figcaption>
-</figure>
+<main id="main">
+  <div class="wrap">
+    <header class="paper-head">
+      <span class="venue">Research in Diagnostic and Interventional Imaging · 2023 · Open access</span>
+      <h1 class="serif">BERT-based natural language processing analysis of French CT reports: Application to the measurement of the positivity rate for pulmonary embolism</h1>
+      
+      <p class="authors">E. Jupin-Delevaux<sup>1</sup> · <span class="me">A. Djahnine</span><sup>2,3</sup> · F. Talbot<sup>4</sup> · A. Richard<sup>4</sup> · S. Gouttard<sup>1</sup> · A. Mansuy<sup>1</sup> · P. Douek<sup>1,2</sup> · S. Si-Mohamed<sup>1,2</sup> · L. Boussel<sup>1,2</sup></p>
+      <p class="affil"><sup>1</sup> Radiology Department, Hospices Civils de Lyon · <sup>2</sup> CREATIS, Univ Lyon, INSA Lyon, Université Claude Bernard Lyon 1 · <sup>3</sup> Philips Research France, Suresnes · <sup>4</sup> DSN, Hospices Civils de Lyon</p>
+      <div class="actions">
+        <a class="btn primary" href="https://doi.org/10.1016/j.redii.2023.100027"><svg class="i" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>Paper</a>
+        <a class="btn" href="#citation"><svg class="i" viewBox="0 0 24 24"><path d="M7 7h4v4H7zM13 7h4v4h-4zM7 11c0 4-2 6-2 6M13 11c0 4-2 6-2 6"/></svg>Cite</a>
+      </div>
+    </header>
 
-<div class="research-copy">
-  <section aria-labelledby="overview">
-    <h2 id="overview">Overview</h2>
-    <p>This study uses natural language processing to analyze French CT reports and measure the diagnostic yield of examinations requested for suspected pulmonary embolism.</p>
-  </section>
-  <section aria-labelledby="method">
-    <h2 id="method">Method</h2>
-    <p>A BERT-based sentence classifier distinguishes report content using three-category and eleven-category classification tasks. Report analysis identifies examinations with pulmonary embolism.</p>
-    <p>The three-category task separates non-thoracic, healthy thoracic, and pathological thoracic content. The finer classification task distinguishes thoracic findings; report-level analysis then identifies PE-positive examinations.</p>
-  </section>
-  <section aria-labelledby="experiments">
-    <h2 id="experiments">Experiments</h2>
-    <div class="research-table-scroll" role="region" aria-label="Report cohorts" tabindex="0">
-      <table>
-        <caption>Report cohorts</caption>
-        <thead><tr><th scope="col">Year</th><th scope="col">Reports</th><th scope="col">Use</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">2019</th><td>99,510</td><td>Training and validation</td></tr>
-          <tr><th scope="row">2018</th><td>94,559</td><td>Testing</td></tr>
-        </tbody>
-      </table>
-    </div>    <p>Reports were anonymized. Sentence classification and report-level pulmonary embolism identification are evaluated separately.</p>
-  </section>
-  <section aria-labelledby="results">
-    <h2 id="results">Results</h2>
-    <p class="research-table-hint">Scroll tables horizontally to see all columns.</p>
-    <div class="research-table-scroll" role="region" aria-label="Sentence classification results from the research figure" tabindex="0">
-      <table>
-        <caption>Sentence classification results from the research figure</caption>
-        <thead><tr><th scope="col">Classifier</th><th scope="col">Accuracy</th><th scope="col">Precision</th><th scope="col">Recall</th><th scope="col">F1</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">3-category</th><td>0.988</td><td>0.979</td><td>0.989</td><td>0.984</td></tr>
-          <tr><th scope="row">11-category</th><td>0.984</td><td>0.986</td><td>0.985</td><td>0.985</td></tr>
-        </tbody>
-      </table>
-    </div>    <div class="research-table-scroll" role="region" aria-label="Pulmonary embolism identification in reports" tabindex="0">
-      <table>
-        <caption>Pulmonary embolism identification in reports</caption>
-        <thead><tr><th scope="col">Metric</th><th scope="col">Value</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">Sensitivity</th><td>98.2%</td></tr>
-          <tr><th scope="row">Specificity</th><td>99.3%</td></tr>
-          <tr><th scope="row">Accuracy</th><td>99.1%</td></tr>
-          <tr><th scope="row">Positive examinations among those requested for suspected PE</th><td>641 / 4,042 (15.8%)</td></tr>
-        </tbody>
-      </table>
-    </div>    <ul>
-      <li><strong>Text classification:</strong> both sentence-category tasks reach F1 above 0.98.</li>
-      <li><strong>Diagnostic yield:</strong> the positivity rate describes examinations requested for suspected PE, not all CT reports.</li>
-    </ul>
-  </section>
-  <section aria-labelledby="conclusions">
-    <h2 id="conclusions">Conclusions &amp; limitations</h2>
-    <p>The classifier supports large-scale analysis of radiological reports and diagnostic yield. These results concern interpretation of report text, rather than direct detection of emboli in CT images.</p>
-  </section>
-  <section aria-labelledby="sources">
-    <h2 id="sources">Paper &amp; supporting material</h2>
-    <p><a href="https://doi.org/10.1016/j.redii.2023.100027">Full article</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/39077547/">Study abstract and evaluation details</a>.</p>
-  </section>
-  <section aria-labelledby="citation">
-    <h2 id="citation">BibTeX</h2>
-    <pre class="research-citation"><code>@article{djahnine2023bertctreports,
+    <div class="tldr" aria-label="Key numbers">
+      <div><div class="num">98.28%</div><div class="lbl">sensitivity for PE in reports</div></div>
+      <div><div class="num">99.29%</div><div class="lbl">specificity for PE in reports</div></div>
+      <div><div class="num">0.985</div><div class="lbl">F1, 11-class sentence classifier</div></div>
+      <div><div class="num">194k</div><div class="lbl">CT reports analysed</div></div>
+    </div>
+
+    <figure class="teaser">
+      <a href="/images/BERT_recap.webp" aria-label="Open the research figure at full resolution">
+        <img src="/images/BERT_recap.webp" alt="Overview of the BERT-based report analysis pipeline and its results">
+      </a>
+      <figcaption>Research overview. Select the figure to view it at full resolution.</figcaption>
+    </figure>
+
+    <div class="prose">
+      <section class="s" id="abstract">
+        <h2 class="serif">Abstract</h2>
+        <div class="abstract"><p><b>Rationale and objectives:</b> To develop a Natural Language Processing (NLP) method based on Bidirectional Encoder Representations from Transformers (BERT) adapted to French CT reports and to evaluate its performance to calculate the diagnostic yield of CT in patients with clinical suspicion of pulmonary embolism (PE).</p><p><b>Materials and methods:</b> All the CT reports performed in our institution in 2019 (99,510 reports, training and validation dataset) and 2018 (94,559 reports, testing dataset) were included after anonymization. Two BERT-based NLP sentence classifiers were trained on 27.700, manually labeled, sentences from the training dataset. The first one aimed to classify the reports’ sentences into three classes (“Non chest”, “Healthy chest”, and "Pathological chest" related sentences), the second one to classify the last class into eleven sub classes pathologies including "pulmonary embolism". F1-score was reported on the validation dataset. These NLP classifiers were then applied to requested CT reports for pulmonary embolism from the testing dataset. Sensitivity, specificity, and accuracy for detection of the presence of a pulmonary embolism were reported in comparison to human analysis of the reports.</p><p><b>Results:</b> The F1-score for the 3-Classes and 11-SubClasses classifiers was 0.984 and 0.985, respectively. 4,042 examinations from the testing dataset were requested for pulmonary embolism of which 641 (15.8%) were positively evaluated by radiologists. The sensitivity, specificity, and accuracy of the NLP network for identifying pulmonary embolism in these reports were 98.2%, 99.3% and 99.1%, respectively.</p><p><b>Conclusion:</b> BERT-based NLP sentences classifier enables the analysis of large databases of radiological reports to accurately determine the diagnostic yield of CT screening.</p><p class="kw"><strong>Keywords:</strong> Natural language processing; CT; Pulmonary embolism</p></div>
+      </section>
+
+      <section class="s" id="introduction">
+        <h2 class="serif">Introduction</h2>
+        <p>Appropriate use of imaging, especially ionizing exams such as CT, is a major concern, and decision-support tools aim to reduce unnecessary requests. Measuring their effect requires the positive yield of exams, which means analysing report content — hard without structured reports, which are rarely used in emergency settings.</p><p>NLP methods have long been used to detect findings in free-text CT reports. BERT brings state-of-the-art biomedical text mining and can be adapted to a domain and a language without labels. This work builds a BERT-based pipeline for French chest CT reports and uses it to measure the diagnostic yield of CT requested for suspected pulmonary embolism.</p>
+      </section>
+
+      <section class="s" id="method">
+        <h2 class="serif">Method</h2>
+        <h3 class="sub"><span class="num">2.1</span>Population and reports</h3><p>All CT reports from Hospices Civils de Lyon between January 2018 and December 2019 were collected, written by a large and diverse panel of radiologists and structured in four parts: clinical referral, technique, findings and conclusion. Reports were anonymized, with IRB approval and waived consent.</p><div class="ptable-wrap"><p class="ptable-caption"><b>Table 1:</b> Report and sentence datasets.</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th scope="col">Dataset</th><th scope="col">Size</th><th scope="col">Use</th></tr></thead><tbody><tr><th scope="row">CT reports, 2019</th><td>99,510 reports</td><td>Training and validation of the language model and classifiers</td></tr><tr><th scope="row">CT reports, 2018</th><td>94,559 reports</td><td>Test: PE detection and positivity rate</td></tr><tr><th scope="row">“Findings” sentences, 2019</th><td>1,007,000 sentences</td><td>Unsupervised fine-tuning (95% / 5% split)</td></tr><tr><th scope="row">Labelled sentences</th><td>27,731 sentences</td><td>Classifier training, labelled by two radiologists (consensus on disagreement)</td></tr></tbody></table></div></div><h3 class="sub"><span class="num">2.2</span>Two-stage sentence classification</h3><p>Instead of classifying each pathology directly, a first classifier separates findings sentences into non-chest, healthy chest and pathological chest; a second one assigns pathological chest sentences to 11 pathology types. Splitting the task this way handles the strong imbalance between categories.</p><figure class="pfig"><a class="frame" href="/images/projects/bert-ct-reports/sankey-labels.webp"><img src="/images/projects/bert-ct-reports/sankey-labels.webp" alt="Sankey diagram splitting 27,731 sentences into non-thoracic, pathological thoracic and healthy thoracic, then pathological sentences into 11 pathology types" loading="lazy"></a><figcaption><b>Figure 1:</b> Sankey diagram of the 27,731 labels used to train and validate the classifiers. <span class="muted">Figure from Jupin-Delevaux et al., Research in Diagnostic and Interventional Imaging (2023), reproduced unmodified under CC BY-NC-ND 4.0.</span></figcaption></figure><div class="ptable-wrap"><p class="ptable-caption"><b>Table 2:</b> Sentence labels used to train the two classifiers.</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th scope="col">Classifier</th><th scope="col">Class</th><th scope="col">Sentences</th></tr></thead><tbody><tr><th scope="row" rowspan="3">3-Classes</th><td class="wrap">Non chest</td><td>11,277</td></tr><tr><td class="wrap">Healthy chest</td><td>3,808</td></tr><tr><td class="wrap">Pathological chest</td><td>12,646</td></tr><tr class="mid"><th scope="row" rowspan="11">11-SubClasses<br><span class="muted">(pathological chest)</span></th><td class="wrap">Pulmonary embolism</td><td>560</td></tr><tr><td class="wrap">Non-embolic pulmonary artery pathology</td><td>656</td></tr><tr><td class="wrap">Aortic pathology</td><td>545</td></tr><tr><td class="wrap">Heart abnormality</td><td>1,215</td></tr><tr><td class="wrap">Mediastinal lymphadenopathy</td><td>1,161</td></tr><tr><td class="wrap">Lung consolidation</td><td>1,686</td></tr><tr><td class="wrap">Lung nodule or mass</td><td>2,201</td></tr><tr><td class="wrap">Bronchial disorders</td><td>621</td></tr><tr><td class="wrap">Interstitial syndrome</td><td>1,322</td></tr><tr><td class="wrap">Pleural abnormality</td><td>1,216</td></tr><tr><td class="wrap">Chest wall abnormality</td><td>1,463</td></tr></tbody></table></div></div><h3 class="sub"><span class="num">2.3</span>Language model and training</h3><p>The French CamemBERT model is first adapted to radiology language by unsupervised masked language modelling on report sentences, then fine-tuned in a supervised way into the two classifiers.</p><div class="ptable-wrap"><p class="ptable-caption"><b>Table 3:</b> Implementation details.</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th scope="col">Setting</th><th scope="col">Value</th></tr></thead><tbody><tr><th scope="row">Base model</th><td>CamemBERT (camembert-large), French pretrained</td></tr><tr><th scope="row">Domain adaptation</th><td>Unsupervised masked language modelling on report sentences</td></tr><tr><th scope="row">Classifiers</th><td>CamemBERT for sequence classification, cross-entropy loss</td></tr><tr><th scope="row">Optimizer</th><td>AdamW, betas (0.9, 0.999), weight decay 10⁻²</td></tr><tr><th scope="row">Batch size</th><td>32 (language model) · 16 (classifiers)</td></tr><tr><th scope="row">Epochs</th><td>40; convergence after 16 (3-Classes) and 21 (11-SubClasses)</td></tr><tr><th scope="row">Framework / hardware</th><td>PyTorch 1.7.0 · one NVIDIA Titan RTX (24 GiB), about 5 hours</td></tr></tbody></table></div></div><h3 class="sub"><span class="num">2.4</span>Pulmonary embolism detection</h3><p>In the 2018 test set, chest CT exams are found with stemmed keywords in the technique section (e.g. “thor”, “card”, “pulm”, “TAVI”, “coroscanner”), and exams requested for PE with keywords in the clinical referral (e.g. “embo”, “dimer”, “phlebi”). Two experienced radiologists then rated each selected report as requested for PE or not, and positive for PE or not. A report is NLP-positive when at least one of its findings sentences is classified as pulmonary embolism.</p>
+      </section>
+
+      <section class="s" id="experiments">
+        <h2 class="serif">Results</h2>
+        <h3 class="sub"><span class="num">3.1</span>Domain-adapted language model</h3><p>Fine-tuning CamemBERT on 50,350 validation sentences cut perplexity from 4,539.01 to 1.39.</p><div class="ptable-wrap"><p class="ptable-caption"><b>Table 4:</b> Top predictions for the masked sentence “Absence de &lt;mot masqué&gt; du médiastin” (“No &lt;masked word&gt; of the mediastinum”), before and after fine-tuning (French / English).</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th scope="col">Before fine-tuning</th><th scope="col">Probability</th><th scope="col">After fine-tuning</th><th scope="col">Probability</th></tr></thead><tbody><tr><td>Traitement / Treatment</td><td>1.49%</td><td class="best">Déviation / Deviation</td><td class="best">75.79%</td></tr><tr><td>Troubles / Trouble</td><td>1.18%</td><td>Lésion / Lesion</td><td>7.49%</td></tr><tr><td>Maladie / Disease</td><td>1.17%</td><td>Masse / Mass</td><td>3.33%</td></tr><tr><td>Cancer / Cancer</td><td>0.87%</td><td>Collection / Collection</td><td>4.45%</td></tr></tbody></table></div></div><h3 class="sub"><span class="num">3.2</span>Sentence classification</h3><div class="ptable-wrap"><p class="ptable-caption"><b>Table 5:</b> Sentence classifiers, trained on 27,731 sentences and validated on about 1,400 sentences.</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th scope="col">Classifier</th><th scope="col">Accuracy</th><th scope="col">Precision</th><th scope="col">Recall</th><th scope="col">F1-score</th></tr></thead><tbody><tr><th scope="row">3-Classes</th><td class="best">0.988</td><td>0.979</td><td class="best">0.989</td><td>0.984</td></tr><tr><th scope="row">11-SubClasses</th><td>0.984</td><td class="best">0.986</td><td>0.985</td><td class="best">0.985</td></tr></tbody></table></div></div><h3 class="sub"><span class="num">3.3</span>Pulmonary embolism and positivity rate</h3><div class="ptable-wrap"><p class="ptable-caption"><b>Table 6:</b> Pulmonary embolism detection in the 4,042 reports of exams requested for suspected PE (2018 test set), against radiologists’ reading.</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th scope="col">Metric</th><th scope="col">Value</th></tr></thead><tbody><tr><th scope="row">Exams requested for PE</th><td>4,042 of 94,559 (4.27%)</td></tr><tr><th scope="row">PE-positive per radiologists</th><td>641 (15.8%)</td></tr><tr><th scope="row">PE-positive per NLP</th><td>654</td></tr><tr><th scope="row">Accuracy</th><td>99.13%</td></tr><tr><th scope="row">Sensitivity</th><td>98.28%</td></tr><tr><th scope="row">Specificity</th><td>99.29%</td></tr><tr><th scope="row">PPV</th><td>96.33%</td></tr><tr><th scope="row">NPV</th><td>99.68%</td></tr></tbody></table></div></div><div class="ptable-wrap"><p class="ptable-caption"><b>Table 7:</b> Causes of the 35 discrepancies between manual and NLP ratings.</p><div class="ptable-scroll"><table class="ptable "><thead><tr><th scope="col">Cause</th><th scope="col">Reports</th></tr></thead><tbody><tr><th scope="row">Uncertainty about a PE</th><td>14</td></tr><tr><th scope="row">Unclear distinction between acute and chronic PE</th><td>7</td></tr><tr><th scope="row">Unaccountable errors</th><td>5</td></tr><tr><th scope="row">Other pulmonary-artery diagnosis (e.g. tumour)</th><td>4</td></tr><tr><th scope="row">Partial regression of a previously diagnosed PE</th><td>3</td></tr><tr><th scope="row">Absence of PE stated only in the conclusion</th><td>2</td></tr></tbody></table></div></div><h4 style="font-size:17px;margin:20px 0 6px">Key findings</h4><ul class="findings"><li><span><strong>Near-perfect PE detection:</strong> 99.13% accuracy, 98.28% sensitivity and 99.29% specificity against radiologists’ reading.</span></li><li><span><strong>Positivity rate:</strong> 15.8% of the 4,042 exams requested for suspected PE were positive, consistent with a recent large French cohort.</span></li><li><span><strong>Errors reflect uncertainty:</strong> most discrepancies come from uncertain or ambiguous wording, such as doubtful distal defects or acute versus chronic PE.</span></li></ul>
+      </section>
+
+      <section class="s" id="conclusions">
+        <h2 class="serif">Discussion &amp; limitations</h2>
+        <p>Contextual embeddings such as BERT outperform non-contextual methods for capturing syntax and for downstream tasks, and the approach transfers to other languages through open-source pretrained models; the French model can serve other tasks in French-speaking countries. Earlier European studies reported comparable PE detection from French and German reports with maximum-entropy and CNN-based models.</p><p>The classifiers are mono-label, although a sentence can describe several findings; focusing on the findings section, where findings are usually described separately, limits the impact. Medical uncertainty in reports remains hard to model, and the study did not compare against simpler NLP methods such as NegEx or FastContext.</p>
+      </section>
+
+      <section class="s" id="sources">
+        <h2 class="serif">Related links</h2>
+        <ol class="refs"><li><a href="https://doi.org/10.1016/j.redii.2023.100027">BERT-based natural language processing analysis of French CT reports: Application to the measurement of the positivity rate for pulmonary embolism</a>, Research in Diagnostic and Interventional Imaging 6 (2023) 100027. Open access under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>.</li><li>L. Martin et al., CamemBERT: a Tasty French Language Model, ACL 2020.</li><li>J. Devlin et al., BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding, NAACL 2019.</li></ol>
+      </section>
+
+      <section class="s" id="citation">
+        <h2 class="serif">BibTeX</h2>
+        <div class="bib"><button class="btn copy" type="button">Copy</button><pre><code>@article{djahnine2023bertctreports,
   title = {BERT-based natural language processing analysis of French CT reports: Application to the measurement of the positivity rate for pulmonary embolism},
   author = {E. Jupin-Delevaux and A. Djahnine and F. Talbot and A. Richard and S. Gouttard and A. Mansuy and P. Douek and S. A. Si-Mohamed and L. Boussel},
   journal = {Research in Diagnostic and Interventional Imaging (ReDII)},
   year = {2023},
   doi = {10.1016/j.redii.2023.100027}
-}</code></pre>
-  </section>
-</div>
+}</code></pre></div>
+      </section>
+
+    </div>
+
+    <section class="more" aria-labelledby="more-title">
+      <h2 class="serif" id="more-title">More research</h2>
+      <div class="more-grid">
+        <a class="mcard" href="/projects/pulmonary-embolism/">
+          <div class="thumb"><img src="/images/JFR_recap.webp" alt="" loading="lazy"></div>
+          <div class="body"><h3>Pulmonary embolism detection and severity quantification with 3D CT</h3><div class="meta">Diagnostic and Interventional Imaging · 2024</div></div>
+        </a>
+        <a class="mcard" href="/projects/ecapri/">
+          <div class="thumb"><img src="/images/CAPRI_recap.webp" alt="" loading="lazy"></div>
+          <div class="body"><h3>eCAPRI: post-TAVI mortality prediction</h3><div class="meta">European Radiology · 2025</div></div>
+        </a>
+        <a class="mcard" href="/projects/weakly-supervised-ct/">
+          <div class="thumb"><img src="/images/SIMCLR_recap.webp" alt="" loading="lazy"></div>
+          <div class="body"><h3>Weakly-Supervised Pathology Detection and Localization in 3D Chest Scans</h3><div class="meta">Medical Physics · 2024</div></div>
+        </a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><a href="/">Aissam Djahnine</a> · AI Research Engineer</span>
+    <span><a href="/#research">All research</a> · <a href="/#publications">Publications</a></span>
+  </div>
+</footer>
+<script src="/assets/js/project.js?v={{ site.time | date: '%s' }}"></script>
+</body>
+</html>
