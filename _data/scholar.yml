@@ -1,7 +1,7 @@
 # Google Scholar statistics shown on the home page.
 # Update these numbers from https://scholar.google.com/citations?user=uRNOC9sAAAAJ
-updated_at: 2026-11-11
-citations: { all: 64, since_2021: 64 }
+updated_at: 2026-11-17
+citations: { all: 65, since_2021: 65 }
 h_index: { all: 3, since_2021: 3 }
 i10_index: { all: 2, since_2021: 2 }
 axis_max: 32   # top gridline of the chart, like Scholar's
@@ -9,4 +9,4 @@ per_year:
   - { year: 2023, count: 3 }
   - { year: 2024, count: 11 }
   - { year: 2025, count: 32 }
-  - { year: 2026, count: 18 }
+  - { year: 2026, count: 19 }
