@@ -3,6 +3,7 @@ layout: default
 title: All projects
 description: Featured and personal projects by Aissam Djahnine, from research write-ups to course work and side projects.
 permalink: /github-repos/
+image: /images/og/all-projects.jpg
 ---
 <div class="section-head" style="margin-top:8px"><h1 class="serif" style="font-size:38px;margin:0">All projects</h1><a href="https://github.com/AissamDjahnine">GitHub profile →</a></div>
 <p class="muted" style="max-width:68ch;margin-top:0">Featured projects with full write-ups, then course work and side projects. Research papers are in the <a class="text-link" href="/#research">Research</a> section.</p>
