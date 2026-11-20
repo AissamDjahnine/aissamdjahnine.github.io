@@ -1,0 +1,8 @@
+{%- comment -%}
+Privacy-friendly page-view counting with GoatCounter: no cookies, no personal data, so no consent banner.
+Switched on by `goatcounter:` in _config.yml (the site code from goatcounter.com). Empty = no script.
+GoatCounter skips localhost, so local previews are never counted.
+{%- endcomment -%}
+{%- if site.goatcounter and site.goatcounter != "" -%}
+<script data-goatcounter="https://{{ site.goatcounter }}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+{%- endif -%}

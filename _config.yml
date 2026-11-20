@@ -4,6 +4,9 @@ url: "https://aissamdjahnine.github.io"
 lang: en-US
 author: Aissam Djahnine
 
+# GoatCounter site code (the part before .goatcounter.com). Leave empty to turn analytics off.
+goatcounter: ""
+
 # Pages not published on the site
 exclude:
   - mockups/
