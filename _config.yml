@@ -5,7 +5,7 @@ lang: en-US
 author: Aissam Djahnine
 
 # GoatCounter site code (the part before .goatcounter.com). Leave empty to turn analytics off.
-goatcounter: ""
+goatcounter: "aissamdjahnine"
 
 # Pages not published on the site
 exclude:
